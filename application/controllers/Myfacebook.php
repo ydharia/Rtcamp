@@ -53,9 +53,9 @@ class myfacebook extends CI_Controller {
 			        {
 			        	$this->crontab->remove_job('* * * * *', 'cronjob.php');
 			        }
-			        else
-			        {
-				        $myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
+					else
+					{
+						$myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
 						$cronSession = fread($myfile,filesize($dirname."/".$map[0]));
 						fclose($myfile);
 						$_SESSION = json_decode($cronSession, TRUE);
