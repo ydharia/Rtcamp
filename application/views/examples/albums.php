@@ -58,7 +58,8 @@
                     Google Drive
                 </div>
                 <div class="progress-bar-div">
-                    Your Album Start To Backup in Your Google Drive.
+                    Your Album Start To Backup in Your Google Drive. Cronjob will move your albums to google drive in background<br>
+                    You can logout or shutdown your device.
                 </div>
             
                 <div class="download-button" id="download-button">
@@ -72,7 +73,7 @@
                 <div class="profileName">
                         
                     <span><img src="<?=$this->session->userdata("userimage")?>" align="center" ><?=$this->session->userdata("uname")?> 
-                        <a href="<?=base_url().'example/logout'?>" title="Logout" class="logout">
+                        <a href="<?=base_url().'myfacebook/logout'?>" title="Logout" class="logout">
                             <i class="fa fa-power-off"></i>
                         </a>
                     </span>
@@ -99,12 +100,12 @@
 				    {
 				    ?>
                     <li>   
-                        <a href="javascript:;" title="Download All Albums" class="downloadAllAlbum">
+                        <a href="javascript:;" onclick="moveAll()" title="Download All Albums" class="downloadAllAlbum">
                             <i class="fa fa-google"> </i> DRIVE ALL
                         </a>                 
                     </li>
                     <li>   
-                        <a href="javascript:;" title="Backup All Albums" class="driveAllAlbum">
+                        <a href="javascript:;" onclick="moveSelected()" title="Backup All Albums" class="driveAllAlbum">
                             <i class="fa fa-google"> </i> DRIVE SELECTED
                         </a>
                     </li>
@@ -114,12 +115,12 @@
                 	{
                 		?>
                 		<li>   
-	                        <a href="<?php echo base_url()."example/googleLogin";?>" title="Download All Albums" class="downloadAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Download All Albums" class="downloadAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE ALL
 	                        </a>                 
 	                    </li>
 	                    <li>   
-	                        <a href="<?php echo base_url()."example/googleLogin";?>" title="Backup All Albums" class="driveAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Backup All Albums" class="driveAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE SELECTED
 	                        </a>
 	                    </li>
@@ -146,7 +147,7 @@
                     <a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
-                                <div class="gridItemImg" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" onclick="window.location.href='<?php echo base_url('example/album?album='.$album['id'].'&albumName='.$album['name'])?>'"  >
+                                <div class="gridItemImg" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" onclick="window.location.href='<?php echo base_url('myfacebook/album?album='.$album['id'].'&albumName='.$album['name'])?>'"  >
                                 </div>
                                 <div class="gridItemInfo">
                                     <span class="imgName" >
@@ -158,7 +159,7 @@
                                     </span>
                                     <span class="imgIcons">
                                         <i class="fa fa-download" onclick="download('single',event,'<?=$album['id']?>')" aria-hidden="true" style="border-right: 1px solid;" ></i>
-                                        <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('example/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
+                                        <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('myfacebook/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
                                         <i class="fa fa-google" onclick="moveAlbum('<?=$album['id']?>','<?=$album['name']?>',event)" aria-hidden="true" ></i>                                     
                                     </span>
                                 </div>
@@ -182,7 +183,7 @@
                 	<a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
-                                <div class="gridItemImg" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" onclick="window.location.href='<?php echo base_url('example/album?album='.$album['id'].'&albumName='.$album['name'])?>'"  >
+                                <div class="gridItemImg" style="background-image: url('<?php print_r($album["picture"]["data"]["url"]); ?>')" onclick="window.location.href='<?php echo base_url('myfacebook/album?album='.$album['id'].'&albumName='.$album['name'])?>'"  >
                                 </div>
                                 <div class="gridItemInfo">
                                     <span class="imgName" >
@@ -194,8 +195,8 @@
                                     </span>
                                     <span class="imgIcons">
                                         <i class="fa fa-download" onclick="download('single',event,'<?=$album['id']?>')" aria-hidden="true" style="border-right: 1px solid;" ></i>
-                                        <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('example/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
-                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."example/googleLogin";?>'" aria-hidden="true" ></i>                                     
+                                        <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('myfacebook/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
+                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."myfacebook/googleLogin";?>'" aria-hidden="true" ></i>                                     
                                     </span>
                                 </div>
                             </div>

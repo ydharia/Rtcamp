@@ -2,7 +2,7 @@
 session_start();
 
 $postdata = array('nodata' => "");
-$curl = curl_init("https://rtcampyash.myfoodstore.in/example/cronMoveAlbums");
+$curl = curl_init("https://rtcampyash.myfoodstore.in/myfacebook/cronMoveAlbums");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
