@@ -23,6 +23,8 @@ $(document).ready(function(){
         download('all',event);
     });
 
+   
+
     
 });
 /*
@@ -37,7 +39,7 @@ function downloadAlbum(albumId,e)
         dataType:'json',
         type:'post',
         data:'albumId='+albumId,
-        url:baseurl+'example/downloadSingle',
+        url:baseurl+'myfacebook/downloadSingle',
         catch:false,
         success:function(response)
         {
@@ -68,7 +70,7 @@ function downloadAlbum(albumId,type,e="")
    $.ajax({
         dataType:'json',
         type:'get',
-        url:baseurl+'example/getAllImageCount/'+albumId,
+        url:baseurl+'myfacebook/getAllImageCount/'+albumId,
         catch:false,
         success:async function(response)
         {
@@ -87,7 +89,7 @@ function downloadAlbum(albumId,type,e="")
 			        dataType:'json',
 			        type:'post',
 				data:jdata,				        
-			        url:baseurl+'example/downloadSingle',
+			        url:baseurl+'myfacebook/downloadSingle',
 			        catch:false,
 			        success:async function(result)
 			        {
@@ -131,7 +133,7 @@ function downloadAlbum(albumId,type,e="")
                                         dataType:'json',
                                         type:'post',
                                         data:album,			        
-                                        url:baseurl+'example/zipping/'+type,
+                                        url:baseurl+'myfacebook/zipping/'+type,
                                         catch:false,
                                         success:function(zipresult)
                                         {
@@ -219,7 +221,7 @@ function downloadAll()
         dataType:'json',
         type:'post',
         data:'albums=all',
-        url:baseurl+'example/downloadall',
+        url:baseurl+'myfacebook/downloadall',
         catch:false,
         success:function(response)
         {
@@ -242,7 +244,7 @@ function downloadSelected()
         dataType:'json',
         type:'post',
         data:'selected='+selected_albums+'&albums=selected',
-        url:baseurl+'example/downloadall',
+        url:baseurl+'myfacebook/downloadall',
         catch:false,
         success:function(response)
         {
@@ -256,14 +258,14 @@ function moveAlbum(albumId,albumName,e)
 {
     e.preventDefault();
     $("#driveFiles").show();
-    setTimeout(function(){
-        $("#driveFiles").hide();
-    }, 2000);
+    // setTimeout(function(){
+    //     $("#driveFiles").hide();
+    // }, 2000);
     $.ajax({
         dataType:'json',
         type:'post',
         data:'albumId='+albumId+'&albumName='+albumName,
-        url:baseurl+'example/moveSingle',
+        url:baseurl+'myfacebook/moveSingle',
         catch:false,
         success:function(response)
         {
@@ -276,14 +278,14 @@ function moveAlbum(albumId,albumName,e)
 function moveAll()
 {
     $("#driveFiles").show();
-    setTimeout(function(){
-        $("#driveFiles").hide();
-    }, 2000);
+    // setTimeout(function(){
+    //     $("#driveFiles").hide();
+    // }, 2000);
     $.ajax({
         dataType:'json',
         type:'post',
         data:'albums=all',
-        url:baseurl+'example/moveAll',
+        url:baseurl+'myfacebook/moveAll',
         catch:false,
         success:function(response)
         {
@@ -295,18 +297,23 @@ function moveAll()
 
 function moveSelected()
 {
+    
     var selected_albums =  [];
     $(".selectedAlbums").each(function () {
         if ($(this).is(":checked")) {
             selected_albums.push($(this).val());
         }
     });
+    if(selected_albums.length != 0)
+    {
+        $("#driveFiles").show();
+    }
 
     $.ajax({
         dataType:'json',
         type:'post',
         data:'selected='+selected_albums+'&albums=selected',
-        url:baseurl+'example/moveSelected',
+        url:baseurl+'myfacebook/moveSelected',
         catch:false,
         success:function(response)
         {
