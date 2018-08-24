@@ -309,7 +309,8 @@ class myfacebook extends CI_Controller {
 			$data['album']["name"] = $albumdetails["name"];
 		}
 
-		try {
+		try 
+		{
 			if(isset($data["album"]["paging"]["next"]))
 		  	{
 		  		$nextUrl = $data["album"]["paging"]["next"];
@@ -319,20 +320,24 @@ class myfacebook extends CI_Controller {
 		  		$nextUrl = "";
 		  	}
 		  
-		  while($nextUrl) 
-		  {
-		  	$nextData = $this->nextAlbumData($nextUrl);
-		  	if(isset($nextData["paging"]["next"]))
-		  	{
-		  		$nextUrl =$nextData["paging"]["next"];
-		  	} else {
-		  		$nextUrl = "";
-		  	}		  	
-		  	$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
-		  }
+			while($nextUrl) 
+			{
+				$nextData = $this->nextAlbumData($nextUrl);
+				if(isset($nextData["paging"]["next"]))
+				{
+					$nextUrl =$nextData["paging"]["next"];
+				} 
+				else
+				{
+					$nextUrl = "";
+				}		  	
+				$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
+			}
 		  
-	    } catch (Exception $e) {
-	  	
+	    }
+		catch (Exception $e)
+		{
+			
 	    }
 	    return $data;
 	}
