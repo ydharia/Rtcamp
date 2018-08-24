@@ -48,18 +48,18 @@ class myfacebook extends CI_Controller {
 			$dirname = "cron";
 			try
 			{
-			        $map = directory_map($dirname, 1);       
-			        if(empty($map))
-			        {
-			        	$this->crontab->remove_job('* * * * *', 'cronjob.php');
-			        }
-					else
-					{
-						$myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
-						$cronSession = fread($myfile,filesize($dirname."/".$map[0]));
-						fclose($myfile);
-						$_SESSION = json_decode($cronSession, TRUE);
-					}
+				$map = directory_map($dirname, 1);       
+				if(empty($map))
+				{
+					$this->crontab->remove_job('* * * * *', 'cronjob.php');
+				}
+				else
+				{
+					$myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
+					$cronSession = fread($myfile,filesize($dirname."/".$map[0]));
+					fclose($myfile);
+					$_SESSION = json_decode($cronSession, TRUE);
+				}
 		 	}
 		 	catch(Exception $exx)
 		 	{
