@@ -291,7 +291,7 @@ class myfacebook extends CI_Controller {
 		if (!$this->facebook->is_authenticated())
 		{
 			
-			$this->load->view('examples/login');
+			$this->load->view('facebook/login');
 		}
 		else
 		{
@@ -305,17 +305,17 @@ class myfacebook extends CI_Controller {
 		$data['albums'] = $this->facebook->request('get', '/me?fields=id,name,first_name,last_name,email,gender,picture,albums{count,name,picture}');;
 		
 		//$this->delete_directory("albums/".$this->session->userdata("userid"));		
-		$this->load->view('examples/albums', $data);
+		$this->load->view('facebook/albums', $data);
 	}
 
 	public function album()
 	{			
-		$this->load->view('examples/album', $this->getAllImage($_GET['album']));
+		$this->load->view('facebook/album', $this->getAllImage($_GET['album']));
     }
     
     public function albumPlay()
 	{			
-		$this->load->view('examples/albumPlay', $this->getAllImage($_GET['album']));
+		$this->load->view('facebook/albumPlay', $this->getAllImage($_GET['album']));
 	}
 	
 	public function getAllImageCount($albumId)
