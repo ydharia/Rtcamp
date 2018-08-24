@@ -525,9 +525,9 @@ class myfacebook extends CI_Controller {
 			$ext = explode(".",$img);
 			$ext = end($ext);
 			
-	        $imgName = $i.".".$ext;
-	        $mimeType = "image/jpeg";
-	        $this->google_drive->newFile($imgName, "", $mimeType, $ab["source"], $albumFolderId, "");
+			$imgName = $i.".".$ext;
+			$mimeType = "image/jpeg";
+			$this->google_drive->newFile($imgName, "", $mimeType, $ab["source"], $albumFolderId, "");
 			$i++;
 		}
 		echo "compleate";
