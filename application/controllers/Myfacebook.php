@@ -217,7 +217,6 @@ class myfacebook extends CI_Controller {
 			$this->session->set_userdata("photono", $i);
 			$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "w") or die("Unable to open file!");
 			$txt = json_encode($this->session->userdata())."\n";
-			//$txt = print_r($this->session->userdata())."\n";
 			fwrite($myfile, $txt);
 			fclose($myfile);
 		}
