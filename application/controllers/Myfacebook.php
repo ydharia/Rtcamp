@@ -585,12 +585,6 @@ class myfacebook extends CI_Controller {
 		$this->crontab->add_job('* * * * *', 'cronjob.php');
 		$this->setCronTask($selected);
 	}
-	
-	public function taskList()
-	{
-		echo "<pre>";
-		print_r($this->session->userdata());
-	}
 
 	public function removeFolder($folderId)
 	{
