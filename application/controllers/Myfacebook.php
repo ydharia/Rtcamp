@@ -337,10 +337,11 @@ class myfacebook extends CI_Controller {
 		catch (Exception $e)
 		{			
 		}
-	    return $data;
+		return $data;
 	}
 
-	public function nextAlbumData($nextUrl) {
+	public function nextAlbumData($nextUrl)
+	{
 		$nextData = json_decode(file_get_contents($nextUrl), true);		 
 		return $nextData;		
 	}
@@ -467,7 +468,7 @@ class myfacebook extends CI_Controller {
 		 	}
 		 	else
 		 	{
-		     	return false;
+				return false;
 		 	}
 	 	}
 	 	catch(Exception $exx)
