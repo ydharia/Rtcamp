@@ -27,28 +27,7 @@ $(document).ready(function(){
 
     
 });
-/*
-var myVar = "";
-function downloadAlbum(albumId,e)
-{
-    e.preventDefault();
-  
-   // myVar = setInterval(gcount, 1000);
-    
-    $.ajax({
-        dataType:'json',
-        type:'post',
-        data:'albumId='+albumId,
-        url:baseurl+'myfacebook/downloadSingle',
-        catch:false,
-        success:function(response)
-        {
-        	alert("download call");
-        	//clearInterval(myVar);
-        }
-    });
-}
-*/
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -65,7 +44,6 @@ function downloadAlbum(albumId,type,e="")
     $("#download-button").html("");
     $("#progress-bar-in-album-counter").html("");
     $("#progress-bar-in-album").html("");
-	//e.preventDefault();
 	var inresult = "";
    $.ajax({
         dataType:'json',
@@ -82,7 +60,6 @@ function downloadAlbum(albumId,type,e="")
 
         	for(i=0;i<response.album.data.length;i++)
         	{
-        	//alert(i);
         	var picno = i+1;
         	var jdata = { albumId: albumId, albumName: response.album.name,source: response.album.data[i].source, photono: picno };
 			    $.ajax({
@@ -96,29 +73,18 @@ function downloadAlbum(albumId,type,e="")
 			        	inresult = result;
 			        	if(result.status == 1)
 			        	{
-				        	// $("#downloader").html(( response.album.data.length-total+1 )+" of "+response.album.data.length);
-                            // alert(response.album.data.length-total+1);
                             var progress = (response.album.data.length-total+1) * (100/response.album.data.length);
                             document.getElementById("progress-bar-in").style.width= progress + "%";
 
-                             $("#progress-bar-in-counter").html(( response.album.data.length-total+1 )+" of "+response.album.data.length);                
-
-                            
-				        	//$("#downloader").html("downloading");
-				        	if(total == 1)
+							$("#progress-bar-in-counter").html(( response.album.data.length-total+1 )+" of "+response.album.data.length);                
+							if(total == 1)
 				        	{
-                                // alert(total);
                                 doneAlbum++;
-                                // alert(doneAlbum);
                                 var progressRate = doneAlbum/totalAlbums * 100;
                                 document.getElementById("progress-bar-in-album").style.width= progressRate + "%";
 
                                 $("#progress-bar-in-album-counter").html(doneAlbum + " of "+ totalAlbums);     
-				        		
-                                
-                                 //alert(doneAlbum+" total : "+totalAlbums);
-                                // progress-bar-in-album-counter
-                                if(totalAlbums <= doneAlbum)
+				        	    if(totalAlbums <= doneAlbum)
                                 {
                                     if(totalAlbums == 1 && type == "single")
                                     {       
@@ -147,11 +113,8 @@ function downloadAlbum(albumId,type,e="")
                                     });
                                     
                                 }
-
-
 				        	}
 				        	total--;
-				        	
 			        	}
 			        	else
 			        	{
@@ -176,7 +139,6 @@ function download_zip(url){
 
 function download(type,e,albumId="")
 {
-//e.preventDefault();
    if(type == "single")
    {
        totalAlbums = 1;
@@ -214,23 +176,6 @@ function download(type,e,albumId="")
    }
 }
 
-/*
-function downloadAll()
-{
-    $.ajax({
-        dataType:'json',
-        type:'post',
-        data:'albums=all',
-        url:baseurl+'myfacebook/downloadall',
-        catch:false,
-        success:function(response)
-        {
-            alert(response.status);
-        }
-    });
-}
-*/
-
 function downloadSelected()
 {
     var selected_albums =  [];
@@ -258,9 +203,6 @@ function moveAlbum(albumId,albumName,e)
 {
     e.preventDefault();
     $("#driveFiles").show();
-    // setTimeout(function(){
-    //     $("#driveFiles").hide();
-    // }, 2000);
     $.ajax({
         dataType:'json',
         type:'post',
@@ -278,9 +220,6 @@ function moveAlbum(albumId,albumName,e)
 function moveAll()
 {
     $("#driveFiles").show();
-    // setTimeout(function(){
-    //     $("#driveFiles").hide();
-    // }, 2000);
     $.ajax({
         dataType:'json',
         type:'post',
@@ -289,7 +228,6 @@ function moveAll()
         catch:false,
         success:function(response)
         {
-            //alert(response.message);
         }
     });
 }
@@ -317,8 +255,6 @@ function moveSelected()
         catch:false,
         success:function(response)
         {
-            // console.log(response);
-            // alert(response.status);
         }
     });
 }
@@ -327,7 +263,6 @@ function moveSelected()
 
 
 var total = (document.getElementById("sider").childElementCount*100);
-//document.getElementById("sider").style.width = (total+5)+"vw";
 var marginTop = 0;
 var playSide;
 var playFlag = true;
