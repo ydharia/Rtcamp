@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /robots.txt
-Sitemap: https://rtcampyash.myfoodstore.in/sitemap.xml
