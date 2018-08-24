@@ -1,0 +1,624 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.bg {
+    background-image: url("http://acshub.co.uk/hubassets/uploads/2016/09/acs-website-background-building-e1472862899804.jpg");    
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    height: 3em;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    border: 0;
+    padding: .625rem 0;
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);
+    transition-duration: 1s;
+}
+
+.header > .profile {
+    position: relative;
+    width: 60vw;
+    height: 100%;
+    float: right;
+    margin-left: 5vw;
+}
+
+.profile > .profileName {
+    position: relative;
+    color: inherit;
+    float: right;
+    width: 100%;
+    height: 100%;
+    font-size: 1.125rem;
+    line-height: 30px;
+    padding: .625rem 0rem;
+    transition-duration: 1s;
+    margin-right: 1em;
+}
+
+.profile > .profileName > span {
+    float: right;
+}
+
+.profile > .profileName > span > img {
+    border-radius: 50px;
+    margin-top: -10px;
+    margin-right: 1em;
+}
+
+.header > .menu > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header > .menu > .mobileMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: black;
+    z-index: 20;
+    padding:5px 5px; 
+    border-radius: 5px;
+}
+
+.header > .menu > .mobileMenu > i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 20;
+    margin-top: 15px;
+    margin-left: 18px;
+}
+
+.header > .menu {
+    position: relative;
+    width: auto;
+    height: 100%;
+    margin-right: 4vw;
+    float: left;
+    display: block;
+    margin-left: 1em;
+    height: auto;
+    background-color: #3B3B3B;    
+}
+
+.menuLeft {
+    margin-left: 0px !important;
+}
+
+.header > .menu > ul {
+    /*position: relative;*/
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    /*margin: 0px;*/
+    padding: 0px;
+    float: right;
+
+    margin-top: 47px;
+    background-color: black;
+    width: 12em;
+}
+
+.header > .menu > ul > li {
+    position: relative;
+    max-width: 10rem;
+    min-width: auto;
+    text-align: center;
+    height: 100%;
+    line-height: 100%;
+    padding: 1em;
+    margin-left: 5px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px 0px #1942a759; 
+    border-bottom: 1px solid gray;   
+    text-align: left;   
+    /* box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2); */
+}
+
+.logout{
+    color: white;
+    background-color: #d9534f;
+    display: inline;
+    margin-top: -11px;
+    float: right;
+    padding: 10px 15px;
+    margin-left: 5px;
+    margin-right: 0px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px 0px #1942a759;
+
+}
+
+
+
+.header:hover {    
+    height: 48px;
+    box-shadow: 0px 0px 10px #27b686;
+}
+
+.header > .buttons {
+    margin-left:2em;
+    margin-top:10px;
+}
+
+.header > .buttons > .button{
+    padding: 5px 10px;
+    background-color: #00000060;
+    border:0px;
+    border-radius: 5px;
+    color: white;
+}
+
+.container {
+    position: relative;
+    /* padding: 6em; */
+    padding-top: 5em;
+}
+
+.loginDiv {
+    width: 450px;
+    height: 380px;
+    background-color: #0000001f;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #3045b5, -1px -1px 10px 0px #27b686;
+    transition-duration: 1s;
+}
+
+.loginDiv:hover {    
+    box-shadow: 1px 1px 10px #27b686, -1px -1px 10px 0px #3045b5;
+}
+
+.loginText {
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+    color: cornflowerblue;
+    padding: 15px;
+}
+
+
+hr {
+    width: 92%;
+    border-color: #4c4747;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: transparent;
+    padding: 10px;
+    border: 0px solid;
+    border-bottom: 2px solid #b9642a;
+    color: gray;
+    outline: none;
+    transition-duration: 1s;
+    width: 73%;
+    margin: 5% 10% 0% 10%;
+    font-size: 1em;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    border-bottom: 2px solid #3045b5;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-bottom: 2px solid #27b686;
+}
+
+input[type="submit"], button[type="submit"] {
+    background: linear-gradient(-90deg, #27b686, #3045b5);
+    padding: 10px;
+    color: white;       
+    width: 78%;
+    margin: 5% 10% 0% 10%;
+    font-size: 1em;
+    transition-duration: 1s;
+    border: 3px solid black;    
+}
+
+
+input[type="submit"]:hover, button[type="submit"]:hover {    
+    background: linear-gradient(-90deg, #3045b5, #27b686);
+}
+
+input[type="submit"]:focus, button[type="submit"]:focus  {    
+    border: 2px solid #3045b5;    
+}
+
+
+.albumHeader {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-left: 1em;
+}
+
+.albumHeader > hr{
+    padding: 0;
+    margin: 0em;
+    width: 99%;
+    border: 1px solid white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    /* overflow-x: hidden; */
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 24.7% 24.7% 24.7% 24.7%;
+    /* overflow-x: hidden; */
+}
+
+.grid-item {
+    width: auto;
+    height: 20vw;    
+}  
+
+.gridData {
+    width: auto;
+    height: 20vw;   
+    margin: 2em; 
+    background: #00000059;
+    box-shadow: 5px 5px 10px #000000;
+    /* box-shadow: 1px 1px 10px #3045b5, -1px -1px 10px 0px #27b686; */
+    transition-duration: 0.5s;
+}
+
+.gridData:hover {
+    transform: scale(1.05);
+    background: #00000090;
+    box-shadow: 5px 5px 15px #000000;
+}
+
+.gridData:hover > .gridItemImg {
+    transform: scale(0.9);
+    box-shadow: 5px 5px 10px #000000;
+}
+
+.gridItemImg {
+    width: 20vw;
+    height: 20vw;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+    transition-duration: 1s;
+    cursor: pointer;   
+    float: left;
+}
+
+
+.gridItemInfo {
+    width: 23vw;
+    height: 20vw;
+    float: right;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative; 
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+
+span.imgName {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 4em;
+    transition-duration: 0.5s;
+}
+
+span.imgName i.fa {
+    font-size: 1em;
+}
+
+span.imgName .name {
+    font-size: 1.5em;
+}
+
+span.imgIcons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 7em;
+    transition-duration: 0.5s;
+    font-size: 1.5em;
+    opacity: 1;
+}
+
+span.imgIcons > i {
+    width: 20%;
+    position: relative;
+    cursor: pointer;
+}
+
+span.imgName > label {
+    cursor: pointer;
+}
+
+span.imgName input[type="checkbox"] {
+    display: none;
+}
+
+span.imgName > label > i.fa-square-o, span.imgName > label > i.fa-check-square-o {
+    font-size: 1.5em;
+    transition-duration: 0.5s;
+}
+
+
+span.imgName > label > i.fa-check-square-o, span.imgName > label > i.fa-check-square-o + .name {
+    color: #b9642a;
+}
+
+
+
+
+.sider {    
+    /* position: absolute; */
+    width: 100vw;
+    height: auto;
+    float: right;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    transition-duration: 1s;
+}
+
+.sider > .side {
+    position: relative;
+    color: white;
+    width: 100vw;
+    height: 100vh;    
+    display: inline-block;
+    vertical-align: top; 
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px 0em 0px 0em;
+}
+
+.sider > .side > img {
+    max-height: 100%;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.siderFooter {
+    position: absolute;
+    width: 3em;
+    height: 100vh;
+    background-color: #00000070;
+    right: 0;
+    line-height: 3em;
+    display: table;
+}
+
+.siderFooter .siderBtn {       
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.siderBtn button {  
+    background-color: black;
+    color: white;
+    border: 2px solid #3F3F3F;    
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+}
+
+
+.siderFooter button.next, .siderFooter button.prev {    
+    padding: 1px 10px 1px 10px;
+}
+
+.siderFooter button.next {
+    border-radius: 0px 0px 50px 50px;
+}
+
+.siderFooter button.prev {
+    border-radius: 50px 50px  0px 0px ;
+}
+
+.download-file
+{
+    background-color: rgba(0,0,0,0.7);
+    top: 0 !important;
+    left: 0 !important;
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9999;
+    position: fixed;
+
+    /*overflow: hidden;*/
+}
+.zip-div{
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: auto;
+    height: 400px;
+    text-align: center; 
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #333;
+}
+.zip-title{
+    padding: 10px 10px;
+    color:#333;
+    text-shadow: 1px 1px 2px #333;
+    font-size: 1.3em;
+}
+.progress-bar-div {
+    margin-bottom: 0.4%;
+    padding: 10px 50px;
+}
+.progress-bar-out, .progress-bar-out-album{
+    height: 20px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #ccc;
+    text-align: center;
+}
+.progress-bar-in, .progress-bar-in-album{
+    height: 20px;
+    width: 100%;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, orangered, white , green);
+    background-color: orangered;
+    /*box-shadow: 2px 2px 4px #333;*/
+    
+}
+.progress-bar-in-counter{
+    text-align: center;
+    padding:  10px !important;
+}
+.download-button{
+    padding: 10px;
+    margin-top: 30px;
+}
+.download-button button{
+    padding: 10px 30px;
+    background-color: #333;
+    color:#fff;
+    border-radius: 5px;
+    border:none;
+}
+
+
+@media (max-width: 1000px) {
+    .center{};
+    .center-inner{left:25%;top:25%;position:absolute;width: 450px;
+        height: 400px;
+        background:transparent;text-align:center;max-width:500px;max-height:500px;}
+}
+@media (min-width: 1000px) {
+    .center{left:50%;top:25%;position:absolute;}
+    .center-inner{height:100%;margin-left:-250px;width: 450px;
+        height: 400px;
+        background:transparent; text-align:center;max-width:500px;max-height:500px;}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .zip-div{
+        background-color: #fff;
+        padding: 10px;
+        margin-top: 40%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+        height: 400px;
+        text-align: center; 
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px #333;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto ;        
+    }
+}
+
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto ;        
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: auto;
+        /* overflow-x: hidden; */
+    }
+
+    .grid-container > a >  .grid-item{
+    	width: auto;
+    	height: 40vw;
+   	}
+
+   	.grid-container > a > .grid-item > .gridData{
+    	width: auto;
+    	height: 40vw;
+   	}
+   	
+   	.grid-container > a > .grid-item > .gridData > .gridItemImg {
+    	width: 40vw;
+    	height: 40vw;
+    }
+
+    .gridItemInfo {
+        width: 40vw;
+        height: 40vw;
+        font-size: 0.7em;
+    }
+    
+    span.imgName {
+        padding-top: 3.5em;
+    }
+
+    span.imgIcons {
+        font-size: 1.8em;
+        top: 6em;
+    }
+
+    span.imgIcons > i {
+        width: 30%;
+    }
+
+    .gridContainer > a > .grid-item{
+    	width: auto;
+    	height: 80vw;
+   	}
+
+   	.gridContainer > a > .grid-item > .gridData{
+    	width: auto;
+    	height: 80vw;
+   	}
+   	
+   	.gridContainer > a > .grid-item > .gridData > .gridItemImg {
+    	width: 100%;
+    	height: 80vw;
+    }
+
+}
