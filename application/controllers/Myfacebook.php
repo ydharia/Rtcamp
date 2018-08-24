@@ -11,20 +11,16 @@ class myfacebook extends CI_Controller {
 		$this->load->helper('download');
 		$this->load->helper('directory');
 		$this->load->library('crontab');
-		
 		$this->setCronSession();
 		$this->load->library('facebook');
-		
 		$this->load->helper('url');
 		$this->load->library('zip');
-	        $this->load->helper('download');
-	        
-	        $this->load->library('email');
+		$this->load->helper('download');
+		$this->load->library('email');
 		if(!$this->facebook->is_authenticated() && $this->router->fetch_method() !="index")
 		{
 			redirect(base_url()."myfacebook/");
 		}
-		
 		if($this->input->ip_address() == $_SERVER['SERVER_ADDR'])
 		{
 			$url_array = explode('?', 'https://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
@@ -32,19 +28,16 @@ class myfacebook extends CI_Controller {
 			$config = array("client_id"=>"962527986048-fko0boarhk09sclfu0igldkgj1po0p8d.apps.googleusercontent.com","client_secret"=>"By-esciDrlc7omI-_pVmHZag","redirect_uri"=>$url);
 			$this->load->library("google_drive",$config);
 		}
-		
-	        $this->setUserSession();
- 	      	$this->setOldTask();
+		$this->setUserSession();
+		$this->setOldTask();
     }
 	
 	public function googleLogin()
 	{
-		
 		$url_array = explode('?', 'https://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 		$url = $url_array[0];		
 		$config = array("client_id"=>"CLIENT_ID","client_secret"=>"CLIENT_SECRET","redirect_uri"=>$url);		
 		$this->load->library('google_drive',$config);
-		
 		redirect(base_url()."myfacebook/albums");
 	}
 	
@@ -55,8 +48,7 @@ class myfacebook extends CI_Controller {
 			$dirname = "cron";
 			try
 			{
-			        $map = directory_map($dirname, 1);
-			        
+			        $map = directory_map($dirname, 1);       
 			        if(empty($map))
 			        {
 			        	$this->crontab->remove_job('* * * * *', 'cronjob.php');
@@ -64,10 +56,10 @@ class myfacebook extends CI_Controller {
 			        else
 			        {
 				        $myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
-					$cronSession = fread($myfile,filesize($dirname."/".$map[0]));
-					fclose($myfile);
-					$_SESSION = json_decode($cronSession, TRUE);
-				}
+						$cronSession = fread($myfile,filesize($dirname."/".$map[0]));
+						fclose($myfile);
+						$_SESSION = json_decode($cronSession, TRUE);
+					}
 		 	}
 		 	catch(Exception $exx)
 		 	{
@@ -133,11 +125,9 @@ class myfacebook extends CI_Controller {
 			{
 				$_SESSION["photono"] = 1;
 			}
-			
 			$this->setUserSession();
 			$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "w") or die("Unable to open file!");
 			$txt = json_encode($this->session->userdata())."\n";
-			//$txt = print_r($this->session->userdata())."\n";
 			fwrite($myfile, $txt);
 			fclose($myfile);
 		}
@@ -149,7 +139,6 @@ class myfacebook extends CI_Controller {
 	{
 		if ($this->facebook->is_authenticated())
 		{
-		
 			if(!$this->session->userdata("uname"))
 			{
 				$user = $this->facebook->request('get', '/me?fields=id,name,first_name,last_name,email,gender,picture,albums{count,name,picture}');
@@ -171,9 +160,7 @@ class myfacebook extends CI_Controller {
 	{
 		if(count($this->session->userdata("albumList")) > 0)
 		{
-		$startTime = time();
-	
-			
+			$startTime = time();
 			$albums = $this->facebook->request('get', '/'.$_SESSION["albumList"][0].'?fields=name,count');
 			$albumName = $albums["name"];
 			$albumId = $_SESSION["albumList"][0];
@@ -192,7 +179,6 @@ class myfacebook extends CI_Controller {
 			$finish = 0;
 			while((time() < ($startTime + 50)) && $albums["count"] >= $i)
 			{
-				//$photono = $this->session->userdata("photono");
 				$this->moveAlbumPhoto($albumName, $albumId, $images["album"]["data"][$i-1]["source"], $i);
 				$i++;
 				
@@ -209,17 +195,13 @@ class myfacebook extends CI_Controller {
 					fclose($myfile);
 					$allSession = json_decode($cronSession, TRUE);
 					$_SESSION = $allSession;
-					
-					
 					$this->session->set_userdata("photono", $i);
 					$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "w") or die("Unable to open file!");
 					$txt = json_encode($this->session->userdata())."\n";
-					//$txt = print_r($this->session->userdata())."\n";
 					fwrite($myfile, $txt);
 					fclose($myfile);
 				}
 			}
-			
 			$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "r") or die("Unable to open file!");
 			$cronSession = fread($myfile,filesize("cron/".$this->session->userdata("userid").".txt"));
 			fclose($myfile);
@@ -238,8 +220,6 @@ class myfacebook extends CI_Controller {
 			//$txt = print_r($this->session->userdata())."\n";
 			fwrite($myfile, $txt);
 			fclose($myfile);
-			
-			
 		}
 		else
 		{
@@ -278,19 +258,17 @@ class myfacebook extends CI_Controller {
 			$parameters = explode("/",explode("?",$source)[0]);
 			$img = end($parameters);
 			$ext = explode(".",$img);
-			$ext = end($ext);
-			
-		        $imgName = $i.".".$ext;
-		        $mimeType = "image/jpeg";
-		        $this->google_drive->newFile($imgName, "", $mimeType, $source, $albumFolderId, "");
-	        }
+			$ext = end($ext);				
+			$imgName = $i.".".$ext;
+			$mimeType = "image/jpeg";
+			$this->google_drive->newFile($imgName, "", $mimeType, $source, $albumFolderId, "");
+		}
 	}
 	 
 	public function index()
 	{ 
 		if (!$this->facebook->is_authenticated())
-		{
-			
+		{			
 			$this->load->view('facebook/login');
 		}
 		else
@@ -303,8 +281,6 @@ class myfacebook extends CI_Controller {
 	{
 		$data['albums'] = array();
 		$data['albums'] = $this->facebook->request('get', '/me?fields=id,name,first_name,last_name,email,gender,picture,albums{count,name,picture}');;
-		
-		//$this->delete_directory("albums/".$this->session->userdata("userid"));		
 		$this->load->view('facebook/albums', $data);
 	}
 
@@ -324,8 +300,7 @@ class myfacebook extends CI_Controller {
 	}
 
 	public function getAllImage($albumId)
-	{
-		
+	{		
 		$data['album'] = array();
 		$album = $this->facebook->request('get', '/'.$albumId.'/photos?fields=source');
 		$albumdetails = $this->facebook->request('get', '/'.$albumId);
@@ -339,11 +314,14 @@ class myfacebook extends CI_Controller {
 			if(isset($data["album"]["paging"]["next"]))
 		  	{
 		  		$nextUrl = $data["album"]["paging"]["next"];
-		  	} else {
+		  	} 
+			else 
+			{
 		  		$nextUrl = "";
 		  	}
 		  
-		  while($nextUrl) {
+		  while($nextUrl) 
+		  {
 		  	$nextData = $this->nextAlbumData($nextUrl);
 		  	if(isset($nextData["paging"]["next"]))
 		  	{
@@ -351,27 +329,12 @@ class myfacebook extends CI_Controller {
 		  	} else {
 		  		$nextUrl = "";
 		  	}		  	
-
 		  	$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
-		  	
 		  }
 		  
 	    } catch (Exception $e) {
 	  	
 	    }
-	    /*
-	    $data['album'] = array();
-		$album = $this->facebook->request('get', '/'.$albumId.'?fields=photos.limit(50000){images},name');
-		if (!isset($album['error']))
-		{
-			$data['album']["name"] = $album["name"];
-			 
-			foreach($album["photos"]["data"] as $album)
-			{
-				$data["album"]["data"][] = array("source"=>$album["images"][0]["source"]);
-			}
-		}
-		*/
 	    return $data;
 	}
 
@@ -380,38 +343,16 @@ class myfacebook extends CI_Controller {
 		return $nextData;		
 	}
 
-	// ------------------------------------------------------------------------
-
-	
-	// ------------------------------------------------------------------------
-
-	/**
-	 * AJAX request method for positing to facebook feed
-	 */
-	public function post()
-	{
-		header('Content-Type: application/json');
-
-		$result = $this->facebook->request(
-			'post',
-			'/me/feed',
-			['message' => $this->input->post('message')]
-		);
-
-		echo json_encode($result);
-	}
-
-
 	private function downloadAlbum($albumId,$albumName,$source,$i=0)
 	{
 		try
 		{
 			$foldername = "facebook_".$this->session->userdata("uname")."_".$albumName."_".$albumId;
 			$path = "albums/".$this->session->userdata("userid")."/albums/".$foldername;
-			if (!file_exists($path)) {
+			if (!file_exists($path)) 
+			{
 				mkdir($path, 0777, true);
-			}
-			
+			}		
 			$parameters = explode("/",explode("?",$source)[0]);
 			$img = end($parameters);
 			$ext = explode(".",$img);
@@ -443,13 +384,6 @@ class myfacebook extends CI_Controller {
 					$data = $this->downloadAlbum($ab["id"]);
 				}
 			}
-
-			//testing ma time west ni karva mate
-			// if($i == 2)
-			// {
-			// 	break;
-			// }
-			// $i++;
 		}
 		
 		if ($albs == "all")
@@ -460,9 +394,7 @@ class myfacebook extends CI_Controller {
 		{
 			$data["foldername"] = $this->session->userdata("uname")."_Selected_albums";
 		}
-
 		$this->zipping($data);
-		
 	}
 
 	public function zipping($type="")
@@ -494,16 +426,13 @@ class myfacebook extends CI_Controller {
 		}
 		$zippath = "albums/".$this->session->userdata("userid")."/";
 		$this->zip->read_dir($zippath."albums/");
-	        $this->zip->archive($zippath.$foldername.".zip");
-	        // $this->zip->download('my_backup.zip');
-	        $this->zip->clear_data();
-        
+		$this->zip->archive($zippath.$foldername.".zip");
+		$this->zip->clear_data();        
 		$this->delete_directory("albums/".$this->session->userdata("userid")."/albums");
 		$data["status"] = "1";
 		$data["url"] = base_url()."albums/".$this->session->userdata("userid")."/".$foldername.".zip";
 		echo json_encode($data);
 	}
-
 
 	private function delete_directory($dirname) 
 	{
@@ -511,17 +440,25 @@ class myfacebook extends CI_Controller {
 		{
 	         if (is_dir($dirname))
 	         {
-		           $dir_handle = opendir($dirname);
-			     if (!$dir_handle)
-			          return false;
-			     while($file = readdir($dir_handle)) {
-			           if ($file != "." && $file != "..") {
-			                if (!is_dir($dirname."/".$file))
-			                     unlink($dirname."/".$file);
-			                else
-		                     	$this->delete_directory($dirname.'/'.$file);
-			           }
-			     }
+				$dir_handle = opendir($dirname);
+				if (!$dir_handle)
+				{
+					return false;
+				}
+				while($file = readdir($dir_handle)) 
+				{
+					if ($file != "." && $file != "..") 
+					{
+						if (!is_dir($dirname."/".$file))
+						{
+							 unlink($dirname."/".$file);
+						}
+						else
+						{
+							$this->delete_directory($dirname.'/'.$file);
+						}
+					}
+				}
 			     closedir($dir_handle);
 			     rmdir($dirname);
 			     return true;
@@ -538,22 +475,19 @@ class myfacebook extends CI_Controller {
 	}
 
 	public function downloadSingle()
-	{
-	
-	if($this->downloadAlbum($this->input->post("albumId"),$this->input->post("albumName"),$this->input->post("source"),$this->input->post("photono")))
-	{
-		$data["error"] = "";
-		$data["status"] = 1;
-	}
-	else
-	{
-		$data["status"] = 0;
-		$data["error"] = "Something wrong";
-	}
-	$data["picno"] = $this->input->post("photono");
-	
-	echo json_encode($data);
-		
+	{	
+		if($this->downloadAlbum($this->input->post("albumId"),$this->input->post("albumName"),$this->input->post("source"),$this->input->post("photono")))
+		{
+			$data["error"] = "";
+			$data["status"] = 1;
+		}
+		else
+		{
+			$data["status"] = 0;
+			$data["error"] = "Something wrong";
+		}
+		$data["picno"] = $this->input->post("photono");
+		echo json_encode($data);	
 	}
 
 	public function moveAlbum($albumId,$albumName)
@@ -593,19 +527,16 @@ class myfacebook extends CI_Controller {
 	        $this->google_drive->newFile($imgName, "", $mimeType, $ab["source"], $albumFolderId, "");
 			$i++;
 		}
-		//$data["message"] = "compleate";
 		echo "compleate";
 	}
 
 	public function moveMultiple($abls,$selected=null)
 	{
-		
 		$albums = $this->facebook->request('get', '/me?fields=albums{count,name}');
 		if($abls == "all" || $selected == null)
 		{
 			foreach($albums["albums"]["data"] as $ab)
-			{
-			
+			{	
 				if ($abls == "all" && $ab["count"] != 0)
 				{
 					$this->moveAlbum($ab["id"], $ab["name"]);
@@ -623,14 +554,12 @@ class myfacebook extends CI_Controller {
 				}
 			}	
 		}
-
 	}
 	
 	public function moveSingle()
 	{
 		$this->crontab->add_job('* * * * *', 'cronjob.php');
 		$this->setCronTask(array($this->input->post("albumId")));
-		//$this->moveAlbum($albumId,$albumName);
 	}
 
 	public function moveAll()
@@ -704,5 +633,5 @@ class myfacebook extends CI_Controller {
 	{
 		$this->load->view("policies");
 	}
-		
+	
 }
