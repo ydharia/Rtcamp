@@ -333,12 +333,10 @@ class myfacebook extends CI_Controller {
 				}		  	
 				$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
 			}
-		  
-	    }
+		}
 		catch (Exception $e)
-		{
-			
-	    }
+		{			
+		}
 	    return $data;
 	}
 
