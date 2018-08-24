@@ -286,7 +286,7 @@ class myfacebook extends CI_Controller {
 	public function album()
 	{			
 		$this->load->view('facebook/album', $this->getAllImage($_GET['album']));
-    }
+	}
     
     public function albumPlay()
 	{			
