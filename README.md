@@ -54,13 +54,13 @@ When user click on move album(s) then moving work is assigned to Cron job so use
 
 # Technologies
 
-## Platforms : PHP
+### Platforms : PHP
 
-## Framework : Codeignitor
+### Framework : Codeignitor
 
-## Scripting Language : JQuery, JQuery AJAX, JavaScript
+### Scripting Language : JQuery, JQuery AJAX, JavaScript
 
-## Library Used :
+### Library Used :
 
     Facebook PHP SDK 
     Google Drive API
