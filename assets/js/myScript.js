@@ -23,9 +23,6 @@ $(document).ready(function(){
         download('all',event);
     });
 
-   
-
-    
 });
 
 function sleep(ms) {
@@ -176,29 +173,6 @@ function download(type,e,albumId="")
    }
 }
 
-function downloadSelected()
-{
-    var selected_albums =  [];
-    $(".selectedAlbums").each(function () {
-        if ($(this).is(":checked")) {
-            selected_albums.push($(this).val());
-        }
-    });
-
-    $.ajax({
-        dataType:'json',
-        type:'post',
-        data:'selected='+selected_albums+'&albums=selected',
-        url:baseurl+'myfacebook/downloadall',
-        catch:false,
-        success:function(response)
-        {
-            console.log(response);
-            alert(response.status);
-        }
-    });
-}
-
 function moveAlbum(albumId,albumName,e)
 {
     e.preventDefault();
@@ -235,7 +209,6 @@ function moveAll()
 
 function moveSelected()
 {
-    
     var selected_albums =  [];
     $(".selectedAlbums").each(function () {
         if ($(this).is(":checked")) {
@@ -258,8 +231,6 @@ function moveSelected()
         }
     });
 }
-
-
 
 
 var total = (document.getElementById("sider").childElementCount*100);

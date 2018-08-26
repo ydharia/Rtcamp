@@ -25,7 +25,7 @@ class myfacebook extends CI_Controller {
 		{
 			$url_array = explode('?', 'https://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 			$url = $url_array[0];	
-			$config = array("client_id"=>"962527986048-fko0boarhk09sclfu0igldkgj1po0p8d.apps.googleusercontent.com","client_secret"=>"By-esciDrlc7omI-_pVmHZag","redirect_uri"=>$url);
+			$config = array("client_id"=>"CLIENT_ID","client_secret"=>"CLIENT_SECRET","redirect_uri"=>$url);
 			$this->load->library("google_drive",$config);
 		}
 		$this->setUserSession();
@@ -132,9 +132,7 @@ class myfacebook extends CI_Controller {
 			fclose($myfile);
 		}
 	}
-	
-	
-	
+
 	public function setUserSession()
 	{
 		if ($this->facebook->is_authenticated())
@@ -492,72 +490,6 @@ class myfacebook extends CI_Controller {
 		$data["picno"] = $this->input->post("photono");
 		echo json_encode($data);	
 	}
-
-	public function moveAlbum($albumId,$albumName)
-	{
-		$albumName = $albumName."_".$albumId;
-		$folderName = "facebook_".$this->session->userdata("uname")."_albums";
-		$folder = $this->findFolder($folderName);
-		if(empty($folder))
-		{
-			$folderId = $this->newDirectory($folderName);
-		}
-		else
-		{
-			$folderId = $folder[0]->id;
-		}
-
-		$albumFolder = $this->findFolder($albumName);
-		if(!empty($albumFolder))
-		{
-			$this->removeFolder($albumFolder[0]->id);
-		}
-		$albumFolderId = $this->newDirectory($albumName,$folderId);
-
-		$images = $this->getAllImage($albumId);
-		
-		$i=1;
-		foreach($images["album"]["data"] as $ab)
-		{
-		
-			$parameters = explode("/",explode("?",$ab["source"])[0]);
-			$img = end($parameters);
-			$ext = explode(".",$img);
-			$ext = end($ext);
-			
-			$imgName = $i.".".$ext;
-			$mimeType = "image/jpeg";
-			$this->google_drive->newFile($imgName, "", $mimeType, $ab["source"], $albumFolderId, "");
-			$i++;
-		}
-		echo "compleate";
-	}
-
-	public function moveMultiple($abls,$selected=null)
-	{
-		$albums = $this->facebook->request('get', '/me?fields=albums{count,name}');
-		if($abls == "all" || $selected == null)
-		{
-			foreach($albums["albums"]["data"] as $ab)
-			{	
-				if ($abls == "all" && $ab["count"] != 0)
-				{
-					$this->moveAlbum($ab["id"], $ab["name"]);
-				}
-			}
-		}
-		else
-		{
-			foreach($albums["albums"]["data"] as $ab)
-			{
-			
-				if(in_array($ab["id"], $selected) && $ab["count"] != 0)
-				{
-					$this->moveAlbum($ab["id"], $ab["name"]);	
-				}
-			}	
-		}
-	}
 	
 	public function moveSingle()
 	{
@@ -599,8 +531,6 @@ class myfacebook extends CI_Controller {
     public function findFolder($folder)
     {
         $filter = array("title='".$folder."'","mimeType='application/vnd.google-apps.folder'");
-        echo "<pre>";
-        print_r($this->google_drive->getFiles(null,$filter)["files"][0]->labels->trashed);
         if($this->google_drive->getFiles(null,$filter)["files"][0]->labels->trashed != 1)
         {
         	return $this->google_drive->getFiles(null,$filter)["files"];
