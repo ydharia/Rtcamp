@@ -12,7 +12,7 @@ Album's will be display with a thumbnail and name. whenever user click the Play 
 
 ## Facebook Album Download:
 
-=> Download Single Album
+### Download Single Album
 
 A 'Download icon' is Putting on Each Album thumbnail whenever the User click  on that button then in the background process all the photos of that album is Put on folder and create the zip of that Album with the name of Album name and Album id.
 
