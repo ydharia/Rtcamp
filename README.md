@@ -50,7 +50,9 @@ Using the checkbox user can select multiple Album and click the 'Drive Selected'
 
 * **How Google Drive Moving Work.**
 
-When user click on move album(s) then moving work is assigned to **_Cron job_** so user can logout or shutdown device without waiting for complete moving process of albums.
+When user click on move album(s) then new Cron job is added to server.
+moving work is assigned to **_Cron job_** so user can **logout or shutdown device without waiting for complete moving process of albums.**
+when all albums are moved to google drive then **_cron job_ is removed from server.**
 
 # Technologies
 
