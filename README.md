@@ -16,7 +16,7 @@ A checkbox is displayed in each album. when the user click the 'Selected Album D
 
 'Download All Albums' link also Available to the Top of Page.using that you can dowanload all the Album into zip.
 
-All the Time while Download Process is not Completing the Spinner is Loading Continuesly.
+All the Time while Download Process is not Completing the Progressbar show you current downloading photo of your album.
 
 Part 3:
 
@@ -25,3 +25,7 @@ A 'Move' Link is display on Each Album thumbnail and when the User click that li
 Using the checkbox user can select multiple Album and click the 'Move to Selected Album' then all the Selected Album move to the Google drive of the User.
 
 'Move All' link is Top of the Page. It can Move all the Album to the Google Drive.
+
+* How Google Drive Moving Work.
+
+When user click on move album(s) then moving work is assigned to Cron job so user can logout or shutdown device without waiting for complete moving process of albums.
