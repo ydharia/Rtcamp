@@ -16,11 +16,11 @@ Album's will be display with a thumbnail and name. whenever user click the Play 
 
 A 'Download icon' is Putting on Each Album thumbnail whenever the User click  on that button then in the background process all the photos of that album is Put on folder and create the zip of that Album with the name of Album name and Album id.
 
-=> Download Multiple Albums
+#### Download Multiple Albums
 
 A checkbox is displayed in each album. when the user click the 'Download Selected icon' then All the selected Album put on the Folder and creating the zip in background.
 
-=> Download All Albums
+#### Download All Albums
 
 'Download All icon' link also Available to dowanload all Album put on the Folder and creating the zip in background.
 
@@ -30,21 +30,21 @@ while Download Process is not Completing the Progressbar show you current downlo
 
 ## Facebook Albums To Google Drive :
 
-=> Google Login : 
+#### Google Login : 
 
 User Login to Google. Asking for permission of user profile, email and manage files and folder of google drive which is created by this application. Application retrieve all permission grant.
 
 If user is Sign into Google for the First Time for moving the album into the Google Drive. After that Google can not Take Any Permission for Moving the Album to the google drive.
 
-=> Move Single Album to Google Drive :
+#### Move Single Album to Google Drive :
 
 A 'Google icon' Link is display on Each Album thumbnail and when the User click that link the Album photos is move on the Google Drive.
 
-=> Move Selected albums to Google Drive :
+#### Move Selected albums to Google Drive :
 
 Using the checkbox user can select multiple Album and click the 'Drive Selected' then all the Selected Album move to the Google drive of the User.
 
-=> Move All Albums to Google Drive :
+#### Move All Albums to Google Drive :
 
 'Drive All' It can Move all the Albums to the Google Drive.
 
