@@ -52,15 +52,15 @@ Using the checkbox user can select multiple Album and click the 'Drive Selected'
 
 When user click on move album(s) then moving work is assigned to Cron job so user can logout or shutdown device without waiting for complete moving process of albums.
 
-========================================================================================================================================
+# Technologies
 
-Platforms : PHP
+## Platforms : PHP
 
-Framework : Codeignitor
+## Framework : Codeignitor
 
-Scripting Language : JQuery, JQuery AJAX, JavaScript
+## Scripting Language : JQuery, JQuery AJAX, JavaScript
 
-Library Used :
+## Library Used :
 
     Facebook PHP SDK 
     Google Drive API
