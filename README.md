@@ -48,6 +48,7 @@ Using the checkbox user can select multiple Album and click the 'Drive Selected'
 
 'Drive All' It can Move all the Albums to the Google Drive.
 
+
 * **How Google Drive Moving Work.**
 
 When user click on move album(s) then new Cron job is added to server.
