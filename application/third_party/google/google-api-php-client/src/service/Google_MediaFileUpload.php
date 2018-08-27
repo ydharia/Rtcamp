@@ -146,7 +146,9 @@ class Google_MediaFileUpload {
    * @visible For testing.
    */
   public static function processFileUpload($file, $mime) {
-	if ( ! $file) return array();
+	if ( ! $file) {
+		return array();
+	}
 	if (substr($file, 0, 1) != '@') {
 	  $file = '@'.$file;
 	}

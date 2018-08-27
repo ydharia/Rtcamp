@@ -173,12 +173,14 @@ class google_drive {
 			if ( ! empty($dirinfo->id)):
 				$sysdir = $this->Service->files->get($dirinfo->id);
 			endif;
-		else:
+		else {
+			:
 			// there was a problem - re-make the system directory
 			$params = array(
 				'q'=>"mimeType = 'application/vnd.google-apps.folder' and title = '".self::SYSDIR."'",
 				'maxResults'=>1
 			);
+		}
 			$gquery = $this->Service->files->listFiles($params);
 			$sysdir = $gquery->getItems();
 			// sysdir not found
@@ -431,8 +433,7 @@ class google_drive {
 		try
 		{
 			$createdFile = $this->Service->files->delete($folderId);
-		}
-		catch (Exception $ex)
+		} catch (Exception $ex)
 		{
 
 		}

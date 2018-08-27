@@ -141,12 +141,10 @@ Class Facebook
 		{
 			$response = $this->fb->{strtolower($method)}($endpoint, $params, $access_token);
 			return $response->getDecodedBody();
-		}
-		catch (FacebookResponseException $e)
+		} catch (FacebookResponseException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
-		}
-		catch (FacebookSDKException $e)
+		} catch (FacebookSDKException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
@@ -181,8 +179,7 @@ Class Facebook
 		{
 			$response = $this->fb->post($endpoint, $data, $access_token);
 			return $response->getDecodedBody();
-		}
-		catch (FacebookSDKException $e)
+		} catch (FacebookSDKException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
@@ -237,12 +234,10 @@ Class Facebook
 			}
 
 			return $data;
-		}
-		catch (FacebookResponseException $e)
+		} catch (FacebookResponseException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
-		}
-		catch (FacebookSDKException $e)
+		} catch (FacebookSDKException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}

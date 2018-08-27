@@ -509,8 +509,7 @@ class myfacebook extends CI_Controller {
 		if ($this->google_drive->getFiles(null, $filter)["files"][0]->labels->trashed != 1)
 		{
 			return $this->google_drive->getFiles(null, $filter)["files"];
-		}
-		else
+		} else
 		{
 			return null;
 		}
