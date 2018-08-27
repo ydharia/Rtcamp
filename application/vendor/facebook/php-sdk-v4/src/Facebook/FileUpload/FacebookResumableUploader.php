@@ -117,7 +117,7 @@ class FacebookResumableUploader
 			$response = $this->sendUploadRequest($endpoint, $params);
 		} catch (FacebookResponseException $e) {
 			$preException = $e->getPrevious();
-			if ($allowToThrow || !$preException instanceof FacebookResumableUploadException) {
+			if ($allowToThrow || ! $preException instanceof FacebookResumableUploadException) {
 				throw $e;
 			}
 

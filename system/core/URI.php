@@ -554,8 +554,7 @@ class CI_URI {
 		if ($where === 'trailing')
 		{
 			$leading = '';
-		}
-		elseif ($where === 'leading')
+		} elseif ($where === 'leading')
 		{
 			$trailing = '';
 		}

@@ -63,7 +63,7 @@ class Google_HttpStreamIO extends Google_IO {
 	// First, check to see if we have a valid cached version.
 	$cached = $this->getCachedRequest($request);
 	if ($cached !== false) {
-	  if (!$this->checkMustRevaliadateCachedRequest($cached, $request)) {
+	  if ( ! $this->checkMustRevaliadateCachedRequest($cached, $request)) {
 		return $cached;
 	  }
 	}
@@ -84,7 +84,7 @@ class Google_HttpStreamIO extends Google_IO {
 	$requestHeaders = $request->getRequestHeaders();
 	if ($requestHeaders && is_array($requestHeaders)) {
 	  $headers = "";
-	  foreach($requestHeaders as $k => $v) {
+	  foreach ($requestHeaders as $k => $v) {
 		$headers .= "$k: $v\n";
 	  }
 	  $requestHttpContext["header"] = $headers;
@@ -96,8 +96,8 @@ class Google_HttpStreamIO extends Google_IO {
 	$requestSslContext = array_key_exists('ssl', $default_options) ?
 		$default_options['ssl'] : array();
 
-	if (!array_key_exists("cafile", $requestSslContext)) {
-	  $requestSslContext["cafile"] = dirname(__FILE__) . '/cacerts.pem';
+	if ( ! array_key_exists("cafile", $requestSslContext)) {
+	  $requestSslContext["cafile"] = dirname(__FILE__).'/cacerts.pem';
 	}
 
 	$options = array("http" => array_merge(self::$DEFAULT_HTTP_CONTEXT,

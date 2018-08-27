@@ -44,7 +44,7 @@ require_once __DIR__.'/polyfills.php';
  *
  * @return void
  */
-spl_autoload_register(function ($class) {
+spl_autoload_register(function($class) {
 	// project-specific namespace prefix
 	$prefix = 'Facebook\\';
 
@@ -57,7 +57,7 @@ spl_autoload_register(function ($class) {
 		$customBaseDir = FACEBOOK_SDK_SRC_DIR;
 	}
 	// base directory for the namespace prefix
-	$baseDir = $customBaseDir ?: __DIR__ . '/';
+	$baseDir = $customBaseDir ?: __DIR__.'/';
 
 	// does the class use the namespace prefix?
 	$len = strlen($prefix);
@@ -72,7 +72,7 @@ spl_autoload_register(function ($class) {
 	// replace the namespace prefix with the base directory, replace namespace
 	// separators with directory separators in the relative class name, append
 	// with .php
-	$file = rtrim($baseDir, '/') . '/' . str_replace('\\', '/', $relativeClass) . '.php';
+	$file = rtrim($baseDir, '/').'/'.str_replace('\\', '/', $relativeClass).'.php';
 
 	// if the file exists, require it
 	if (file_exists($file)) {

@@ -77,7 +77,7 @@ abstract class FacebookSignedRequestFromInputHelper
 	{
 		$rawSignedRequest = $rawSignedRequest ?: $this->getRawSignedRequest();
 
-		if (!$rawSignedRequest) {
+		if ( ! $rawSignedRequest) {
 			return;
 		}
 
@@ -97,7 +97,7 @@ abstract class FacebookSignedRequestFromInputHelper
 			$code = $this->signedRequest->get('code');
 			$accessToken = $this->signedRequest->get('oauth_token');
 
-			if ($code && !$accessToken) {
+			if ($code && ! $accessToken) {
 				return $this->oAuth2Client->getAccessTokenFromCode($code);
 			}
 
@@ -157,8 +157,8 @@ abstract class FacebookSignedRequestFromInputHelper
 	 */
 	public function getRawSignedRequestFromCookie()
 	{
-		if (isset($_COOKIE['fbsr_' . $this->app->getId()])) {
-			return $_COOKIE['fbsr_' . $this->app->getId()];
+		if (isset($_COOKIE['fbsr_'.$this->app->getId()])) {
+			return $_COOKIE['fbsr_'.$this->app->getId()];
 		}
 
 		return null;

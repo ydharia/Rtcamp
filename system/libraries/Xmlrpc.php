@@ -1406,30 +1406,25 @@ class XML_RPC_Message extends CI_Xmlrpc
 				if ($name === 'STRING')
 				{
 					$this->xh[$the_parser]['value'] = $this->xh[$the_parser]['ac'];
-				}
-				elseif ($name === 'DATETIME.ISO8601')
+				} elseif ($name === 'DATETIME.ISO8601')
 				{
 					$this->xh[$the_parser]['vt'] = $this->xmlrpcDateTime;
 					$this->xh[$the_parser]['value'] = $this->xh[$the_parser]['ac'];
-				}
-				elseif ($name === 'BASE64')
+				} elseif ($name === 'BASE64')
 				{
 					$this->xh[$the_parser]['value'] = base64_decode($this->xh[$the_parser]['ac']);
-				}
-				elseif ($name === 'BOOLEAN')
+				} elseif ($name === 'BOOLEAN')
 				{
 					// Translated BOOLEAN values to TRUE AND FALSE
 					$this->xh[$the_parser]['value'] = (bool) $this->xh[$the_parser]['ac'];
-				}
-				elseif ($name == 'DOUBLE')
+				} elseif ($name == 'DOUBLE')
 				{
 					// we have a DOUBLE
 					// we must check that only 0123456789-.<space> are characters here
 					$this->xh[$the_parser]['value'] = preg_match('/^[+-]?[eE0-9\t \.]+$/', $this->xh[$the_parser]['ac'])
 										? (float) $this->xh[$the_parser]['ac']
 										: 'ERROR_NON_NUMERIC_FOUND';
-				}
-				else
+				} else
 				{
 					// we have an I4/INT
 					// we must check that only 0123456789-<space> are characters here

@@ -39,9 +39,9 @@ class RandomBytesPseudoRandomStringGenerator implements PseudoRandomStringGenera
 	 */
 	public function __construct()
 	{
-		if (!function_exists('random_bytes')) {
+		if ( ! function_exists('random_bytes')) {
 			throw new FacebookSDKException(
-				static::ERROR_MESSAGE .
+				static::ERROR_MESSAGE.
 				'The function random_bytes() does not exist.'
 			);
 		}

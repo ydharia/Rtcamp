@@ -33,18 +33,18 @@
  * 
  * **/
 define('APP_NAME', 'your_app_name');
-if(!defined('DS')) {
+if ( ! defined('DS')) {
 	define('DS', DIRECTORY_SEPARATOR);
 }
 
-require_once APPPATH .  'third_party' . DS . 'google' . DS . 'google-api-php-client' . DS . 'src' . DS . 'Google_Client.php';
-require_once APPPATH . 'third_party' . DS . 'google' . DS . 'google-api-php-client' . DS . 'src' . DS . 'contrib' . DS . 'Google_Oauth2Service.php';
-require_once APPPATH . 'third_party' . DS . 'google' . DS . 'google-api-php-client' . DS . 'src' . DS . 'contrib' . DS . 'Google_DriveService.php';
+require_once APPPATH.'third_party'.DS.'google'.DS.'google-api-php-client'.DS.'src'.DS.'Google_Client.php';
+require_once APPPATH.'third_party'.DS.'google'.DS.'google-api-php-client'.DS.'src'.DS.'contrib'.DS.'Google_Oauth2Service.php';
+require_once APPPATH.'third_party'.DS.'google'.DS.'google-api-php-client'.DS.'src'.DS.'contrib'.DS.'Google_DriveService.php';
 
 class GoogleDrive2Exception extends Exception {
 	public function __construct($message, $code, $previous) {
 		parent::__construct($message, $code, $previous);
-		die("GoogleDrive2 Library Exception:: " . $message);
+		die("GoogleDrive2 Library Exception:: ".$message);
 	}
 }
 
@@ -69,7 +69,7 @@ class google_drive {
 	var $Ready = FALSE;
     
 	public function __construct($config = ['client_id'=>null, 'client_secret'=>null, 'redirect_uri'=>null]) {
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 		//print_r($config);
 		$this->Scopes = [
 				'https://www.googleapis.com/auth/drive.readonly',
@@ -77,15 +77,15 @@ class google_drive {
 		'https://www.googleapis.com/auth/userinfo.profile',
 		'https://www.googleapis.com/auth/userinfo.email'
 		];
-		$required_config=['client_id','client_secret','redirect_uri'];
+		$required_config = ['client_id', 'client_secret', 'redirect_uri'];
 		// throw error if config is not passed with google console app parameters
-		foreach($required_config as $key):
-			if(empty($config[$key])):
+		foreach ($required_config as $key):
+			if (empty($config[$key])):
 				throw new GoogleDrive2Exception("config key `{$key}` is required");
 			endif;
 		endforeach;
         
-		$config = (object)$config;
+		$config = (object) $config;
 		$this->Client = new Google_Client();
 		$this->Client->setClientId($config->client_id);
 		$this->Client->setClientSecret($config->client_secret);
@@ -97,27 +97,27 @@ class google_drive {
 		$this->OAuth2Service = new Google_Oauth2Service($this->Client);
         
 		$this->Tokens = $this->CI->session->userdata(self::TOKEN_KEY);
-		if($this->Tokens) {
+		if ($this->Tokens) {
 			$this->Client->setAccessToken($this->Tokens);
-		} else if($code = $this->CI->input->get('code',TRUE)) {
+		} else if ($code = $this->CI->input->get('code', TRUE)) {
 			$this->Client->authenticate($code);
 			$this->Tokens = $this->Client->getAccessToken();
 		} else {
 			// no code, and no available token
-			if(!empty($config->redirect_uri)) {
+			if ( ! empty($config->redirect_uri)) {
 				// redirect for authorization
 				redirect($this->Client->createAuthUrl());
 			}
 		}
 		// check to make sure access token is not expired
-		if($this->Client->isAccessTokenExpired() and $this->Tokens) {
+		if ($this->Client->isAccessTokenExpired() and $this->Tokens) {
 			$tokens = json_decode($this->Tokens);
 			$refreshToken = $tokens->refresh_token;
 			$this->Client->refreshToken($refreshToken);
 			$this->Tokens = $this->Client->getAccessToken();
 		}
 		// save access token
-		if(!$this->Client->isAccessTokenExpired()) {
+		if ( ! $this->Client->isAccessTokenExpired()) {
 			$this->CI->session->set_userdata(self::TOKEN_KEY, $this->Tokens);
 			$this->Ready = true;
 		} else {
@@ -126,7 +126,7 @@ class google_drive {
 	}
     
 	public function getUser() {
-		if(!$this->Client) {
+		if ( ! $this->Client) {
 			throw new GoogleDrive2Exception("You MUST initialize the Google_Client before attempting getUser()");
 		}
 		return $this->OAuth2Service->userinfo->get();
@@ -136,9 +136,9 @@ class google_drive {
 		$this->CI->session->unset_userdata(self::TOKEN_KEY);
 	}
     
-	public function getFilePermissions($allow=self::PERMISSION_PRIVATE) {
+	public function getFilePermissions($allow = self::PERMISSION_PRIVATE) {
 		$permission = new Google_Permission();
-		switch($allow):
+		switch ($allow):
 			case self::PERMISSION_PRIVATE:
 				$permission->setValue('me');
 				$permission->setType('default');
@@ -155,12 +155,12 @@ class google_drive {
 	}
     
 	public function getSystemDirectoryInfo() {
-		$dirinfo = $this->CI->session->userdata(APP_NAME . "." . self::SYSDIR);
+		$dirinfo = $this->CI->session->userdata(APP_NAME.".".self::SYSDIR);
 		return json_decode($dirinfo);
 	}
     
 	public function setSystemDirectoryInfo($sysdirinfo) {
-		$this->CI->session->set_userdata(APP_NAME . "." . self::SYSDIR);
+		$this->CI->session->set_userdata(APP_NAME.".".self::SYSDIR);
 	}
     
 	public function isReady() {
@@ -169,25 +169,27 @@ class google_drive {
     
 	public function getSystemDirectory() {
 		$dirinfo = $this->getSystemDirectoryInfo();
-		if(!empty($dirinfo)):
-			if(!empty($dirinfo->id)):
+		if ( ! empty($dirinfo)):
+			if ( ! empty($dirinfo->id)):
 				$sysdir = $this->Service->files->get($dirinfo->id);
 			endif;
 		else:
 			// there was a problem - re-make the system directory
 			$params = array(
-				'q'=>"mimeType = 'application/vnd.google-apps.folder' and title = '" . self::SYSDIR . "'",
+				'q'=>"mimeType = 'application/vnd.google-apps.folder' and title = '".self::SYSDIR."'",
 				'maxResults'=>1
 			);
 			$gquery = $this->Service->files->listFiles($params);
 			$sysdir = $gquery->getItems();
 			// sysdir not found
-			if(empty($sysdir)):
+			if (empty($sysdir)):
 				// create system directory
 				$sysdir = $this->newDirectory(self::SYSDIR, null, self::PERMISSION_PUBLIC);
 				$this->setSystemDirectoryInfo($sysdir);
-			else:
+			else {
+				:
 				$sysdir = $sysdir[0];
+			}
 			endif;
 		endif;
 		// return the system directory
@@ -195,10 +197,10 @@ class google_drive {
 	}
     
 	public function getFileUrl(\Google_DriveFile $file, $parentId) {
-		return "https://googledrive.com/host/{$parentId}/" . $file->title;
+		return "https://googledrive.com/host/{$parentId}/".$file->title;
 	}
     
-	public function uploadFile($path, $title, $parentId=null, $allow=self::PERMISSION_PRIVATE) {
+	public function uploadFile($path, $title, $parentId = null, $allow = self::PERMISSION_PRIVATE) {
 		/** @TODO Build in re-try parameters **/
 		$newFile = new Google_DriveFile();
 		if ($parentId != null) {
@@ -207,7 +209,7 @@ class google_drive {
 		   $newFile->setParents(array($parent));
 		}
 		$newFile->setTitle($title);
-		$newFile->setDescription(APP_NAME . " file uploaded " . gmdate("jS F, Y H:i A") . " GMT");
+		$newFile->setDescription(APP_NAME." file uploaded ".gmdate("jS F, Y H:i A")." GMT");
 		$newFile->setMimeType(mime_content_type($path));
         
 		$permission = $this->getFilePermissions($allow);
@@ -216,13 +218,13 @@ class google_drive {
 			'mimeType'=>  mime_content_type($path)
 		));
 		$fileId = $remoteNewFile->getId();
-		if(!empty($fileId)):
+		if ( ! empty($fileId)):
 			$this->Service->permissions->insert($fileId, $permission);
 			return $remoteNewFile;
 		endif;
 	}
     
-	public function copyFile($originFileId, $copyTitle, $parentId=null, $allow=self::PERMISSION_PRIVATE) {
+	public function copyFile($originFileId, $copyTitle, $parentId = null, $allow = self::PERMISSION_PRIVATE) {
 		$copiedFile = new Google_DriveFile();
 		$copiedFile->setTitle($copyTitle);
 		try {
@@ -239,13 +241,13 @@ class google_drive {
 			return $newFile;
           
 		} catch (Exception $e) {
-		  print "An error occurred: " . $e->getMessage();
+		  print "An error occurred: ".$e->getMessage();
 		}
 		return NULL;
 	}
     
-	public function newFile($title, $description, $mimeType, $filename, $parentId=null, $allow=self::PERMISSION_PRIVATE) {
-		if(!$this->isReady()):
+	public function newFile($title, $description, $mimeType, $filename, $parentId = null, $allow = self::PERMISSION_PRIVATE) {
+		if ( ! $this->isReady()):
 			throw new Exception("Google client is not initialized");
 		endif;
         
@@ -270,7 +272,7 @@ class google_drive {
 		   ));
 
 			$permission = new Google_Permission();
-			switch($allow):
+			switch ($allow):
 				case self::PERMISSION_PRIVATE:
 					$permission->setValue('me');
 					$permission->setType('default');
@@ -292,16 +294,16 @@ class google_drive {
 		   return $createdFile;
            
 		 } catch (Exception $e) {
-			throw new Exception("An error occurred: " . $e->getMessage());
+			throw new Exception("An error occurred: ".$e->getMessage());
 		 }
 	}
     
-	public function newDirectory($folderName, $parentId=null, $allow=self::PERMISSION_PRIVATE) {
+	public function newDirectory($folderName, $parentId = null, $allow = self::PERMISSION_PRIVATE) {
 		$file = new Google_DriveFile();
 		$file->setTitle($folderName);
 		$file->setMimeType('application/vnd.google-apps.folder');
         
-		if(!$this->isReady()):
+		if ( ! $this->isReady()):
 			throw new Exception("Google client is not initialized");
 		endif;
         
@@ -317,7 +319,7 @@ class google_drive {
 		));
 		
 		$permission = new Google_Permission();
-		switch($allow):
+		switch ($allow):
 			case self::PERMISSION_PRIVATE:
 				$permission->setValue('me');
 				$permission->setType('default');
@@ -336,9 +338,9 @@ class google_drive {
 		return $createdFile;
 	}
     
-	public function getFiles($pageToken=null, $filters=null) {
+	public function getFiles($pageToken = null, $filters = null) {
 		try {
-			if(!$this->isReady()):
+			if ( ! $this->isReady()):
 				throw new Exception("Google client is not initialized");
 			endif;
         
@@ -347,14 +349,16 @@ class google_drive {
             
 			try {
                 
-				if(!empty($filters)):
+				if ( ! empty($filters)):
 					$where = "";
                     
-					foreach($filters as $i=>$filter):
-						if($i>0):
+					foreach ($filters as $i=>$filter):
+						if ($i > 0):
 							$where .= " and {$filter}";
-						else:    
+						else {
+							:    
 							$where .= $filter;
+						}
 						endif;
 					endforeach;
                     
@@ -362,15 +366,17 @@ class google_drive {
 						'q'=>$where,
 						'maxResults'=>50
 					);
-				else:
+				else {
+					:
 					$parameters = array(
 						// 'q'=>"mimeType != 'application/vnd.google-apps.folder' and mimeType = 'image/gif' and mimeType = 'image/jpeg' and mimeType = 'image/png'",
 						'q'=>"mimeType != 'application/vnd.google-apps.folder'",
 						'maxResults'=>100
 					);
+				}
 				endif;
                 
-				if($pageToken):
+				if ($pageToken):
 					$parameters['pageToken'] = $pageToken;
 				endif;
                 
@@ -426,7 +432,7 @@ class google_drive {
 		{
 			$createdFile = $this->Service->files->delete($folderId);
 		}
-		catch(Exception $ex)
+		catch (Exception $ex)
 		{
 
 		}

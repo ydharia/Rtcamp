@@ -67,7 +67,7 @@ class Google_ServiceResource {
    * @throws Google_Exception
    */
   public function __call($name, $arguments) {
-	if (! isset($this->methods[$name])) {
+	if ( ! isset($this->methods[$name])) {
 	  throw new Google_Exception("Unknown function: {$this->serviceName}->{$this->resourceName}->{$name}()");
 	}
 	$method = $this->methods[$name];
@@ -82,7 +82,7 @@ class Google_ServiceResource {
 
 	  // Some APIs require the postBody to be set under the data key.
 	  if (is_array($parameters['postBody']) && 'latitude' == $this->serviceName) {
-		if (!isset($parameters['postBody']['data'])) {
+		if ( ! isset($parameters['postBody']['data'])) {
 		  $rawBody = $parameters['postBody'];
 		  unset($parameters['postBody']);
 		  $parameters['postBody']['data'] = $rawBody;
@@ -101,7 +101,7 @@ class Google_ServiceResource {
 	  }
 	}
 
-	if (!isset($method['parameters'])) {
+	if ( ! isset($method['parameters'])) {
 	  $method['parameters'] = array();
 	}
     
@@ -128,12 +128,12 @@ class Google_ServiceResource {
 	}
 
 	// Discovery v1.0 puts the canonical method id under the 'id' field.
-	if (! isset($method['id'])) {
+	if ( ! isset($method['id'])) {
 	  $method['id'] = $method['rpcMethod'];
 	}
 
 	// Discovery v1.0 puts the canonical path under the 'path' field.
-	if (! isset($method['path'])) {
+	if ( ! isset($method['path'])) {
 	  $method['path'] = $method['restPath'];
 	}
 
@@ -144,7 +144,7 @@ class Google_ServiceResource {
 	if (isset($method['mediaUpload'])) {
 	  $media = Google_MediaFileUpload::process($postBody, $parameters);
 	  if ($media) {
-		$contentType = isset($media['content-type']) ? $media['content-type']: null;
+		$contentType = isset($media['content-type']) ? $media['content-type'] : null;
 		$postBody = isset($media['postBody']) ? $media['postBody'] : null;
 		$servicePath = $method['mediaUpload']['protocols']['simple']['path'];
 		$method['path'] = '';
@@ -196,8 +196,7 @@ class Google_ServiceResource {
 	foreach ($o as $k => $v) {
 	  if ($v === null || strstr($k, "\0*\0__")) {
 		unset($o[$k]);
-	  }
-	  elseif (is_object($v) || is_array($v)) {
+	  } elseif (is_object($v) || is_array($v)) {
 		$this->stripNull($o[$k]);
 	  }
 	}

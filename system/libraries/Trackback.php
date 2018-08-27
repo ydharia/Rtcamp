@@ -399,8 +399,7 @@ class CI_Trackback {
 
 			$tb_array = explode('=', $tb_end);
 			$tb_id = $tb_array[count($tb_array) - 1];
-		}
-		else
+		} else
 		{
 			$url = rtrim($url, '/');
 

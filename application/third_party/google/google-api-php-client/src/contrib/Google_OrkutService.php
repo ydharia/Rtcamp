@@ -913,7 +913,7 @@ class Google_Acl extends Google_Model {
   public $items;
   public $kind;
   public $totalParticipants;
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
@@ -926,13 +926,13 @@ class Google_Acl extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setTotalParticipants( $totalParticipants) {
+  public function setTotalParticipants($totalParticipants) {
 	$this->totalParticipants = $totalParticipants;
   }
   public function getTotalParticipants() {
@@ -943,13 +943,13 @@ class Google_Acl extends Google_Model {
 class Google_AclItems extends Google_Model {
   public $id;
   public $type;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -988,13 +988,13 @@ class Google_Activity extends Google_Model {
   public function getActor() {
 	return $this->actor;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1013,25 +1013,25 @@ class Google_Activity extends Google_Model {
   public function getObject() {
 	return $this->object;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
 	return $this->published;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
 	return $this->updated;
   }
-  public function setVerb( $verb) {
+  public function setVerb($verb) {
 	$this->verb = $verb;
   }
   public function getVerb() {
@@ -1052,13 +1052,13 @@ class Google_ActivityList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1075,7 +1075,7 @@ class Google_ActivityObject extends Google_Model {
   protected $__repliesType = 'Google_ActivityObjectReplies';
   protected $__repliesDataType = '';
   public $replies;
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
@@ -1088,7 +1088,7 @@ class Google_ActivityObject extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setObjectType( $objectType) {
+  public function setObjectType($objectType) {
 	$this->objectType = $objectType;
   }
   public function getObjectType() {
@@ -1115,13 +1115,13 @@ class Google_ActivityObjectReplies extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
 	return $this->totalItems;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1139,55 +1139,55 @@ class Google_Badge extends Google_Model {
   public $sponsorLogo;
   public $sponsorName;
   public $sponsorUrl;
-  public function setBadgeLargeLogo( $badgeLargeLogo) {
+  public function setBadgeLargeLogo($badgeLargeLogo) {
 	$this->badgeLargeLogo = $badgeLargeLogo;
   }
   public function getBadgeLargeLogo() {
 	return $this->badgeLargeLogo;
   }
-  public function setBadgeSmallLogo( $badgeSmallLogo) {
+  public function setBadgeSmallLogo($badgeSmallLogo) {
 	$this->badgeSmallLogo = $badgeSmallLogo;
   }
   public function getBadgeSmallLogo() {
 	return $this->badgeSmallLogo;
   }
-  public function setCaption( $caption) {
+  public function setCaption($caption) {
 	$this->caption = $caption;
   }
   public function getCaption() {
 	return $this->caption;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setSponsorLogo( $sponsorLogo) {
+  public function setSponsorLogo($sponsorLogo) {
 	$this->sponsorLogo = $sponsorLogo;
   }
   public function getSponsorLogo() {
 	return $this->sponsorLogo;
   }
-  public function setSponsorName( $sponsorName) {
+  public function setSponsorName($sponsorName) {
 	$this->sponsorName = $sponsorName;
   }
   public function getSponsorName() {
 	return $this->sponsorName;
   }
-  public function setSponsorUrl( $sponsorUrl) {
+  public function setSponsorUrl($sponsorUrl) {
 	$this->sponsorUrl = $sponsorUrl;
   }
   public function getSponsorUrl() {
@@ -1207,7 +1207,7 @@ class Google_BadgeList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1235,13 +1235,13 @@ class Google_Comment extends Google_Model {
   public function getActor() {
 	return $this->actor;
   }
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1253,7 +1253,7 @@ class Google_Comment extends Google_Model {
   public function getInReplyTo() {
 	return $this->inReplyTo;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1266,7 +1266,7 @@ class Google_Comment extends Google_Model {
   public function getLinks() {
 	return $this->links;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
@@ -1279,25 +1279,25 @@ class Google_CommentInReplyTo extends Google_Model {
   public $ref;
   public $rel;
   public $type;
-  public function setHref( $href) {
+  public function setHref($href) {
 	$this->href = $href;
   }
   public function getHref() {
 	return $this->href;
   }
-  public function setRef( $ref) {
+  public function setRef($ref) {
 	$this->ref = $ref;
   }
   public function getRef() {
 	return $this->ref;
   }
-  public function setRel( $rel) {
+  public function setRel($rel) {
 	$this->rel = $rel;
   }
   public function getRel() {
 	return $this->rel;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1319,19 +1319,19 @@ class Google_CommentList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPreviousPageToken( $previousPageToken) {
+  public function setPreviousPageToken($previousPageToken) {
 	$this->previousPageToken = $previousPageToken;
   }
   public function getPreviousPageToken() {
@@ -1362,7 +1362,7 @@ class Google_Community extends Google_Model {
   protected $__ownerDataType = '';
   public $owner;
   public $photo_url;
-  public function setCategory( $category) {
+  public function setCategory($category) {
 	$this->category = $category;
   }
   public function getCategory() {
@@ -1375,31 +1375,31 @@ class Google_Community extends Google_Model {
   public function getCo_owners() {
 	return $this->co_owners;
   }
-  public function setCreation_date( $creation_date) {
+  public function setCreation_date($creation_date) {
 	$this->creation_date = $creation_date;
   }
   public function getCreation_date() {
 	return $this->creation_date;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLanguage( $language) {
+  public function setLanguage($language) {
 	$this->language = $language;
   }
   public function getLanguage() {
@@ -1412,13 +1412,13 @@ class Google_Community extends Google_Model {
   public function getLinks() {
 	return $this->links;
   }
-  public function setLocation( $location) {
+  public function setLocation($location) {
 	$this->location = $location;
   }
   public function getLocation() {
 	return $this->location;
   }
-  public function setMember_count( $member_count) {
+  public function setMember_count($member_count) {
 	$this->member_count = $member_count;
   }
   public function getMember_count() {
@@ -1431,7 +1431,7 @@ class Google_Community extends Google_Model {
   public function getModerators() {
 	return $this->moderators;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -1443,7 +1443,7 @@ class Google_Community extends Google_Model {
   public function getOwner() {
 	return $this->owner;
   }
-  public function setPhoto_url( $photo_url) {
+  public function setPhoto_url($photo_url) {
 	$this->photo_url = $photo_url;
   }
   public function getPhoto_url() {
@@ -1463,7 +1463,7 @@ class Google_CommunityList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1485,7 +1485,7 @@ class Google_CommunityMembers extends Google_Model {
   public function getCommunityMembershipStatus() {
 	return $this->communityMembershipStatus;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1508,7 +1508,7 @@ class Google_CommunityMembersList extends Google_Model {
   public $lastPageToken;
   public $nextPageToken;
   public $prevPageToken;
-  public function setFirstPageToken( $firstPageToken) {
+  public function setFirstPageToken($firstPageToken) {
 	$this->firstPageToken = $firstPageToken;
   }
   public function getFirstPageToken() {
@@ -1521,25 +1521,25 @@ class Google_CommunityMembersList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastPageToken( $lastPageToken) {
+  public function setLastPageToken($lastPageToken) {
 	$this->lastPageToken = $lastPageToken;
   }
   public function getLastPageToken() {
 	return $this->lastPageToken;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -1559,67 +1559,67 @@ class Google_CommunityMembershipStatus extends Google_Model {
   public $isTakebackAvailable;
   public $kind;
   public $status;
-  public function setCanCreatePoll( $canCreatePoll) {
+  public function setCanCreatePoll($canCreatePoll) {
 	$this->canCreatePoll = $canCreatePoll;
   }
   public function getCanCreatePoll() {
 	return $this->canCreatePoll;
   }
-  public function setCanCreateTopic( $canCreateTopic) {
+  public function setCanCreateTopic($canCreateTopic) {
 	$this->canCreateTopic = $canCreateTopic;
   }
   public function getCanCreateTopic() {
 	return $this->canCreateTopic;
   }
-  public function setCanShout( $canShout) {
+  public function setCanShout($canShout) {
 	$this->canShout = $canShout;
   }
   public function getCanShout() {
 	return $this->canShout;
   }
-  public function setIsCoOwner( $isCoOwner) {
+  public function setIsCoOwner($isCoOwner) {
 	$this->isCoOwner = $isCoOwner;
   }
   public function getIsCoOwner() {
 	return $this->isCoOwner;
   }
-  public function setIsFollowing( $isFollowing) {
+  public function setIsFollowing($isFollowing) {
 	$this->isFollowing = $isFollowing;
   }
   public function getIsFollowing() {
 	return $this->isFollowing;
   }
-  public function setIsModerator( $isModerator) {
+  public function setIsModerator($isModerator) {
 	$this->isModerator = $isModerator;
   }
   public function getIsModerator() {
 	return $this->isModerator;
   }
-  public function setIsOwner( $isOwner) {
+  public function setIsOwner($isOwner) {
 	$this->isOwner = $isOwner;
   }
   public function getIsOwner() {
 	return $this->isOwner;
   }
-  public function setIsRestoreAvailable( $isRestoreAvailable) {
+  public function setIsRestoreAvailable($isRestoreAvailable) {
 	$this->isRestoreAvailable = $isRestoreAvailable;
   }
   public function getIsRestoreAvailable() {
 	return $this->isRestoreAvailable;
   }
-  public function setIsTakebackAvailable( $isTakebackAvailable) {
+  public function setIsTakebackAvailable($isTakebackAvailable) {
 	$this->isTakebackAvailable = $isTakebackAvailable;
   }
   public function getIsTakebackAvailable() {
 	return $this->isTakebackAvailable;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -1640,7 +1640,7 @@ class Google_CommunityMessage extends Google_Model {
   protected $__linksDataType = 'array';
   public $links;
   public $subject;
-  public function setAddedDate( $addedDate) {
+  public function setAddedDate($addedDate) {
 	$this->addedDate = $addedDate;
   }
   public function getAddedDate() {
@@ -1652,25 +1652,25 @@ class Google_CommunityMessage extends Google_Model {
   public function getAuthor() {
 	return $this->author;
   }
-  public function setBody( $body) {
+  public function setBody($body) {
 	$this->body = $body;
   }
   public function getBody() {
 	return $this->body;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setIsSpam( $isSpam) {
+  public function setIsSpam($isSpam) {
 	$this->isSpam = $isSpam;
   }
   public function getIsSpam() {
 	return $this->isSpam;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1683,7 +1683,7 @@ class Google_CommunityMessage extends Google_Model {
   public function getLinks() {
 	return $this->links;
   }
-  public function setSubject( $subject) {
+  public function setSubject($subject) {
 	$this->subject = $subject;
   }
   public function getSubject() {
@@ -1700,7 +1700,7 @@ class Google_CommunityMessageList extends Google_Model {
   public $lastPageToken;
   public $nextPageToken;
   public $prevPageToken;
-  public function setFirstPageToken( $firstPageToken) {
+  public function setFirstPageToken($firstPageToken) {
 	$this->firstPageToken = $firstPageToken;
   }
   public function getFirstPageToken() {
@@ -1713,25 +1713,25 @@ class Google_CommunityMessageList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastPageToken( $lastPageToken) {
+  public function setLastPageToken($lastPageToken) {
 	$this->lastPageToken = $lastPageToken;
   }
   public function getLastPageToken() {
 	return $this->lastPageToken;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -1776,37 +1776,37 @@ class Google_CommunityPoll extends Google_Model {
   public function getAuthor() {
 	return $this->author;
   }
-  public function setCommunityId( $communityId) {
+  public function setCommunityId($communityId) {
 	$this->communityId = $communityId;
   }
   public function getCommunityId() {
 	return $this->communityId;
   }
-  public function setCreationTime( $creationTime) {
+  public function setCreationTime($creationTime) {
 	$this->creationTime = $creationTime;
   }
   public function getCreationTime() {
 	return $this->creationTime;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setEndingTime( $endingTime) {
+  public function setEndingTime($endingTime) {
 	$this->endingTime = $endingTime;
   }
   public function getEndingTime() {
 	return $this->endingTime;
   }
-  public function setHasVoted( $hasVoted) {
+  public function setHasVoted($hasVoted) {
 	$this->hasVoted = $hasVoted;
   }
   public function getHasVoted() {
 	return $this->hasVoted;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1818,55 +1818,55 @@ class Google_CommunityPoll extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setIsClosed( $isClosed) {
+  public function setIsClosed($isClosed) {
 	$this->isClosed = $isClosed;
   }
   public function getIsClosed() {
 	return $this->isClosed;
   }
-  public function setIsMultipleAnswers( $isMultipleAnswers) {
+  public function setIsMultipleAnswers($isMultipleAnswers) {
 	$this->isMultipleAnswers = $isMultipleAnswers;
   }
   public function getIsMultipleAnswers() {
 	return $this->isMultipleAnswers;
   }
-  public function setIsOpenForVoting( $isOpenForVoting) {
+  public function setIsOpenForVoting($isOpenForVoting) {
 	$this->isOpenForVoting = $isOpenForVoting;
   }
   public function getIsOpenForVoting() {
 	return $this->isOpenForVoting;
   }
-  public function setIsRestricted( $isRestricted) {
+  public function setIsRestricted($isRestricted) {
 	$this->isRestricted = $isRestricted;
   }
   public function getIsRestricted() {
 	return $this->isRestricted;
   }
-  public function setIsSpam( $isSpam) {
+  public function setIsSpam($isSpam) {
 	$this->isSpam = $isSpam;
   }
   public function getIsSpam() {
 	return $this->isSpam;
   }
-  public function setIsUsersVotePublic( $isUsersVotePublic) {
+  public function setIsUsersVotePublic($isUsersVotePublic) {
 	$this->isUsersVotePublic = $isUsersVotePublic;
   }
   public function getIsUsersVotePublic() {
 	return $this->isUsersVotePublic;
   }
-  public function setIsVotingAllowedForNonMembers( $isVotingAllowedForNonMembers) {
+  public function setIsVotingAllowedForNonMembers($isVotingAllowedForNonMembers) {
 	$this->isVotingAllowedForNonMembers = $isVotingAllowedForNonMembers;
   }
   public function getIsVotingAllowedForNonMembers() {
 	return $this->isVotingAllowedForNonMembers;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastUpdate( $lastUpdate) {
+  public function setLastUpdate($lastUpdate) {
 	$this->lastUpdate = $lastUpdate;
   }
   public function getLastUpdate() {
@@ -1886,13 +1886,13 @@ class Google_CommunityPoll extends Google_Model {
   public function getOptions() {
 	return $this->options;
   }
-  public function setQuestion( $question) {
+  public function setQuestion($question) {
 	$this->question = $question;
   }
   public function getQuestion() {
 	return $this->question;
   }
-  public function setTotalNumberOfVotes( $totalNumberOfVotes) {
+  public function setTotalNumberOfVotes($totalNumberOfVotes) {
 	$this->totalNumberOfVotes = $totalNumberOfVotes;
   }
   public function getTotalNumberOfVotes() {
@@ -1915,7 +1915,7 @@ class Google_CommunityPollComment extends Google_Model {
   public $body;
   public $id;
   public $kind;
-  public function setAddedDate( $addedDate) {
+  public function setAddedDate($addedDate) {
 	$this->addedDate = $addedDate;
   }
   public function getAddedDate() {
@@ -1927,19 +1927,19 @@ class Google_CommunityPollComment extends Google_Model {
   public function getAuthor() {
 	return $this->author;
   }
-  public function setBody( $body) {
+  public function setBody($body) {
 	$this->body = $body;
   }
   public function getBody() {
 	return $this->body;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1956,7 +1956,7 @@ class Google_CommunityPollCommentList extends Google_Model {
   public $lastPageToken;
   public $nextPageToken;
   public $prevPageToken;
-  public function setFirstPageToken( $firstPageToken) {
+  public function setFirstPageToken($firstPageToken) {
 	$this->firstPageToken = $firstPageToken;
   }
   public function getFirstPageToken() {
@@ -1969,25 +1969,25 @@ class Google_CommunityPollCommentList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastPageToken( $lastPageToken) {
+  public function setLastPageToken($lastPageToken) {
 	$this->lastPageToken = $lastPageToken;
   }
   public function getLastPageToken() {
 	return $this->lastPageToken;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -1997,7 +1997,7 @@ class Google_CommunityPollCommentList extends Google_Model {
 
 class Google_CommunityPollImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2014,7 +2014,7 @@ class Google_CommunityPollList extends Google_Model {
   public $lastPageToken;
   public $nextPageToken;
   public $prevPageToken;
-  public function setFirstPageToken( $firstPageToken) {
+  public function setFirstPageToken($firstPageToken) {
 	$this->firstPageToken = $firstPageToken;
   }
   public function getFirstPageToken() {
@@ -2027,25 +2027,25 @@ class Google_CommunityPollList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastPageToken( $lastPageToken) {
+  public function setLastPageToken($lastPageToken) {
 	$this->lastPageToken = $lastPageToken;
   }
   public function getLastPageToken() {
 	return $this->lastPageToken;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -2057,13 +2057,13 @@ class Google_CommunityPollVote extends Google_Model {
   public $isVotevisible;
   public $kind;
   public $optionIds;
-  public function setIsVotevisible( $isVotevisible) {
+  public function setIsVotevisible($isVotevisible) {
 	$this->isVotevisible = $isVotevisible;
   }
   public function getIsVotevisible() {
 	return $this->isVotevisible;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2102,37 +2102,37 @@ class Google_CommunityTopic extends Google_Model {
   public function getAuthor() {
 	return $this->author;
   }
-  public function setBody( $body) {
+  public function setBody($body) {
 	$this->body = $body;
   }
   public function getBody() {
 	return $this->body;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setIsClosed( $isClosed) {
+  public function setIsClosed($isClosed) {
 	$this->isClosed = $isClosed;
   }
   public function getIsClosed() {
 	return $this->isClosed;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastUpdate( $lastUpdate) {
+  public function setLastUpdate($lastUpdate) {
 	$this->lastUpdate = $lastUpdate;
   }
   public function getLastUpdate() {
 	return $this->lastUpdate;
   }
-  public function setLatestMessageSnippet( $latestMessageSnippet) {
+  public function setLatestMessageSnippet($latestMessageSnippet) {
 	$this->latestMessageSnippet = $latestMessageSnippet;
   }
   public function getLatestMessageSnippet() {
@@ -2152,13 +2152,13 @@ class Google_CommunityTopic extends Google_Model {
   public function getMessages() {
 	return $this->messages;
   }
-  public function setNumberOfReplies( $numberOfReplies) {
+  public function setNumberOfReplies($numberOfReplies) {
 	$this->numberOfReplies = $numberOfReplies;
   }
   public function getNumberOfReplies() {
 	return $this->numberOfReplies;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -2175,7 +2175,7 @@ class Google_CommunityTopicList extends Google_Model {
   public $lastPageToken;
   public $nextPageToken;
   public $prevPageToken;
-  public function setFirstPageToken( $firstPageToken) {
+  public function setFirstPageToken($firstPageToken) {
 	$this->firstPageToken = $firstPageToken;
   }
   public function getFirstPageToken() {
@@ -2188,25 +2188,25 @@ class Google_CommunityTopicList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastPageToken( $lastPageToken) {
+  public function setLastPageToken($lastPageToken) {
 	$this->lastPageToken = $lastPageToken;
   }
   public function getLastPageToken() {
 	return $this->lastPageToken;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -2226,7 +2226,7 @@ class Google_Counters extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2254,19 +2254,19 @@ class Google_OrkutActivityobjectsResource extends Google_Model {
   public function getCommunity() {
 	return $this->community;
   }
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2279,7 +2279,7 @@ class Google_OrkutActivityobjectsResource extends Google_Model {
   public function getLinks() {
 	return $this->links;
   }
-  public function setObjectType( $objectType) {
+  public function setObjectType($objectType) {
 	$this->objectType = $objectType;
   }
   public function getObjectType() {
@@ -2304,19 +2304,19 @@ class Google_OrkutActivitypersonResource extends Google_Model {
   protected $__nameDataType = '';
   public $name;
   public $url;
-  public function setBirthday( $birthday) {
+  public function setBirthday($birthday) {
 	$this->birthday = $birthday;
   }
   public function getBirthday() {
 	return $this->birthday;
   }
-  public function setGender( $gender) {
+  public function setGender($gender) {
 	$this->gender = $gender;
   }
   public function getGender() {
 	return $this->gender;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2334,7 +2334,7 @@ class Google_OrkutActivitypersonResource extends Google_Model {
   public function getName() {
 	return $this->name;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2344,7 +2344,7 @@ class Google_OrkutActivitypersonResource extends Google_Model {
 
 class Google_OrkutActivitypersonResourceImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2355,13 +2355,13 @@ class Google_OrkutActivitypersonResourceImage extends Google_Model {
 class Google_OrkutActivitypersonResourceName extends Google_Model {
   public $familyName;
   public $givenName;
-  public function setFamilyName( $familyName) {
+  public function setFamilyName($familyName) {
 	$this->familyName = $familyName;
   }
   public function getFamilyName() {
 	return $this->familyName;
   }
-  public function setGivenName( $givenName) {
+  public function setGivenName($givenName) {
 	$this->givenName = $givenName;
   }
   public function getGivenName() {
@@ -2376,13 +2376,13 @@ class Google_OrkutAuthorResource extends Google_Model {
   protected $__imageDataType = '';
   public $image;
   public $url;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2394,7 +2394,7 @@ class Google_OrkutAuthorResource extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2404,7 +2404,7 @@ class Google_OrkutAuthorResource extends Google_Model {
 
 class Google_OrkutAuthorResourceImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2419,7 +2419,7 @@ class Google_OrkutCommunitypolloptionResource extends Google_Model {
   public $image;
   public $numberOfVotes;
   public $optionId;
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
@@ -2431,13 +2431,13 @@ class Google_OrkutCommunitypolloptionResource extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setNumberOfVotes( $numberOfVotes) {
+  public function setNumberOfVotes($numberOfVotes) {
 	$this->numberOfVotes = $numberOfVotes;
   }
   public function getNumberOfVotes() {
 	return $this->numberOfVotes;
   }
-  public function setOptionId( $optionId) {
+  public function setOptionId($optionId) {
 	$this->optionId = $optionId;
   }
   public function getOptionId() {
@@ -2447,7 +2447,7 @@ class Google_OrkutCommunitypolloptionResource extends Google_Model {
 
 class Google_OrkutCommunitypolloptionResourceImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -2467,13 +2467,13 @@ class Google_OrkutCounterResource extends Google_Model {
   public function getLink() {
 	return $this->link;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setTotal( $total) {
+  public function setTotal($total) {
 	$this->total = $total;
   }
   public function getTotal() {
@@ -2486,25 +2486,25 @@ class Google_OrkutLinkResource extends Google_Model {
   public $rel;
   public $title;
   public $type;
-  public function setHref( $href) {
+  public function setHref($href) {
 	$this->href = $href;
   }
   public function getHref() {
 	return $this->href;
   }
-  public function setRel( $rel) {
+  public function setRel($rel) {
 	$this->rel = $rel;
   }
   public function getRel() {
 	return $this->rel;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -2518,7 +2518,7 @@ class Google_Visibility extends Google_Model {
   protected $__linksDataType = 'array';
   public $links;
   public $visibility;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2531,7 +2531,7 @@ class Google_Visibility extends Google_Model {
   public function getLinks() {
 	return $this->links;
   }
-  public function setVisibility( $visibility) {
+  public function setVisibility($visibility) {
 	$this->visibility = $visibility;
   }
   public function getVisibility() {

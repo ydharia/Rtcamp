@@ -638,73 +638,73 @@ class Google_AchievementDefinition extends Google_Model {
   public $revealedIconUrl;
   public $totalSteps;
   public $unlockedIconUrl;
-  public function setAchievementType( $achievementType) {
+  public function setAchievementType($achievementType) {
 	$this->achievementType = $achievementType;
   }
   public function getAchievementType() {
 	return $this->achievementType;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setFormattedTotalSteps( $formattedTotalSteps) {
+  public function setFormattedTotalSteps($formattedTotalSteps) {
 	$this->formattedTotalSteps = $formattedTotalSteps;
   }
   public function getFormattedTotalSteps() {
 	return $this->formattedTotalSteps;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setInitialState( $initialState) {
+  public function setInitialState($initialState) {
 	$this->initialState = $initialState;
   }
   public function getInitialState() {
 	return $this->initialState;
   }
-  public function setIsRevealedIconUrlDefault( $isRevealedIconUrlDefault) {
+  public function setIsRevealedIconUrlDefault($isRevealedIconUrlDefault) {
 	$this->isRevealedIconUrlDefault = $isRevealedIconUrlDefault;
   }
   public function getIsRevealedIconUrlDefault() {
 	return $this->isRevealedIconUrlDefault;
   }
-  public function setIsUnlockedIconUrlDefault( $isUnlockedIconUrlDefault) {
+  public function setIsUnlockedIconUrlDefault($isUnlockedIconUrlDefault) {
 	$this->isUnlockedIconUrlDefault = $isUnlockedIconUrlDefault;
   }
   public function getIsUnlockedIconUrlDefault() {
 	return $this->isUnlockedIconUrlDefault;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setRevealedIconUrl( $revealedIconUrl) {
+  public function setRevealedIconUrl($revealedIconUrl) {
 	$this->revealedIconUrl = $revealedIconUrl;
   }
   public function getRevealedIconUrl() {
 	return $this->revealedIconUrl;
   }
-  public function setTotalSteps( $totalSteps) {
+  public function setTotalSteps($totalSteps) {
 	$this->totalSteps = $totalSteps;
   }
   public function getTotalSteps() {
 	return $this->totalSteps;
   }
-  public function setUnlockedIconUrl( $unlockedIconUrl) {
+  public function setUnlockedIconUrl($unlockedIconUrl) {
 	$this->unlockedIconUrl = $unlockedIconUrl;
   }
   public function getUnlockedIconUrl() {
@@ -725,13 +725,13 @@ class Google_AchievementDefinitionsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -743,19 +743,19 @@ class Google_AchievementIncrementResponse extends Google_Model {
   public $currentSteps;
   public $kind;
   public $newlyUnlocked;
-  public function setCurrentSteps( $currentSteps) {
+  public function setCurrentSteps($currentSteps) {
 	$this->currentSteps = $currentSteps;
   }
   public function getCurrentSteps() {
 	return $this->currentSteps;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNewlyUnlocked( $newlyUnlocked) {
+  public function setNewlyUnlocked($newlyUnlocked) {
 	$this->newlyUnlocked = $newlyUnlocked;
   }
   public function getNewlyUnlocked() {
@@ -766,13 +766,13 @@ class Google_AchievementIncrementResponse extends Google_Model {
 class Google_AchievementRevealResponse extends Google_Model {
   public $currentState;
   public $kind;
-  public function setCurrentState( $currentState) {
+  public function setCurrentState($currentState) {
 	$this->currentState = $currentState;
   }
   public function getCurrentState() {
 	return $this->currentState;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -783,13 +783,13 @@ class Google_AchievementRevealResponse extends Google_Model {
 class Google_AchievementUnlockResponse extends Google_Model {
   public $kind;
   public $newlyUnlocked;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNewlyUnlocked( $newlyUnlocked) {
+  public function setNewlyUnlocked($newlyUnlocked) {
 	$this->newlyUnlocked = $newlyUnlocked;
   }
   public function getNewlyUnlocked() {
@@ -803,31 +803,31 @@ class Google_AggregateStats extends Google_Model {
   public $max;
   public $min;
   public $sum;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMax( $max) {
+  public function setMax($max) {
 	$this->max = $max;
   }
   public function getMax() {
 	return $this->max;
   }
-  public function setMin( $min) {
+  public function setMin($min) {
 	$this->min = $min;
   }
   public function getMin() {
 	return $this->min;
   }
-  public function setSum( $sum) {
+  public function setSum($sum) {
 	$this->sum = $sum;
   }
   public function getSum() {
@@ -839,19 +839,19 @@ class Google_AnonymousPlayer extends Google_Model {
   public $avatarImageUrl;
   public $displayName;
   public $kind;
-  public function setAvatarImageUrl( $avatarImageUrl) {
+  public function setAvatarImageUrl($avatarImageUrl) {
 	$this->avatarImageUrl = $avatarImageUrl;
   }
   public function getAvatarImageUrl() {
 	return $this->avatarImageUrl;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -877,7 +877,7 @@ class Google_Application extends Google_Model {
   public $lastUpdatedTimestamp;
   public $leaderboard_count;
   public $name;
-  public function setAchievement_count( $achievement_count) {
+  public function setAchievement_count($achievement_count) {
 	$this->achievement_count = $achievement_count;
   }
   public function getAchievement_count() {
@@ -890,7 +890,7 @@ class Google_Application extends Google_Model {
   public function getAssets() {
 	return $this->assets;
   }
-  public function setAuthor( $author) {
+  public function setAuthor($author) {
 	$this->author = $author;
   }
   public function getAuthor() {
@@ -902,13 +902,13 @@ class Google_Application extends Google_Model {
   public function getCategory() {
 	return $this->category;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -921,25 +921,25 @@ class Google_Application extends Google_Model {
   public function getInstances() {
 	return $this->instances;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastUpdatedTimestamp( $lastUpdatedTimestamp) {
+  public function setLastUpdatedTimestamp($lastUpdatedTimestamp) {
 	$this->lastUpdatedTimestamp = $lastUpdatedTimestamp;
   }
   public function getLastUpdatedTimestamp() {
 	return $this->lastUpdatedTimestamp;
   }
-  public function setLeaderboard_count( $leaderboard_count) {
+  public function setLeaderboard_count($leaderboard_count) {
 	$this->leaderboard_count = $leaderboard_count;
   }
   public function getLeaderboard_count() {
 	return $this->leaderboard_count;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -951,19 +951,19 @@ class Google_ApplicationCategory extends Google_Model {
   public $kind;
   public $primary;
   public $secondary;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPrimary( $primary) {
+  public function setPrimary($primary) {
 	$this->primary = $primary;
   }
   public function getPrimary() {
 	return $this->primary;
   }
-  public function setSecondary( $secondary) {
+  public function setSecondary($secondary) {
 	$this->secondary = $secondary;
   }
   public function getSecondary() {
@@ -977,31 +977,31 @@ class Google_ImageAsset extends Google_Model {
   public $name;
   public $url;
   public $width;
-  public function setHeight( $height) {
+  public function setHeight($height) {
 	$this->height = $height;
   }
   public function getHeight() {
 	return $this->height;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
 	return $this->url;
   }
-  public function setWidth( $width) {
+  public function setWidth($width) {
 	$this->width = $width;
   }
   public function getWidth() {
@@ -1025,7 +1025,7 @@ class Google_Instance extends Google_Model {
   protected $__webInstanceType = 'Google_InstanceWebDetails';
   protected $__webInstanceDataType = '';
   public $webInstance;
-  public function setAcquisitionUri( $acquisitionUri) {
+  public function setAcquisitionUri($acquisitionUri) {
 	$this->acquisitionUri = $acquisitionUri;
   }
   public function getAcquisitionUri() {
@@ -1043,31 +1043,31 @@ class Google_Instance extends Google_Model {
   public function getIosInstance() {
 	return $this->iosInstance;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setPlatformType( $platformType) {
+  public function setPlatformType($platformType) {
 	$this->platformType = $platformType;
   }
   public function getPlatformType() {
 	return $this->platformType;
   }
-  public function setRealtimePlay( $realtimePlay) {
+  public function setRealtimePlay($realtimePlay) {
 	$this->realtimePlay = $realtimePlay;
   }
   public function getRealtimePlay() {
 	return $this->realtimePlay;
   }
-  public function setTurnBasedPlay( $turnBasedPlay) {
+  public function setTurnBasedPlay($turnBasedPlay) {
 	$this->turnBasedPlay = $turnBasedPlay;
   }
   public function getTurnBasedPlay() {
@@ -1086,25 +1086,25 @@ class Google_InstanceAndroidDetails extends Google_Model {
   public $kind;
   public $packageName;
   public $preferred;
-  public function setEnablePiracyCheck( $enablePiracyCheck) {
+  public function setEnablePiracyCheck($enablePiracyCheck) {
 	$this->enablePiracyCheck = $enablePiracyCheck;
   }
   public function getEnablePiracyCheck() {
 	return $this->enablePiracyCheck;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPackageName( $packageName) {
+  public function setPackageName($packageName) {
 	$this->packageName = $packageName;
   }
   public function getPackageName() {
 	return $this->packageName;
   }
-  public function setPreferred( $preferred) {
+  public function setPreferred($preferred) {
 	$this->preferred = $preferred;
   }
   public function getPreferred() {
@@ -1120,43 +1120,43 @@ class Google_InstanceIosDetails extends Google_Model {
   public $preferredForIphone;
   public $supportIpad;
   public $supportIphone;
-  public function setBundleIdentifier( $bundleIdentifier) {
+  public function setBundleIdentifier($bundleIdentifier) {
 	$this->bundleIdentifier = $bundleIdentifier;
   }
   public function getBundleIdentifier() {
 	return $this->bundleIdentifier;
   }
-  public function setItunesAppId( $itunesAppId) {
+  public function setItunesAppId($itunesAppId) {
 	$this->itunesAppId = $itunesAppId;
   }
   public function getItunesAppId() {
 	return $this->itunesAppId;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPreferredForIpad( $preferredForIpad) {
+  public function setPreferredForIpad($preferredForIpad) {
 	$this->preferredForIpad = $preferredForIpad;
   }
   public function getPreferredForIpad() {
 	return $this->preferredForIpad;
   }
-  public function setPreferredForIphone( $preferredForIphone) {
+  public function setPreferredForIphone($preferredForIphone) {
 	$this->preferredForIphone = $preferredForIphone;
   }
   public function getPreferredForIphone() {
 	return $this->preferredForIphone;
   }
-  public function setSupportIpad( $supportIpad) {
+  public function setSupportIpad($supportIpad) {
 	$this->supportIpad = $supportIpad;
   }
   public function getSupportIpad() {
 	return $this->supportIpad;
   }
-  public function setSupportIphone( $supportIphone) {
+  public function setSupportIphone($supportIphone) {
 	$this->supportIphone = $supportIphone;
   }
   public function getSupportIphone() {
@@ -1168,19 +1168,19 @@ class Google_InstanceWebDetails extends Google_Model {
   public $kind;
   public $launchUrl;
   public $preferred;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLaunchUrl( $launchUrl) {
+  public function setLaunchUrl($launchUrl) {
 	$this->launchUrl = $launchUrl;
   }
   public function getLaunchUrl() {
 	return $this->launchUrl;
   }
-  public function setPreferred( $preferred) {
+  public function setPreferred($preferred) {
 	$this->preferred = $preferred;
   }
   public function getPreferred() {
@@ -1195,37 +1195,37 @@ class Google_Leaderboard extends Google_Model {
   public $kind;
   public $name;
   public $order;
-  public function setIconUrl( $iconUrl) {
+  public function setIconUrl($iconUrl) {
 	$this->iconUrl = $iconUrl;
   }
   public function getIconUrl() {
 	return $this->iconUrl;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setIsIconUrlDefault( $isIconUrlDefault) {
+  public function setIsIconUrlDefault($isIconUrlDefault) {
 	$this->isIconUrlDefault = $isIconUrlDefault;
   }
   public function getIsIconUrlDefault() {
 	return $this->isIconUrlDefault;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setOrder( $order) {
+  public function setOrder($order) {
 	$this->order = $order;
   }
   public function getOrder() {
@@ -1244,19 +1244,19 @@ class Google_LeaderboardEntry extends Google_Model {
   public $scoreValue;
   public $timeSpan;
   public $writeTimestampMillis;
-  public function setFormattedScore( $formattedScore) {
+  public function setFormattedScore($formattedScore) {
 	$this->formattedScore = $formattedScore;
   }
   public function getFormattedScore() {
 	return $this->formattedScore;
   }
-  public function setFormattedScoreRank( $formattedScoreRank) {
+  public function setFormattedScoreRank($formattedScoreRank) {
 	$this->formattedScoreRank = $formattedScoreRank;
   }
   public function getFormattedScoreRank() {
 	return $this->formattedScoreRank;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1268,25 +1268,25 @@ class Google_LeaderboardEntry extends Google_Model {
   public function getPlayer() {
 	return $this->player;
   }
-  public function setScoreRank( $scoreRank) {
+  public function setScoreRank($scoreRank) {
 	$this->scoreRank = $scoreRank;
   }
   public function getScoreRank() {
 	return $this->scoreRank;
   }
-  public function setScoreValue( $scoreValue) {
+  public function setScoreValue($scoreValue) {
 	$this->scoreValue = $scoreValue;
   }
   public function getScoreValue() {
 	return $this->scoreValue;
   }
-  public function setTimeSpan( $timeSpan) {
+  public function setTimeSpan($timeSpan) {
 	$this->timeSpan = $timeSpan;
   }
   public function getTimeSpan() {
 	return $this->timeSpan;
   }
-  public function setWriteTimestampMillis( $writeTimestampMillis) {
+  public function setWriteTimestampMillis($writeTimestampMillis) {
 	$this->writeTimestampMillis = $writeTimestampMillis;
   }
   public function getWriteTimestampMillis() {
@@ -1307,13 +1307,13 @@ class Google_LeaderboardListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1327,31 +1327,31 @@ class Google_LeaderboardScoreRank extends Google_Model {
   public $kind;
   public $numScores;
   public $rank;
-  public function setFormattedNumScores( $formattedNumScores) {
+  public function setFormattedNumScores($formattedNumScores) {
 	$this->formattedNumScores = $formattedNumScores;
   }
   public function getFormattedNumScores() {
 	return $this->formattedNumScores;
   }
-  public function setFormattedRank( $formattedRank) {
+  public function setFormattedRank($formattedRank) {
 	$this->formattedRank = $formattedRank;
   }
   public function getFormattedRank() {
 	return $this->formattedRank;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNumScores( $numScores) {
+  public function setNumScores($numScores) {
 	$this->numScores = $numScores;
   }
   public function getNumScores() {
 	return $this->numScores;
   }
-  public function setRank( $rank) {
+  public function setRank($rank) {
 	$this->rank = $rank;
   }
   public function getRank() {
@@ -1377,19 +1377,19 @@ class Google_LeaderboardScores extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setNumScores( $numScores) {
+  public function setNumScores($numScores) {
 	$this->numScores = $numScores;
   }
   public function getNumScores() {
@@ -1401,7 +1401,7 @@ class Google_LeaderboardScores extends Google_Model {
   public function getPlayerScore() {
 	return $this->playerScore;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -1414,25 +1414,25 @@ class Google_NetworkDiagnostics extends Google_Model {
   public $androidNetworkType;
   public $kind;
   public $registrationLatencyMillis;
-  public function setAndroidNetworkSubtype( $androidNetworkSubtype) {
+  public function setAndroidNetworkSubtype($androidNetworkSubtype) {
 	$this->androidNetworkSubtype = $androidNetworkSubtype;
   }
   public function getAndroidNetworkSubtype() {
 	return $this->androidNetworkSubtype;
   }
-  public function setAndroidNetworkType( $androidNetworkType) {
+  public function setAndroidNetworkType($androidNetworkType) {
 	$this->androidNetworkType = $androidNetworkType;
   }
   public function getAndroidNetworkType() {
 	return $this->androidNetworkType;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setRegistrationLatencyMillis( $registrationLatencyMillis) {
+  public function setRegistrationLatencyMillis($registrationLatencyMillis) {
 	$this->registrationLatencyMillis = $registrationLatencyMillis;
   }
   public function getRegistrationLatencyMillis() {
@@ -1467,31 +1467,31 @@ class Google_PeerChannelDiagnostics extends Google_Model {
   public function getBytesSent() {
 	return $this->bytesSent;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNumMessagesLost( $numMessagesLost) {
+  public function setNumMessagesLost($numMessagesLost) {
 	$this->numMessagesLost = $numMessagesLost;
   }
   public function getNumMessagesLost() {
 	return $this->numMessagesLost;
   }
-  public function setNumMessagesReceived( $numMessagesReceived) {
+  public function setNumMessagesReceived($numMessagesReceived) {
 	$this->numMessagesReceived = $numMessagesReceived;
   }
   public function getNumMessagesReceived() {
 	return $this->numMessagesReceived;
   }
-  public function setNumMessagesSent( $numMessagesSent) {
+  public function setNumMessagesSent($numMessagesSent) {
 	$this->numMessagesSent = $numMessagesSent;
   }
   public function getNumMessagesSent() {
 	return $this->numMessagesSent;
   }
-  public function setNumSendFailures( $numSendFailures) {
+  public function setNumSendFailures($numSendFailures) {
 	$this->numSendFailures = $numSendFailures;
   }
   public function getNumSendFailures() {
@@ -1515,19 +1515,19 @@ class Google_PeerSessionDiagnostics extends Google_Model {
   protected $__unreliableChannelType = 'Google_PeerChannelDiagnostics';
   protected $__unreliableChannelDataType = '';
   public $unreliableChannel;
-  public function setConnectedTimestampMillis( $connectedTimestampMillis) {
+  public function setConnectedTimestampMillis($connectedTimestampMillis) {
 	$this->connectedTimestampMillis = $connectedTimestampMillis;
   }
   public function getConnectedTimestampMillis() {
 	return $this->connectedTimestampMillis;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setParticipantId( $participantId) {
+  public function setParticipantId($participantId) {
 	$this->participantId = $participantId;
   }
   public function getParticipantId() {
@@ -1552,25 +1552,25 @@ class Google_Player extends Google_Model {
   public $displayName;
   public $kind;
   public $playerId;
-  public function setAvatarImageUrl( $avatarImageUrl) {
+  public function setAvatarImageUrl($avatarImageUrl) {
 	$this->avatarImageUrl = $avatarImageUrl;
   }
   public function getAvatarImageUrl() {
 	return $this->avatarImageUrl;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPlayerId( $playerId) {
+  public function setPlayerId($playerId) {
 	$this->playerId = $playerId;
   }
   public function getPlayerId() {
@@ -1585,37 +1585,37 @@ class Google_PlayerAchievement extends Google_Model {
   public $id;
   public $kind;
   public $lastUpdatedTimestamp;
-  public function setAchievementState( $achievementState) {
+  public function setAchievementState($achievementState) {
 	$this->achievementState = $achievementState;
   }
   public function getAchievementState() {
 	return $this->achievementState;
   }
-  public function setCurrentSteps( $currentSteps) {
+  public function setCurrentSteps($currentSteps) {
 	$this->currentSteps = $currentSteps;
   }
   public function getCurrentSteps() {
 	return $this->currentSteps;
   }
-  public function setFormattedCurrentStepsString( $formattedCurrentStepsString) {
+  public function setFormattedCurrentStepsString($formattedCurrentStepsString) {
 	$this->formattedCurrentStepsString = $formattedCurrentStepsString;
   }
   public function getFormattedCurrentStepsString() {
 	return $this->formattedCurrentStepsString;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastUpdatedTimestamp( $lastUpdatedTimestamp) {
+  public function setLastUpdatedTimestamp($lastUpdatedTimestamp) {
 	$this->lastUpdatedTimestamp = $lastUpdatedTimestamp;
   }
   public function getLastUpdatedTimestamp() {
@@ -1636,13 +1636,13 @@ class Google_PlayerAchievementListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1663,13 +1663,13 @@ class Google_PlayerLeaderboardScore extends Google_Model {
   public $socialRank;
   public $timeSpan;
   public $writeTimestamp;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLeaderboard_id( $leaderboard_id) {
+  public function setLeaderboard_id($leaderboard_id) {
 	$this->leaderboard_id = $leaderboard_id;
   }
   public function getLeaderboard_id() {
@@ -1681,13 +1681,13 @@ class Google_PlayerLeaderboardScore extends Google_Model {
   public function getPublicRank() {
 	return $this->publicRank;
   }
-  public function setScoreString( $scoreString) {
+  public function setScoreString($scoreString) {
 	$this->scoreString = $scoreString;
   }
   public function getScoreString() {
 	return $this->scoreString;
   }
-  public function setScoreValue( $scoreValue) {
+  public function setScoreValue($scoreValue) {
 	$this->scoreValue = $scoreValue;
   }
   public function getScoreValue() {
@@ -1699,13 +1699,13 @@ class Google_PlayerLeaderboardScore extends Google_Model {
   public function getSocialRank() {
 	return $this->socialRank;
   }
-  public function setTimeSpan( $timeSpan) {
+  public function setTimeSpan($timeSpan) {
 	$this->timeSpan = $timeSpan;
   }
   public function getTimeSpan() {
 	return $this->timeSpan;
   }
-  public function setWriteTimestamp( $writeTimestamp) {
+  public function setWriteTimestamp($writeTimestamp) {
 	$this->writeTimestamp = $writeTimestamp;
   }
   public function getWriteTimestamp() {
@@ -1726,13 +1726,13 @@ class Google_PlayerLeaderboardScoreListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1745,25 +1745,25 @@ class Google_PlayerScore extends Google_Model {
   public $kind;
   public $score;
   public $timeSpan;
-  public function setFormattedScore( $formattedScore) {
+  public function setFormattedScore($formattedScore) {
 	$this->formattedScore = $formattedScore;
   }
   public function getFormattedScore() {
 	return $this->formattedScore;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setScore( $score) {
+  public function setScore($score) {
 	$this->score = $score;
   }
   public function getScore() {
 	return $this->score;
   }
-  public function setTimeSpan( $timeSpan) {
+  public function setTimeSpan($timeSpan) {
 	$this->timeSpan = $timeSpan;
   }
   public function getTimeSpan() {
@@ -1776,7 +1776,7 @@ class Google_PlayerScoreListResponse extends Google_Model {
   protected $__submittedScoresType = 'Google_PlayerScoreResponse';
   protected $__submittedScoresDataType = 'array';
   public $submittedScores;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1806,19 +1806,19 @@ class Google_PlayerScoreResponse extends Google_Model {
   public function getBeatenScoreTimeSpans() {
 	return $this->beatenScoreTimeSpans;
   }
-  public function setFormattedScore( $formattedScore) {
+  public function setFormattedScore($formattedScore) {
 	$this->formattedScore = $formattedScore;
   }
   public function getFormattedScore() {
 	return $this->formattedScore;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLeaderboardId( $leaderboardId) {
+  public function setLeaderboardId($leaderboardId) {
 	$this->leaderboardId = $leaderboardId;
   }
   public function getLeaderboardId() {
@@ -1838,7 +1838,7 @@ class Google_PlayerScoreSubmissionList extends Google_Model {
   protected $__scoresType = 'Google_ScoreSubmission';
   protected $__scoresDataType = 'array';
   public $scores;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1856,13 +1856,13 @@ class Google_PlayerScoreSubmissionList extends Google_Model {
 class Google_RevisionCheckResponse extends Google_Model {
   public $kind;
   public $revisionStatus;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setRevisionStatus( $revisionStatus) {
+  public function setRevisionStatus($revisionStatus) {
 	$this->revisionStatus = $revisionStatus;
   }
   public function getRevisionStatus() {
@@ -1893,7 +1893,7 @@ class Google_Room extends Google_Model {
   public $roomStatusVersion;
   public $status;
   public $variant;
-  public function setApplicationId( $applicationId) {
+  public function setApplicationId($applicationId) {
 	$this->applicationId = $applicationId;
   }
   public function getApplicationId() {
@@ -1917,13 +1917,13 @@ class Google_Room extends Google_Model {
   public function getCreationDetails() {
 	return $this->creationDetails;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1942,25 +1942,25 @@ class Google_Room extends Google_Model {
   public function getParticipants() {
 	return $this->participants;
   }
-  public function setRoomId( $roomId) {
+  public function setRoomId($roomId) {
 	$this->roomId = $roomId;
   }
   public function getRoomId() {
 	return $this->roomId;
   }
-  public function setRoomStatusVersion( $roomStatusVersion) {
+  public function setRoomStatusVersion($roomStatusVersion) {
 	$this->roomStatusVersion = $roomStatusVersion;
   }
   public function getRoomStatusVersion() {
 	return $this->roomStatusVersion;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setVariant( $variant) {
+  public function setVariant($variant) {
 	$this->variant = $variant;
   }
   public function getVariant() {
@@ -1971,13 +1971,13 @@ class Google_Room extends Google_Model {
 class Google_RoomAutoMatchStatus extends Google_Model {
   public $kind;
   public $waitEstimateSeconds;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setWaitEstimateSeconds( $waitEstimateSeconds) {
+  public function setWaitEstimateSeconds($waitEstimateSeconds) {
 	$this->waitEstimateSeconds = $waitEstimateSeconds;
   }
   public function getWaitEstimateSeconds() {
@@ -1990,25 +1990,25 @@ class Google_RoomAutoMatchingCriteria extends Google_Model {
   public $kind;
   public $maxAutoMatchingPlayers;
   public $minAutoMatchingPlayers;
-  public function setExclusiveBitmask( $exclusiveBitmask) {
+  public function setExclusiveBitmask($exclusiveBitmask) {
 	$this->exclusiveBitmask = $exclusiveBitmask;
   }
   public function getExclusiveBitmask() {
 	return $this->exclusiveBitmask;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMaxAutoMatchingPlayers( $maxAutoMatchingPlayers) {
+  public function setMaxAutoMatchingPlayers($maxAutoMatchingPlayers) {
 	$this->maxAutoMatchingPlayers = $maxAutoMatchingPlayers;
   }
   public function getMaxAutoMatchingPlayers() {
 	return $this->maxAutoMatchingPlayers;
   }
-  public function setMinAutoMatchingPlayers( $minAutoMatchingPlayers) {
+  public function setMinAutoMatchingPlayers($minAutoMatchingPlayers) {
 	$this->minAutoMatchingPlayers = $minAutoMatchingPlayers;
   }
   public function getMinAutoMatchingPlayers() {
@@ -2019,13 +2019,13 @@ class Google_RoomAutoMatchingCriteria extends Google_Model {
 class Google_RoomClientAddress extends Google_Model {
   public $kind;
   public $xmppAddress;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setXmppAddress( $xmppAddress) {
+  public function setXmppAddress($xmppAddress) {
 	$this->xmppAddress = $xmppAddress;
   }
   public function getXmppAddress() {
@@ -2073,7 +2073,7 @@ class Google_RoomCreateRequest extends Google_Model {
   public function getInvitedPlayerIds() {
 	return $this->invitedPlayerIds;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2085,7 +2085,7 @@ class Google_RoomCreateRequest extends Google_Model {
   public function getNetworkDiagnostics() {
 	return $this->networkDiagnostics;
   }
-  public function setVariant( $variant) {
+  public function setVariant($variant) {
 	$this->variant = $variant;
   }
   public function getVariant() {
@@ -2115,7 +2115,7 @@ class Google_RoomJoinRequest extends Google_Model {
   public function getClientAddress() {
 	return $this->clientAddress;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2137,19 +2137,19 @@ class Google_RoomLeaveDiagnostics extends Google_Model {
   protected $__peerSessionDataType = 'array';
   public $peerSession;
   public $socketsUsed;
-  public function setAndroidNetworkSubtype( $androidNetworkSubtype) {
+  public function setAndroidNetworkSubtype($androidNetworkSubtype) {
 	$this->androidNetworkSubtype = $androidNetworkSubtype;
   }
   public function getAndroidNetworkSubtype() {
 	return $this->androidNetworkSubtype;
   }
-  public function setAndroidNetworkType( $androidNetworkType) {
+  public function setAndroidNetworkType($androidNetworkType) {
 	$this->androidNetworkType = $androidNetworkType;
   }
   public function getAndroidNetworkType() {
 	return $this->androidNetworkType;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2162,7 +2162,7 @@ class Google_RoomLeaveDiagnostics extends Google_Model {
   public function getPeerSession() {
 	return $this->peerSession;
   }
-  public function setSocketsUsed( $socketsUsed) {
+  public function setSocketsUsed($socketsUsed) {
 	$this->socketsUsed = $socketsUsed;
   }
   public function getSocketsUsed() {
@@ -2176,7 +2176,7 @@ class Google_RoomLeaveRequest extends Google_Model {
   protected $__leaveDiagnosticsDataType = '';
   public $leaveDiagnostics;
   public $reason;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2188,7 +2188,7 @@ class Google_RoomLeaveRequest extends Google_Model {
   public function getLeaveDiagnostics() {
 	return $this->leaveDiagnostics;
   }
-  public function setReason( $reason) {
+  public function setReason($reason) {
 	$this->reason = $reason;
   }
   public function getReason() {
@@ -2209,13 +2209,13 @@ class Google_RoomList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -2227,19 +2227,19 @@ class Google_RoomModification extends Google_Model {
   public $kind;
   public $modifiedTimestampMillis;
   public $participantId;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setModifiedTimestampMillis( $modifiedTimestampMillis) {
+  public function setModifiedTimestampMillis($modifiedTimestampMillis) {
 	$this->modifiedTimestampMillis = $modifiedTimestampMillis;
   }
   public function getModifiedTimestampMillis() {
 	return $this->modifiedTimestampMillis;
   }
-  public function setParticipantId( $participantId) {
+  public function setParticipantId($participantId) {
 	$this->participantId = $participantId;
   }
   public function getParticipantId() {
@@ -2255,43 +2255,43 @@ class Google_RoomP2PStatus extends Google_Model {
   public $participantId;
   public $status;
   public $unreliableRoundtripLatencyMillis;
-  public function setConnectionSetupLatencyMillis( $connectionSetupLatencyMillis) {
+  public function setConnectionSetupLatencyMillis($connectionSetupLatencyMillis) {
 	$this->connectionSetupLatencyMillis = $connectionSetupLatencyMillis;
   }
   public function getConnectionSetupLatencyMillis() {
 	return $this->connectionSetupLatencyMillis;
   }
-  public function setError( $error) {
+  public function setError($error) {
 	$this->error = $error;
   }
   public function getError() {
 	return $this->error;
   }
-  public function setError_reason( $error_reason) {
+  public function setError_reason($error_reason) {
 	$this->error_reason = $error_reason;
   }
   public function getError_reason() {
 	return $this->error_reason;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setParticipantId( $participantId) {
+  public function setParticipantId($participantId) {
 	$this->participantId = $participantId;
   }
   public function getParticipantId() {
 	return $this->participantId;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setUnreliableRoundtripLatencyMillis( $unreliableRoundtripLatencyMillis) {
+  public function setUnreliableRoundtripLatencyMillis($unreliableRoundtripLatencyMillis) {
 	$this->unreliableRoundtripLatencyMillis = $unreliableRoundtripLatencyMillis;
   }
   public function getUnreliableRoundtripLatencyMillis() {
@@ -2304,7 +2304,7 @@ class Google_RoomP2PStatuses extends Google_Model {
   protected $__updatesType = 'Google_RoomP2PStatus';
   protected $__updatesDataType = 'array';
   public $updates;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2354,25 +2354,25 @@ class Google_RoomParticipant extends Google_Model {
   public function getClientAddress() {
 	return $this->clientAddress;
   }
-  public function setConnected( $connected) {
+  public function setConnected($connected) {
 	$this->connected = $connected;
   }
   public function getConnected() {
 	return $this->connected;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLeaveReason( $leaveReason) {
+  public function setLeaveReason($leaveReason) {
 	$this->leaveReason = $leaveReason;
   }
   public function getLeaveReason() {
@@ -2384,7 +2384,7 @@ class Google_RoomParticipant extends Google_Model {
   public function getPlayer() {
 	return $this->player;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -2409,7 +2409,7 @@ class Google_RoomStatus extends Google_Model {
   public function getAutoMatchingStatus() {
 	return $this->autoMatchingStatus;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2422,19 +2422,19 @@ class Google_RoomStatus extends Google_Model {
   public function getParticipants() {
 	return $this->participants;
   }
-  public function setRoomId( $roomId) {
+  public function setRoomId($roomId) {
 	$this->roomId = $roomId;
   }
   public function getRoomId() {
 	return $this->roomId;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setStatusVersion( $statusVersion) {
+  public function setStatusVersion($statusVersion) {
 	$this->statusVersion = $statusVersion;
   }
   public function getStatusVersion() {
@@ -2446,19 +2446,19 @@ class Google_ScoreSubmission extends Google_Model {
   public $kind;
   public $leaderboardId;
   public $score;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLeaderboardId( $leaderboardId) {
+  public function setLeaderboardId($leaderboardId) {
 	$this->leaderboardId = $leaderboardId;
   }
   public function getLeaderboardId() {
 	return $this->leaderboardId;
   }
-  public function setScore( $score) {
+  public function setScore($score) {
 	$this->score = $score;
   }
   public function getScore() {

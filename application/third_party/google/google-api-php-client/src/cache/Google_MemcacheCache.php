@@ -28,7 +28,7 @@ class Google_MemcacheCache extends Google_Cache {
 
   public function __construct() {
 	global $apiConfig;
-	if (! function_exists('memcache_connect')) {
+	if ( ! function_exists('memcache_connect')) {
 	  throw new Google_CacheException("Memcache functions not available");
 	}
 	$this->host = $apiConfig['ioMemCacheCache_host'];
@@ -40,7 +40,7 @@ class Google_MemcacheCache extends Google_Cache {
 
   private function isLocked($key) {
 	$this->check();
-	if ((@memcache_get($this->connection, $key . '.lock')) === false) {
+	if ((@memcache_get($this->connection, $key.'.lock')) === false) {
 	  return false;
 	}
 	return true;
@@ -50,13 +50,13 @@ class Google_MemcacheCache extends Google_Cache {
 	$this->check();
 	// the interesting thing is that this could fail if the lock was created in the meantime..
 	// but we'll ignore that out of convenience
-	@memcache_add($this->connection, $key . '.lock', '', 0, 5);
+	@memcache_add($this->connection, $key.'.lock', '', 0, 5);
   }
 
   private function removeLock($key) {
 	$this->check();
 	// suppress all warnings, if some other process removed it that's ok too
-	@memcache_delete($this->connection, $key . '.lock');
+	@memcache_delete($this->connection, $key.'.lock');
   }
 
   private function waitForLock($key) {
@@ -67,7 +67,7 @@ class Google_MemcacheCache extends Google_Cache {
 	do {
 	  // 250 ms is a long time to sleep, but it does stop the server from burning all resources on polling locks..
 	  usleep(250);
-	  $cnt ++;
+	  $cnt++;
 	} while ($cnt <= $tries && $this->isLocked($key));
 	if ($this->isLocked($key)) {
 	  // 5 seconds passed, assume the owning process died off and remove it
@@ -78,13 +78,13 @@ class Google_MemcacheCache extends Google_Cache {
   // I prefer lazy initialization since the cache isn't used every request
   // so this potentially saves a lot of overhead
   private function connect() {
-	if (! $this->connection = @memcache_pconnect($this->host, $this->port)) {
+	if ( ! $this->connection = @memcache_pconnect($this->host, $this->port)) {
 	  throw new Google_CacheException("Couldn't connect to memcache server");
 	}
   }
 
   private function check() {
-	if (! $this->connection) {
+	if ( ! $this->connection) {
 	  $this->connect();
 	}
   }

@@ -212,7 +212,7 @@ class Google_AllocateIdsResponse extends Google_Model {
   public function getKeys() {
 	return $this->keys;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -222,7 +222,7 @@ class Google_AllocateIdsResponse extends Google_Model {
 
 class Google_BeginTransactionRequest extends Google_Model {
   public $isolationLevel;
-  public function setIsolationLevel( $isolationLevel) {
+  public function setIsolationLevel($isolationLevel) {
 	$this->isolationLevel = $isolationLevel;
   }
   public function getIsolationLevel() {
@@ -233,13 +233,13 @@ class Google_BeginTransactionRequest extends Google_Model {
 class Google_BeginTransactionResponse extends Google_Model {
   public $kind;
   public $transaction;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setTransaction( $transaction) {
+  public function setTransaction($transaction) {
 	$this->transaction = $transaction;
   }
   public function getTransaction() {
@@ -264,7 +264,7 @@ class Google_BlindWriteResponse extends Google_Model {
   protected $__mutationResultType = 'Google_MutationResult';
   protected $__mutationResultDataType = '';
   public $mutationResult;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -289,7 +289,7 @@ class Google_CommitRequest extends Google_Model {
   public function getMutation() {
 	return $this->mutation;
   }
-  public function setTransaction( $transaction) {
+  public function setTransaction($transaction) {
 	$this->transaction = $transaction;
   }
   public function getTransaction() {
@@ -302,7 +302,7 @@ class Google_CommitResponse extends Google_Model {
   protected $__mutationResultType = 'Google_MutationResult';
   protected $__mutationResultDataType = '';
   public $mutationResult;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -328,7 +328,7 @@ class Google_CompositeFilter extends Google_Model {
   public function getFilters() {
 	return $this->filters;
   }
-  public function setOperator( $operator) {
+  public function setOperator($operator) {
 	$this->operator = $operator;
   }
   public function getOperator() {
@@ -421,19 +421,19 @@ class Google_KeyPathElement extends Google_Model {
   public $id;
   public $kind;
   public $name;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -443,7 +443,7 @@ class Google_KeyPathElement extends Google_Model {
 
 class Google_KindExpression extends Google_Model {
   public $name;
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -498,7 +498,7 @@ class Google_LookupResponse extends Google_Model {
   public function getFound() {
 	return $this->found;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -537,7 +537,7 @@ class Google_Mutation extends Google_Model {
   public function getDelete() {
 	return $this->delete;
   }
-  public function setForce( $force) {
+  public function setForce($force) {
 	$this->force = $force;
   }
   public function getForce() {
@@ -578,7 +578,7 @@ class Google_MutationResult extends Google_Model {
   protected $__insertAutoIdKeysType = 'Google_Key';
   protected $__insertAutoIdKeysDataType = 'array';
   public $insertAutoIdKeys;
-  public function setIndexUpdates( $indexUpdates) {
+  public function setIndexUpdates($indexUpdates) {
 	$this->indexUpdates = $indexUpdates;
   }
   public function getIndexUpdates() {
@@ -596,13 +596,13 @@ class Google_MutationResult extends Google_Model {
 class Google_PartitionId extends Google_Model {
   public $datasetId;
   public $namespace;
-  public function setDatasetId( $datasetId) {
+  public function setDatasetId($datasetId) {
 	$this->datasetId = $datasetId;
   }
   public function getDatasetId() {
 	return $this->datasetId;
   }
-  public function setNamespace( $namespace) {
+  public function setNamespace($namespace) {
 	$this->namespace = $namespace;
   }
   public function getNamespace() {
@@ -615,7 +615,7 @@ class Google_Property extends Google_Model {
   protected $__valuesType = 'Google_Value';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setMulti( $multi) {
+  public function setMulti($multi) {
 	$this->multi = $multi;
   }
   public function getMulti() {
@@ -635,7 +635,7 @@ class Google_PropertyExpression extends Google_Model {
   protected $__propertyType = 'Google_PropertyReference';
   protected $__propertyDataType = '';
   public $property;
-  public function setAggregationFunction( $aggregationFunction) {
+  public function setAggregationFunction($aggregationFunction) {
 	$this->aggregationFunction = $aggregationFunction;
   }
   public function getAggregationFunction() {
@@ -657,7 +657,7 @@ class Google_PropertyFilter extends Google_Model {
   protected $__valueType = 'Google_Value';
   protected $__valueDataType = '';
   public $value;
-  public function setOperator( $operator) {
+  public function setOperator($operator) {
 	$this->operator = $operator;
   }
   public function getOperator() {
@@ -682,7 +682,7 @@ class Google_PropertyOrder extends Google_Model {
   protected $__propertyType = 'Google_PropertyReference';
   protected $__propertyDataType = '';
   public $property;
-  public function setDirection( $direction) {
+  public function setDirection($direction) {
 	$this->direction = $direction;
   }
   public function getDirection() {
@@ -698,7 +698,7 @@ class Google_PropertyOrder extends Google_Model {
 
 class Google_PropertyReference extends Google_Model {
   public $name;
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -726,7 +726,7 @@ class Google_Query extends Google_Model {
   protected $__projectionDataType = 'array';
   public $projection;
   public $startCursor;
-  public function setEndCursor( $endCursor) {
+  public function setEndCursor($endCursor) {
 	$this->endCursor = $endCursor;
   }
   public function getEndCursor() {
@@ -752,13 +752,13 @@ class Google_Query extends Google_Model {
   public function getKinds() {
 	return $this->kinds;
   }
-  public function setLimit( $limit) {
+  public function setLimit($limit) {
 	$this->limit = $limit;
   }
   public function getLimit() {
 	return $this->limit;
   }
-  public function setOffset( $offset) {
+  public function setOffset($offset) {
 	$this->offset = $offset;
   }
   public function getOffset() {
@@ -778,7 +778,7 @@ class Google_Query extends Google_Model {
   public function getProjection() {
 	return $this->projection;
   }
-  public function setStartCursor( $startCursor) {
+  public function setStartCursor($startCursor) {
 	$this->startCursor = $startCursor;
   }
   public function getStartCursor() {
@@ -794,13 +794,13 @@ class Google_QueryResultBatch extends Google_Model {
   public $entityResults;
   public $moreResults;
   public $skippedResults;
-  public function setEndCursor( $endCursor) {
+  public function setEndCursor($endCursor) {
 	$this->endCursor = $endCursor;
   }
   public function getEndCursor() {
 	return $this->endCursor;
   }
-  public function setEntityResultType( $entityResultType) {
+  public function setEntityResultType($entityResultType) {
 	$this->entityResultType = $entityResultType;
   }
   public function getEntityResultType() {
@@ -813,13 +813,13 @@ class Google_QueryResultBatch extends Google_Model {
   public function getEntityResults() {
 	return $this->entityResults;
   }
-  public function setMoreResults( $moreResults) {
+  public function setMoreResults($moreResults) {
 	$this->moreResults = $moreResults;
   }
   public function getMoreResults() {
 	return $this->moreResults;
   }
-  public function setSkippedResults( $skippedResults) {
+  public function setSkippedResults($skippedResults) {
 	$this->skippedResults = $skippedResults;
   }
   public function getSkippedResults() {
@@ -830,13 +830,13 @@ class Google_QueryResultBatch extends Google_Model {
 class Google_ReadOptions extends Google_Model {
   public $readConsistency;
   public $transaction;
-  public function setReadConsistency( $readConsistency) {
+  public function setReadConsistency($readConsistency) {
 	$this->readConsistency = $readConsistency;
   }
   public function getReadConsistency() {
 	return $this->readConsistency;
   }
-  public function setTransaction( $transaction) {
+  public function setTransaction($transaction) {
 	$this->transaction = $transaction;
   }
   public function getTransaction() {
@@ -846,7 +846,7 @@ class Google_ReadOptions extends Google_Model {
 
 class Google_RollbackRequest extends Google_Model {
   public $transaction;
-  public function setTransaction( $transaction) {
+  public function setTransaction($transaction) {
 	$this->transaction = $transaction;
   }
   public function getTransaction() {
@@ -856,7 +856,7 @@ class Google_RollbackRequest extends Google_Model {
 
 class Google_RollbackResponse extends Google_Model {
   public $kind;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -905,7 +905,7 @@ class Google_RunQueryResponse extends Google_Model {
   public function getBatch() {
 	return $this->batch;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -929,31 +929,31 @@ class Google_Value extends Google_Model {
   public $keyValue;
   public $meaning;
   public $stringValue;
-  public function setBlobKeyValue( $blobKeyValue) {
+  public function setBlobKeyValue($blobKeyValue) {
 	$this->blobKeyValue = $blobKeyValue;
   }
   public function getBlobKeyValue() {
 	return $this->blobKeyValue;
   }
-  public function setBlobValue( $blobValue) {
+  public function setBlobValue($blobValue) {
 	$this->blobValue = $blobValue;
   }
   public function getBlobValue() {
 	return $this->blobValue;
   }
-  public function setBooleanValue( $booleanValue) {
+  public function setBooleanValue($booleanValue) {
 	$this->booleanValue = $booleanValue;
   }
   public function getBooleanValue() {
 	return $this->booleanValue;
   }
-  public function setDateTimeValue( $dateTimeValue) {
+  public function setDateTimeValue($dateTimeValue) {
 	$this->dateTimeValue = $dateTimeValue;
   }
   public function getDateTimeValue() {
 	return $this->dateTimeValue;
   }
-  public function setDoubleValue( $doubleValue) {
+  public function setDoubleValue($doubleValue) {
 	$this->doubleValue = $doubleValue;
   }
   public function getDoubleValue() {
@@ -965,13 +965,13 @@ class Google_Value extends Google_Model {
   public function getEntityValue() {
 	return $this->entityValue;
   }
-  public function setIndexed( $indexed) {
+  public function setIndexed($indexed) {
 	$this->indexed = $indexed;
   }
   public function getIndexed() {
 	return $this->indexed;
   }
-  public function setIntegerValue( $integerValue) {
+  public function setIntegerValue($integerValue) {
 	$this->integerValue = $integerValue;
   }
   public function getIntegerValue() {
@@ -983,13 +983,13 @@ class Google_Value extends Google_Model {
   public function getKeyValue() {
 	return $this->keyValue;
   }
-  public function setMeaning( $meaning) {
+  public function setMeaning($meaning) {
 	$this->meaning = $meaning;
   }
   public function getMeaning() {
 	return $this->meaning;
   }
-  public function setStringValue( $stringValue) {
+  public function setStringValue($stringValue) {
 	$this->stringValue = $stringValue;
   }
   public function getStringValue() {

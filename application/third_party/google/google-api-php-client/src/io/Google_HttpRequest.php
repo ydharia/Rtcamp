@@ -54,7 +54,7 @@ class Google_HttpRequest {
 	if (empty($apiConfig['application_name'])) {
 	  $this->userAgent = self::USER_AGENT_SUFFIX;
 	} else {
-	  $this->userAgent = $apiConfig['application_name'] . " " . self::USER_AGENT_SUFFIX;
+	  $this->userAgent = $apiConfig['application_name']." ".self::USER_AGENT_SUFFIX;
 	}
   }
 
@@ -194,10 +194,10 @@ class Google_HttpRequest {
 	} else {
 	  // Force the path become relative.
 	  if (substr($url, 0, 1) !== '/') {
-		$url = '/' . $url;
+		$url = '/'.$url;
 	  }
 	  global $apiConfig;
-	  $this->url = $apiConfig['basePath'] . $url;
+	  $this->url = $apiConfig['basePath'].$url;
 	}
   }
 
@@ -281,17 +281,17 @@ class Google_HttpRequest {
    */
   public function toBatchString($id) {
 	$str = '';
-	foreach($this->batchHeaders as $key => $val) {
-	  $str .= $key . ': ' . $val . "\n";
+	foreach ($this->batchHeaders as $key => $val) {
+	  $str .= $key.': '.$val."\n";
 	}
 
 	$str .= "Content-ID: $id\n";
 	$str .= "\n";
 
 	$path = parse_url($this->getUrl(), PHP_URL_PATH);
-	$str .= $this->getRequestMethod() . ' ' . $path . " HTTP/1.1\n";
-	foreach($this->getRequestHeaders() as $key => $val) {
-	  $str .= $key . ': ' . $val . "\n";
+	$str .= $this->getRequestMethod().' '.$path." HTTP/1.1\n";
+	foreach ($this->getRequestHeaders() as $key => $val) {
+	  $str .= $key.': '.$val."\n";
 	}
 
 	if ($this->getPostBody()) {

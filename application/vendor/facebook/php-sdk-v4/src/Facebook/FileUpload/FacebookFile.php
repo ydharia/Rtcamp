@@ -84,14 +84,14 @@ class FacebookFile
 	 */
 	public function open()
 	{
-		if (!$this->isRemoteFile($this->path) && !is_readable($this->path)) {
-			throw new FacebookSDKException('Failed to create FacebookFile entity. Unable to read resource: ' . $this->path . '.');
+		if ( ! $this->isRemoteFile($this->path) && ! is_readable($this->path)) {
+			throw new FacebookSDKException('Failed to create FacebookFile entity. Unable to read resource: '.$this->path.'.');
 		}
 
 		$this->stream = fopen($this->path, 'r');
 
-		if (!$this->stream) {
-			throw new FacebookSDKException('Failed to create FacebookFile entity. Unable to open resource: ' . $this->path . '.');
+		if ( ! $this->stream) {
+			throw new FacebookSDKException('Failed to create FacebookFile entity. Unable to open resource: '.$this->path.'.');
 		}
 	}
 

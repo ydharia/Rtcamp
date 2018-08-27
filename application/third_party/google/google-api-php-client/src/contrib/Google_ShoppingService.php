@@ -181,13 +181,13 @@ class Google_Product extends Google_Model {
   public function getDebug() {
 	return $this->debug;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -206,13 +206,13 @@ class Google_Product extends Google_Model {
   public function getRecommendations() {
 	return $this->recommendations;
   }
-  public function setRequestId( $requestId) {
+  public function setRequestId($requestId) {
 	$this->requestId = $requestId;
   }
   public function getRequestId() {
 	return $this->requestId;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -275,7 +275,7 @@ class Google_Products extends Google_Model {
   public function getCategoryRecommendations() {
 	return $this->categoryRecommendations;
   }
-  public function setCurrentItemCount( $currentItemCount) {
+  public function setCurrentItemCount($currentItemCount) {
 	$this->currentItemCount = $currentItemCount;
   }
   public function getCurrentItemCount() {
@@ -287,7 +287,7 @@ class Google_Products extends Google_Model {
   public function getDebug() {
 	return $this->debug;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -306,7 +306,7 @@ class Google_Products extends Google_Model {
   public function getFacets() {
 	return $this->facets;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -319,25 +319,25 @@ class Google_Products extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setItemsPerPage( $itemsPerPage) {
+  public function setItemsPerPage($itemsPerPage) {
 	$this->itemsPerPage = $itemsPerPage;
   }
   public function getItemsPerPage() {
 	return $this->itemsPerPage;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextLink( $nextLink) {
+  public function setNextLink($nextLink) {
 	$this->nextLink = $nextLink;
   }
   public function getNextLink() {
 	return $this->nextLink;
   }
-  public function setPreviousLink( $previousLink) {
+  public function setPreviousLink($previousLink) {
 	$this->previousLink = $previousLink;
   }
   public function getPreviousLink() {
@@ -364,13 +364,13 @@ class Google_Products extends Google_Model {
   public function getRelatedQueries() {
 	return $this->relatedQueries;
   }
-  public function setRequestId( $requestId) {
+  public function setRequestId($requestId) {
 	$this->requestId = $requestId;
   }
   public function getRequestId() {
 	return $this->requestId;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -382,7 +382,7 @@ class Google_Products extends Google_Model {
   public function getSpelling() {
 	return $this->spelling;
   }
-  public function setStartIndex( $startIndex) {
+  public function setStartIndex($startIndex) {
 	$this->startIndex = $startIndex;
   }
   public function getStartIndex() {
@@ -395,7 +395,7 @@ class Google_Products extends Google_Model {
   public function getStores() {
 	return $this->stores;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -420,37 +420,37 @@ class Google_ProductsFacets extends Google_Model {
   public function getBuckets() {
 	return $this->buckets;
   }
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setProperty( $property) {
+  public function setProperty($property) {
 	$this->property = $property;
   }
   public function getProperty() {
 	return $this->property;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
 	return $this->type;
   }
-  public function setUnit( $unit) {
+  public function setUnit($unit) {
 	$this->unit = $unit;
   }
   public function getUnit() {
@@ -465,37 +465,37 @@ class Google_ProductsFacetsBuckets extends Google_Model {
   public $min;
   public $minExclusive;
   public $value;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setMax( $max) {
+  public function setMax($max) {
 	$this->max = $max;
   }
   public function getMax() {
 	return $this->max;
   }
-  public function setMaxExclusive( $maxExclusive) {
+  public function setMaxExclusive($maxExclusive) {
 	$this->maxExclusive = $maxExclusive;
   }
   public function getMaxExclusive() {
 	return $this->maxExclusive;
   }
-  public function setMin( $min) {
+  public function setMin($min) {
 	$this->min = $min;
   }
   public function getMin() {
 	return $this->min;
   }
-  public function setMinExclusive( $minExclusive) {
+  public function setMinExclusive($minExclusive) {
 	$this->minExclusive = $minExclusive;
   }
   public function getMinExclusive() {
 	return $this->minExclusive;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -523,31 +523,31 @@ class Google_ProductsPromotions extends Google_Model {
   public function getCustomFields() {
 	return $this->customFields;
   }
-  public function setCustomHtml( $customHtml) {
+  public function setCustomHtml($customHtml) {
 	$this->customHtml = $customHtml;
   }
   public function getCustomHtml() {
 	return $this->customHtml;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setDestLink( $destLink) {
+  public function setDestLink($destLink) {
 	$this->destLink = $destLink;
   }
   public function getDestLink() {
 	return $this->destLink;
   }
-  public function setImageLink( $imageLink) {
+  public function setImageLink($imageLink) {
 	$this->imageLink = $imageLink;
   }
   public function getImageLink() {
 	return $this->imageLink;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -559,7 +559,7 @@ class Google_ProductsPromotions extends Google_Model {
   public function getProduct() {
 	return $this->product;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -570,13 +570,13 @@ class Google_ProductsPromotions extends Google_Model {
 class Google_ProductsPromotionsCustomFields extends Google_Model {
   public $name;
   public $value;
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -586,7 +586,7 @@ class Google_ProductsPromotionsCustomFields extends Google_Model {
 
 class Google_ProductsSpelling extends Google_Model {
   public $suggestion;
-  public function setSuggestion( $suggestion) {
+  public function setSuggestion($suggestion) {
 	$this->suggestion = $suggestion;
   }
   public function getSuggestion() {
@@ -602,43 +602,43 @@ class Google_ProductsStores extends Google_Model {
   public $storeId;
   public $storeName;
   public $telephone;
-  public function setAddress( $address) {
+  public function setAddress($address) {
 	$this->address = $address;
   }
   public function getAddress() {
 	return $this->address;
   }
-  public function setLocation( $location) {
+  public function setLocation($location) {
 	$this->location = $location;
   }
   public function getLocation() {
 	return $this->location;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setStoreCode( $storeCode) {
+  public function setStoreCode($storeCode) {
 	$this->storeCode = $storeCode;
   }
   public function getStoreCode() {
 	return $this->storeCode;
   }
-  public function setStoreId( $storeId) {
+  public function setStoreId($storeId) {
 	$this->storeId = $storeId;
   }
   public function getStoreId() {
 	return $this->storeId;
   }
-  public function setStoreName( $storeName) {
+  public function setStoreName($storeName) {
 	$this->storeName = $storeName;
   }
   public function getStoreName() {
 	return $this->storeName;
   }
-  public function setTelephone( $telephone) {
+  public function setTelephone($telephone) {
 	$this->telephone = $telephone;
   }
   public function getTelephone() {
@@ -651,7 +651,7 @@ class Google_ShoppingModelCategoryJsonV1 extends Google_Model {
   public $parents;
   public $shortName;
   public $url;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -664,13 +664,13 @@ class Google_ShoppingModelCategoryJsonV1 extends Google_Model {
   public function getParents() {
 	return $this->parents;
   }
-  public function setShortName( $shortName) {
+  public function setShortName($shortName) {
 	$this->shortName = $shortName;
   }
   public function getShortName() {
 	return $this->shortName;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -697,49 +697,49 @@ class Google_ShoppingModelDebugJsonV1 extends Google_Model {
   public function getBackendTimes() {
 	return $this->backendTimes;
   }
-  public function setElapsedMillis( $elapsedMillis) {
+  public function setElapsedMillis($elapsedMillis) {
 	$this->elapsedMillis = $elapsedMillis;
   }
   public function getElapsedMillis() {
 	return $this->elapsedMillis;
   }
-  public function setFacetsRequest( $facetsRequest) {
+  public function setFacetsRequest($facetsRequest) {
 	$this->facetsRequest = $facetsRequest;
   }
   public function getFacetsRequest() {
 	return $this->facetsRequest;
   }
-  public function setFacetsResponse( $facetsResponse) {
+  public function setFacetsResponse($facetsResponse) {
 	$this->facetsResponse = $facetsResponse;
   }
   public function getFacetsResponse() {
 	return $this->facetsResponse;
   }
-  public function setRdcResponse( $rdcResponse) {
+  public function setRdcResponse($rdcResponse) {
 	$this->rdcResponse = $rdcResponse;
   }
   public function getRdcResponse() {
 	return $this->rdcResponse;
   }
-  public function setRecommendedItemsRequest( $recommendedItemsRequest) {
+  public function setRecommendedItemsRequest($recommendedItemsRequest) {
 	$this->recommendedItemsRequest = $recommendedItemsRequest;
   }
   public function getRecommendedItemsRequest() {
 	return $this->recommendedItemsRequest;
   }
-  public function setRecommendedItemsResponse( $recommendedItemsResponse) {
+  public function setRecommendedItemsResponse($recommendedItemsResponse) {
 	$this->recommendedItemsResponse = $recommendedItemsResponse;
   }
   public function getRecommendedItemsResponse() {
 	return $this->recommendedItemsResponse;
   }
-  public function setSearchRequest( $searchRequest) {
+  public function setSearchRequest($searchRequest) {
 	$this->searchRequest = $searchRequest;
   }
   public function getSearchRequest() {
 	return $this->searchRequest;
   }
-  public function setSearchResponse( $searchResponse) {
+  public function setSearchResponse($searchResponse) {
 	$this->searchResponse = $searchResponse;
   }
   public function getSearchResponse() {
@@ -752,25 +752,25 @@ class Google_ShoppingModelDebugJsonV1BackendTimes extends Google_Model {
   public $hostName;
   public $name;
   public $serverMillis;
-  public function setElapsedMillis( $elapsedMillis) {
+  public function setElapsedMillis($elapsedMillis) {
 	$this->elapsedMillis = $elapsedMillis;
   }
   public function getElapsedMillis() {
 	return $this->elapsedMillis;
   }
-  public function setHostName( $hostName) {
+  public function setHostName($hostName) {
 	$this->hostName = $hostName;
   }
   public function getHostName() {
 	return $this->hostName;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setServerMillis( $serverMillis) {
+  public function setServerMillis($serverMillis) {
 	$this->serverMillis = $serverMillis;
   }
   public function getServerMillis() {
@@ -803,7 +803,7 @@ class Google_ShoppingModelExtrasJsonV1 extends Google_Model {
 
 class Google_ShoppingModelExtrasJsonV1FacetRules extends Google_Model {
   public $name;
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -813,7 +813,7 @@ class Google_ShoppingModelExtrasJsonV1FacetRules extends Google_Model {
 
 class Google_ShoppingModelExtrasJsonV1RankingRules extends Google_Model {
   public $name;
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -885,7 +885,7 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getAuthor() {
 	return $this->author;
   }
-  public function setBrand( $brand) {
+  public function setBrand($brand) {
 	$this->brand = $brand;
   }
   public function getBrand() {
@@ -898,37 +898,37 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getCategories() {
 	return $this->categories;
   }
-  public function setCondition( $condition) {
+  public function setCondition($condition) {
 	$this->condition = $condition;
   }
   public function getCondition() {
 	return $this->condition;
   }
-  public function setCountry( $country) {
+  public function setCountry($country) {
 	$this->country = $country;
   }
   public function getCountry() {
 	return $this->country;
   }
-  public function setCreationTime( $creationTime) {
+  public function setCreationTime($creationTime) {
 	$this->creationTime = $creationTime;
   }
   public function getCreationTime() {
 	return $this->creationTime;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setGoogleId( $googleId) {
+  public function setGoogleId($googleId) {
 	$this->googleId = $googleId;
   }
   public function getGoogleId() {
 	return $this->googleId;
   }
-  public function setGtin( $gtin) {
+  public function setGtin($gtin) {
 	$this->gtin = $gtin;
   }
   public function getGtin() {
@@ -962,25 +962,25 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getInternal10() {
 	return $this->internal10;
   }
-  public function setInternal12( $internal12) {
+  public function setInternal12($internal12) {
 	$this->internal12 = $internal12;
   }
   public function getInternal12() {
 	return $this->internal12;
   }
-  public function setInternal13( $internal13) {
+  public function setInternal13($internal13) {
 	$this->internal13 = $internal13;
   }
   public function getInternal13() {
 	return $this->internal13;
   }
-  public function setInternal14( $internal14) {
+  public function setInternal14($internal14) {
 	$this->internal14 = $internal14;
   }
   public function getInternal14() {
 	return $this->internal14;
   }
-  public function setInternal15( $internal15) {
+  public function setInternal15($internal15) {
 	$this->internal15 = $internal15;
   }
   public function getInternal15() {
@@ -992,7 +992,7 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getInternal16() {
 	return $this->internal16;
   }
-  public function setInternal3( $internal3) {
+  public function setInternal3($internal3) {
 	$this->internal3 = $internal3;
   }
   public function getInternal3() {
@@ -1005,13 +1005,13 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getInternal4() {
 	return $this->internal4;
   }
-  public function setInternal6( $internal6) {
+  public function setInternal6($internal6) {
 	$this->internal6 = $internal6;
   }
   public function getInternal6() {
 	return $this->internal6;
   }
-  public function setInternal7( $internal7) {
+  public function setInternal7($internal7) {
 	$this->internal7 = $internal7;
   }
   public function getInternal7() {
@@ -1031,19 +1031,19 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getInventories() {
 	return $this->inventories;
   }
-  public function setLanguage( $language) {
+  public function setLanguage($language) {
 	$this->language = $language;
   }
   public function getLanguage() {
 	return $this->language;
   }
-  public function setLink( $link) {
+  public function setLink($link) {
 	$this->link = $link;
   }
   public function getLink() {
 	return $this->link;
   }
-  public function setModificationTime( $modificationTime) {
+  public function setModificationTime($modificationTime) {
 	$this->modificationTime = $modificationTime;
   }
   public function getModificationTime() {
@@ -1056,37 +1056,37 @@ class Google_ShoppingModelProductJsonV1 extends Google_Model {
   public function getMpns() {
 	return $this->mpns;
   }
-  public function setPlusOne( $plusOne) {
+  public function setPlusOne($plusOne) {
 	$this->plusOne = $plusOne;
   }
   public function getPlusOne() {
 	return $this->plusOne;
   }
-  public function setProvidedId( $providedId) {
+  public function setProvidedId($providedId) {
 	$this->providedId = $providedId;
   }
   public function getProvidedId() {
 	return $this->providedId;
   }
-  public function setQueryMatched( $queryMatched) {
+  public function setQueryMatched($queryMatched) {
 	$this->queryMatched = $queryMatched;
   }
   public function getQueryMatched() {
 	return $this->queryMatched;
   }
-  public function setScore( $score) {
+  public function setScore($score) {
 	$this->score = $score;
   }
   public function getScore() {
 	return $this->score;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setTotalMatchingVariants( $totalMatchingVariants) {
+  public function setTotalMatchingVariants($totalMatchingVariants) {
 	$this->totalMatchingVariants = $totalMatchingVariants;
   }
   public function getTotalMatchingVariants() {
@@ -1107,31 +1107,31 @@ class Google_ShoppingModelProductJsonV1Attributes extends Google_Model {
   public $type;
   public $unit;
   public $value;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
 	return $this->type;
   }
-  public function setUnit( $unit) {
+  public function setUnit($unit) {
 	$this->unit = $unit;
   }
   public function getUnit() {
 	return $this->unit;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -1142,13 +1142,13 @@ class Google_ShoppingModelProductJsonV1Attributes extends Google_Model {
 class Google_ShoppingModelProductJsonV1Author extends Google_Model {
   public $accountId;
   public $name;
-  public function setAccountId( $accountId) {
+  public function setAccountId($accountId) {
 	$this->accountId = $accountId;
   }
   public function getAccountId() {
 	return $this->accountId;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -1162,13 +1162,13 @@ class Google_ShoppingModelProductJsonV1Images extends Google_Model {
   protected $__thumbnailsType = 'Google_ShoppingModelProductJsonV1ImagesThumbnails';
   protected $__thumbnailsDataType = 'array';
   public $thumbnails;
-  public function setLink( $link) {
+  public function setLink($link) {
 	$this->link = $link;
   }
   public function getLink() {
 	return $this->link;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -1188,25 +1188,25 @@ class Google_ShoppingModelProductJsonV1ImagesThumbnails extends Google_Model {
   public $height;
   public $link;
   public $width;
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setHeight( $height) {
+  public function setHeight($height) {
 	$this->height = $height;
   }
   public function getHeight() {
 	return $this->height;
   }
-  public function setLink( $link) {
+  public function setLink($link) {
 	$this->link = $link;
   }
   public function getLink() {
 	return $this->link;
   }
-  public function setWidth( $width) {
+  public function setWidth($width) {
 	$this->width = $width;
   }
   public function getWidth() {
@@ -1218,19 +1218,19 @@ class Google_ShoppingModelProductJsonV1Internal16 extends Google_Model {
   public $length;
   public $number;
   public $size;
-  public function setLength( $length) {
+  public function setLength($length) {
 	$this->length = $length;
   }
   public function getLength() {
 	return $this->length;
   }
-  public function setNumber( $number) {
+  public function setNumber($number) {
 	$this->number = $number;
   }
   public function getNumber() {
 	return $this->number;
   }
-  public function setSize( $size) {
+  public function setSize($size) {
 	$this->size = $size;
   }
   public function getSize() {
@@ -1241,13 +1241,13 @@ class Google_ShoppingModelProductJsonV1Internal16 extends Google_Model {
 class Google_ShoppingModelProductJsonV1Internal4 extends Google_Model {
   public $confidence;
   public $node;
-  public function setConfidence( $confidence) {
+  public function setConfidence($confidence) {
 	$this->confidence = $confidence;
   }
   public function getConfidence() {
 	return $this->confidence;
   }
-  public function setNode( $node) {
+  public function setNode($node) {
 	$this->node = $node;
   }
   public function getNode() {
@@ -1271,91 +1271,91 @@ class Google_ShoppingModelProductJsonV1Inventories extends Google_Model {
   public $shipping;
   public $storeId;
   public $tax;
-  public function setAvailability( $availability) {
+  public function setAvailability($availability) {
 	$this->availability = $availability;
   }
   public function getAvailability() {
 	return $this->availability;
   }
-  public function setChannel( $channel) {
+  public function setChannel($channel) {
 	$this->channel = $channel;
   }
   public function getChannel() {
 	return $this->channel;
   }
-  public function setCurrency( $currency) {
+  public function setCurrency($currency) {
 	$this->currency = $currency;
   }
   public function getCurrency() {
 	return $this->currency;
   }
-  public function setDistance( $distance) {
+  public function setDistance($distance) {
 	$this->distance = $distance;
   }
   public function getDistance() {
 	return $this->distance;
   }
-  public function setDistanceUnit( $distanceUnit) {
+  public function setDistanceUnit($distanceUnit) {
 	$this->distanceUnit = $distanceUnit;
   }
   public function getDistanceUnit() {
 	return $this->distanceUnit;
   }
-  public function setInstallmentMonths( $installmentMonths) {
+  public function setInstallmentMonths($installmentMonths) {
 	$this->installmentMonths = $installmentMonths;
   }
   public function getInstallmentMonths() {
 	return $this->installmentMonths;
   }
-  public function setInstallmentPrice( $installmentPrice) {
+  public function setInstallmentPrice($installmentPrice) {
 	$this->installmentPrice = $installmentPrice;
   }
   public function getInstallmentPrice() {
 	return $this->installmentPrice;
   }
-  public function setOriginalPrice( $originalPrice) {
+  public function setOriginalPrice($originalPrice) {
 	$this->originalPrice = $originalPrice;
   }
   public function getOriginalPrice() {
 	return $this->originalPrice;
   }
-  public function setPrice( $price) {
+  public function setPrice($price) {
 	$this->price = $price;
   }
   public function getPrice() {
 	return $this->price;
   }
-  public function setSaleEndDate( $saleEndDate) {
+  public function setSaleEndDate($saleEndDate) {
 	$this->saleEndDate = $saleEndDate;
   }
   public function getSaleEndDate() {
 	return $this->saleEndDate;
   }
-  public function setSalePrice( $salePrice) {
+  public function setSalePrice($salePrice) {
 	$this->salePrice = $salePrice;
   }
   public function getSalePrice() {
 	return $this->salePrice;
   }
-  public function setSaleStartDate( $saleStartDate) {
+  public function setSaleStartDate($saleStartDate) {
 	$this->saleStartDate = $saleStartDate;
   }
   public function getSaleStartDate() {
 	return $this->saleStartDate;
   }
-  public function setShipping( $shipping) {
+  public function setShipping($shipping) {
 	$this->shipping = $shipping;
   }
   public function getShipping() {
 	return $this->shipping;
   }
-  public function setStoreId( $storeId) {
+  public function setStoreId($storeId) {
 	$this->storeId = $storeId;
   }
   public function getStoreId() {
 	return $this->storeId;
   }
-  public function setTax( $tax) {
+  public function setTax($tax) {
 	$this->tax = $tax;
   }
   public function getTax() {
@@ -1387,7 +1387,7 @@ class Google_ShoppingModelRecommendationsJsonV1 extends Google_Model {
   public function getRecommendationList() {
 	return $this->recommendationList;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
