@@ -194,7 +194,7 @@ class google_drive {
 				$sysdir = $sysdir[0];
 			}
 			endif;
-		endif;
+		//endif;
 		// return the system directory
 		return $sysdir;
 	}
