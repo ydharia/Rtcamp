@@ -141,7 +141,9 @@ class URI_Template_Parser {
 		}
 		$part .= $val;
 	  }
-	  if ( ! $exp->one_var_defined) $part = '';
+	  if ( ! $exp->one_var_defined) {
+	  	$part = '';
+	  }
 	  $this->expansion = str_replace($exp->expression, $part, $this->expansion);
 	}
 
