@@ -588,8 +588,7 @@ class CI_FTP {
 				if (is_dir($locpath.$file) && $file[0] !== '.')
 				{
 					$this->mirror($locpath.$file.'/', $rempath.$file.'/');
-				}
-				elseif ($file[0] !== '.')
+				} elseif ($file[0] !== '.')
 				{
 					// Get the file extension so we can se the upload type
 					$ext = $this->_getext($file);
@@ -659,7 +658,7 @@ class CI_FTP {
 	 */
 	protected function _error($line)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->lang->load('ftp');
 		show_error($CI->lang->line($line));
 	}

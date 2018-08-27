@@ -371,8 +371,7 @@ class CI_DB_ibase_driver extends CI_DB {
 		{
 			$select = 'FIRST '.$this->qb_limit
 				.($this->qb_offset ? ' SKIP '.$this->qb_offset : '');
-		}
-		else
+		} else
 		{
 			$select = 'ROWS '
 				.($this->qb_offset ? $this->qb_offset.' TO '.($this->qb_limit + $this->qb_offset) : $this->qb_limit);

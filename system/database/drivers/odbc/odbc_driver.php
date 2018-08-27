@@ -155,13 +155,11 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 		if (empty($binds) OR empty($this->bind_marker) OR strpos($sql, $this->bind_marker) === FALSE)
 		{
 			return $sql;
-		}
-		elseif ( ! is_array($binds))
+		} elseif ( ! is_array($binds))
 		{
 			$binds = array($binds);
 			$bind_count = 1;
-		}
-		else
+		} else
 		{
 			// Make sure we're using numeric keys
 			$binds = array_values($binds);
@@ -185,8 +183,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 			{
 				return $sql;
 			}
-		}
-		elseif (($c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i', $sql, $matches, PREG_OFFSET_CAPTURE)) !== $bind_count)
+		} elseif (($c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i', $sql, $matches, PREG_OFFSET_CAPTURE)) !== $bind_count)
 		{
 			return $sql;
 		}
@@ -222,8 +219,7 @@ class CI_DB_odbc_driver extends CI_DB_driver {
 		if ( ! isset($this->odbc_result))
 		{
 			return odbc_exec($this->conn_id, $sql);
-		}
-		elseif ($this->odbc_result === FALSE)
+		} elseif ($this->odbc_result === FALSE)
 		{
 			return FALSE;
 		}

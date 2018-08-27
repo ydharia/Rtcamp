@@ -73,13 +73,11 @@ if ( ! function_exists('hash_equals'))
 		{
 			trigger_error('hash_equals(): Expected known_string to be a string, '.strtolower(gettype($known_string)).' given', E_USER_WARNING);
 			return FALSE;
-		}
-		elseif ( ! is_string($user_string))
+		} elseif ( ! is_string($user_string))
 		{
 			trigger_error('hash_equals(): Expected user_string to be a string, '.strtolower(gettype($user_string)).' given', E_USER_WARNING);
 			return FALSE;
-		}
-		elseif (($length = strlen($known_string)) !== strlen($user_string))
+		} elseif (($length = strlen($known_string)) !== strlen($user_string))
 		{
 			return FALSE;
 		}
@@ -135,8 +133,7 @@ if ( ! function_exists('hash_pbkdf2'))
 			if (is_string($iterations) && is_numeric($iterations))
 			{
 				$iterations = (int) $iterations;
-			}
-			else
+			} else
 			{
 				trigger_error('hash_pbkdf2() expects parameter 4 to be long, '.$type.' given', E_USER_WARNING);
 				return NULL;
@@ -159,8 +156,7 @@ if ( ! function_exists('hash_pbkdf2'))
 			if (is_string($length) && is_numeric($length))
 			{
 				$length = (int) $length;
-			}
-			else
+			} else
 			{
 				trigger_error('hash_pbkdf2() expects parameter 5 to be long, '.$type.' given', E_USER_WARNING);
 				return NULL;

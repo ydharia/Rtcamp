@@ -158,8 +158,7 @@ if ( ! function_exists('ascii_to_entities'))
 				}
 
 				$out .= $str[$i];
-			}
-			else
+			} else
 			{
 				if (count($temp) === 0)
 				{
@@ -216,12 +215,10 @@ if ( ! function_exists('entities_to_ascii'))
 				{
 					$out .= chr($digits);
 
-				}
-				elseif ($digits < 2048)
+				} elseif ($digits < 2048)
 				{
 					$out .= chr(192 + (($digits - ($digits % 64)) / 64)).chr(128 + ($digits % 64));
-				}
-				else
+				} else
 				{
 					$out .= chr(224 + (($digits - ($digits % 4096)) / 4096))
 						.chr(128 + ((($digits % 4096) - ($digits % 64)) / 64))
@@ -286,8 +283,7 @@ if ( ! function_exists('word_censor'))
 					"\\1{$replacement}\\3",
 					$str
 				);
-			}
-			elseif (preg_match_all("/{$delim}(".$badword."){$delim}/i", $str, $matches, PREG_PATTERN_ORDER | PREG_OFFSET_CAPTURE))
+			} elseif (preg_match_all("/{$delim}(".$badword."){$delim}/i", $str, $matches, PREG_PATTERN_ORDER | PREG_OFFSET_CAPTURE))
 			{
 				$matches = $matches[1];
 				for ($i = count($matches) - 1; $i >= 0; $i--)
@@ -504,8 +500,7 @@ if ( ! function_exists('word_wrap'))
 			if ($temp !== '')
 			{
 				$output .= $temp."\n".$line."\n";
-			}
-			else
+			} else
 			{
 				$output .= $line."\n";
 			}
@@ -556,8 +551,7 @@ if ( ! function_exists('ellipsize'))
 		if ($position === 1)
 		{
 			$end = mb_substr($str, 0, -($max_length - mb_strlen($beg)));
-		}
-		else
+		} else
 		{
 			$end = mb_substr($str, -($max_length - mb_strlen($beg)));
 		}

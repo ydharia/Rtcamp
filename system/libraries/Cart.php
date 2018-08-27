@@ -99,7 +99,7 @@ class CI_Cart {
 	public function __construct($params = array())
 	{
 		// Set the super object to a local variable for use later
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 
 		// Are any config settings being passed manually?  If so, set them
 		$config = is_array($params) ? $params : array();
@@ -147,8 +147,7 @@ class CI_Cart {
 			{
 				$save_cart = TRUE;
 			}
-		}
-		else
+		} else
 		{
 			foreach ($items as $val)
 			{
@@ -248,8 +247,7 @@ class CI_Cart {
 		if (isset($items['options']) && count($items['options']) > 0)
 		{
 			$rowid = md5($items['id'].serialize($items['options']));
-		}
-		else
+		} else
 		{
 			// No options were submitted so we simply MD5 the product ID.
 			// Technically, we don't need to MD5 the ID in this case, but it makes
@@ -303,8 +301,7 @@ class CI_Cart {
 			{
 				$save_cart = TRUE;
 			}
-		}
-		else
+		} else
 		{
 			foreach ($items as $val)
 			{
@@ -546,7 +543,7 @@ class CI_Cart {
 	 */
 	public function format_number($n = '')
 	{
-		return ($n === '') ? '' : number_format( (float) $n, 2, '.', ',');
+		return ($n === '') ? '' : number_format((float) $n, 2, '.', ',');
 	}
 
 	// --------------------------------------------------------------------

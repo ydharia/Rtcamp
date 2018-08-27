@@ -53,21 +53,21 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 	 *
 	 * @var	string
 	 */
-	protected $_list_databases	= 'SHOW DATABASES';
+	protected $_list_databases = 'SHOW DATABASES';
 
 	/**
 	 * OPTIMIZE TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_optimize_table	= 'OPTIMIZE TABLE %s';
+	protected $_optimize_table = 'OPTIMIZE TABLE %s';
 
 	/**
 	 * REPAIR TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_repair_table	= 'REPAIR TABLE %s';
+	protected $_repair_table = 'REPAIR TABLE %s';
 
 	// --------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 			$output .= 'SET foreign_key_checks = 0;'.$newline;
 		}
 
-		foreach ( (array) $tables as $table)
+		foreach ((array) $tables as $table)
 		{
 			// Is the table in the "ignore" list?
 			if (in_array($table, (array) $ignore, TRUE))
@@ -163,7 +163,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 			}
 
 			// Trim off the end comma
-			$field_str = preg_replace('/, $/' , '', $field_str);
+			$field_str = preg_replace('/, $/', '', $field_str);
 
 			// Build the insert string
 			foreach ($query->result_array() as $row)
@@ -177,8 +177,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 					if ($v === NULL)
 					{
 						$val_str .= 'NULL';
-					}
-					else
+					} else
 					{
 						// Escape the data if it's not an integer
 						$val_str .= ($is_int[$i] === FALSE) ? $this->db->escape($v) : $v;
@@ -190,7 +189,7 @@ class CI_DB_mysqli_utility extends CI_DB_utility {
 				}
 
 				// Remove the comma at the end of the string
-				$val_str = preg_replace('/, $/' , '', $val_str);
+				$val_str = preg_replace('/, $/', '', $val_str);
 
 				// Build the INSERT string
 				$output .= 'INSERT INTO '.$this->db->protect_identifiers($table).' ('.$field_str.') VALUES ('.$val_str.');'.$newline;

@@ -97,7 +97,7 @@ class CI_Profiler {
 	 */
 	public function __construct($config = array())
 	{
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 		$this->CI->load->language('profiler');
 
 		// default all sections to display
@@ -206,8 +206,7 @@ class CI_Profiler {
 				if ($cobject instanceof CI_DB)
 				{
 					$dbs[get_class($this->CI).':$'.$name] = $cobject;
-				}
-				elseif ($cobject instanceof CI_Model)
+				} elseif ($cobject instanceof CI_Model)
 				{
 					foreach (get_object_vars($cobject) as $mname => $mobject)
 					{
@@ -238,7 +237,7 @@ class CI_Profiler {
 		// Key words we want bolded
 		$highlight = array('SELECT', 'DISTINCT', 'FROM', 'WHERE', 'AND', 'LEFT&nbsp;JOIN', 'ORDER&nbsp;BY', 'GROUP&nbsp;BY', 'LIMIT', 'INSERT', 'INTO', 'VALUES', 'UPDATE', 'OR&nbsp;', 'HAVING', 'OFFSET', 'NOT&nbsp;IN', 'IN', 'LIKE', 'NOT&nbsp;LIKE', 'COUNT', 'MAX', 'MIN', 'ON', 'AS', 'AVG', 'SUM', '(', ')');
 
-		$output  = "\n\n";
+		$output = "\n\n";
 		$count = 0;
 
 		foreach ($dbs as $name => $db)
@@ -264,8 +263,7 @@ class CI_Profiler {
 			{
 				$output .= '<tr><td style="width:100%;color:#0000FF;font-weight:normal;background-color:#eee;padding:5px;">'
 						.$this->CI->lang->line('profiler_no_queries')."</td></tr>\n";
-			}
-			else
+			} else
 			{
 				foreach ($db->queries as $key => $val)
 				{
@@ -307,8 +305,7 @@ class CI_Profiler {
 		if (count($_GET) === 0)
 		{
 			$output .= '<div style="color:#cd6e00;font-weight:normal;padding:4px 0 4px 0;">'.$this->CI->lang->line('profiler_no_get').'</div>';
-		}
-		else
+		} else
 		{
 			$output .= "\n\n<table style=\"width:100%;border:none;\">\n";
 
@@ -347,8 +344,7 @@ class CI_Profiler {
 		if (count($_POST) === 0 && count($_FILES) === 0)
 		{
 			$output .= '<div style="color:#009900;font-weight:normal;padding:4px 0 4px 0;">'.$this->CI->lang->line('profiler_no_post').'</div>';
-		}
-		else
+		} else
 		{
 			$output .= "\n\n<table style=\"width:100%;\">\n";
 
@@ -455,7 +451,7 @@ class CI_Profiler {
 			.'&nbsp;&nbsp;(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_httpheaders_table\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_show').'\'?\''.$this->CI->lang->line('profiler_section_hide').'\':\''.$this->CI->lang->line('profiler_section_show').'\';">'.$this->CI->lang->line('profiler_section_show')."</span>)</legend>\n\n\n"
 			.'<table style="width:100%;display:none;" id="ci_profiler_httpheaders_table">'."\n";
 
-		foreach (array('HTTP_ACCEPT', 'HTTP_USER_AGENT', 'HTTP_CONNECTION', 'SERVER_PORT', 'SERVER_NAME', 'REMOTE_ADDR', 'SERVER_SOFTWARE', 'HTTP_ACCEPT_LANGUAGE', 'SCRIPT_NAME', 'REQUEST_METHOD',' HTTP_HOST', 'REMOTE_HOST', 'CONTENT_TYPE', 'SERVER_PROTOCOL', 'QUERY_STRING', 'HTTP_ACCEPT_ENCODING', 'HTTP_X_FORWARDED_FOR', 'HTTP_DNT') as $header)
+		foreach (array('HTTP_ACCEPT', 'HTTP_USER_AGENT', 'HTTP_CONNECTION', 'SERVER_PORT', 'SERVER_NAME', 'REMOTE_ADDR', 'SERVER_SOFTWARE', 'HTTP_ACCEPT_LANGUAGE', 'SCRIPT_NAME', 'REQUEST_METHOD', ' HTTP_HOST', 'REMOTE_HOST', 'CONTENT_TYPE', 'SERVER_PROTOCOL', 'QUERY_STRING', 'HTTP_ACCEPT_ENCODING', 'HTTP_X_FORWARDED_FOR', 'HTTP_DNT') as $header)
 		{
 			$val = isset($_SERVER[$header]) ? htmlspecialchars($_SERVER[$header], ENT_QUOTES, config_item('charset')) : '';
 			$output .= '<tr><td style="vertical-align:top;width:50%;padding:5px;color:#900;background-color:#ddd;">'
@@ -491,7 +487,7 @@ class CI_Profiler {
 			{
 				$val = print_r($val, TRUE);
                                 
-				$pre       = '<pre>' ;
+				$pre = '<pre>';
  				$pre_close = '</pre>';
 			}
 
@@ -529,7 +525,7 @@ class CI_Profiler {
 			{
 				$val = print_r($val, TRUE);
                                 
-				$pre       = '<pre>' ;
+				$pre = '<pre>';
  				$pre_close = '</pre>';
 			}
 

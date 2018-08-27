@@ -147,8 +147,7 @@ if ( ! function_exists('_list'))
 			if ( ! is_array($val))
 			{
 				$out .= $val;
-			}
-			else
+			} else
 			{
 				$out .= $_last_list_item."\n"._list($type, $val, '', $depth + 4).str_repeat(' ', $depth + 2);
 			}
@@ -177,7 +176,7 @@ if ( ! function_exists('img'))
 	 */
 	function img($src = '', $index_page = FALSE, $attributes = '')
 	{
-		if ( ! is_array($src) )
+		if ( ! is_array($src))
 		{
 			$src = array('src' => $src);
 		}
@@ -197,13 +196,11 @@ if ( ! function_exists('img'))
 				if ($index_page === TRUE)
 				{
 					$img .= ' src="'.get_instance()->config->site_url($v).'"';
-				}
-				else
+				} else
 				{
 					$img .= ' src="'.get_instance()->config->base_url($v).'"';
 				}
-			}
-			else
+			} else
 			{
 				$img .= ' '.$k.'="'.$v.'"';
 			}
@@ -277,7 +274,7 @@ if ( ! function_exists('link_tag'))
 	 */
 	function link_tag($href = '', $rel = 'stylesheet', $type = 'text/css', $title = '', $media = '', $index_page = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$link = '<link ';
 
 		if (is_array($href))
@@ -289,29 +286,24 @@ if ( ! function_exists('link_tag'))
 					if ($index_page === TRUE)
 					{
 						$link .= 'href="'.$CI->config->site_url($v).'" ';
-					}
-					else
+					} else
 					{
 						$link .= 'href="'.$CI->config->base_url($v).'" ';
 					}
-				}
-				else
+				} else
 				{
 					$link .= $k.'="'.$v.'" ';
 				}
 			}
-		}
-		else
+		} else
 		{
 			if (preg_match('#^([a-z]+:)?//#i', $href))
 			{
 				$link .= 'href="'.$href.'" ';
-			}
-			elseif ($index_page === TRUE)
+			} elseif ($index_page === TRUE)
 			{
 				$link .= 'href="'.$CI->config->site_url($href).'" ';
-			}
-			else
+			} else
 			{
 				$link .= 'href="'.$CI->config->base_url($href).'" ';
 			}
@@ -353,8 +345,7 @@ if ( ! function_exists('meta'))
 		if ( ! is_array($name))
 		{
 			$name = array(array('name' => $name, 'content' => $content, 'type' => $type, 'newline' => $newline));
-		}
-		elseif (isset($name['name']))
+		} elseif (isset($name['name']))
 		{
 			// Turn single array into multidimensional
 			$name = array($name);
@@ -363,10 +354,10 @@ if ( ! function_exists('meta'))
 		$str = '';
 		foreach ($name as $meta)
 		{
-			$type		= (isset($meta['type']) && $meta['type'] !== 'name')	? 'http-equiv' : 'name';
-			$name		= isset($meta['name'])					? $meta['name'] : '';
-			$content	= isset($meta['content'])				? $meta['content'] : '';
-			$newline	= isset($meta['newline'])				? $meta['newline'] : "\n";
+			$type		= (isset($meta['type']) && $meta['type'] !== 'name') ? 'http-equiv' : 'name';
+			$name		= isset($meta['name']) ? $meta['name'] : '';
+			$content	= isset($meta['content']) ? $meta['content'] : '';
+			$newline	= isset($meta['newline']) ? $meta['newline'] : "\n";
 
 			$str .= '<meta '.$type.'="'.$name.'" content="'.$content.'" />'.$newline;
 		}

@@ -97,13 +97,12 @@ class CI_Cache_redis extends CI_Driver
 			return;
 		}
 
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		if ($CI->config->load('redis', TRUE, TRUE))
 		{
 			$config = array_merge(self::$_default_config, $CI->config->item('redis'));
-		}
-		else
+		} else
 		{
 			$config = self::$_default_config;
 		}
@@ -115,8 +114,7 @@ class CI_Cache_redis extends CI_Driver
 			if ($config['socket_type'] === 'unix')
 			{
 				$success = $this->_redis->connect($config['socket']);
-			}
-			else // tcp socket
+			} else // tcp socket
 			{
 				$success = $this->_redis->connect($config['host'], $config['port'], $config['timeout']);
 			}
@@ -130,8 +128,7 @@ class CI_Cache_redis extends CI_Driver
 			{
 				log_message('error', 'Cache: Redis authentication failed.');
 			}
-		}
-		catch (RedisException $e)
+		} catch (RedisException $e)
 		{
 			log_message('error', 'Cache: Redis connection refused ('.$e->getMessage().')');
 		}
@@ -183,8 +180,7 @@ class CI_Cache_redis extends CI_Driver
 
 			isset($this->_serialized[$id]) OR $this->_serialized[$id] = TRUE;
 			$data = serialize($data);
-		}
-		elseif (isset($this->_serialized[$id]))
+		} elseif (isset($this->_serialized[$id]))
 		{
 			$this->_serialized[$id] = NULL;
 			$this->_redis->sRemove('_ci_redis_serialized', $id);

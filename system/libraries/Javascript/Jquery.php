@@ -107,7 +107,7 @@ class CI_Jquery extends CI_Javascript {
 	 */
 	public function __construct($params)
 	{
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 		extract($params);
 
 		if ($autoload === TRUE)
@@ -735,8 +735,7 @@ class CI_Jquery extends CI_Javascript {
 		if ($this->CI->config->item('javascript_ajax_img') === '')
 		{
 			$loading_notifier = 'Loading...';
-		}
-		else
+		} else
 		{
 			$loading_notifier = '<img src="'.$this->CI->config->slash_item('base_url').$this->CI->config->item('javascript_ajax_img').'" alt="Loading" />';
 		}
@@ -892,8 +891,7 @@ class CI_Jquery extends CI_Javascript {
 				$sort_options[] = "\n\t\t".$k.': '.$v;
 			}
 			$sort_options = implode(',', $sort_options);
-		}
-		else
+		} else
 		{
 			$sort_options = '';
 		}
@@ -1064,8 +1062,7 @@ class CI_Jquery extends CI_Javascript {
 		if (in_array($speed, array('slow', 'normal', 'fast')))
 		{
 			return '"'.$speed.'"';
-		}
-		elseif (preg_match('/[^0-9]/', $speed))
+		} elseif (preg_match('/[^0-9]/', $speed))
 		{
 			return '';
 		}

@@ -110,8 +110,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 			if (empty($this->hostname) && empty($this->port))
 			{
 				$this->dsn .= $this->database;
-			}
-			else
+			} else
 			{
 				$this->dsn .= '//'.(empty($this->hostname) ? '127.0.0.1' : $this->hostname)
 					.(empty($this->port) ? '' : ':'.$this->port).'/';
@@ -120,8 +119,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 			}
 
 			empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
-		}
-		elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 4) === FALSE)
+		} elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 4) === FALSE)
 		{
 			$this->dsn .= ';charset='.$this->char_set;
 		}
@@ -188,8 +186,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 		if (strpos($table, '.') !== FALSE)
 		{
 			sscanf($table, '%[^.].%s', $owner, $table);
-		}
-		else
+		} else
 		{
 			$owner = $this->username;
 		}
@@ -212,8 +209,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 		if (strpos($table, '.') !== FALSE)
 		{
 			sscanf($table, '%[^.].%s', $owner, $table);
-		}
-		else
+		} else
 		{
 			$owner = $this->username;
 		}
@@ -232,7 +228,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $query[$i]->COLUMN_NAME;
 			$retval[$i]->type		= $query[$i]->DATA_TYPE;
 
@@ -242,14 +238,14 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 			{
 				$length = $query[$i]->DATA_LENGTH;
 			}
-			$retval[$i]->max_length		= $length;
+			$retval[$i]->max_length = $length;
 
 			$default = $query[$i]->DATA_DEFAULT;
 			if ($default === NULL && $query[$i]->NULLABLE === 'N')
 			{
 				$default = '';
 			}
-			$retval[$i]->default		= $query[$i]->COLUMN_DEFAULT;
+			$retval[$i]->default = $query[$i]->COLUMN_DEFAULT;
 		}
 
 		return $retval;
@@ -292,7 +288,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 	{
 		if ($this->qb_limit)
 		{
-			$this->where('rownum <= ',$this->qb_limit, FALSE);
+			$this->where('rownum <= ', $this->qb_limit, FALSE);
 			$this->qb_limit = FALSE;
 		}
 
@@ -320,7 +316,7 @@ class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
 		}
 
 		return 'SELECT * FROM (SELECT inner_query.*, rownum rnum FROM ('.$sql.') inner_query WHERE rownum < '.($this->qb_offset + $this->qb_limit + 1).')'
-			.($this->qb_offset ? ' WHERE rnum >= '.($this->qb_offset + 1): '');
+			.($this->qb_offset ? ' WHERE rnum >= '.($this->qb_offset + 1) : '');
 	}
 
 }

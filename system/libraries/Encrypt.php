@@ -55,21 +55,21 @@ class CI_Encrypt {
 	 *
 	 * @var string
 	 */
-	public $encryption_key		= '';
+	public $encryption_key = '';
 
 	/**
 	 * Type of hash operation
 	 *
 	 * @var string
 	 */
-	protected $_hash_type		= 'sha1';
+	protected $_hash_type = 'sha1';
 
 	/**
 	 * Flag for the existence of mcrypt
 	 *
 	 * @var bool
 	 */
-	protected $_mcrypt_exists	= FALSE;
+	protected $_mcrypt_exists = FALSE;
 
 	/**
 	 * Current cipher to be used with mcrypt

@@ -87,8 +87,7 @@ class CI_DB_pdo_4d_driver extends CI_DB_pdo_driver {
 			empty($this->port) OR $this->dsn .= ';port='.$this->port;
 			empty($this->database) OR $this->dsn .= ';dbname='.$this->database;
 			empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
-		}
-		elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 3) === FALSE)
+		} elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 3) === FALSE)
 		{
 			$this->dsn .= ';charset='.$this->char_set;
 		}

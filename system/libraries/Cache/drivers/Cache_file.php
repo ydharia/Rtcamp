@@ -62,7 +62,7 @@ class CI_Cache_file extends CI_Driver {
 	 */
 	public function __construct()
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->load->helper('file');
 		$path = $CI->config->item('cache_path');
 		$this->_cache_path = ($path === '') ? APPPATH.'cache/' : $path;
@@ -139,8 +139,7 @@ class CI_Cache_file extends CI_Driver {
 		if ($data === FALSE)
 		{
 			$data = array('data' => 0, 'ttl' => 60);
-		}
-		elseif ( ! is_int($data['data']))
+		} elseif ( ! is_int($data['data']))
 		{
 			return FALSE;
 		}
@@ -167,8 +166,7 @@ class CI_Cache_file extends CI_Driver {
 		if ($data === FALSE)
 		{
 			$data = array('data' => 0, 'ttl' => 60);
-		}
-		elseif ( ! is_int($data['data']))
+		} elseif ( ! is_int($data['data']))
 		{
 			return FALSE;
 		}

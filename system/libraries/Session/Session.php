@@ -74,18 +74,15 @@ class CI_Session {
 		{
 			log_message('debug', 'Session: Initialization under CLI aborted.');
 			return;
-		}
-		elseif ((bool) ini_get('session.auto_start'))
+		} elseif ((bool) ini_get('session.auto_start'))
 		{
 			log_message('error', 'Session: session.auto_start is enabled in php.ini. Aborting.');
 			return;
-		}
-		elseif ( ! empty($params['driver']))
+		} elseif ( ! empty($params['driver']))
 		{
 			$this->_driver = $params['driver'];
 			unset($params['driver']);
-		}
-		elseif ($driver = config_item('sess_driver'))
+		} elseif ($driver = config_item('sess_driver'))
 		{
 			$this->_driver = $driver;
 		}
@@ -108,8 +105,7 @@ class CI_Session {
 			if (is_php('5.4'))
 			{
 				session_set_save_handler($class, TRUE);
-			}
-			else
+			} else
 			{
 				session_set_save_handler(
 					array($class, 'open'),
@@ -122,8 +118,7 @@ class CI_Session {
 
 				register_shutdown_function('session_write_close');
 			}
-		}
-		else
+		} else
 		{
 			log_message('error', "Session: Driver '".$this->_driver."' doesn't implement SessionHandlerInterface. Aborting.");
 			return;
@@ -150,8 +145,7 @@ class CI_Session {
 			if ( ! isset($_SESSION['__ci_last_regenerate']))
 			{
 				$_SESSION['__ci_last_regenerate'] = time();
-			}
-			elseif ($_SESSION['__ci_last_regenerate'] < (time() - $regenerate_time))
+			} elseif ($_SESSION['__ci_last_regenerate'] < (time() - $regenerate_time))
 			{
 				$this->sess_regenerate((bool) config_item('sess_regenerate_destroy'));
 			}
@@ -265,8 +259,7 @@ class CI_Session {
 		if (isset($params['cookie_lifetime']))
 		{
 			$params['cookie_lifetime'] = (int) $params['cookie_lifetime'];
-		}
-		else
+		} else
 		{
 			$params['cookie_lifetime'] = ( ! isset($expiration) && config_item('sess_expire_on_close'))
 				? 0 : (int) $expiration;
@@ -276,8 +269,7 @@ class CI_Session {
 		if (empty($params['cookie_name']))
 		{
 			$params['cookie_name'] = ini_get('session.name');
-		}
-		else
+		} else
 		{
 			ini_set('session.name', $params['cookie_name']);
 		}
@@ -297,8 +289,7 @@ class CI_Session {
 		if (empty($expiration))
 		{
 			$params['expiration'] = (int) ini_get('session.gc_maxlifetime');
-		}
-		else
+		} else
 		{
 			$params['expiration'] = (int) $expiration;
 			ini_set('session.gc_maxlifetime', $expiration);
@@ -349,13 +340,11 @@ class CI_Session {
 				}
 
 				$bits = 160;
-			}
-			elseif ( ! in_array($hash_function, hash_algos(), TRUE))
+			} elseif ( ! in_array($hash_function, hash_algos(), TRUE))
 			{
 				ini_set('session.hash_function', 1);
 				$bits = 160;
-			}
-			elseif (($bits = strlen(hash($hash_function, 'dummy', false)) * 4) < 160)
+			} elseif (($bits = strlen(hash($hash_function, 'dummy', false)) * 4) < 160)
 			{
 				ini_set('session.hash_function', 1);
 				$bits = 160;
@@ -363,8 +352,7 @@ class CI_Session {
 
 			$bits_per_character = (int) ini_get('session.hash_bits_per_character');
 			$sid_length         = (int) ceil($bits / $bits_per_character);
-		}
-		else
+		} else
 		{
 			$bits_per_character = (int) ini_get('session.sid_bits_per_character');
 			$sid_length         = (int) ini_get('session.sid_length');
@@ -429,7 +417,7 @@ class CI_Session {
 			}
 		}
 
-		$this->userdata =& $_SESSION;
+		$this->userdata = & $_SESSION;
 	}
 
 	// ------------------------------------------------------------------------
@@ -548,8 +536,7 @@ class CI_Session {
 				{
 					$k = $v;
 					$v = $ttl;
-				}
-				else
+				} else
 				{
 					$v += time();
 				}
@@ -647,8 +634,7 @@ class CI_Session {
 		if (isset($_SESSION[$key]))
 		{
 			return $_SESSION[$key];
-		}
-		elseif ($key === 'session_id')
+		} elseif ($key === 'session_id')
 		{
 			return session_id();
 		}
@@ -747,8 +733,7 @@ class CI_Session {
 		if (isset($key))
 		{
 			return isset($_SESSION[$key]) ? $_SESSION[$key] : NULL;
-		}
-		elseif (empty($_SESSION))
+		} elseif (empty($_SESSION))
 		{
 			return array();
 		}

@@ -494,8 +494,7 @@ class CI_User_agent {
 			if (empty($_SERVER['HTTP_REFERER']))
 			{
 				$this->referer = FALSE;
-			}
-			else
+			} else
 			{
 				$referer_host = @parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
 				$own_host = parse_url(config_item('base_url'), PHP_URL_HOST);

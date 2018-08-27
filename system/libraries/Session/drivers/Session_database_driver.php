@@ -81,19 +81,17 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	{
 		parent::__construct($params);
 
-		$CI =& get_instance();
+		$CI = & get_instance();
 		isset($CI->db) OR $CI->load->database();
 		$this->_db = $CI->db;
 
 		if ( ! $this->_db instanceof CI_DB_query_builder)
 		{
 			throw new Exception('Query Builder not enabled for the configured database. Aborting.');
-		}
-		elseif ($this->_db->pconnect)
+		} elseif ($this->_db->pconnect)
 		{
 			throw new Exception('Configured database connection is persistent. Aborting.');
-		}
-		elseif ($this->_db->cache_on)
+		} elseif ($this->_db->cache_on)
 		{
 			throw new Exception('Configured database connection has cache enabled. Aborting.');
 		}
@@ -102,8 +100,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 		if (strpos($db_driver, 'mysql') !== FALSE)
 		{
 			$this->_platform = 'mysql';
-		}
-		elseif (in_array($db_driver, array('postgre', 'pdo_pgsql'), TRUE))
+		} elseif (in_array($db_driver, array('postgre', 'pdo_pgsql'), TRUE))
 		{
 			$this->_platform = 'postgre';
 		}
@@ -220,8 +217,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 			$this->_row_exists = FALSE;
 			$this->_session_id = $session_id;
-		}
-		elseif ($this->_lock === FALSE)
+		} elseif ($this->_lock === FALSE)
 		{
 			return $this->_fail();
 		}
@@ -388,8 +384,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 			}
 
 			return FALSE;
-		}
-		elseif ($this->_platform === 'postgre')
+		} elseif ($this->_platform === 'postgre')
 		{
 			$arg = "hashtext('".$session_id."')".($this->_config['match_ip'] ? ", hashtext('".$_SERVER['REMOTE_ADDR']."')" : '');
 			if ($this->_db->simple_query('SELECT pg_advisory_lock('.$arg.')'))
@@ -429,8 +424,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 			}
 
 			return FALSE;
-		}
-		elseif ($this->_platform === 'postgre')
+		} elseif ($this->_platform === 'postgre')
 		{
 			if ($this->_db->simple_query('SELECT pg_advisory_unlock('.$this->_lock.')'))
 			{

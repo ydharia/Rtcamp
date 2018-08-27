@@ -51,14 +51,14 @@ class CI_DB_pdo_mysql_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= 'CREATE DATABASE %s CHARACTER SET %s COLLATE %s';
+	protected $_create_database = 'CREATE DATABASE %s CHARACTER SET %s COLLATE %s';
 
 	/**
 	 * CREATE TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= 'CREATE TABLE IF NOT EXISTS';
+	protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
 
 	/**
 	 * CREATE TABLE keys flag
@@ -68,21 +68,21 @@ class CI_DB_pdo_mysql_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	bool
 	 */
-	protected $_create_table_keys	= TRUE;
+	protected $_create_table_keys = TRUE;
 
 	/**
 	 * DROP TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_table_if	= 'DROP TABLE IF EXISTS';
+	protected $_drop_table_if = 'DROP TABLE IF EXISTS';
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'TINYINT',
 		'SMALLINT',
 		'MEDIUMINT',
@@ -162,14 +162,12 @@ class CI_DB_pdo_mysql_forge extends CI_DB_pdo_forge {
 				$field[$i] = ($alter_type === 'ADD')
 						? "\n\tADD ".$field[$i]['_literal']
 						: "\n\tMODIFY ".$field[$i]['_literal'];
-			}
-			else
+			} else
 			{
 				if ($alter_type === 'ADD')
 				{
 					$field[$i]['_literal'] = "\n\tADD ";
-				}
-				else
+				} else
 				{
 					$field[$i]['_literal'] = empty($field[$i]['new_name']) ? "\n\tMODIFY " : "\n\tCHANGE ";
 				}
@@ -235,8 +233,7 @@ class CI_DB_pdo_mysql_forge extends CI_DB_pdo_forge {
 						continue;
 					}
 				}
-			}
-			elseif ( ! isset($this->fields[$this->keys[$i]]))
+			} elseif ( ! isset($this->fields[$this->keys[$i]]))
 			{
 				unset($this->keys[$i]);
 				continue;

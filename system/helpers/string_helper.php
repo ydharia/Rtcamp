@@ -134,7 +134,7 @@ if ( ! function_exists('quotes_to_entities'))
 	 */
 	function quotes_to_entities($str)
 	{
-		return str_replace(array("\'","\"","'",'"'), array("&#39;","&quot;","&#39;","&quot;"), $str);
+		return str_replace(array("\'", "\"", "'", '"'), array("&#39;", "&quot;", "&#39;", "&quot;"), $str);
 	}
 }
 

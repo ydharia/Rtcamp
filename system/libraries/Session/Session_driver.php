@@ -96,14 +96,13 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 	 */
 	public function __construct(&$params)
 	{
-		$this->_config =& $params;
+		$this->_config = & $params;
 
 		if (is_php('7'))
 		{
 			$this->_success = TRUE;
 			$this->_failure = FALSE;
-		}
-		else
+		} else
 		{
 			$this->_success = 0;
 			$this->_failure = -1;

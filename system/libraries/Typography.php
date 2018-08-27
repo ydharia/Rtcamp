@@ -60,7 +60,7 @@ class CI_Typography {
 	 *
 	 * @var string
 	 */
-	public $skip_elements	= 'p|pre|ol|ul|dl|object|table|h\d';
+	public $skip_elements = 'p|pre|ol|ul|dl|object|table|h\d';
 
 	/**
 	 * Tags we want the parser to completely ignore when splitting the string.
@@ -167,7 +167,7 @@ class CI_Typography {
 		 *		Etc...
 		 *	}
 		 */
-		$chunks = preg_split('/(<(?:[^<>]+(?:"[^"]*"|\'[^\']*\')?)+>)/', $str, -1, PREG_SPLIT_DELIM_CAPTURE|PREG_SPLIT_NO_EMPTY);
+		$chunks = preg_split('/(<(?:[^<>]+(?:"[^"]*"|\'[^\']*\')?)+>)/', $str, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
 		// Build our finalized string.  We cycle through the array, skipping tags, and processing the contained text
 		$str = '';
@@ -266,8 +266,7 @@ class CI_Typography {
 		if ($reduce_linebreaks === TRUE)
 		{
 			$table['#<p>\n*</p>#'] = '';
-		}
-		else
+		} else
 		{
 			// If we have empty paragraph tags we add a non-breaking space
 			// otherwise most browsers won't treat them as true paragraphs
@@ -372,7 +371,7 @@ class CI_Typography {
 			// We trim off the right-side new line so that the closing </p> tag
 			// will be positioned immediately following the string, matching
 			// the behavior of the opening <p> tag
-			$str =  '<p>'.rtrim($str).'</p>';
+			$str = '<p>'.rtrim($str).'</p>';
 		}
 
 		// Remove empty paragraphs if they are on the first line, as this
@@ -395,7 +394,7 @@ class CI_Typography {
 	 */
 	protected function _protect_characters($match)
 	{
-		return str_replace(array("'",'"','--','  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $match[0]);
+		return str_replace(array("'", '"', '--', '  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $match[0]);
 	}
 
 	// --------------------------------------------------------------------

@@ -111,10 +111,10 @@ class CI_DB_mssql_result extends CI_DB_result {
 		{
 			$field = mssql_fetch_field($this->result_id, $i);
 
-			$retval[$i]		= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name	= $field->name;
 			$retval[$i]->type	= $field->type;
-			$retval[$i]->max_length	= $field->max_length;
+			$retval[$i]->max_length = $field->max_length;
 		}
 
 		return $retval;

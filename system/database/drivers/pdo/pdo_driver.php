@@ -94,16 +94,13 @@ class CI_DB_pdo_driver extends CI_DB {
 			$this->hostname = NULL;
 			$this->subdriver = $match[1];
 			return;
-		}
-		elseif (in_array($this->subdriver, array('mssql', 'sybase'), TRUE))
+		} elseif (in_array($this->subdriver, array('mssql', 'sybase'), TRUE))
 		{
 			$this->subdriver = 'dblib';
-		}
-		elseif ($this->subdriver === '4D')
+		} elseif ($this->subdriver === '4D')
 		{
 			$this->subdriver = '4d';
-		}
-		elseif ( ! in_array($this->subdriver, array('4d', 'cubrid', 'dblib', 'firebird', 'ibm', 'informix', 'mysql', 'oci', 'odbc', 'pgsql', 'sqlite', 'sqlsrv'), TRUE))
+		} elseif ( ! in_array($this->subdriver, array('4d', 'cubrid', 'dblib', 'firebird', 'ibm', 'informix', 'mysql', 'oci', 'odbc', 'pgsql', 'sqlite', 'sqlsrv'), TRUE))
 		{
 			log_message('error', 'PDO: Invalid or non-existent subdriver');
 
@@ -134,8 +131,7 @@ class CI_DB_pdo_driver extends CI_DB {
 		try
 		{
 			return new PDO($this->dsn, $this->username, $this->password, $this->options);
-		}
-		catch (PDOException $e)
+		} catch (PDOException $e)
 		{
 			if ($this->db_debug && empty($this->failover))
 			{
@@ -164,8 +160,7 @@ class CI_DB_pdo_driver extends CI_DB {
 		try
 		{
 			return $this->data_cache['version'] = $this->conn_id->getAttribute(PDO::ATTR_SERVER_VERSION);
-		}
-		catch (PDOException $e)
+		} catch (PDOException $e)
 		{
 			return parent::version();
 		}

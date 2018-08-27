@@ -100,13 +100,13 @@ class CI_DB_sqlite3_result extends CI_DB_result {
 		$retval = array();
 		for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $this->result_id->columnName($i);
 
 			$type = $this->result_id->columnType($i);
 			$retval[$i]->type		= isset($data_types[$type]) ? $data_types[$type] : $type;
 
-			$retval[$i]->max_length		= NULL;
+			$retval[$i]->max_length = NULL;
 		}
 
 		return $retval;
@@ -158,8 +158,7 @@ class CI_DB_sqlite3_result extends CI_DB_result {
 		if (($row = $this->result_id->fetchArray(SQLITE3_ASSOC)) === FALSE)
 		{
 			return FALSE;
-		}
-		elseif ($class_name === 'stdClass')
+		} elseif ($class_name === 'stdClass')
 		{
 			return (object) $row;
 		}

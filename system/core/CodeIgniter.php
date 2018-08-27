@@ -172,12 +172,10 @@ if ( ! is_php('5.4'))
 			file_exists(APPPATH.'vendor/autoload.php')
 				? require_once(APPPATH.'vendor/autoload.php')
 				: log_message('error', '$config[\'composer_autoload\'] is set to TRUE but '.APPPATH.'vendor/autoload.php was not found.');
-		}
-		elseif (file_exists($composer_autoload))
+		} elseif (file_exists($composer_autoload))
 		{
 			require_once($composer_autoload);
-		}
-		else
+		} else
 		{
 			log_message('error', 'Could not find the specified $config[\'composer_autoload\'] path: '.$composer_autoload);
 		}
@@ -188,7 +186,7 @@ if ( ! is_php('5.4'))
  *  Start the timer... tick tock tick tock...
  * ------------------------------------------------------
  */
-	$BM =& load_class('Benchmark', 'core');
+	$BM = & load_class('Benchmark', 'core');
 	$BM->mark('total_execution_time_start');
 	$BM->mark('loading_time:_base_classes_start');
 
@@ -197,7 +195,7 @@ if ( ! is_php('5.4'))
  *  Instantiate the hooks class
  * ------------------------------------------------------
  */
-	$EXT =& load_class('Hooks', 'core');
+	$EXT = & load_class('Hooks', 'core');
 
 /*
  * ------------------------------------------------------
@@ -216,7 +214,7 @@ if ( ! is_php('5.4'))
  * depending on another class that uses it.
  *
  */
-	$CFG =& load_class('Config', 'core');
+	$CFG = & load_class('Config', 'core');
 
 	// Do we have any manually set config items in the index.php file?
 	if (isset($assign_to_config) && is_array($assign_to_config))
@@ -253,8 +251,7 @@ if ( ! is_php('5.4'))
 		// This is required for mb_convert_encoding() to strip invalid characters.
 		// That's utilized by CI_Utf8, but it's also done for consistency with iconv.
 		mb_substitute_character('none');
-	}
-	else
+	} else
 	{
 		define('MB_ENABLED', FALSE);
 	}
@@ -267,8 +264,7 @@ if ( ! is_php('5.4'))
 		// iconv.internal_encoding is deprecated starting with PHP 5.6
 		// and it's usage triggers E_DEPRECATED messages.
 		@ini_set('iconv.internal_encoding', $charset);
-	}
-	else
+	} else
 	{
 		define('ICONV_ENABLED', FALSE);
 	}
@@ -294,28 +290,28 @@ if ( ! is_php('5.4'))
  *  Instantiate the UTF-8 class
  * ------------------------------------------------------
  */
-	$UNI =& load_class('Utf8', 'core');
+	$UNI = & load_class('Utf8', 'core');
 
 /*
  * ------------------------------------------------------
  *  Instantiate the URI class
  * ------------------------------------------------------
  */
-	$URI =& load_class('URI', 'core');
+	$URI = & load_class('URI', 'core');
 
 /*
  * ------------------------------------------------------
  *  Instantiate the routing class and set the routing
  * ------------------------------------------------------
  */
-	$RTR =& load_class('Router', 'core', isset($routing) ? $routing : NULL);
+	$RTR = & load_class('Router', 'core', isset($routing) ? $routing : NULL);
 
 /*
  * ------------------------------------------------------
  *  Instantiate the output class
  * ------------------------------------------------------
  */
-	$OUT =& load_class('Output', 'core');
+	$OUT = & load_class('Output', 'core');
 
 /*
  * ------------------------------------------------------
@@ -332,21 +328,21 @@ if ( ! is_php('5.4'))
  * Load the security class for xss and csrf support
  * -----------------------------------------------------
  */
-	$SEC =& load_class('Security', 'core');
+	$SEC = & load_class('Security', 'core');
 
 /*
  * ------------------------------------------------------
  *  Load the Input class and sanitize globals
  * ------------------------------------------------------
  */
-	$IN	=& load_class('Input', 'core');
+	$IN = & load_class('Input', 'core');
 
 /*
  * ------------------------------------------------------
  *  Load the Language class
  * ------------------------------------------------------
  */
-	$LANG =& load_class('Lang', 'core');
+	$LANG = & load_class('Lang', 'core');
 
 /*
  * ------------------------------------------------------
@@ -405,21 +401,18 @@ if ( ! is_php('5.4'))
 	if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
 	{
 		$e404 = TRUE;
-	}
-	else
+	} else
 	{
 		require_once(APPPATH.'controllers/'.$RTR->directory.$class.'.php');
 
 		if ( ! class_exists($class, FALSE) OR $method[0] === '_' OR method_exists('CI_Controller', $method))
 		{
 			$e404 = TRUE;
-		}
-		elseif (method_exists($class, '_remap'))
+		} elseif (method_exists($class, '_remap'))
 		{
 			$params = array($method, array_slice($URI->rsegments, 2));
 			$method = '_remap';
-		}
-		elseif ( ! method_exists($class, $method))
+		} elseif ( ! method_exists($class, $method))
 		{
 			$e404 = TRUE;
 		}
@@ -471,8 +464,7 @@ if ( ! is_php('5.4'))
 						$RTR->directory = '';
 					}
 				}
-			}
-			else
+			} else
 			{
 				$e404 = FALSE;
 			}
@@ -488,8 +480,7 @@ if ( ! is_php('5.4'))
 				1 => $class,
 				2 => $method
 			);
-		}
-		else
+		} else
 		{
 			show_404($RTR->directory.$class.'/'.$method);
 		}

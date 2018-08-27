@@ -91,7 +91,7 @@ class CI_DB_oci8_result extends CI_DB_result {
 		$this->stmt_id = $driver_object->stmt_id;
 		$this->curs_id = $driver_object->curs_id;
 		$this->limit_used = $driver_object->limit_used;
-		$this->commit_mode =& $driver_object->commit_mode;
+		$this->commit_mode = & $driver_object->commit_mode;
 		$driver_object->stmt_id = FALSE;
 	}
 
@@ -143,10 +143,10 @@ class CI_DB_oci8_result extends CI_DB_result {
 		$retval = array();
 		for ($c = 1, $fieldCount = $this->num_fields(); $c <= $fieldCount; $c++)
 		{
-			$F		= new stdClass();
+			$F = new stdClass();
 			$F->name	= oci_field_name($this->stmt_id, $c);
 			$F->type	= oci_field_type($this->stmt_id, $c);
-			$F->max_length	= oci_field_size($this->stmt_id, $c);
+			$F->max_length = oci_field_size($this->stmt_id, $c);
 
 			$retval[] = $F;
 		}

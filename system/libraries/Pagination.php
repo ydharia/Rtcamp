@@ -55,7 +55,7 @@ class CI_Pagination {
 	 *
 	 * @var	string
 	 */
-	protected $base_url		= '';
+	protected $base_url = '';
 
 	/**
 	 * Prefix
@@ -329,7 +329,7 @@ class CI_Pagination {
 	 */
 	public function __construct($params = array())
 	{
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 		$this->CI->load->language('pagination');
 		foreach (array('first_link', 'next_link', 'prev_link', 'last_link') as $key)
 		{
@@ -433,8 +433,7 @@ class CI_Pagination {
 
 			// Unset the control, method, old-school routing options
 			unset($get['c'], $get['m'], $get[$this->query_string_segment]);
-		}
-		else
+		} else
 		{
 			$get = array();
 		}
@@ -466,8 +465,7 @@ class CI_Pagination {
 			// Add the page segment to the end of the query string, where the
 			// page number will be appended.
 			$base_url .= $query_string_sep.http_build_query(array_merge($get, array($this->query_string_segment => '')));
-		}
-		else
+		} else
 		{
 			// Standard segment mode.
 			// Generate our saved query string to append later after the page number.
@@ -499,8 +497,7 @@ class CI_Pagination {
 		if ($this->page_query_string === TRUE)
 		{
 			$this->cur_page = $this->CI->input->get($this->query_string_segment);
-		}
-		elseif (empty($this->cur_page))
+		} elseif (empty($this->cur_page))
 		{
 			// Default to the last segment number if one hasn't been defined.
 			if ($this->uri_segment === 0)
@@ -515,8 +512,7 @@ class CI_Pagination {
 			{
 				$this->cur_page = str_replace(array($this->prefix, $this->suffix), '', $this->cur_page);
 			}
-		}
-		else
+		} else
 		{
 			$this->cur_page = (string) $this->cur_page;
 		}
@@ -525,8 +521,7 @@ class CI_Pagination {
 		if ( ! ctype_digit($this->cur_page) OR ($this->use_page_numbers && (int) $this->cur_page === 0))
 		{
 			$this->cur_page = $base_page;
-		}
-		else
+		} else
 		{
 			// Make sure we're using integers for comparisons later.
 			$this->cur_page = (int) $this->cur_page;
@@ -540,8 +535,7 @@ class CI_Pagination {
 			{
 				$this->cur_page = $num_pages;
 			}
-		}
-		elseif ($this->cur_page > $this->total_rows)
+		} elseif ($this->cur_page > $this->total_rows)
 		{
 			$this->cur_page = ($num_pages - 1) * $this->per_page;
 		}
@@ -552,13 +546,13 @@ class CI_Pagination {
 		// to a page number, so we can generate the surrounding number links.
 		if ( ! $this->use_page_numbers)
 		{
-			$this->cur_page = (int) floor(($this->cur_page/$this->per_page) + 1);
+			$this->cur_page = (int) floor(($this->cur_page / $this->per_page) + 1);
 		}
 
 		// Calculate the start and end numbers. These determine
 		// which number to start and end the digit links with.
-		$start	= (($this->cur_page - $this->num_links) > 0) ? $this->cur_page - ($this->num_links - 1) : 1;
-		$end	= (($this->cur_page + $this->num_links) < $num_pages) ? $this->cur_page + $this->num_links : $num_pages;
+		$start = (($this->cur_page - $this->num_links) > 0) ? $this->cur_page - ($this->num_links - 1) : 1;
+		$end = (($this->cur_page + $this->num_links) < $num_pages) ? $this->cur_page + $this->num_links : $num_pages;
 
 		// And here we go...
 		$output = '';
@@ -585,8 +579,7 @@ class CI_Pagination {
 				// First page
 				$output .= $this->prev_tag_open.'<a href="'.$first_url.'"'.$attributes.$this->_attr_rel('prev').'>'
 					.$this->prev_link.'</a>'.$this->prev_tag_close;
-			}
-			else
+			} else
 			{
 				$append = $this->prefix.$i.$this->suffix;
 				$output .= $this->prev_tag_open.'<a href="'.$base_url.$append.'"'.$attributes.$this->_attr_rel('prev').'>'
@@ -611,14 +604,12 @@ class CI_Pagination {
 					{
 						// Current page
 						$output .= $this->cur_tag_open.$loop.$this->cur_tag_close;
-					}
-					elseif ($i === $base_page)
+					} elseif ($i === $base_page)
 					{
 						// First page
 						$output .= $this->num_tag_open.'<a href="'.$first_url.'"'.$attributes.$this->_attr_rel('start').'>'
 							.$loop.'</a>'.$this->num_tag_close;
-					}
-					else
+					} else
 					{
 						$append = $this->prefix.$i.$this->suffix;
 						$output .= $this->num_tag_open.'<a href="'.$base_url.$append.'"'.$attributes.'>'

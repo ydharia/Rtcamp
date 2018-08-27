@@ -137,17 +137,17 @@ class CI_Input {
 	 */
 	public function __construct()
 	{
-		$this->_allow_get_array		= (config_item('allow_get_array') !== FALSE);
-		$this->_enable_xss		= (config_item('global_xss_filtering') === TRUE);
-		$this->_enable_csrf		= (config_item('csrf_protection') === TRUE);
-		$this->_standardize_newlines	= (bool) config_item('standardize_newlines');
+		$this->_allow_get_array = (config_item('allow_get_array') !== FALSE);
+		$this->_enable_xss = (config_item('global_xss_filtering') === TRUE);
+		$this->_enable_csrf = (config_item('csrf_protection') === TRUE);
+		$this->_standardize_newlines = (bool) config_item('standardize_newlines');
 
-		$this->security =& load_class('Security', 'core');
+		$this->security = & load_class('Security', 'core');
 
 		// Do we need the UTF-8 class?
 		if (UTF8_ENABLED === TRUE)
 		{
-			$this->uni =& load_class('Utf8', 'core');
+			$this->uni = & load_class('Utf8', 'core');
 		}
 
 		// Sanitize global arrays
@@ -196,29 +196,30 @@ class CI_Input {
 		if (isset($array[$index]))
 		{
 			$value = $array[$index];
-		}
-		elseif (($count = preg_match_all('/(?:^[^\[]+)|\[[^]]*\]/', $index, $matches)) > 1) // Does the index contain array notation
+		} elseif (($count = preg_match_all('/(?:^[^\[]+)|\[[^]]*\]/', $index, $matches)) > 1) {
+			// Does the index contain array notation
 		{
 			$value = $array;
+		}
 			for ($i = 0; $i < $count; $i++)
 			{
 				$key = trim($matches[0][$i], '[]');
-				if ($key === '') // Empty notation will return the value as array
+				if ($key === '') {
+					// Empty notation will return the value as array
 				{
 					break;
+				}
 				}
 
 				if (isset($value[$key]))
 				{
 					$value = $value[$key];
-				}
-				else
+				} else
 				{
 					return NULL;
 				}
 			}
-		}
-		else
+		} else
 		{
 			return NULL;
 		}
@@ -399,8 +400,7 @@ class CI_Input {
 		if ( ! is_numeric($expire))
 		{
 			$expire = time() - 86500;
-		}
-		else
+		} else
 		{
 			$expire = ($expire > 0) ? time() + $expire : 0;
 		}
@@ -446,8 +446,7 @@ class CI_Input {
 					if ( ! $this->valid_ip($spoof))
 					{
 						$spoof = NULL;
-					}
-					else
+					} else
 					{
 						break;
 					}
@@ -500,8 +499,7 @@ class CI_Input {
 							}
 
 							$sprintf = '%016b%016b%016b%016b%016b%016b%016b%016b';
-						}
-						else
+						} else
 						{
 							$ip = explode('.', $this->ip_address);
 							$sprintf = '%08b%08b%08b%08b';
@@ -521,8 +519,7 @@ class CI_Input {
 						{
 							$netaddr[$j] = intval($netaddr[$j], 16);
 						}
-					}
-					else
+					} else
 					{
 						$netaddr = explode('.', $netaddr);
 					}
@@ -603,8 +600,7 @@ class CI_Input {
 		if ($this->_allow_get_array === FALSE)
 		{
 			$_GET = array();
-		}
-		elseif (is_array($_GET))
+		} elseif (is_array($_GET))
 		{
 			foreach ($_GET as $key => $val)
 			{
@@ -640,8 +636,7 @@ class CI_Input {
 				if (($cookie_key = $this->_clean_input_keys($key)) !== FALSE)
 				{
 					$_COOKIE[$cookie_key] = $this->_clean_input_data($val);
-				}
-				else
+				} else
 				{
 					unset($_COOKIE[$key]);
 				}
@@ -727,8 +722,7 @@ class CI_Input {
 			if ($fatal === TRUE)
 			{
 				return FALSE;
-			}
-			else
+			} else
 			{
 				set_status_header(503);
 				echo 'Disallowed Key Characters.';
@@ -765,8 +759,7 @@ class CI_Input {
 		if (function_exists('apache_request_headers'))
 		{
 			$this->headers = apache_request_headers();
-		}
-		else
+		} else
 		{
 			isset($_SERVER['CONTENT_TYPE']) && $this->headers['Content-Type'] = $_SERVER['CONTENT_TYPE'];
 
@@ -885,8 +878,7 @@ class CI_Input {
 		{
 			isset($this->_raw_input_stream) OR $this->_raw_input_stream = file_get_contents('php://input');
 			return $this->_raw_input_stream;
-		}
-		elseif ($name === 'ip_address')
+		} elseif ($name === 'ip_address')
 		{
 			return $this->ip_address;
 		}

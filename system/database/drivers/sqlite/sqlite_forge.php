@@ -51,21 +51,21 @@ class CI_DB_sqlite_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= FALSE;
+	protected $_create_table_if = FALSE;
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	bool|array
 	 */
-	protected $_unsigned		= FALSE;
+	protected $_unsigned = FALSE;
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
 	 *
 	 * @var	string
 	 */
-	protected $_null		= 'NULL';
+	protected $_null = 'NULL';
 
 	// --------------------------------------------------------------------
 
@@ -95,8 +95,7 @@ class CI_DB_sqlite_forge extends CI_DB_forge {
 		if ( ! file_exists($this->db->database) OR ! @unlink($this->db->database))
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
-		}
-		elseif ( ! empty($this->db->data_cache['db_names']))
+		} elseif ( ! empty($this->db->data_cache['db_names']))
 		{
 			$key = array_search(strtolower($this->db->database), array_map('strtolower', $this->db->data_cache['db_names']), TRUE);
 			if ($key !== FALSE)

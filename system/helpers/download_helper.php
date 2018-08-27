@@ -66,8 +66,7 @@ if ( ! function_exists('force_download'))
 		if ($filename === '' OR $data === '')
 		{
 			return;
-		}
-		elseif ($data === NULL)
+		} elseif ($data === NULL)
 		{
 			if ( ! @is_file($filename) OR ($filesize = @filesize($filename)) === FALSE)
 			{
@@ -77,8 +76,7 @@ if ( ! function_exists('force_download'))
 			$filepath = $filename;
 			$filename = explode('/', str_replace(DIRECTORY_SEPARATOR, '/', $filename));
 			$filename = end($filename);
-		}
-		else
+		} else
 		{
 			$filesize = strlen($data);
 		}
@@ -100,7 +98,7 @@ if ( ! function_exists('force_download'))
 			}
 
 			// Load the mime types
-			$mimes =& get_mimes();
+			$mimes = & get_mimes();
 
 			// Only change the default MIME if we can find one
 			if (isset($mimes[$extension]))

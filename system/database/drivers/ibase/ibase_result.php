@@ -95,10 +95,10 @@ class CI_DB_ibase_result extends CI_DB_result {
 		{
 			$info = ibase_field_info($this->result_id, $i);
 
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $info['name'];
 			$retval[$i]->type		= $info['type'];
-			$retval[$i]->max_length		= $info['length'];
+			$retval[$i]->max_length = $info['length'];
 		}
 
 		return $retval;

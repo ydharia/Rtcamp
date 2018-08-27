@@ -110,12 +110,12 @@ class CI_DB_mysqli_result extends CI_DB_result {
 		$field_data = $this->result_id->fetch_fields();
 		for ($i = 0, $c = count($field_data); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $field_data[$i]->name;
 			$retval[$i]->type		= static::_get_field_type($field_data[$i]->type);
 			$retval[$i]->max_length		= $field_data[$i]->max_length;
 			$retval[$i]->primary_key	= (int) ($field_data[$i]->flags & MYSQLI_PRI_KEY_FLAG);
-			$retval[$i]->default		= $field_data[$i]->def;
+			$retval[$i]->default = $field_data[$i]->def;
 		}
 
 		return $retval;

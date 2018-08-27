@@ -113,26 +113,22 @@ if ( ! function_exists('password_hash'))
 		{
 			trigger_error('password_hash(): Provided salt is too short: '.$saltlen.' expecting 22', E_USER_WARNING);
 			return NULL;
-		}
-		elseif ( ! isset($options['salt']))
+		} elseif ( ! isset($options['salt']))
 		{
 			if (function_exists('random_bytes'))
 			{
 				try
 				{
 					$options['salt'] = random_bytes(16);
-				}
-				catch (Exception $e)
+				} catch (Exception $e)
 				{
 					log_message('error', 'compat/password: Error while trying to use random_bytes(): '.$e->getMessage());
 					return FALSE;
 				}
-			}
-			elseif (defined('MCRYPT_DEV_URANDOM'))
+			} elseif (defined('MCRYPT_DEV_URANDOM'))
 			{
 				$options['salt'] = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
-			}
-			elseif (DIRECTORY_SEPARATOR === '/' && (is_readable($dev = '/dev/arandom') OR is_readable($dev = '/dev/urandom')))
+			} elseif (DIRECTORY_SEPARATOR === '/' && (is_readable($dev = '/dev/arandom') OR is_readable($dev = '/dev/urandom')))
 			{
 				if (($fp = fopen($dev, 'rb')) === FALSE)
 				{
@@ -155,8 +151,7 @@ if ( ! function_exists('password_hash'))
 				}
 
 				fclose($fp);
-			}
-			elseif (function_exists('openssl_random_pseudo_bytes'))
+			} elseif (function_exists('openssl_random_pseudo_bytes'))
 			{
 				$is_secure = NULL;
 				$options['salt'] = openssl_random_pseudo_bytes(16, $is_secure);
@@ -165,16 +160,14 @@ if ( ! function_exists('password_hash'))
 					log_message('error', 'compat/password: openssl_random_pseudo_bytes() set the $cryto_strong flag to FALSE');
 					return FALSE;
 				}
-			}
-			else
+			} else
 			{
 				log_message('error', 'compat/password: No CSPRNG available.');
 				return FALSE;
 			}
 
 			$options['salt'] = str_replace('+', '.', rtrim(base64_encode($options['salt']), '='));
-		}
-		elseif ( ! preg_match('#^[a-zA-Z0-9./]+$#D', $options['salt']))
+		} elseif ( ! preg_match('#^[a-zA-Z0-9./]+$#D', $options['salt']))
 		{
 			$options['salt'] = str_replace('+', '.', rtrim(base64_encode($options['salt']), '='));
 		}
@@ -207,8 +200,7 @@ if ( ! function_exists('password_needs_rehash'))
 		if ($algo !== $info['algo'])
 		{
 			return TRUE;
-		}
-		elseif ($algo === 1)
+		} elseif ($algo === 1)
 		{
 			$options['cost'] = isset($options['cost']) ? (int) $options['cost'] : 10;
 			return ($info['options']['cost'] !== $options['cost']);

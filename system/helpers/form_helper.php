@@ -63,7 +63,7 @@ if ( ! function_exists('form_open'))
 	 */
 	function form_open($action = '', $attributes = array(), $hidden = array())
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		// If no action is provided then set to the current url
 		if ( ! $action)
@@ -106,8 +106,7 @@ if ( ! function_exists('form_open'))
 			if (FALSE !== ($noise = $CI->security->get_random_bytes(1)))
 			{
 				list(, $noise) = unpack('c', $noise);
-			}
-			else
+			} else
 			{
 				$noise = mt_rand(-128, 127);
 			}
@@ -117,10 +116,9 @@ if ( ! function_exists('form_open'))
 			if ($noise < 0)
 			{
 				$prepend = str_repeat(" ", abs($noise));
-			}
-			elseif ($noise > 0)
+			} elseif ($noise > 0)
 			{
-				$append  = str_repeat(" ", $noise);
+				$append = str_repeat(" ", $noise);
 			}
 
 			$form .= sprintf(
@@ -156,8 +154,7 @@ if ( ! function_exists('form_open_multipart'))
 		if (is_string($attributes))
 		{
 			$attributes .= ' enctype="multipart/form-data"';
-		}
-		else
+		} else
 		{
 			$attributes['enctype'] = 'multipart/form-data';
 		}
@@ -203,8 +200,7 @@ if ( ! function_exists('form_hidden'))
 		if ( ! is_array($value))
 		{
 			$form .= '<input type="hidden" name="'.$name.'" value="'.html_escape($value)."\" />\n";
-		}
-		else
+		} else
 		{
 			foreach ($value as $k => $v)
 			{
@@ -310,8 +306,7 @@ if ( ! function_exists('form_textarea'))
 		if ( ! is_array($data) OR ! isset($data['value']))
 		{
 			$val = $value;
-		}
-		else
+		} else
 		{
 			$val = $data['value'];
 			unset($data['value']); // textareas don't use the value attribute
@@ -378,8 +373,7 @@ if ( ! function_exists('form_dropdown'))
 				$options = $data['options'];
 				unset($data['options']); // select tags don't use an options attribute
 			}
-		}
-		else
+		} else
 		{
 			$defaults = array('name' => $data);
 		}
@@ -396,8 +390,7 @@ if ( ! function_exists('form_dropdown'))
 				{
 					$selected = array($_POST[$data['name']]);
 				}
-			}
-			elseif (isset($_POST[$data]))
+			} elseif (isset($_POST[$data]))
 			{
 				$selected = array($_POST[$data]);
 			}
@@ -430,8 +423,7 @@ if ( ! function_exists('form_dropdown'))
 				}
 
 				$form .= "</optgroup>\n";
-			}
-			else
+			} else
 			{
 				$form .= '<option value="'.html_escape($key).'"'
 					.(in_array($key, $selected) ? ' selected="selected"' : '').'>'
@@ -467,8 +459,7 @@ if ( ! function_exists('form_checkbox'))
 			if ($checked == FALSE)
 			{
 				unset($data['checked']);
-			}
-			else
+			} else
 			{
 				$data['checked'] = 'checked';
 			}
@@ -477,8 +468,7 @@ if ( ! function_exists('form_checkbox'))
 		if ($checked == TRUE)
 		{
 			$defaults['checked'] = 'checked';
-		}
-		else
+		} else
 		{
 			unset($defaults['checked']);
 		}
@@ -711,7 +701,7 @@ if ( ! function_exists('set_value'))
 	 */
 	function set_value($field, $default = '', $html_escape = TRUE)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		$value = (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
 			? $CI->form_validation->set_value($field, $default)
@@ -739,13 +729,12 @@ if ( ! function_exists('set_select'))
 	 */
 	function set_select($field, $value = '', $default = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
 		{
 			return $CI->form_validation->set_select($field, $value, $default);
-		}
-		elseif (($input = $CI->input->post($field, FALSE)) === NULL)
+		} elseif (($input = $CI->input->post($field, FALSE)) === NULL)
 		{
 			return ($default === TRUE) ? ' selected="selected"' : '';
 		}
@@ -786,7 +775,7 @@ if ( ! function_exists('set_checkbox'))
 	 */
 	function set_checkbox($field, $value = '', $default = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
 		{
@@ -838,7 +827,7 @@ if ( ! function_exists('set_radio'))
 	 */
 	function set_radio($field, $value = '', $default = FALSE)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
 		{
@@ -890,7 +879,7 @@ if ( ! function_exists('form_error'))
 	 */
 	function form_error($field = '', $prefix = '', $suffix = '')
 	{
-		if (FALSE === ($OBJ =& _get_validation_object()))
+		if (FALSE === ($OBJ = & _get_validation_object()))
 		{
 			return '';
 		}
@@ -915,7 +904,7 @@ if ( ! function_exists('validation_errors'))
 	 */
 	function validation_errors($prefix = '', $suffix = '')
 	{
-		if (FALSE === ($OBJ =& _get_validation_object()))
+		if (FALSE === ($OBJ = & _get_validation_object()))
 		{
 			return '';
 		}
@@ -963,8 +952,7 @@ if ( ! function_exists('_parse_form_attributes'))
 			if ($key === 'value')
 			{
 				$val = html_escape($val);
-			}
-			elseif ($key === 'name' && ! strlen($default['name']))
+			} elseif ($key === 'name' && ! strlen($default['name']))
 			{
 				continue;
 			}
@@ -1035,7 +1023,7 @@ if ( ! function_exists('_get_validation_object'))
 	 */
 	function &_get_validation_object()
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 
 		// We set this as a variable since we're returning by reference.
 		$return = FALSE;

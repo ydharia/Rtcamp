@@ -51,14 +51,14 @@ class CI_DB_pdo_informix_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_rename_table	= 'RENAME TABLE %s TO %s';
+	protected $_rename_table = 'RENAME TABLE %s TO %s';
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'SMALLINT'	=> 'INTEGER',
 		'INT'		=> 'BIGINT',
 		'INTEGER'	=> 'BIGINT',
@@ -71,7 +71,7 @@ class CI_DB_pdo_informix_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_default		= ', ';
+	protected $_default = ', ';
 
 	// --------------------------------------------------------------------
 

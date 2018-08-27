@@ -106,8 +106,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 		{
 			$this->_config['save_path'] = rtrim($this->_config['save_path'], '/\\');
 			ini_set('session.save_path', $this->_config['save_path']);
-		}
-		else
+		} else
 		{
 			log_message('debug', 'Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.');
 			$this->_config['save_path'] = rtrim(ini_get('session.save_path'), '/\\');
@@ -137,8 +136,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 			{
 				throw new Exception("Session: Configured save path '".$this->_config['save_path']."' is not a directory, doesn't exist or cannot be created.");
 			}
-		}
-		elseif ( ! is_writable($save_path))
+		} elseif ( ! is_writable($save_path))
 		{
 			throw new Exception("Session: Configured save path '".$this->_config['save_path']."' is not writable by the PHP process.");
 		}
@@ -200,8 +198,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 		elseif ($this->_file_handle === FALSE)
 		{
 			return $this->_failure;
-		}
-		else
+		} else
 		{
 			rewind($this->_file_handle);
 		}
@@ -244,8 +241,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 		if ( ! is_resource($this->_file_handle))
 		{
 			return $this->_failure;
-		}
-		elseif ($this->_fingerprint === md5($session_data))
+		} elseif ($this->_fingerprint === md5($session_data))
 		{
 			return ( ! $this->_file_new && ! touch($this->_file_path.$session_id))
 				? $this->_failure
@@ -325,8 +321,7 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 			}
 
 			return $this->_success;
-		}
-		elseif ($this->_file_path !== NULL)
+		} elseif ($this->_file_path !== NULL)
 		{
 			clearstatcache();
 			if (file_exists($this->_file_path.$session_id))
