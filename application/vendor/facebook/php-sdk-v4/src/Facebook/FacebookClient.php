@@ -163,13 +163,13 @@ class FacebookClient
 	public function prepareRequestMessage(FacebookRequest $request)
 	{
 		$postToVideoUrl = $request->containsVideoUploads();
-		$url = $this->getBaseGraphUrl($postToVideoUrl) . $request->getUrl();
+		$url = $this->getBaseGraphUrl($postToVideoUrl).$request->getUrl();
 
 		// If we're sending files they should be sent as multipart/form-data
 		if ($request->containsFileUploads()) {
 			$requestBody = $request->getMultipartBody();
 			$request->setHeaders([
-				'Content-Type' => 'multipart/form-data; boundary=' . $requestBody->getBoundary(),
+				'Content-Type' => 'multipart/form-data; boundary='.$requestBody->getBoundary(),
 			]);
 		} else {
 			$requestBody = $request->getUrlEncodedBody();

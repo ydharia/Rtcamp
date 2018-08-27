@@ -49,7 +49,7 @@ class FacebookPageTabHelper extends FacebookCanvasHelper
 	{
 		parent::__construct($app, $client, $graphVersion);
 
-		if (!$this->signedRequest) {
+		if ( ! $this->signedRequest) {
 			return;
 		}
 

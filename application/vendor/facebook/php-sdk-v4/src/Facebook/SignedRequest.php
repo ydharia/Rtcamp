@@ -57,7 +57,7 @@ class SignedRequest
 	{
 		$this->app = $facebookApp;
 
-		if (!$rawSignedRequest) {
+		if ( ! $rawSignedRequest) {
 			return;
 		}
 
@@ -139,7 +139,7 @@ class SignedRequest
 		$hashedSig = $this->hashSignature($encodedPayload);
 		$encodedSig = $this->base64UrlEncode($hashedSig);
 
-		return $encodedSig . '.' . $encodedPayload;
+		return $encodedSig.'.'.$encodedPayload;
 	}
 
 	/**
@@ -190,7 +190,7 @@ class SignedRequest
 	{
 		$sig = $this->base64UrlDecode($encodedSig);
 
-		if (!$sig) {
+		if ( ! $sig) {
 			throw new FacebookSDKException('Signed request has malformed encoded signature data.', 607);
 		}
 
@@ -214,7 +214,7 @@ class SignedRequest
 			$payload = json_decode($payload, true);
 		}
 
-		if (!is_array($payload)) {
+		if ( ! is_array($payload)) {
 			throw new FacebookSDKException('Signed request has malformed encoded payload data.', 607);
 		}
 
@@ -251,7 +251,7 @@ class SignedRequest
 			$raw_output = true
 		);
 
-		if (!$hashedSig) {
+		if ( ! $hashedSig) {
 			throw new FacebookSDKException('Unable to hash signature from encoded payload data.', 602);
 		}
 
@@ -319,7 +319,7 @@ class SignedRequest
 	 */
 	protected function validateBase64($input)
 	{
-		if (!preg_match('/^[a-zA-Z0-9\/\r\n+]*={0,2}$/', $input)) {
+		if ( ! preg_match('/^[a-zA-Z0-9\/\r\n+]*={0,2}$/', $input)) {
 			throw new FacebookSDKException('Signed request contains malformed base64 encoding.', 608);
 		}
 	}

@@ -104,7 +104,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphAchievement()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphAchievement');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphAchievement');
 	}
 
 	/**
@@ -116,7 +116,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphAlbum()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphAlbum');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphAlbum');
 	}
 
 	/**
@@ -128,7 +128,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphPage()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphPage');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphPage');
 	}
 
 	/**
@@ -140,7 +140,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphSessionInfo()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphSessionInfo');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphSessionInfo');
 	}
 
 	/**
@@ -152,7 +152,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphUser()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphUser');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphUser');
 	}
 
 	/**
@@ -164,7 +164,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphEvent()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphEvent');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphEvent');
 	}
 
 	/**
@@ -176,7 +176,7 @@ class GraphNodeFactory
 	 */
 	public function makeGraphGroup()
 	{
-		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX . 'GraphGroup');
+		return $this->makeGraphNode(static::BASE_GRAPH_OBJECT_PREFIX.'GraphGroup');
 	}
 
 	/**
@@ -195,7 +195,7 @@ class GraphNodeFactory
 		$this->validateResponseCastableAsGraphEdge();
 
 		if ($subclassName && $auto_prefix) {
-			$subclassName = static::BASE_GRAPH_OBJECT_PREFIX . $subclassName;
+			$subclassName = static::BASE_GRAPH_OBJECT_PREFIX.$subclassName;
 		}
 
 		return $this->castAsGraphNodeOrGraphEdge($this->decodedBody, $subclassName);
@@ -208,7 +208,7 @@ class GraphNodeFactory
 	 */
 	public function validateResponseAsArray()
 	{
-		if (!is_array($this->decodedBody)) {
+		if ( ! is_array($this->decodedBody)) {
 			throw new FacebookSDKException('Unable to get response from Graph as array.', 620);
 		}
 	}
@@ -235,7 +235,7 @@ class GraphNodeFactory
 	 */
 	public function validateResponseCastableAsGraphEdge()
 	{
-		if (!(isset($this->decodedBody['data']) && static::isCastableAsGraphEdge($this->decodedBody['data']))) {
+		if ( ! (isset($this->decodedBody['data']) && static::isCastableAsGraphEdge($this->decodedBody['data']))) {
 			throw new FacebookSDKException(
 				'Unable to convert response from Graph to a GraphEdge because the response does not look like a GraphEdge. Try using GraphNodeFactory::makeGraphNode() instead.',
 				620
@@ -325,7 +325,7 @@ class GraphNodeFactory
 	 */
 	public function safelyMakeGraphEdge(array $data, $subclassName = null, $parentKey = null, $parentNodeId = null)
 	{
-		if (!isset($data['data'])) {
+		if ( ! isset($data['data'])) {
 			throw new FacebookSDKException('Cannot cast data to GraphEdge. Expected a "data" key.', 620);
 		}
 
@@ -337,7 +337,7 @@ class GraphNodeFactory
 		$metaData = $this->getMetaData($data);
 
 		// We'll need to make an edge endpoint for this in case it's a GraphEdge (for cursor pagination)
-		$parentGraphEdgeEndpoint = $parentNodeId && $parentKey ? '/' . $parentNodeId . '/' . $parentKey : null;
+		$parentGraphEdgeEndpoint = $parentNodeId && $parentKey ? '/'.$parentNodeId.'/'.$parentKey : null;
 		$className = static::BASE_GRAPH_EDGE_CLASS;
 
 		return new $className($this->response->getRequest(), $dataList, $metaData, $parentGraphEdgeEndpoint, $subclassName);
@@ -387,6 +387,6 @@ class GraphNodeFactory
 			return;
 		}
 
-		throw new FacebookSDKException('The given subclass "' . $subclassName . '" is not valid. Cannot cast to an object that is not a GraphNode subclass.', 620);
+		throw new FacebookSDKException('The given subclass "'.$subclassName.'" is not valid. Cannot cast to an object that is not a GraphNode subclass.', 620);
 	}
 }

@@ -56,7 +56,7 @@ class AccessTokenMetadata
 	 */
 	public function __construct(array $metadata)
 	{
-		if (!isset($metadata['data'])) {
+		if ( ! isset($metadata['data'])) {
 			throw new FacebookSDKException('Unexpected debug token response data.', 401);
 		}
 
@@ -109,11 +109,11 @@ class AccessTokenMetadata
 	 */
 	public function getChildProperty($parentField, $field, $default = null)
 	{
-		if (!isset($this->metadata[$parentField])) {
+		if ( ! isset($this->metadata[$parentField])) {
 			return $default;
 		}
 
-		if (!isset($this->metadata[$parentField][$field])) {
+		if ( ! isset($this->metadata[$parentField][$field])) {
 			return $default;
 		}
 
@@ -352,7 +352,7 @@ class AccessTokenMetadata
 	 */
 	public function validateExpiration()
 	{
-		if (!$this->getExpiresAt() instanceof \DateTime) {
+		if ( ! $this->getExpiresAt() instanceof \DateTime) {
 			return;
 		}
 

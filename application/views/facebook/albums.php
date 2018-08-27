@@ -96,7 +96,7 @@
                         </a>                 
                     </li>
                     <?php
-					if($this->session->userdata("shdwbx.gdrive.access_token"))
+					if ($this->session->userdata("shdwbx.gdrive.access_token"))
 					{
 					?>
                     <li>   
@@ -110,8 +110,7 @@
                         </a>
                     </li>
                     <?php
-					}
-					else
+					} else
 					{
 						?>
                 		<li>   
@@ -135,15 +134,15 @@
 		<!-- <a style="color:white;" class="pull-right" href="http://myfoodstore.in/policies">privacy policy</a> -->
 	
     <?php
-	if($this->session->userdata("shdwbx.gdrive.access_token"))
+	if ($this->session->userdata("shdwbx.gdrive.access_token"))
 	{
 	?>
         <div class="grid-container">                
             <?php 
-			if(count($albums["albums"]) > 0)
+			if (count($albums["albums"]) > 0)
 			{
-			foreach($albums["albums"]["data"] as $album) { ?> 
-                <?php if($album["count"] != 0) { ?>    
+			foreach ($albums["albums"]["data"] as $album) { ?> 
+                <?php if ($album["count"] != 0) { ?>    
                     <a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
@@ -173,8 +172,7 @@
         </div>
  
     <?php
-	}
-	else
+	} else
 	{
 		?>
         <div class="grid-container">                

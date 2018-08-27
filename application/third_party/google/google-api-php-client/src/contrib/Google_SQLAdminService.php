@@ -403,25 +403,25 @@ class Google_BackupConfiguration extends Google_Model {
   public $id;
   public $kind;
   public $startTime;
-  public function setEnabled( $enabled) {
+  public function setEnabled($enabled) {
 	$this->enabled = $enabled;
   }
   public function getEnabled() {
 	return $this->enabled;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
@@ -441,25 +441,25 @@ class Google_BackupRun extends Google_Model {
   public $kind;
   public $startTime;
   public $status;
-  public function setBackupConfiguration( $backupConfiguration) {
+  public function setBackupConfiguration($backupConfiguration) {
 	$this->backupConfiguration = $backupConfiguration;
   }
   public function getBackupConfiguration() {
 	return $this->backupConfiguration;
   }
-  public function setDueTime( $dueTime) {
+  public function setDueTime($dueTime) {
 	$this->dueTime = $dueTime;
   }
   public function getDueTime() {
 	return $this->dueTime;
   }
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
 	return $this->endTime;
   }
-  public function setEnqueuedTime( $enqueuedTime) {
+  public function setEnqueuedTime($enqueuedTime) {
 	$this->enqueuedTime = $enqueuedTime;
   }
   public function getEnqueuedTime() {
@@ -471,25 +471,25 @@ class Google_BackupRun extends Google_Model {
   public function getError() {
 	return $this->error;
   }
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
 	return $this->instance;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
 	return $this->startTime;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -510,13 +510,13 @@ class Google_BackupRunsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -537,49 +537,49 @@ class Google_DatabaseInstance extends Google_Model {
   protected $__settingsDataType = '';
   public $settings;
   public $state;
-  public function setCurrentDiskSize( $currentDiskSize) {
+  public function setCurrentDiskSize($currentDiskSize) {
 	$this->currentDiskSize = $currentDiskSize;
   }
   public function getCurrentDiskSize() {
 	return $this->currentDiskSize;
   }
-  public function setDatabaseVersion( $databaseVersion) {
+  public function setDatabaseVersion($databaseVersion) {
 	$this->databaseVersion = $databaseVersion;
   }
   public function getDatabaseVersion() {
 	return $this->databaseVersion;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
 	return $this->instance;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMaxDiskSize( $maxDiskSize) {
+  public function setMaxDiskSize($maxDiskSize) {
 	$this->maxDiskSize = $maxDiskSize;
   }
   public function getMaxDiskSize() {
 	return $this->maxDiskSize;
   }
-  public function setProject( $project) {
+  public function setProject($project) {
 	$this->project = $project;
   }
   public function getProject() {
 	return $this->project;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
@@ -591,7 +591,7 @@ class Google_DatabaseInstance extends Google_Model {
   public function getSettings() {
 	return $this->settings;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
@@ -611,7 +611,7 @@ class Google_ExportContext extends Google_Model {
   public function getDatabase() {
 	return $this->database;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -624,7 +624,7 @@ class Google_ExportContext extends Google_Model {
   public function getTable() {
 	return $this->table;
   }
-  public function setUri( $uri) {
+  public function setUri($uri) {
 	$this->uri = $uri;
   }
   public function getUri() {
@@ -636,13 +636,13 @@ class Google_ImportContext extends Google_Model {
   public $database;
   public $kind;
   public $uri;
-  public function setDatabase( $database) {
+  public function setDatabase($database) {
 	$this->database = $database;
   }
   public function getDatabase() {
 	return $this->database;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -676,13 +676,13 @@ class Google_InstanceOperation extends Google_Model {
   public $startTime;
   public $state;
   public $userEmailAddress;
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
 	return $this->endTime;
   }
-  public function setEnqueuedTime( $enqueuedTime) {
+  public function setEnqueuedTime($enqueuedTime) {
 	$this->enqueuedTime = $enqueuedTime;
   }
   public function getEnqueuedTime() {
@@ -707,43 +707,43 @@ class Google_InstanceOperation extends Google_Model {
   public function getImportContext() {
 	return $this->importContext;
   }
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
 	return $this->instance;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
 	return $this->operation;
   }
-  public function setOperationType( $operationType) {
+  public function setOperationType($operationType) {
 	$this->operationType = $operationType;
   }
   public function getOperationType() {
 	return $this->operationType;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
 	return $this->startTime;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
 	return $this->state;
   }
-  public function setUserEmailAddress( $userEmailAddress) {
+  public function setUserEmailAddress($userEmailAddress) {
 	$this->userEmailAddress = $userEmailAddress;
   }
   public function getUserEmailAddress() {
@@ -754,13 +754,13 @@ class Google_InstanceOperation extends Google_Model {
 class Google_InstancesDeleteResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -783,13 +783,13 @@ class Google_InstancesExportRequest extends Google_Model {
 class Google_InstancesExportResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -812,13 +812,13 @@ class Google_InstancesImportRequest extends Google_Model {
 class Google_InstancesImportResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -829,13 +829,13 @@ class Google_InstancesImportResponse extends Google_Model {
 class Google_InstancesInsertResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -856,13 +856,13 @@ class Google_InstancesListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -873,13 +873,13 @@ class Google_InstancesListResponse extends Google_Model {
 class Google_InstancesRestartResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -890,13 +890,13 @@ class Google_InstancesRestartResponse extends Google_Model {
 class Google_InstancesRestoreBackupResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -907,13 +907,13 @@ class Google_InstancesRestoreBackupResponse extends Google_Model {
 class Google_InstancesUpdateResponse extends Google_Model {
   public $kind;
   public $operation;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -924,13 +924,13 @@ class Google_InstancesUpdateResponse extends Google_Model {
 class Google_OperationError extends Google_Model {
   public $code;
   public $kind;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
 	return $this->code;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -951,13 +951,13 @@ class Google_OperationsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -975,7 +975,7 @@ class Google_Settings extends Google_Model {
   public $pricingPlan;
   public $replicationType;
   public $tier;
-  public function setActivationPolicy( $activationPolicy) {
+  public function setActivationPolicy($activationPolicy) {
 	$this->activationPolicy = $activationPolicy;
   }
   public function getActivationPolicy() {
@@ -995,25 +995,25 @@ class Google_Settings extends Google_Model {
   public function getBackupConfiguration() {
 	return $this->backupConfiguration;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPricingPlan( $pricingPlan) {
+  public function setPricingPlan($pricingPlan) {
 	$this->pricingPlan = $pricingPlan;
   }
   public function getPricingPlan() {
 	return $this->pricingPlan;
   }
-  public function setReplicationType( $replicationType) {
+  public function setReplicationType($replicationType) {
 	$this->replicationType = $replicationType;
   }
   public function getReplicationType() {
 	return $this->replicationType;
   }
-  public function setTier( $tier) {
+  public function setTier($tier) {
 	$this->tier = $tier;
   }
   public function getTier() {
@@ -1027,19 +1027,19 @@ class Google_Tier extends Google_Model {
   public $kind;
   public $region;
   public $tier;
-  public function setDiskQuota( $DiskQuota) {
+  public function setDiskQuota($DiskQuota) {
 	$this->DiskQuota = $DiskQuota;
   }
   public function getDiskQuota() {
 	return $this->DiskQuota;
   }
-  public function setRAM( $RAM) {
+  public function setRAM($RAM) {
 	$this->RAM = $RAM;
   }
   public function getRAM() {
 	return $this->RAM;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1052,7 +1052,7 @@ class Google_Tier extends Google_Model {
   public function getRegion() {
 	return $this->region;
   }
-  public function setTier( $tier) {
+  public function setTier($tier) {
 	$this->tier = $tier;
   }
   public function getTier() {
@@ -1072,7 +1072,7 @@ class Google_TiersListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {

@@ -62,7 +62,7 @@ Class Facebook
 		$this->load->library('session');
 		$this->load->helper('url');
 
-		if (!isset($this->fb))
+		if ( ! isset($this->fb))
 		{
 			$this->fb = new FB([
 				'app_id'                => $this->config->item('facebook_app_id'),
@@ -142,7 +142,7 @@ Class Facebook
 			$response = $this->fb->{strtolower($method)}($endpoint, $params, $access_token);
 			return $response->getDecodedBody();
 		}
-		catch(FacebookResponseException $e)
+		catch (FacebookResponseException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
@@ -168,13 +168,11 @@ Class Facebook
 		{
 			$data = ['source' => $this->fb->fileToUpload($path_to_file)] + $params;
 			$endpoint = '/me/photos';
-		}
-		elseif ($type === self::UPLOAD_TYPE_VIDEO)
+		} elseif ($type === self::UPLOAD_TYPE_VIDEO)
 		{
 			$data = ['source' => $this->fb->videoToUpload($path_to_file)] + $params;
 			$endpoint = '/me/videos';
-		}
-		else
+		} else
 		{
 			return $this->logError(400, 'Invalid upload type');
 		}
@@ -184,7 +182,7 @@ Class Facebook
 			$response = $this->fb->post($endpoint, $data, $access_token);
 			return $response->getDecodedBody();
 		}
-		catch(FacebookSDKException $e)
+		catch (FacebookSDKException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
@@ -240,11 +238,11 @@ Class Facebook
 
 			return $data;
 		}
-		catch(FacebookResponseException $e)
+		catch (FacebookResponseException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
-		catch(FacebookSDKException $e)
+		catch (FacebookSDKException $e)
 		{
 			return $this->logError($e->getCode(), $e->getMessage());
 		}
@@ -264,7 +262,7 @@ Class Facebook
 		}
 
 		return $this->helper->getLoginUrl(
-			base_url() . $this->config->item('facebook_login_redirect_url'),
+			base_url().$this->config->item('facebook_login_redirect_url'),
 			$this->config->item('facebook_permissions')
 		);
 	}
@@ -286,7 +284,7 @@ Class Facebook
 		// Create logout url
 		return $this->helper->getLogoutUrl(
 			$this->get_access_token(),
-			base_url() . $this->config->item('facebook_logout_redirect_url')
+			base_url().$this->config->item('facebook_logout_redirect_url')
 		);
 	}
 
@@ -307,20 +305,19 @@ Class Facebook
 	{
 		$access_token = $this->get_access_token();
 
-		if ($access_token && $this->get_expire_time() > (time() + 30) || $access_token && !$this->get_expire_time())
+		if ($access_token && $this->get_expire_time() > (time() + 30) || $access_token && ! $this->get_expire_time())
 		{
 			$this->fb->setDefaultAccessToken($access_token);
 			return $access_token;
 		}
 
 		// If we did not have a stored access token or if it has expired, try get a new access token
-		if (!$access_token)
+		if ( ! $access_token)
 		{
 			try
 			{
 				$access_token = $this->helper->getAccessToken();
-			}
-			catch (FacebookSDKException $e)
+			} catch (FacebookSDKException $e)
 			{
 				$this->logError($e->getCode(), $e->getMessage());
 				return null;
@@ -368,15 +365,14 @@ Class Facebook
 	 */
 	private function long_lived_token(AccessToken $access_token)
 	{
-		if (!$access_token->isLongLived())
+		if ( ! $access_token->isLongLived())
 		{
 			$oauth2_client = $this->fb->getOAuth2Client();
 
 			try
 			{
 				return $oauth2_client->getLongLivedAccessToken($access_token);
-			}
-			catch (FacebookSDKException $e)
+			} catch (FacebookSDKException $e)
 			{
 				$this->logError($e->getCode(), $e->getMessage());
 				return null;
@@ -432,7 +428,7 @@ Class Facebook
 	 */
 	private function logError($code, $message)
 	{
-		log_message('error', '[FACEBOOK PHP SDK] code: ' . $code.' | message: '.$message);
+		log_message('error', '[FACEBOOK PHP SDK] code: '.$code.' | message: '.$message);
 		return ['error' => $code, 'message' => $message];
 	}
 

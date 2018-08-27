@@ -47,8 +47,7 @@ $apiConfig = array(
 	// for the class that was configured as the ioClass above
 	'ioFileCache_directory'  =>
 		(function_exists('sys_get_temp_dir') ?
-			sys_get_temp_dir() . '/Google_Client' :
-		'/tmp/Google_Client'),
+			sys_get_temp_dir().'/Google_Client' : '/tmp/Google_Client'),
 
 	// Definition of service specific values like scopes, oauth token URLs, etc
 	'services' => array(

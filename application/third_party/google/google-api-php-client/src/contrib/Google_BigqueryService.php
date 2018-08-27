@@ -515,7 +515,7 @@ class Google_Dataset extends Google_Model {
   public function getAccess() {
 	return $this->access;
   }
-  public function setCreationTime( $creationTime) {
+  public function setCreationTime($creationTime) {
 	$this->creationTime = $creationTime;
   }
   public function getCreationTime() {
@@ -527,43 +527,43 @@ class Google_Dataset extends Google_Model {
   public function getDatasetReference() {
 	return $this->datasetReference;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setFriendlyName( $friendlyName) {
+  public function setFriendlyName($friendlyName) {
 	$this->friendlyName = $friendlyName;
   }
   public function getFriendlyName() {
 	return $this->friendlyName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastModifiedTime( $lastModifiedTime) {
+  public function setLastModifiedTime($lastModifiedTime) {
 	$this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
 	return $this->lastModifiedTime;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -577,31 +577,31 @@ class Google_DatasetAccess extends Google_Model {
   public $role;
   public $specialGroup;
   public $userByEmail;
-  public function setDomain( $domain) {
+  public function setDomain($domain) {
 	$this->domain = $domain;
   }
   public function getDomain() {
 	return $this->domain;
   }
-  public function setGroupByEmail( $groupByEmail) {
+  public function setGroupByEmail($groupByEmail) {
 	$this->groupByEmail = $groupByEmail;
   }
   public function getGroupByEmail() {
 	return $this->groupByEmail;
   }
-  public function setRole( $role) {
+  public function setRole($role) {
 	$this->role = $role;
   }
   public function getRole() {
 	return $this->role;
   }
-  public function setSpecialGroup( $specialGroup) {
+  public function setSpecialGroup($specialGroup) {
 	$this->specialGroup = $specialGroup;
   }
   public function getSpecialGroup() {
 	return $this->specialGroup;
   }
-  public function setUserByEmail( $userByEmail) {
+  public function setUserByEmail($userByEmail) {
 	$this->userByEmail = $userByEmail;
   }
   public function getUserByEmail() {
@@ -623,19 +623,19 @@ class Google_DatasetList extends Google_Model {
   public function getDatasets() {
 	return $this->datasets;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -656,19 +656,19 @@ class Google_DatasetListDatasets extends Google_Model {
   public function getDatasetReference() {
 	return $this->datasetReference;
   }
-  public function setFriendlyName( $friendlyName) {
+  public function setFriendlyName($friendlyName) {
 	$this->friendlyName = $friendlyName;
   }
   public function getFriendlyName() {
 	return $this->friendlyName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -679,13 +679,13 @@ class Google_DatasetListDatasets extends Google_Model {
 class Google_DatasetReference extends Google_Model {
   public $datasetId;
   public $projectId;
-  public function setDatasetId( $datasetId) {
+  public function setDatasetId($datasetId) {
 	$this->datasetId = $datasetId;
   }
   public function getDatasetId() {
 	return $this->datasetId;
   }
-  public function setProjectId( $projectId) {
+  public function setProjectId($projectId) {
 	$this->projectId = $projectId;
   }
   public function getProjectId() {
@@ -698,25 +698,25 @@ class Google_ErrorProto extends Google_Model {
   public $location;
   public $message;
   public $reason;
-  public function setDebugInfo( $debugInfo) {
+  public function setDebugInfo($debugInfo) {
 	$this->debugInfo = $debugInfo;
   }
   public function getDebugInfo() {
 	return $this->debugInfo;
   }
-  public function setLocation( $location) {
+  public function setLocation($location) {
 	$this->location = $location;
   }
   public function getLocation() {
 	return $this->location;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
 	return $this->message;
   }
-  public function setReason( $reason) {
+  public function setReason($reason) {
 	$this->reason = $reason;
   }
   public function getReason() {
@@ -740,19 +740,19 @@ class Google_GetQueryResultsResponse extends Google_Model {
   protected $__schemaDataType = '';
   public $schema;
   public $totalRows;
-  public function setCacheHit( $cacheHit) {
+  public function setCacheHit($cacheHit) {
 	$this->cacheHit = $cacheHit;
   }
   public function getCacheHit() {
 	return $this->cacheHit;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setJobComplete( $jobComplete) {
+  public function setJobComplete($jobComplete) {
 	$this->jobComplete = $jobComplete;
   }
   public function getJobComplete() {
@@ -764,13 +764,13 @@ class Google_GetQueryResultsResponse extends Google_Model {
   public function getJobReference() {
 	return $this->jobReference;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPageToken( $pageToken) {
+  public function setPageToken($pageToken) {
 	$this->pageToken = $pageToken;
   }
   public function getPageToken() {
@@ -789,7 +789,7 @@ class Google_GetQueryResultsResponse extends Google_Model {
   public function getSchema() {
 	return $this->schema;
   }
-  public function setTotalRows( $totalRows) {
+  public function setTotalRows($totalRows) {
 	$this->totalRows = $totalRows;
   }
   public function getTotalRows() {
@@ -820,13 +820,13 @@ class Google_Job extends Google_Model {
   public function getConfiguration() {
 	return $this->configuration;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -838,13 +838,13 @@ class Google_Job extends Google_Model {
   public function getJobReference() {
 	return $this->jobReference;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -887,7 +887,7 @@ class Google_JobConfiguration extends Google_Model {
   public function getCopy() {
 	return $this->copy;
   }
-  public function setDryRun( $dryRun) {
+  public function setDryRun($dryRun) {
 	$this->dryRun = $dryRun;
   }
   public function getDryRun() {
@@ -927,25 +927,25 @@ class Google_JobConfigurationExtract extends Google_Model {
   protected $__sourceTableType = 'Google_TableReference';
   protected $__sourceTableDataType = '';
   public $sourceTable;
-  public function setDestinationFormat( $destinationFormat) {
+  public function setDestinationFormat($destinationFormat) {
 	$this->destinationFormat = $destinationFormat;
   }
   public function getDestinationFormat() {
 	return $this->destinationFormat;
   }
-  public function setDestinationUri( $destinationUri) {
+  public function setDestinationUri($destinationUri) {
 	$this->destinationUri = $destinationUri;
   }
   public function getDestinationUri() {
 	return $this->destinationUri;
   }
-  public function setFieldDelimiter( $fieldDelimiter) {
+  public function setFieldDelimiter($fieldDelimiter) {
 	$this->fieldDelimiter = $fieldDelimiter;
   }
   public function getFieldDelimiter() {
 	return $this->fieldDelimiter;
   }
-  public function setPrintHeader( $printHeader) {
+  public function setPrintHeader($printHeader) {
 	$this->printHeader = $printHeader;
   }
   public function getPrintHeader() {
@@ -966,7 +966,7 @@ class Google_JobConfigurationLink extends Google_Model {
   public $destinationTable;
   public $sourceUri;
   public $writeDisposition;
-  public function setCreateDisposition( $createDisposition) {
+  public function setCreateDisposition($createDisposition) {
 	$this->createDisposition = $createDisposition;
   }
   public function getCreateDisposition() {
@@ -985,7 +985,7 @@ class Google_JobConfigurationLink extends Google_Model {
   public function getSourceUri() {
 	return $this->sourceUri;
   }
-  public function setWriteDisposition( $writeDisposition) {
+  public function setWriteDisposition($writeDisposition) {
 	$this->writeDisposition = $writeDisposition;
   }
   public function getWriteDisposition() {
@@ -1013,19 +1013,19 @@ class Google_JobConfigurationLoad extends Google_Model {
   public $sourceFormat;
   public $sourceUris;
   public $writeDisposition;
-  public function setAllowJaggedRows( $allowJaggedRows) {
+  public function setAllowJaggedRows($allowJaggedRows) {
 	$this->allowJaggedRows = $allowJaggedRows;
   }
   public function getAllowJaggedRows() {
 	return $this->allowJaggedRows;
   }
-  public function setAllowQuotedNewlines( $allowQuotedNewlines) {
+  public function setAllowQuotedNewlines($allowQuotedNewlines) {
 	$this->allowQuotedNewlines = $allowQuotedNewlines;
   }
   public function getAllowQuotedNewlines() {
 	return $this->allowQuotedNewlines;
   }
-  public function setCreateDisposition( $createDisposition) {
+  public function setCreateDisposition($createDisposition) {
 	$this->createDisposition = $createDisposition;
   }
   public function getCreateDisposition() {
@@ -1037,25 +1037,25 @@ class Google_JobConfigurationLoad extends Google_Model {
   public function getDestinationTable() {
 	return $this->destinationTable;
   }
-  public function setEncoding( $encoding) {
+  public function setEncoding($encoding) {
 	$this->encoding = $encoding;
   }
   public function getEncoding() {
 	return $this->encoding;
   }
-  public function setFieldDelimiter( $fieldDelimiter) {
+  public function setFieldDelimiter($fieldDelimiter) {
 	$this->fieldDelimiter = $fieldDelimiter;
   }
   public function getFieldDelimiter() {
 	return $this->fieldDelimiter;
   }
-  public function setMaxBadRecords( $maxBadRecords) {
+  public function setMaxBadRecords($maxBadRecords) {
 	$this->maxBadRecords = $maxBadRecords;
   }
   public function getMaxBadRecords() {
 	return $this->maxBadRecords;
   }
-  public function setQuote( $quote) {
+  public function setQuote($quote) {
 	$this->quote = $quote;
   }
   public function getQuote() {
@@ -1067,25 +1067,25 @@ class Google_JobConfigurationLoad extends Google_Model {
   public function getSchema() {
 	return $this->schema;
   }
-  public function setSchemaInline( $schemaInline) {
+  public function setSchemaInline($schemaInline) {
 	$this->schemaInline = $schemaInline;
   }
   public function getSchemaInline() {
 	return $this->schemaInline;
   }
-  public function setSchemaInlineFormat( $schemaInlineFormat) {
+  public function setSchemaInlineFormat($schemaInlineFormat) {
 	$this->schemaInlineFormat = $schemaInlineFormat;
   }
   public function getSchemaInlineFormat() {
 	return $this->schemaInlineFormat;
   }
-  public function setSkipLeadingRows( $skipLeadingRows) {
+  public function setSkipLeadingRows($skipLeadingRows) {
 	$this->skipLeadingRows = $skipLeadingRows;
   }
   public function getSkipLeadingRows() {
 	return $this->skipLeadingRows;
   }
-  public function setSourceFormat( $sourceFormat) {
+  public function setSourceFormat($sourceFormat) {
 	$this->sourceFormat = $sourceFormat;
   }
   public function getSourceFormat() {
@@ -1098,7 +1098,7 @@ class Google_JobConfigurationLoad extends Google_Model {
   public function getSourceUris() {
 	return $this->sourceUris;
   }
-  public function setWriteDisposition( $writeDisposition) {
+  public function setWriteDisposition($writeDisposition) {
 	$this->writeDisposition = $writeDisposition;
   }
   public function getWriteDisposition() {
@@ -1121,13 +1121,13 @@ class Google_JobConfigurationQuery extends Google_Model {
   public $query;
   public $useQueryCache;
   public $writeDisposition;
-  public function setAllowLargeResults( $allowLargeResults) {
+  public function setAllowLargeResults($allowLargeResults) {
 	$this->allowLargeResults = $allowLargeResults;
   }
   public function getAllowLargeResults() {
 	return $this->allowLargeResults;
   }
-  public function setCreateDisposition( $createDisposition) {
+  public function setCreateDisposition($createDisposition) {
 	$this->createDisposition = $createDisposition;
   }
   public function getCreateDisposition() {
@@ -1145,37 +1145,37 @@ class Google_JobConfigurationQuery extends Google_Model {
   public function getDestinationTable() {
 	return $this->destinationTable;
   }
-  public function setMinCompletionRatio( $minCompletionRatio) {
+  public function setMinCompletionRatio($minCompletionRatio) {
 	$this->minCompletionRatio = $minCompletionRatio;
   }
   public function getMinCompletionRatio() {
 	return $this->minCompletionRatio;
   }
-  public function setPreserveNulls( $preserveNulls) {
+  public function setPreserveNulls($preserveNulls) {
 	$this->preserveNulls = $preserveNulls;
   }
   public function getPreserveNulls() {
 	return $this->preserveNulls;
   }
-  public function setPriority( $priority) {
+  public function setPriority($priority) {
 	$this->priority = $priority;
   }
   public function getPriority() {
 	return $this->priority;
   }
-  public function setQuery( $query) {
+  public function setQuery($query) {
 	$this->query = $query;
   }
   public function getQuery() {
 	return $this->query;
   }
-  public function setUseQueryCache( $useQueryCache) {
+  public function setUseQueryCache($useQueryCache) {
 	$this->useQueryCache = $useQueryCache;
   }
   public function getUseQueryCache() {
 	return $this->useQueryCache;
   }
-  public function setWriteDisposition( $writeDisposition) {
+  public function setWriteDisposition($writeDisposition) {
 	$this->writeDisposition = $writeDisposition;
   }
   public function getWriteDisposition() {
@@ -1192,7 +1192,7 @@ class Google_JobConfigurationTableCopy extends Google_Model {
   protected $__sourceTableDataType = '';
   public $sourceTable;
   public $writeDisposition;
-  public function setCreateDisposition( $createDisposition) {
+  public function setCreateDisposition($createDisposition) {
 	$this->createDisposition = $createDisposition;
   }
   public function getCreateDisposition() {
@@ -1210,7 +1210,7 @@ class Google_JobConfigurationTableCopy extends Google_Model {
   public function getSourceTable() {
 	return $this->sourceTable;
   }
-  public function setWriteDisposition( $writeDisposition) {
+  public function setWriteDisposition($writeDisposition) {
 	$this->writeDisposition = $writeDisposition;
   }
   public function getWriteDisposition() {
@@ -1226,7 +1226,7 @@ class Google_JobList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $totalItems;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -1239,19 +1239,19 @@ class Google_JobList extends Google_Model {
   public function getJobs() {
 	return $this->jobs;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1290,7 +1290,7 @@ class Google_JobListJobs extends Google_Model {
   public function getErrorResult() {
 	return $this->errorResult;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1302,13 +1302,13 @@ class Google_JobListJobs extends Google_Model {
   public function getJobReference() {
 	return $this->jobReference;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
@@ -1331,13 +1331,13 @@ class Google_JobListJobs extends Google_Model {
 class Google_JobReference extends Google_Model {
   public $jobId;
   public $projectId;
-  public function setJobId( $jobId) {
+  public function setJobId($jobId) {
 	$this->jobId = $jobId;
   }
   public function getJobId() {
 	return $this->jobId;
   }
-  public function setProjectId( $projectId) {
+  public function setProjectId($projectId) {
 	$this->projectId = $projectId;
   }
   public function getProjectId() {
@@ -1355,7 +1355,7 @@ class Google_JobStatistics extends Google_Model {
   public $query;
   public $startTime;
   public $totalBytesProcessed;
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
@@ -1373,13 +1373,13 @@ class Google_JobStatistics extends Google_Model {
   public function getQuery() {
 	return $this->query;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
 	return $this->startTime;
   }
-  public function setTotalBytesProcessed( $totalBytesProcessed) {
+  public function setTotalBytesProcessed($totalBytesProcessed) {
 	$this->totalBytesProcessed = $totalBytesProcessed;
   }
   public function getTotalBytesProcessed() {
@@ -1391,19 +1391,19 @@ class Google_JobStatistics2 extends Google_Model {
   public $cacheHit;
   public $completionRatio;
   public $totalBytesProcessed;
-  public function setCacheHit( $cacheHit) {
+  public function setCacheHit($cacheHit) {
 	$this->cacheHit = $cacheHit;
   }
   public function getCacheHit() {
 	return $this->cacheHit;
   }
-  public function setCompletionRatio( $completionRatio) {
+  public function setCompletionRatio($completionRatio) {
 	$this->completionRatio = $completionRatio;
   }
   public function getCompletionRatio() {
 	return $this->completionRatio;
   }
-  public function setTotalBytesProcessed( $totalBytesProcessed) {
+  public function setTotalBytesProcessed($totalBytesProcessed) {
 	$this->totalBytesProcessed = $totalBytesProcessed;
   }
   public function getTotalBytesProcessed() {
@@ -1416,25 +1416,25 @@ class Google_JobStatistics3 extends Google_Model {
   public $inputFiles;
   public $outputBytes;
   public $outputRows;
-  public function setInputFileBytes( $inputFileBytes) {
+  public function setInputFileBytes($inputFileBytes) {
 	$this->inputFileBytes = $inputFileBytes;
   }
   public function getInputFileBytes() {
 	return $this->inputFileBytes;
   }
-  public function setInputFiles( $inputFiles) {
+  public function setInputFiles($inputFiles) {
 	$this->inputFiles = $inputFiles;
   }
   public function getInputFiles() {
 	return $this->inputFiles;
   }
-  public function setOutputBytes( $outputBytes) {
+  public function setOutputBytes($outputBytes) {
 	$this->outputBytes = $outputBytes;
   }
   public function getOutputBytes() {
 	return $this->outputBytes;
   }
-  public function setOutputRows( $outputRows) {
+  public function setOutputRows($outputRows) {
 	$this->outputRows = $outputRows;
   }
   public function getOutputRows() {
@@ -1463,7 +1463,7 @@ class Google_JobStatus extends Google_Model {
   public function getErrors() {
 	return $this->errors;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
@@ -1479,19 +1479,19 @@ class Google_ProjectList extends Google_Model {
   protected $__projectsDataType = 'array';
   public $projects;
   public $totalItems;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1504,7 +1504,7 @@ class Google_ProjectList extends Google_Model {
   public function getProjects() {
 	return $this->projects;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1520,25 +1520,25 @@ class Google_ProjectListProjects extends Google_Model {
   protected $__projectReferenceType = 'Google_ProjectReference';
   protected $__projectReferenceDataType = '';
   public $projectReference;
-  public function setFriendlyName( $friendlyName) {
+  public function setFriendlyName($friendlyName) {
 	$this->friendlyName = $friendlyName;
   }
   public function getFriendlyName() {
 	return $this->friendlyName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNumericId( $numericId) {
+  public function setNumericId($numericId) {
 	$this->numericId = $numericId;
   }
   public function getNumericId() {
@@ -1554,7 +1554,7 @@ class Google_ProjectListProjects extends Google_Model {
 
 class Google_ProjectReference extends Google_Model {
   public $projectId;
-  public function setProjectId( $projectId) {
+  public function setProjectId($projectId) {
 	$this->projectId = $projectId;
   }
   public function getProjectId() {
@@ -1580,49 +1580,49 @@ class Google_QueryRequest extends Google_Model {
   public function getDefaultDataset() {
 	return $this->defaultDataset;
   }
-  public function setDryRun( $dryRun) {
+  public function setDryRun($dryRun) {
 	$this->dryRun = $dryRun;
   }
   public function getDryRun() {
 	return $this->dryRun;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMaxResults( $maxResults) {
+  public function setMaxResults($maxResults) {
 	$this->maxResults = $maxResults;
   }
   public function getMaxResults() {
 	return $this->maxResults;
   }
-  public function setMinCompletionRatio( $minCompletionRatio) {
+  public function setMinCompletionRatio($minCompletionRatio) {
 	$this->minCompletionRatio = $minCompletionRatio;
   }
   public function getMinCompletionRatio() {
 	return $this->minCompletionRatio;
   }
-  public function setPreserveNulls( $preserveNulls) {
+  public function setPreserveNulls($preserveNulls) {
 	$this->preserveNulls = $preserveNulls;
   }
   public function getPreserveNulls() {
 	return $this->preserveNulls;
   }
-  public function setQuery( $query) {
+  public function setQuery($query) {
 	$this->query = $query;
   }
   public function getQuery() {
 	return $this->query;
   }
-  public function setTimeoutMs( $timeoutMs) {
+  public function setTimeoutMs($timeoutMs) {
 	$this->timeoutMs = $timeoutMs;
   }
   public function getTimeoutMs() {
 	return $this->timeoutMs;
   }
-  public function setUseQueryCache( $useQueryCache) {
+  public function setUseQueryCache($useQueryCache) {
 	$this->useQueryCache = $useQueryCache;
   }
   public function getUseQueryCache() {
@@ -1646,13 +1646,13 @@ class Google_QueryResponse extends Google_Model {
   public $schema;
   public $totalBytesProcessed;
   public $totalRows;
-  public function setCacheHit( $cacheHit) {
+  public function setCacheHit($cacheHit) {
 	$this->cacheHit = $cacheHit;
   }
   public function getCacheHit() {
 	return $this->cacheHit;
   }
-  public function setJobComplete( $jobComplete) {
+  public function setJobComplete($jobComplete) {
 	$this->jobComplete = $jobComplete;
   }
   public function getJobComplete() {
@@ -1664,13 +1664,13 @@ class Google_QueryResponse extends Google_Model {
   public function getJobReference() {
 	return $this->jobReference;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPageToken( $pageToken) {
+  public function setPageToken($pageToken) {
 	$this->pageToken = $pageToken;
   }
   public function getPageToken() {
@@ -1689,13 +1689,13 @@ class Google_QueryResponse extends Google_Model {
   public function getSchema() {
 	return $this->schema;
   }
-  public function setTotalBytesProcessed( $totalBytesProcessed) {
+  public function setTotalBytesProcessed($totalBytesProcessed) {
 	$this->totalBytesProcessed = $totalBytesProcessed;
   }
   public function getTotalBytesProcessed() {
 	return $this->totalBytesProcessed;
   }
-  public function setTotalRows( $totalRows) {
+  public function setTotalRows($totalRows) {
 	$this->totalRows = $totalRows;
   }
   public function getTotalRows() {
@@ -1721,61 +1721,61 @@ class Google_Table extends Google_Model {
   protected $__tableReferenceType = 'Google_TableReference';
   protected $__tableReferenceDataType = '';
   public $tableReference;
-  public function setCreationTime( $creationTime) {
+  public function setCreationTime($creationTime) {
 	$this->creationTime = $creationTime;
   }
   public function getCreationTime() {
 	return $this->creationTime;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setExpirationTime( $expirationTime) {
+  public function setExpirationTime($expirationTime) {
 	$this->expirationTime = $expirationTime;
   }
   public function getExpirationTime() {
 	return $this->expirationTime;
   }
-  public function setFriendlyName( $friendlyName) {
+  public function setFriendlyName($friendlyName) {
 	$this->friendlyName = $friendlyName;
   }
   public function getFriendlyName() {
 	return $this->friendlyName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastModifiedTime( $lastModifiedTime) {
+  public function setLastModifiedTime($lastModifiedTime) {
 	$this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
 	return $this->lastModifiedTime;
   }
-  public function setNumBytes( $numBytes) {
+  public function setNumBytes($numBytes) {
 	$this->numBytes = $numBytes;
   }
   public function getNumBytes() {
 	return $this->numBytes;
   }
-  public function setNumRows( $numRows) {
+  public function setNumRows($numRows) {
 	$this->numRows = $numRows;
   }
   public function getNumRows() {
@@ -1787,7 +1787,7 @@ class Google_Table extends Google_Model {
   public function getSchema() {
 	return $this->schema;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -1803,7 +1803,7 @@ class Google_Table extends Google_Model {
 
 class Google_TableCell extends Google_Model {
   public $v;
-  public function setV( $v) {
+  public function setV($v) {
 	$this->v = $v;
   }
   public function getV() {
@@ -1819,19 +1819,19 @@ class Google_TableDataList extends Google_Model {
   protected $__rowsDataType = 'array';
   public $rows;
   public $totalRows;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPageToken( $pageToken) {
+  public function setPageToken($pageToken) {
 	$this->pageToken = $pageToken;
   }
   public function getPageToken() {
@@ -1844,7 +1844,7 @@ class Google_TableDataList extends Google_Model {
   public function getRows() {
 	return $this->rows;
   }
-  public function setTotalRows( $totalRows) {
+  public function setTotalRows($totalRows) {
 	$this->totalRows = $totalRows;
   }
   public function getTotalRows() {
@@ -1866,19 +1866,19 @@ class Google_TableFieldSchema extends Google_Model {
   public function getFields() {
 	return $this->fields;
   }
-  public function setMode( $mode) {
+  public function setMode($mode) {
 	$this->mode = $mode;
   }
   public function getMode() {
 	return $this->mode;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1894,19 +1894,19 @@ class Google_TableList extends Google_Model {
   protected $__tablesDataType = 'array';
   public $tables;
   public $totalItems;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1919,7 +1919,7 @@ class Google_TableList extends Google_Model {
   public function getTables() {
 	return $this->tables;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1934,19 +1934,19 @@ class Google_TableListTables extends Google_Model {
   protected $__tableReferenceType = 'Google_TableReference';
   protected $__tableReferenceDataType = '';
   public $tableReference;
-  public function setFriendlyName( $friendlyName) {
+  public function setFriendlyName($friendlyName) {
 	$this->friendlyName = $friendlyName;
   }
   public function getFriendlyName() {
 	return $this->friendlyName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1964,19 +1964,19 @@ class Google_TableReference extends Google_Model {
   public $datasetId;
   public $projectId;
   public $tableId;
-  public function setDatasetId( $datasetId) {
+  public function setDatasetId($datasetId) {
 	$this->datasetId = $datasetId;
   }
   public function getDatasetId() {
 	return $this->datasetId;
   }
-  public function setProjectId( $projectId) {
+  public function setProjectId($projectId) {
 	$this->projectId = $projectId;
   }
   public function getProjectId() {
 	return $this->projectId;
   }
-  public function setTableId( $tableId) {
+  public function setTableId($tableId) {
 	$this->tableId = $tableId;
   }
   public function getTableId() {

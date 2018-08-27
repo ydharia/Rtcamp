@@ -35,7 +35,7 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 	 */
 	public function getCurrentUrl()
 	{
-		return $this->getHttpScheme() . '://' . $this->getHostName() . $this->getServerVar('REQUEST_URI');
+		return $this->getHttpScheme().'://'.$this->getHostName().$this->getServerVar('REQUEST_URI');
 	}
 
 	/**
@@ -66,7 +66,7 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 			return $this->protocolWithActiveSsl($protocol);
 		}
 
-		return (string)$this->getServerVar('SERVER_PORT') === '443';
+		return (string) $this->getServerVar('SERVER_PORT') === '443';
 	}
 
 	/**
@@ -78,7 +78,7 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 	 */
 	protected function protocolWithActiveSsl($protocol)
 	{
-		$protocol = strtolower((string)$protocol);
+		$protocol = strtolower((string) $protocol);
 
 		return in_array($protocol, ['on', '1', 'https', 'ssl'], true);
 	}
@@ -99,8 +99,8 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 		if ($header && $this->isValidForwardedHost($header)) {
 			$elements = explode(',', $header);
 			$host = $elements[count($elements) - 1];
-		} elseif (!$host = $this->getHeader('HOST')) {
-			if (!$host = $this->getServerVar('SERVER_NAME')) {
+		} elseif ( ! $host = $this->getHeader('HOST')) {
+			if ( ! $host = $this->getServerVar('SERVER_NAME')) {
 				$host = $this->getServerVar('SERVER_ADDR');
 			}
 		}
@@ -112,14 +112,14 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 		// Port number
 		$scheme = $this->getHttpScheme();
 		$port = $this->getCurrentPort();
-		$appendPort = ':' . $port;
+		$appendPort = ':'.$port;
 
 		// Don't append port number if a normal port.
 		if (($scheme == 'http' && $port == '80') || ($scheme == 'https' && $port == '443')) {
 			$appendPort = '';
 		}
 
-		return $host . $appendPort;
+		return $host.$appendPort;
 	}
 
 	protected function getCurrentPort()
@@ -127,15 +127,15 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 		// Check for proxy first
 		$port = $this->getHeader('X_FORWARDED_PORT');
 		if ($port) {
-			return (string)$port;
+			return (string) $port;
 		}
 
-		$protocol = (string)$this->getHeader('X_FORWARDED_PROTO');
+		$protocol = (string) $this->getHeader('X_FORWARDED_PROTO');
 		if ($protocol === 'https') {
 			return '443';
 		}
 
-		return (string)$this->getServerVar('SERVER_PORT');
+		return (string) $this->getServerVar('SERVER_PORT');
 	}
 
 	/**
@@ -159,7 +159,7 @@ class FacebookUrlDetectionHandler implements UrlDetectionInterface
 	 */
 	protected function getHeader($key)
 	{
-		return $this->getServerVar('HTTP_' . $key);
+		return $this->getServerVar('HTTP_'.$key);
 	}
 
 	/**

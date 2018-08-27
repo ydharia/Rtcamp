@@ -58,7 +58,7 @@ class FacebookStreamHttpClient implements FacebookHttpClientInterface
 				'verify_peer' => true,
 				'verify_peer_name' => true,
 				'allow_self_signed' => true, // All root certificates are self-signed
-				'cafile' => __DIR__ . '/certs/DigiCertHighAssuranceEVRootCA.pem',
+				'cafile' => __DIR__.'/certs/DigiCertHighAssuranceEVRootCA.pem',
 			],
 		];
 
@@ -86,7 +86,7 @@ class FacebookStreamHttpClient implements FacebookHttpClientInterface
 	{
 		$header = [];
 		foreach ($headers as $k => $v) {
-			$header[] = $k . ': ' . $v;
+			$header[] = $k.': '.$v;
 		}
 
 		return implode("\r\n", $header);

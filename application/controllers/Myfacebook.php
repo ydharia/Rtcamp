@@ -52,16 +52,14 @@ class myfacebook extends CI_Controller {
 				if (empty($map))
 				{
 					$this->crontab->remove_job('* * * * *', 'cronjob.php');
-				}
-				else
+				} else
 				{
 					$myfile = fopen($dirname."/".$map[0], "r") or die("Unable to open file!");
 					$cronSession = fread($myfile, filesize($dirname."/".$map[0]));
 					fclose($myfile);
 					$_SESSION = json_decode($cronSession, TRUE);
 				}
-		 	}
-		 	catch (Exception $exx)
+		 	} catch (Exception $exx)
 		 	{
 		 		return false;
 		 	}
@@ -164,8 +162,7 @@ class myfacebook extends CI_Controller {
 			{
 				$photono = $this->session->set_userdata("photono", 1);
 				$i = 1;
-			}
-			else
+			} else
 			{
 				$photono = $this->session->userdata("photono");
 				$i = $photono;
@@ -315,15 +312,13 @@ class myfacebook extends CI_Controller {
 				if (isset($nextData["paging"]["next"]))
 				{
 					$nextUrl = $nextData["paging"]["next"];
-				} 
-				else
+				} else
 				{
 					$nextUrl = "";
 				}		  	
 				$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
 			}
-		}
-		catch (Exception $e)
+		} catch (Exception $e)
 		{			
 		}
 		return $data;
@@ -351,8 +346,7 @@ class myfacebook extends CI_Controller {
 			$ext = end($ext);
 			copy($source, $path."/".$i.".".$ext);
 			return true;
-		}
-		catch (Exceptin $ex)
+		} catch (Exceptin $ex)
 		{
 			return false;
 		}
@@ -394,23 +388,19 @@ class myfacebook extends CI_Controller {
 		if ($type == "all")
 		{
 			$foldername = "Facebook_".$this->session->userdata('uname')."_All_albums";
-		}
-		elseif ($type == "multiple")
+		} elseif ($type == "multiple")
 		{
 			$foldername = "Facebook_".$this->session->userdata('uname')."_Selected_albums";
-		}
-		elseif ($type == "single")
+		} elseif ($type == "single")
 		{
 			if ($albumName != "" || $albumId != "")
 			{
 				$foldername = "Facebook_".$this->session->userdata("uname")."_".$albumName."_".$albumId;
-			}
-			else
+			} else
 			{
 				exit();
 			}
-		}
-		else
+		} else
 		{
 			exit();
 		}
@@ -451,13 +441,11 @@ class myfacebook extends CI_Controller {
 				 closedir($dir_handle);
 				 rmdir($dirname);
 				 return true;
-		 	}
-		 	else
+		 	} else
 		 	{
 				return false;
 		 	}
-	 	}
-	 	catch (Exception $exx)
+	 	} catch (Exception $exx)
 	 	{
 	 		return false;
 	 	}
@@ -510,17 +498,17 @@ class myfacebook extends CI_Controller {
 		$this->google_drive->removeFolder($folderId);
 	}
 
-	public function newDirectory($dirName, $parent=null)
+	public function newDirectory($dirName, $parent = null)
 	{
 		return $this->google_drive->newDirectory($dirName, $parent, "")->id;
 	}
 
 	public function findFolder($folder)
 	{
-		$filter = array("title='".$folder."'","mimeType='application/vnd.google-apps.folder'");
-		if($this->google_drive->getFiles(null,$filter)["files"][0]->labels->trashed != 1)
+		$filter = array("title='".$folder."'", "mimeType='application/vnd.google-apps.folder'");
+		if ($this->google_drive->getFiles(null, $filter)["files"][0]->labels->trashed != 1)
 		{
-			return $this->google_drive->getFiles(null,$filter)["files"];
+			return $this->google_drive->getFiles(null, $filter)["files"];
 		}
 		else
 		{

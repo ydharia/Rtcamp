@@ -53,17 +53,17 @@ class FacebookUrlManipulator
 			}
 
 			if (count($params) > 0) {
-				$query = '?' . http_build_query($params, null, '&');
+				$query = '?'.http_build_query($params, null, '&');
 			}
 		}
 
-		$scheme = isset($parts['scheme']) ? $parts['scheme'] . '://' : '';
+		$scheme = isset($parts['scheme']) ? $parts['scheme'].'://' : '';
 		$host = isset($parts['host']) ? $parts['host'] : '';
-		$port = isset($parts['port']) ? ':' . $parts['port'] : '';
+		$port = isset($parts['port']) ? ':'.$parts['port'] : '';
 		$path = isset($parts['path']) ? $parts['path'] : '';
-		$fragment = isset($parts['fragment']) ? '#' . $parts['fragment'] : '';
+		$fragment = isset($parts['fragment']) ? '#'.$parts['fragment'] : '';
 
-		return $scheme . $host . $port . $path . $query . $fragment;
+		return $scheme.$host.$port.$path.$query.$fragment;
 	}
 
 	/**
@@ -81,7 +81,7 @@ class FacebookUrlManipulator
 		}
 
 		if (strpos($url, '?') === false) {
-			return $url . '?' . http_build_query($newParams, null, '&');
+			return $url.'?'.http_build_query($newParams, null, '&');
 		}
 
 		list($path, $query) = explode('?', $url, 2);
@@ -94,7 +94,7 @@ class FacebookUrlManipulator
 		// Sort for a predicable order
 		ksort($newParams);
 
-		return $path . '?' . http_build_query($newParams, null, '&');
+		return $path.'?'.http_build_query($newParams, null, '&');
 	}
 
 	/**
@@ -107,7 +107,7 @@ class FacebookUrlManipulator
 	public static function getParamsAsArray($url)
 	{
 		$query = parse_url($url, PHP_URL_QUERY);
-		if (!$query) {
+		if ( ! $query) {
 			return [];
 		}
 		$params = [];
@@ -130,7 +130,7 @@ class FacebookUrlManipulator
 	{
 		$newParams = static::getParamsAsArray($urlToStealFrom);
 		// Nothing new to add, return as-is
-		if (!$newParams) {
+		if ( ! $newParams) {
 			return $urlToAddTo;
 		}
 
@@ -146,11 +146,11 @@ class FacebookUrlManipulator
 	 */
 	public static function forceSlashPrefix($string)
 	{
-		if (!$string) {
+		if ( ! $string) {
 			return $string;
 		}
 
-		return strpos($string, '/') === 0 ? $string : '/' . $string;
+		return strpos($string, '/') === 0 ? $string : '/'.$string;
 	}
 
 	/**
@@ -162,6 +162,6 @@ class FacebookUrlManipulator
 	 */
 	public static function baseGraphUrlEndpoint($urlToTrim)
 	{
-		return '/' . preg_replace('/^https:\/\/.+\.facebook\.com(\/v.+?)?\//', '', $urlToTrim);
+		return '/'.preg_replace('/^https:\/\/.+\.facebook\.com(\/v.+?)?\//', '', $urlToTrim);
 	}
 }

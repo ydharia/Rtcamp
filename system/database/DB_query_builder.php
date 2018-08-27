@@ -2640,15 +2640,16 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		if (count($this->qb_cache_exists) === 0)
 		{
 			return;
-		}
-		elseif (in_array('select', $this->qb_cache_exists, TRUE))
+		} elseif (in_array('select', $this->qb_cache_exists, TRUE))
 		{
 			$qb_no_escape = $this->qb_cache_no_escape;
 		}
 
-		foreach (array_unique($this->qb_cache_exists) as $val) // select, from, etc.
+		foreach (array_unique($this->qb_cache_exists) as $val) {
+			// select, from, etc.
 		{
 			$qb_variable = 'qb_'.$val;
+		}
 			$qb_cache_var = 'qb_cache_'.$val;
 			$qb_new = $this->$qb_cache_var;
 

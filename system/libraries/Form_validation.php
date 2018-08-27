@@ -592,8 +592,7 @@ class CI_Form_validation {
 					if (count($row['keys']) === 1)
 					{
 						$post_ref = & $post_ref[current($row['keys'])];
-					}
-					else
+					} else
 					{
 						foreach ($row['keys'] as $val)
 						{

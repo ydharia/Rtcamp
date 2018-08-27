@@ -138,12 +138,12 @@ class OAuth2Client
 			'client_id' => $this->app->getId(),
 			'state' => $state,
 			'response_type' => 'code',
-			'sdk' => 'php-sdk-' . Facebook::VERSION,
+			'sdk' => 'php-sdk-'.Facebook::VERSION,
 			'redirect_uri' => $redirectUrl,
 			'scope' => implode(',', $scope)
 		];
 
-		return static::BASE_AUTHORIZATION_URL . '/' . $this->graphVersion . '/dialog/oauth?' . http_build_query($params, null, $separator);
+		return static::BASE_AUTHORIZATION_URL.'/'.$this->graphVersion.'/dialog/oauth?'.http_build_query($params, null, $separator);
 	}
 
 	/**
@@ -205,7 +205,7 @@ class OAuth2Client
 		$response = $this->sendRequestWithClientParams('/oauth/client_code', $params, $accessToken);
 		$data = $response->getDecodedBody();
 
-		if (!isset($data['code'])) {
+		if ( ! isset($data['code'])) {
 			throw new FacebookSDKException('Code was not returned from Graph.', 401);
 		}
 
@@ -226,7 +226,7 @@ class OAuth2Client
 		$response = $this->sendRequestWithClientParams('/oauth/access_token', $params);
 		$data = $response->getDecodedBody();
 
-		if (!isset($data['access_token'])) {
+		if ( ! isset($data['access_token'])) {
 			throw new FacebookSDKException('Access token was not returned from Graph.', 401);
 		}
 

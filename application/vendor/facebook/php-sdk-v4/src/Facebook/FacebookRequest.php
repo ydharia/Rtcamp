@@ -134,7 +134,7 @@ class FacebookRequest
 	public function setAccessTokenFromParams($accessToken)
 	{
 		$existingAccessToken = $this->getAccessToken();
-		if (!$existingAccessToken) {
+		if ( ! $existingAccessToken) {
 			$this->setAccessToken($accessToken);
 		} elseif ($accessToken !== $existingAccessToken) {
 			throw new FacebookSDKException('Access token mismatch. The access token provided in the FacebookRequest and the one provided in the URL or POST params do not match.');
@@ -190,7 +190,7 @@ class FacebookRequest
 	 */
 	public function getAppSecretProof()
 	{
-		if (!$accessTokenEntity = $this->getAccessTokenEntity()) {
+		if ( ! $accessTokenEntity = $this->getAccessTokenEntity()) {
 			return null;
 		}
 
@@ -205,7 +205,7 @@ class FacebookRequest
 	public function validateAccessToken()
 	{
 		$accessToken = $this->getAccessToken();
-		if (!$accessToken) {
+		if ( ! $accessToken) {
 			throw new FacebookSDKException('You must provide an access token.');
 		}
 	}
@@ -237,11 +237,11 @@ class FacebookRequest
 	 */
 	public function validateMethod()
 	{
-		if (!$this->method) {
+		if ( ! $this->method) {
 			throw new FacebookSDKException('HTTP method not specified.');
 		}
 
-		if (!in_array($this->method, ['GET', 'POST', 'DELETE'])) {
+		if ( ! in_array($this->method, ['GET', 'POST', 'DELETE'])) {
 			throw new FacebookSDKException('Invalid HTTP method specified.');
 		}
 	}
@@ -412,7 +412,7 @@ class FacebookRequest
 	 */
 	public function containsFileUploads()
 	{
-		return !empty($this->files);
+		return ! empty($this->files);
 	}
 
 	/**
@@ -509,7 +509,7 @@ class FacebookRequest
 		$graphVersion = FacebookUrlManipulator::forceSlashPrefix($this->graphVersion);
 		$endpoint = FacebookUrlManipulator::forceSlashPrefix($this->getEndpoint());
 
-		$url = $graphVersion . $endpoint;
+		$url = $graphVersion.$endpoint;
 
 		if ($this->getMethod() !== 'POST') {
 			$params = $this->getParams();
@@ -527,7 +527,7 @@ class FacebookRequest
 	public static function getDefaultHeaders()
 	{
 		return [
-			'User-Agent' => 'fb-php-' . Facebook::VERSION,
+			'User-Agent' => 'fb-php-'.Facebook::VERSION,
 			'Accept-Encoding' => '*',
 		];
 	}

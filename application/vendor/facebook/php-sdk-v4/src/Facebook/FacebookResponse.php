@@ -247,7 +247,7 @@ class FacebookResponse
 			$this->decodedBody = ['id' => $this->decodedBody];
 		}
 
-		if (!is_array($this->decodedBody)) {
+		if ( ! is_array($this->decodedBody)) {
 			$this->decodedBody = [];
 		}
 

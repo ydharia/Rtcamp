@@ -42,19 +42,19 @@ class Google_BatchRequest {
 	$body = '';
 
 	/** @var Google_HttpRequest $req */
-	foreach($this->requests as $key => $req) {
+	foreach ($this->requests as $key => $req) {
 	  $body .= "--{$this->boundary}\n";
-	  $body .= $req->toBatchString($key) . "\n";
+	  $body .= $req->toBatchString($key)."\n";
 	}
 
 	$body = rtrim($body);
 	$body .= "\n--{$this->boundary}--";
 
 	global $apiConfig;
-	$url = $apiConfig['basePath'] . '/batch';
+	$url = $apiConfig['basePath'].'/batch';
 	$httpRequest = new Google_HttpRequest($url, 'POST');
 	$httpRequest->setRequestHeaders(array(
-		'Content-Type' => 'multipart/mixed; boundary=' . $this->boundary));
+		'Content-Type' => 'multipart/mixed; boundary='.$this->boundary));
 
 	$httpRequest->setPostBody($body);
 	$response = Google_Client::$io->makeRequest($httpRequest);
@@ -67,7 +67,7 @@ class Google_BatchRequest {
 	$contentType = $response->getResponseHeader('content-type');
 	$contentType = explode(';', $contentType);
 	$boundary = false;
-	foreach($contentType as $part) {
+	foreach ($contentType as $part) {
 	  $part = (explode('=', $part, 2));
 	  if (isset($part[0]) && 'boundary' == trim($part[0])) {
 		$boundary = $part[1];
@@ -80,9 +80,9 @@ class Google_BatchRequest {
 	  $parts = explode("--$boundary", $body);
 	  $responses = array();
 
-	  foreach($parts as $part) {
+	  foreach ($parts as $part) {
 		$part = trim($part);
-		if (!empty($part)) {
+		if ( ! empty($part)) {
 		  list($metaHeaders, $part) = explode("\r\n\r\n", $part, 2);
 		  $metaHeaders = Google_CurlIO::parseResponseHeaders($metaHeaders);
 

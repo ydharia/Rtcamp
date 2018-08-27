@@ -82,13 +82,13 @@ class FacebookBatchRequest extends FacebookRequest implements IteratorAggregate,
 			return $this;
 		}
 
-		if (!$request instanceof FacebookRequest) {
+		if ( ! $request instanceof FacebookRequest) {
 			throw new \InvalidArgumentException('Argument for add() must be of type array or FacebookRequest.');
 		}
 
 		if (null === $options) {
 			$options = [];
-		} elseif (!is_array($options)) {
+		} elseif ( ! is_array($options)) {
 			$options = ['name' => $options];
 		}
 
@@ -122,17 +122,17 @@ class FacebookBatchRequest extends FacebookRequest implements IteratorAggregate,
 	 */
 	public function addFallbackDefaults(FacebookRequest $request)
 	{
-		if (!$request->getApp()) {
+		if ( ! $request->getApp()) {
 			$app = $this->getApp();
-			if (!$app) {
+			if ( ! $app) {
 				throw new FacebookSDKException('Missing FacebookApp on FacebookRequest and no fallback detected on FacebookBatchRequest.');
 			}
 			$request->setApp($app);
 		}
 
-		if (!$request->getAccessToken()) {
+		if ( ! $request->getAccessToken()) {
 			$accessToken = $this->getAccessToken();
-			if (!$accessToken) {
+			if ( ! $accessToken) {
 				throw new FacebookSDKException('Missing access token on FacebookRequest and no fallback detected on FacebookBatchRequest.');
 			}
 			$request->setAccessToken($accessToken);
@@ -150,7 +150,7 @@ class FacebookBatchRequest extends FacebookRequest implements IteratorAggregate,
 	 */
 	public function extractFileAttachments(FacebookRequest $request)
 	{
-		if (!$request->containsFileUploads()) {
+		if ( ! $request->containsFileUploads()) {
 			return null;
 		}
 
@@ -246,14 +246,14 @@ class FacebookBatchRequest extends FacebookRequest implements IteratorAggregate,
 
 		if (null === $options) {
 			$options = [];
-		} elseif (!is_array($options)) {
+		} elseif ( ! is_array($options)) {
 			$options = ['name' => $options];
 		}
 
 		$compiledHeaders = [];
 		$headers = $request->getHeaders();
 		foreach ($headers as $name => $value) {
-			$compiledHeaders[] = $name . ': ' . $value;
+			$compiledHeaders[] = $name.': '.$value;
 		}
 
 		$batch = [

@@ -429,7 +429,7 @@ class Google_Activities extends Google_Model {
   public function getFilters() {
 	return $this->filters;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -473,7 +473,7 @@ class Google_CompatibleFields extends Google_Model {
   public function getFloodlightReportCompatibleFields() {
 	return $this->floodlightReportCompatibleFields;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -527,7 +527,7 @@ class Google_CrossDimensionReachReportCompatibleFields extends Google_Model {
   public function getDimensionFilters() {
 	return $this->dimensionFilters;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -561,7 +561,7 @@ class Google_CustomRichMediaEvents extends Google_Model {
   public function getFilteredEventIds() {
 	return $this->filteredEventIds;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -574,25 +574,25 @@ class Google_DateRange extends Google_Model {
   public $kind;
   public $relativeDateRange;
   public $startDate;
-  public function setEndDate( $endDate) {
+  public function setEndDate($endDate) {
 	$this->endDate = $endDate;
   }
   public function getEndDate() {
 	return $this->endDate;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setRelativeDateRange( $relativeDateRange) {
+  public function setRelativeDateRange($relativeDateRange) {
 	$this->relativeDateRange = $relativeDateRange;
   }
   public function getRelativeDateRange() {
 	return $this->relativeDateRange;
   }
-  public function setStartDate( $startDate) {
+  public function setStartDate($startDate) {
 	$this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -621,49 +621,49 @@ class Google_DfareportingFile extends Google_Model {
   public function getDateRange() {
 	return $this->dateRange;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setFileName( $fileName) {
+  public function setFileName($fileName) {
 	$this->fileName = $fileName;
   }
   public function getFileName() {
 	return $this->fileName;
   }
-  public function setFormat( $format) {
+  public function setFormat($format) {
 	$this->format = $format;
   }
   public function getFormat() {
 	return $this->format;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastModifiedTime( $lastModifiedTime) {
+  public function setLastModifiedTime($lastModifiedTime) {
 	$this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
 	return $this->lastModifiedTime;
   }
-  public function setReportId( $reportId) {
+  public function setReportId($reportId) {
 	$this->reportId = $reportId;
   }
   public function getReportId() {
 	return $this->reportId;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -680,13 +680,13 @@ class Google_DfareportingFile extends Google_Model {
 class Google_DfareportingFileUrls extends Google_Model {
   public $apiUrl;
   public $browserUrl;
-  public function setApiUrl( $apiUrl) {
+  public function setApiUrl($apiUrl) {
 	$this->apiUrl = $apiUrl;
   }
   public function getApiUrl() {
 	return $this->apiUrl;
   }
-  public function setBrowserUrl( $browserUrl) {
+  public function setBrowserUrl($browserUrl) {
 	$this->browserUrl = $browserUrl;
   }
   public function getBrowserUrl() {
@@ -697,13 +697,13 @@ class Google_DfareportingFileUrls extends Google_Model {
 class Google_Dimension extends Google_Model {
   public $kind;
   public $name;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -715,19 +715,19 @@ class Google_DimensionFilter extends Google_Model {
   public $dimensionName;
   public $kind;
   public $value;
-  public function setDimensionName( $dimensionName) {
+  public function setDimensionName($dimensionName) {
 	$this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
 	return $this->dimensionName;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -742,37 +742,37 @@ class Google_DimensionValue extends Google_Model {
   public $kind;
   public $matchType;
   public $value;
-  public function setDimensionName( $dimensionName) {
+  public function setDimensionName($dimensionName) {
 	$this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
 	return $this->dimensionName;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMatchType( $matchType) {
+  public function setMatchType($matchType) {
 	$this->matchType = $matchType;
   }
   public function getMatchType() {
 	return $this->matchType;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -787,7 +787,7 @@ class Google_DimensionValueList extends Google_Model {
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -800,13 +800,13 @@ class Google_DimensionValueList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -822,13 +822,13 @@ class Google_DimensionValueRequest extends Google_Model {
   public $filters;
   public $kind;
   public $startDate;
-  public function setDimensionName( $dimensionName) {
+  public function setDimensionName($dimensionName) {
 	$this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
 	return $this->dimensionName;
   }
-  public function setEndDate( $endDate) {
+  public function setEndDate($endDate) {
 	$this->endDate = $endDate;
   }
   public function getEndDate() {
@@ -841,13 +841,13 @@ class Google_DimensionValueRequest extends Google_Model {
   public function getFilters() {
 	return $this->filters;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setStartDate( $startDate) {
+  public function setStartDate($startDate) {
 	$this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -862,7 +862,7 @@ class Google_FileList extends Google_Model {
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -875,13 +875,13 @@ class Google_FileList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -914,7 +914,7 @@ class Google_FloodlightReportCompatibleFields extends Google_Model {
   public function getDimensions() {
 	return $this->dimensions;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -932,13 +932,13 @@ class Google_FloodlightReportCompatibleFields extends Google_Model {
 class Google_Metric extends Google_Model {
   public $kind;
   public $name;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -974,7 +974,7 @@ class Google_PathToConversionReportCompatibleFields extends Google_Model {
   public function getCustomFloodlightVariables() {
 	return $this->customFloodlightVariables;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1027,7 +1027,7 @@ class Google_ReachReportCompatibleFields extends Google_Model {
   public function getDimensions() {
 	return $this->dimensions;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1060,19 +1060,19 @@ class Google_Recipient extends Google_Model {
   public $deliveryType;
   public $email;
   public $kind;
-  public function setDeliveryType( $deliveryType) {
+  public function setDeliveryType($deliveryType) {
 	$this->deliveryType = $deliveryType;
   }
   public function getDeliveryType() {
 	return $this->deliveryType;
   }
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
 	return $this->email;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1116,7 +1116,7 @@ class Google_Report extends Google_Model {
   public $schedule;
   public $subAccountId;
   public $type;
-  public function setAccountId( $accountId) {
+  public function setAccountId($accountId) {
 	$this->accountId = $accountId;
   }
   public function getAccountId() {
@@ -1146,13 +1146,13 @@ class Google_Report extends Google_Model {
   public function getDelivery() {
 	return $this->delivery;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setFileName( $fileName) {
+  public function setFileName($fileName) {
 	$this->fileName = $fileName;
   }
   public function getFileName() {
@@ -1164,37 +1164,37 @@ class Google_Report extends Google_Model {
   public function getFloodlightCriteria() {
 	return $this->floodlightCriteria;
   }
-  public function setFormat( $format) {
+  public function setFormat($format) {
 	$this->format = $format;
   }
   public function getFormat() {
 	return $this->format;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastModifiedTime( $lastModifiedTime) {
+  public function setLastModifiedTime($lastModifiedTime) {
 	$this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
 	return $this->lastModifiedTime;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setOwnerProfileId( $ownerProfileId) {
+  public function setOwnerProfileId($ownerProfileId) {
 	$this->ownerProfileId = $ownerProfileId;
   }
   public function getOwnerProfileId() {
@@ -1218,13 +1218,13 @@ class Google_Report extends Google_Model {
   public function getSchedule() {
 	return $this->schedule;
   }
-  public function setSubAccountId( $subAccountId) {
+  public function setSubAccountId($subAccountId) {
 	$this->subAccountId = $subAccountId;
   }
   public function getSubAccountId() {
 	return $this->subAccountId;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1300,7 +1300,7 @@ class Google_ReportCompatibleFields extends Google_Model {
   public function getDimensions() {
 	return $this->dimensions;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1407,7 +1407,7 @@ class Google_ReportCrossDimensionReachCriteria extends Google_Model {
   public function getDateRange() {
 	return $this->dateRange;
   }
-  public function setDimension( $dimension) {
+  public function setDimension($dimension) {
 	$this->dimension = $dimension;
   }
   public function getDimension() {
@@ -1434,7 +1434,7 @@ class Google_ReportCrossDimensionReachCriteria extends Google_Model {
   public function getOverlapMetricNames() {
 	return $this->overlapMetricNames;
   }
-  public function setPivoted( $pivoted) {
+  public function setPivoted($pivoted) {
 	$this->pivoted = $pivoted;
   }
   public function getPivoted() {
@@ -1449,19 +1449,19 @@ class Google_ReportDelivery extends Google_Model {
   protected $__recipientsType = 'Google_Recipient';
   protected $__recipientsDataType = 'array';
   public $recipients;
-  public function setEmailOwner( $emailOwner) {
+  public function setEmailOwner($emailOwner) {
 	$this->emailOwner = $emailOwner;
   }
   public function getEmailOwner() {
 	return $this->emailOwner;
   }
-  public function setEmailOwnerDeliveryType( $emailOwnerDeliveryType) {
+  public function setEmailOwnerDeliveryType($emailOwnerDeliveryType) {
 	$this->emailOwnerDeliveryType = $emailOwnerDeliveryType;
   }
   public function getEmailOwnerDeliveryType() {
 	return $this->emailOwnerDeliveryType;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -1548,19 +1548,19 @@ class Google_ReportFloodlightCriteriaReportProperties extends Google_Model {
   public $includeAttributedIPConversions;
   public $includeUnattributedCookieConversions;
   public $includeUnattributedIPConversions;
-  public function setIncludeAttributedIPConversions( $includeAttributedIPConversions) {
+  public function setIncludeAttributedIPConversions($includeAttributedIPConversions) {
 	$this->includeAttributedIPConversions = $includeAttributedIPConversions;
   }
   public function getIncludeAttributedIPConversions() {
 	return $this->includeAttributedIPConversions;
   }
-  public function setIncludeUnattributedCookieConversions( $includeUnattributedCookieConversions) {
+  public function setIncludeUnattributedCookieConversions($includeUnattributedCookieConversions) {
 	$this->includeUnattributedCookieConversions = $includeUnattributedCookieConversions;
   }
   public function getIncludeUnattributedCookieConversions() {
 	return $this->includeUnattributedCookieConversions;
   }
-  public function setIncludeUnattributedIPConversions( $includeUnattributedIPConversions) {
+  public function setIncludeUnattributedIPConversions($includeUnattributedIPConversions) {
 	$this->includeUnattributedIPConversions = $includeUnattributedIPConversions;
   }
   public function getIncludeUnattributedIPConversions() {
@@ -1575,7 +1575,7 @@ class Google_ReportList extends Google_Model {
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -1588,13 +1588,13 @@ class Google_ReportList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1700,55 +1700,55 @@ class Google_ReportPathToConversionCriteriaReportProperties extends Google_Model
   public $maximumImpressionInteractions;
   public $maximumInteractionGap;
   public $pivotOnInteractionPath;
-  public function setClicksLookbackWindow( $clicksLookbackWindow) {
+  public function setClicksLookbackWindow($clicksLookbackWindow) {
 	$this->clicksLookbackWindow = $clicksLookbackWindow;
   }
   public function getClicksLookbackWindow() {
 	return $this->clicksLookbackWindow;
   }
-  public function setImpressionsLookbackWindow( $impressionsLookbackWindow) {
+  public function setImpressionsLookbackWindow($impressionsLookbackWindow) {
 	$this->impressionsLookbackWindow = $impressionsLookbackWindow;
   }
   public function getImpressionsLookbackWindow() {
 	return $this->impressionsLookbackWindow;
   }
-  public function setIncludeAttributedIPConversions( $includeAttributedIPConversions) {
+  public function setIncludeAttributedIPConversions($includeAttributedIPConversions) {
 	$this->includeAttributedIPConversions = $includeAttributedIPConversions;
   }
   public function getIncludeAttributedIPConversions() {
 	return $this->includeAttributedIPConversions;
   }
-  public function setIncludeUnattributedCookieConversions( $includeUnattributedCookieConversions) {
+  public function setIncludeUnattributedCookieConversions($includeUnattributedCookieConversions) {
 	$this->includeUnattributedCookieConversions = $includeUnattributedCookieConversions;
   }
   public function getIncludeUnattributedCookieConversions() {
 	return $this->includeUnattributedCookieConversions;
   }
-  public function setIncludeUnattributedIPConversions( $includeUnattributedIPConversions) {
+  public function setIncludeUnattributedIPConversions($includeUnattributedIPConversions) {
 	$this->includeUnattributedIPConversions = $includeUnattributedIPConversions;
   }
   public function getIncludeUnattributedIPConversions() {
 	return $this->includeUnattributedIPConversions;
   }
-  public function setMaximumClickInteractions( $maximumClickInteractions) {
+  public function setMaximumClickInteractions($maximumClickInteractions) {
 	$this->maximumClickInteractions = $maximumClickInteractions;
   }
   public function getMaximumClickInteractions() {
 	return $this->maximumClickInteractions;
   }
-  public function setMaximumImpressionInteractions( $maximumImpressionInteractions) {
+  public function setMaximumImpressionInteractions($maximumImpressionInteractions) {
 	$this->maximumImpressionInteractions = $maximumImpressionInteractions;
   }
   public function getMaximumImpressionInteractions() {
 	return $this->maximumImpressionInteractions;
   }
-  public function setMaximumInteractionGap( $maximumInteractionGap) {
+  public function setMaximumInteractionGap($maximumInteractionGap) {
 	$this->maximumInteractionGap = $maximumInteractionGap;
   }
   public function getMaximumInteractionGap() {
 	return $this->maximumInteractionGap;
   }
-  public function setPivotOnInteractionPath( $pivotOnInteractionPath) {
+  public function setPivotOnInteractionPath($pivotOnInteractionPath) {
 	$this->pivotOnInteractionPath = $pivotOnInteractionPath;
   }
   public function getPivotOnInteractionPath() {
@@ -1830,25 +1830,25 @@ class Google_ReportSchedule extends Google_Model {
   public $repeatsOnWeekDays;
   public $runsOnDayOfMonth;
   public $startDate;
-  public function setActive( $active) {
+  public function setActive($active) {
 	$this->active = $active;
   }
   public function getActive() {
 	return $this->active;
   }
-  public function setEvery( $every) {
+  public function setEvery($every) {
 	$this->every = $every;
   }
   public function getEvery() {
 	return $this->every;
   }
-  public function setExpirationDate( $expirationDate) {
+  public function setExpirationDate($expirationDate) {
 	$this->expirationDate = $expirationDate;
   }
   public function getExpirationDate() {
 	return $this->expirationDate;
   }
-  public function setRepeats( $repeats) {
+  public function setRepeats($repeats) {
 	$this->repeats = $repeats;
   }
   public function getRepeats() {
@@ -1861,13 +1861,13 @@ class Google_ReportSchedule extends Google_Model {
   public function getRepeatsOnWeekDays() {
 	return $this->repeatsOnWeekDays;
   }
-  public function setRunsOnDayOfMonth( $runsOnDayOfMonth) {
+  public function setRunsOnDayOfMonth($runsOnDayOfMonth) {
 	$this->runsOnDayOfMonth = $runsOnDayOfMonth;
   }
   public function getRunsOnDayOfMonth() {
 	return $this->runsOnDayOfMonth;
   }
-  public function setStartDate( $startDate) {
+  public function setStartDate($startDate) {
 	$this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -1879,19 +1879,19 @@ class Google_SortedDimension extends Google_Model {
   public $kind;
   public $name;
   public $sortOrder;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setSortOrder( $sortOrder) {
+  public function setSortOrder($sortOrder) {
 	$this->sortOrder = $sortOrder;
   }
   public function getSortOrder() {
@@ -1908,49 +1908,49 @@ class Google_UserProfile extends Google_Model {
   public $subAccountId;
   public $subAccountName;
   public $userName;
-  public function setAccountId( $accountId) {
+  public function setAccountId($accountId) {
 	$this->accountId = $accountId;
   }
   public function getAccountId() {
 	return $this->accountId;
   }
-  public function setAccountName( $accountName) {
+  public function setAccountName($accountName) {
 	$this->accountName = $accountName;
   }
   public function getAccountName() {
 	return $this->accountName;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setProfileId( $profileId) {
+  public function setProfileId($profileId) {
 	$this->profileId = $profileId;
   }
   public function getProfileId() {
 	return $this->profileId;
   }
-  public function setSubAccountId( $subAccountId) {
+  public function setSubAccountId($subAccountId) {
 	$this->subAccountId = $subAccountId;
   }
   public function getSubAccountId() {
 	return $this->subAccountId;
   }
-  public function setSubAccountName( $subAccountName) {
+  public function setSubAccountName($subAccountName) {
 	$this->subAccountName = $subAccountName;
   }
   public function getSubAccountName() {
 	return $this->subAccountName;
   }
-  public function setUserName( $userName) {
+  public function setUserName($userName) {
 	$this->userName = $userName;
   }
   public function getUserName() {
@@ -1964,7 +1964,7 @@ class Google_UserProfileList extends Google_Model {
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -1977,7 +1977,7 @@ class Google_UserProfileList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {

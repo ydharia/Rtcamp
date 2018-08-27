@@ -30,7 +30,7 @@ class Google_CurlIO extends Google_IO {
 	  'connection', 'keep-alive', 'proxy-authenticate', 'proxy-authorization',
 	  'te', 'trailers', 'transfer-encoding', 'upgrade');
 
-  private $curlParams = array (
+  private $curlParams = array(
 	  CURLOPT_RETURNTRANSFER => true,
 	  CURLOPT_FOLLOWLOCATION => 0,
 	  CURLOPT_FAILONERROR => false,
@@ -43,7 +43,7 @@ class Google_CurlIO extends Google_IO {
    * Check for cURL availability.
    */
   public function __construct() {
-	if (! function_exists('curl_init')) {
+	if ( ! function_exists('curl_init')) {
 	  throw new Exception(
 		'Google CurlIO client requires the CURL PHP extension');
 	}
@@ -76,7 +76,7 @@ class Google_CurlIO extends Google_IO {
 	// First, check to see if we have a valid cached version.
 	$cached = $this->getCachedRequest($request);
 	if ($cached !== false) {
-	  if (!$this->checkMustRevaliadateCachedRequest($cached, $request)) {
+	  if ( ! $this->checkMustRevaliadateCachedRequest($cached, $request)) {
 		return $cached;
 	  }
 	}
@@ -110,7 +110,7 @@ class Google_CurlIO extends Google_IO {
 	if (curl_errno($ch) == CURLE_SSL_CACERT) {
 	  error_log('SSL certificate problem, verify that the CA cert is OK.'
 		. ' Retrying with the CA cert bundle from google-api-php-client.');
-	  curl_setopt($ch, CURLOPT_CAINFO, dirname(__FILE__) . '/cacerts.pem');
+	  curl_setopt($ch, CURLOPT_CAINFO, dirname(__FILE__).'/cacerts.pem');
 	  $respData = curl_exec($ch);
 	}
 
@@ -187,7 +187,7 @@ class Google_CurlIO extends Google_IO {
 		list($header, $value) = explode(': ', $headerLine, 2);
 		$header = strtolower($header);
 		if (isset($responseHeaders[$header])) {
-		  $responseHeaders[$header] .= "\n" . $value;
+		  $responseHeaders[$header] .= "\n".$value;
 		} else {
 		  $responseHeaders[$header] = $value;
 		}

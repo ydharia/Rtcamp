@@ -122,7 +122,7 @@ class Google_FreebaseService extends Google_Service {
 
 class Google_ContentserviceGet extends Google_Model {
   public $result;
-  public function setResult( $result) {
+  public function setResult($result) {
 	$this->result = $result;
   }
   public function getResult() {
@@ -135,7 +135,7 @@ class Google_TopicLookup extends Google_Model {
   protected $__propertyType = 'Google_TopicLookupProperty';
   protected $__propertyDataType = '';
   public $property;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -168,13 +168,13 @@ class Google_TopicPropertyvalue extends Google_Model {
   protected $__valuesDataType = 'array';
   public $values;
   public $valuetype;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -187,7 +187,7 @@ class Google_TopicPropertyvalue extends Google_Model {
   public function getValues() {
 	return $this->values;
   }
-  public function setValuetype( $valuetype) {
+  public function setValuetype($valuetype) {
 	$this->valuetype = $valuetype;
   }
   public function getValuetype() {
@@ -200,7 +200,7 @@ class Google_TopicStatslinkcount extends Google_Model {
   protected $__valuesType = 'Google_TopicStatslinkcountValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -221,13 +221,13 @@ class Google_TopicStatslinkcountValues extends Google_Model {
   protected $__valuesType = 'Google_TopicStatslinkcountValuesValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -248,13 +248,13 @@ class Google_TopicStatslinkcountValuesValues extends Google_Model {
   protected $__valuesType = 'Google_TopicStatslinkcountValuesValuesValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -272,13 +272,13 @@ class Google_TopicStatslinkcountValuesValues extends Google_Model {
 class Google_TopicStatslinkcountValuesValuesValues extends Google_Model {
   public $count;
   public $id;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -307,31 +307,31 @@ class Google_TopicValue extends Google_Model {
   public function getCitation() {
 	return $this->citation;
   }
-  public function setCreator( $creator) {
+  public function setCreator($creator) {
 	$this->creator = $creator;
   }
   public function getCreator() {
 	return $this->creator;
   }
-  public function setDataset( $dataset) {
+  public function setDataset($dataset) {
 	$this->dataset = $dataset;
   }
   public function getDataset() {
 	return $this->dataset;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setLang( $lang) {
+  public function setLang($lang) {
 	$this->lang = $lang;
   }
   public function getLang() {
 	return $this->lang;
   }
-  public function setProject( $project) {
+  public function setProject($project) {
 	$this->project = $project;
   }
   public function getProject() {
@@ -343,19 +343,19 @@ class Google_TopicValue extends Google_Model {
   public function getProperty() {
 	return $this->property;
   }
-  public function setText( $text) {
+  public function setText($text) {
 	$this->text = $text;
   }
   public function getText() {
 	return $this->text;
   }
-  public function setTimestamp( $timestamp) {
+  public function setTimestamp($timestamp) {
 	$this->timestamp = $timestamp;
   }
   public function getTimestamp() {
 	return $this->timestamp;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -367,19 +367,19 @@ class Google_TopicValueCitation extends Google_Model {
   public $provider;
   public $statement;
   public $uri;
-  public function setProvider( $provider) {
+  public function setProvider($provider) {
 	$this->provider = $provider;
   }
   public function getProvider() {
 	return $this->provider;
   }
-  public function setStatement( $statement) {
+  public function setStatement($statement) {
 	$this->statement = $statement;
   }
   public function getStatement() {
 	return $this->statement;
   }
-  public function setUri( $uri) {
+  public function setUri($uri) {
 	$this->uri = $uri;
   }
   public function getUri() {
