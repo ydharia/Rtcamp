@@ -713,8 +713,7 @@ class CI_Image_lib {
 		{
 			$this->width = $this->orig_height;
 			$this->height = $this->orig_width;
-		}
-		else
+		} else
 		{
 			$this->width = $this->orig_width;
 			$this->height = $this->orig_height;
@@ -796,8 +795,7 @@ class CI_Image_lib {
 		{
 			$create = 'imagecreatetruecolor';
 			$copy = 'imagecopyresampled';
-		}
-		else
+		} else
 		{
 			$create = 'imagecreate';
 			$copy = 'imagecopyresized';
@@ -868,20 +866,17 @@ class CI_Image_lib {
 		if ($action === 'crop')
 		{
 			$cmd .= ' -crop '.$this->width.'x'.$this->height.'+'.$this->x_axis.'+'.$this->y_axis;
-		}
-		elseif ($action === 'rotate')
+		} elseif ($action === 'rotate')
 		{
 			$cmd .= ($this->rotation_angle === 'hor' OR $this->rotation_angle === 'vrt')
 					? ' -flop'
 					: ' -rotate '.$this->rotation_angle;
-		}
-		else // Resize
+		} else // Resize
 		{
 			if ($this->maintain_ratio === TRUE)
 			{
 				$cmd .= ' -resize '.$this->width.'x'.$this->height;
-			}
-			else
+			} else
 			{
 				$cmd .= ' -resize '.$this->width.'x'.$this->height.'\!';
 			}
@@ -1602,8 +1597,7 @@ class CI_Image_lib {
 		if ($this->master_dim === 'width')
 		{
 			$this->height = (int) ceil($this->width * $this->orig_height / $this->orig_width);
-		}
-		else
+		} else
 		{
 			$this->width = (int) ceil($this->orig_width * $this->height / $this->orig_height);
 		}
@@ -1710,8 +1704,7 @@ class CI_Image_lib {
 		if ($vals['new_width'] === 0)
 		{
 			$vals['new_width'] = ceil($vals['width'] * $vals['new_height'] / $vals['height']);
-		}
-		elseif ($vals['new_height'] === 0)
+		} elseif ($vals['new_height'] === 0)
 		{
 			$vals['new_height'] = ceil($vals['new_width'] * $vals['height'] / $vals['width']);
 		}

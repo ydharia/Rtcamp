@@ -470,25 +470,25 @@ class Google_Blog extends Google_Model {
   public $selfLink;
   public $updated;
   public $url;
-  public function setCustomMetaData( $customMetaData) {
+  public function setCustomMetaData($customMetaData) {
 	$this->customMetaData = $customMetaData;
   }
   public function getCustomMetaData() {
 	return $this->customMetaData;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -500,7 +500,7 @@ class Google_Blog extends Google_Model {
   public function getLocale() {
 	return $this->locale;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -518,25 +518,25 @@ class Google_Blog extends Google_Model {
   public function getPosts() {
 	return $this->posts;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
 	return $this->published;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
 	return $this->updated;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -556,7 +556,7 @@ class Google_BlogList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -568,19 +568,19 @@ class Google_BlogLocale extends Google_Model {
   public $country;
   public $language;
   public $variant;
-  public function setCountry( $country) {
+  public function setCountry($country) {
 	$this->country = $country;
   }
   public function getCountry() {
 	return $this->country;
   }
-  public function setLanguage( $language) {
+  public function setLanguage($language) {
 	$this->language = $language;
   }
   public function getLanguage() {
 	return $this->language;
   }
-  public function setVariant( $variant) {
+  public function setVariant($variant) {
 	$this->variant = $variant;
   }
   public function getVariant() {
@@ -591,13 +591,13 @@ class Google_BlogLocale extends Google_Model {
 class Google_BlogPages extends Google_Model {
   public $selfLink;
   public $totalItems;
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -610,25 +610,25 @@ class Google_BlogPerUserInfo extends Google_Model {
   public $kind;
   public $photosAlbumKey;
   public $userId;
-  public function setBlogId( $blogId) {
+  public function setBlogId($blogId) {
 	$this->blogId = $blogId;
   }
   public function getBlogId() {
 	return $this->blogId;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPhotosAlbumKey( $photosAlbumKey) {
+  public function setPhotosAlbumKey($photosAlbumKey) {
 	$this->photosAlbumKey = $photosAlbumKey;
   }
   public function getPhotosAlbumKey() {
 	return $this->photosAlbumKey;
   }
-  public function setUserId( $userId) {
+  public function setUserId($userId) {
 	$this->userId = $userId;
   }
   public function getUserId() {
@@ -649,13 +649,13 @@ class Google_BlogPosts extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -677,7 +677,7 @@ class Google_BlogUserInfo extends Google_Model {
   public function getBlog() {
 	return $this->blog;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -722,13 +722,13 @@ class Google_Comment extends Google_Model {
   public function getBlog() {
 	return $this->blog;
   }
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -740,7 +740,7 @@ class Google_Comment extends Google_Model {
   public function getInReplyTo() {
 	return $this->inReplyTo;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -752,19 +752,19 @@ class Google_Comment extends Google_Model {
   public function getPost() {
 	return $this->post;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
 	return $this->published;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
@@ -779,13 +779,13 @@ class Google_CommentAuthor extends Google_Model {
   protected $__imageDataType = '';
   public $image;
   public $url;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -797,7 +797,7 @@ class Google_CommentAuthor extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -807,7 +807,7 @@ class Google_CommentAuthor extends Google_Model {
 
 class Google_CommentAuthorImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -817,7 +817,7 @@ class Google_CommentAuthorImage extends Google_Model {
 
 class Google_CommentBlog extends Google_Model {
   public $id;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -827,7 +827,7 @@ class Google_CommentBlog extends Google_Model {
 
 class Google_CommentInReplyTo extends Google_Model {
   public $id;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -849,19 +849,19 @@ class Google_CommentList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -871,7 +871,7 @@ class Google_CommentList extends Google_Model {
 
 class Google_CommentPost extends Google_Model {
   public $id;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -906,49 +906,49 @@ class Google_Page extends Google_Model {
   public function getBlog() {
 	return $this->blog;
   }
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
 	return $this->published;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
 	return $this->updated;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -963,13 +963,13 @@ class Google_PageAuthor extends Google_Model {
   protected $__imageDataType = '';
   public $image;
   public $url;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -981,7 +981,7 @@ class Google_PageAuthor extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -991,7 +991,7 @@ class Google_PageAuthor extends Google_Model {
 
 class Google_PageAuthorImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1001,7 +1001,7 @@ class Google_PageAuthorImage extends Google_Model {
 
 class Google_PageBlog extends Google_Model {
   public $id;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1021,7 +1021,7 @@ class Google_PageList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1064,25 +1064,25 @@ class Google_Post extends Google_Model {
   public function getBlog() {
 	return $this->blog;
   }
-  public function setContent( $content) {
+  public function setContent($content) {
 	$this->content = $content;
   }
   public function getContent() {
 	return $this->content;
   }
-  public function setCustomMetaData( $customMetaData) {
+  public function setCustomMetaData($customMetaData) {
 	$this->customMetaData = $customMetaData;
   }
   public function getCustomMetaData() {
 	return $this->customMetaData;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1101,7 +1101,7 @@ class Google_Post extends Google_Model {
   public function getLocation() {
 	return $this->location;
   }
-  public function setPublished( $published) {
+  public function setPublished($published) {
 	$this->published = $published;
   }
   public function getPublished() {
@@ -1113,25 +1113,25 @@ class Google_Post extends Google_Model {
   public function getReplies() {
 	return $this->replies;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
 	return $this->updated;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1146,13 +1146,13 @@ class Google_PostAuthor extends Google_Model {
   protected $__imageDataType = '';
   public $image;
   public $url;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1164,7 +1164,7 @@ class Google_PostAuthor extends Google_Model {
   public function getImage() {
 	return $this->image;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1174,7 +1174,7 @@ class Google_PostAuthor extends Google_Model {
 
 class Google_PostAuthorImage extends Google_Model {
   public $url;
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1184,7 +1184,7 @@ class Google_PostAuthorImage extends Google_Model {
 
 class Google_PostBlog extends Google_Model {
   public $id;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1206,19 +1206,19 @@ class Google_PostList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
@@ -1231,25 +1231,25 @@ class Google_PostLocation extends Google_Model {
   public $lng;
   public $name;
   public $span;
-  public function setLat( $lat) {
+  public function setLat($lat) {
 	$this->lat = $lat;
   }
   public function getLat() {
 	return $this->lat;
   }
-  public function setLng( $lng) {
+  public function setLng($lng) {
 	$this->lng = $lng;
   }
   public function getLng() {
 	return $this->lng;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setSpan( $span) {
+  public function setSpan($span) {
 	$this->span = $span;
   }
   public function getSpan() {
@@ -1270,13 +1270,13 @@ class Google_PostReplies extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1298,7 +1298,7 @@ class Google_User extends Google_Model {
   public $locale;
   public $selfLink;
   public $url;
-  public function setAbout( $about) {
+  public function setAbout($about) {
 	$this->about = $about;
   }
   public function getAbout() {
@@ -1310,25 +1310,25 @@ class Google_User extends Google_Model {
   public function getBlogs() {
 	return $this->blogs;
   }
-  public function setCreated( $created) {
+  public function setCreated($created) {
 	$this->created = $created;
   }
   public function getCreated() {
 	return $this->created;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1340,13 +1340,13 @@ class Google_User extends Google_Model {
   public function getLocale() {
 	return $this->locale;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1356,7 +1356,7 @@ class Google_User extends Google_Model {
 
 class Google_UserBlogs extends Google_Model {
   public $selfLink;
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -1368,19 +1368,19 @@ class Google_UserLocale extends Google_Model {
   public $country;
   public $language;
   public $variant;
-  public function setCountry( $country) {
+  public function setCountry($country) {
 	$this->country = $country;
   }
   public function getCountry() {
 	return $this->country;
   }
-  public function setLanguage( $language) {
+  public function setLanguage($language) {
 	$this->language = $language;
   }
   public function getLanguage() {
 	return $this->language;
   }
-  public function setVariant( $variant) {
+  public function setVariant($variant) {
 	$this->variant = $variant;
   }
   public function getVariant() {

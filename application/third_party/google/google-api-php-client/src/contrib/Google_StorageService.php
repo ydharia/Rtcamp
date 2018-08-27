@@ -884,19 +884,19 @@ class Google_Bucket extends Google_Model {
   public function getDefaultObjectAcl() {
 	return $this->defaultObjectAcl;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -908,7 +908,7 @@ class Google_Bucket extends Google_Model {
   public function getLifecycle() {
 	return $this->lifecycle;
   }
-  public function setLocation( $location) {
+  public function setLocation($location) {
 	$this->location = $location;
   }
   public function getLocation() {
@@ -920,13 +920,13 @@ class Google_Bucket extends Google_Model {
   public function getLogging() {
 	return $this->logging;
   }
-  public function setMetageneration( $metageneration) {
+  public function setMetageneration($metageneration) {
 	$this->metageneration = $metageneration;
   }
   public function getMetageneration() {
 	return $this->metageneration;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -938,19 +938,19 @@ class Google_Bucket extends Google_Model {
   public function getOwner() {
 	return $this->owner;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setStorageClass( $storageClass) {
+  public function setStorageClass($storageClass) {
 	$this->storageClass = $storageClass;
   }
   public function getStorageClass() {
 	return $this->storageClass;
   }
-  public function setTimeCreated( $timeCreated) {
+  public function setTimeCreated($timeCreated) {
 	$this->timeCreated = $timeCreated;
   }
   public function getTimeCreated() {
@@ -981,61 +981,61 @@ class Google_BucketAccessControl extends Google_Model {
   public $kind;
   public $role;
   public $selfLink;
-  public function setBucket( $bucket) {
+  public function setBucket($bucket) {
 	$this->bucket = $bucket;
   }
   public function getBucket() {
 	return $this->bucket;
   }
-  public function setDomain( $domain) {
+  public function setDomain($domain) {
 	$this->domain = $domain;
   }
   public function getDomain() {
 	return $this->domain;
   }
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
 	return $this->email;
   }
-  public function setEntity( $entity) {
+  public function setEntity($entity) {
 	$this->entity = $entity;
   }
   public function getEntity() {
 	return $this->entity;
   }
-  public function setEntityId( $entityId) {
+  public function setEntityId($entityId) {
 	$this->entityId = $entityId;
   }
   public function getEntityId() {
 	return $this->entityId;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setRole( $role) {
+  public function setRole($role) {
 	$this->role = $role;
   }
   public function getRole() {
 	return $this->role;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -1055,7 +1055,7 @@ class Google_BucketAccessControls extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1068,7 +1068,7 @@ class Google_BucketCors extends Google_Model {
   public $method;
   public $origin;
   public $responseHeader;
-  public function setMaxAgeSeconds( $maxAgeSeconds) {
+  public function setMaxAgeSeconds($maxAgeSeconds) {
 	$this->maxAgeSeconds = $maxAgeSeconds;
   }
   public function getMaxAgeSeconds() {
@@ -1133,7 +1133,7 @@ class Google_BucketLifecycleRule extends Google_Model {
 
 class Google_BucketLifecycleRuleAction extends Google_Model {
   public $type;
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1146,25 +1146,25 @@ class Google_BucketLifecycleRuleCondition extends Google_Model {
   public $createdBefore;
   public $isLive;
   public $numNewerVersions;
-  public function setAge( $age) {
+  public function setAge($age) {
 	$this->age = $age;
   }
   public function getAge() {
 	return $this->age;
   }
-  public function setCreatedBefore( $createdBefore) {
+  public function setCreatedBefore($createdBefore) {
 	$this->createdBefore = $createdBefore;
   }
   public function getCreatedBefore() {
 	return $this->createdBefore;
   }
-  public function setIsLive( $isLive) {
+  public function setIsLive($isLive) {
 	$this->isLive = $isLive;
   }
   public function getIsLive() {
 	return $this->isLive;
   }
-  public function setNumNewerVersions( $numNewerVersions) {
+  public function setNumNewerVersions($numNewerVersions) {
 	$this->numNewerVersions = $numNewerVersions;
   }
   public function getNumNewerVersions() {
@@ -1175,13 +1175,13 @@ class Google_BucketLifecycleRuleCondition extends Google_Model {
 class Google_BucketLogging extends Google_Model {
   public $logBucket;
   public $logObjectPrefix;
-  public function setLogBucket( $logBucket) {
+  public function setLogBucket($logBucket) {
 	$this->logBucket = $logBucket;
   }
   public function getLogBucket() {
 	return $this->logBucket;
   }
-  public function setLogObjectPrefix( $logObjectPrefix) {
+  public function setLogObjectPrefix($logObjectPrefix) {
 	$this->logObjectPrefix = $logObjectPrefix;
   }
   public function getLogObjectPrefix() {
@@ -1192,13 +1192,13 @@ class Google_BucketLogging extends Google_Model {
 class Google_BucketOwner extends Google_Model {
   public $entity;
   public $entityId;
-  public function setEntity( $entity) {
+  public function setEntity($entity) {
 	$this->entity = $entity;
   }
   public function getEntity() {
 	return $this->entity;
   }
-  public function setEntityId( $entityId) {
+  public function setEntityId($entityId) {
 	$this->entityId = $entityId;
   }
   public function getEntityId() {
@@ -1208,7 +1208,7 @@ class Google_BucketOwner extends Google_Model {
 
 class Google_BucketVersioning extends Google_Model {
   public $enabled;
-  public function setEnabled( $enabled) {
+  public function setEnabled($enabled) {
 	$this->enabled = $enabled;
   }
   public function getEnabled() {
@@ -1219,13 +1219,13 @@ class Google_BucketVersioning extends Google_Model {
 class Google_BucketWebsite extends Google_Model {
   public $mainPageSuffix;
   public $notFoundPage;
-  public function setMainPageSuffix( $mainPageSuffix) {
+  public function setMainPageSuffix($mainPageSuffix) {
 	$this->mainPageSuffix = $mainPageSuffix;
   }
   public function getMainPageSuffix() {
 	return $this->mainPageSuffix;
   }
-  public function setNotFoundPage( $notFoundPage) {
+  public function setNotFoundPage($notFoundPage) {
 	$this->notFoundPage = $notFoundPage;
   }
   public function getNotFoundPage() {
@@ -1246,13 +1246,13 @@ class Google_Buckets extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1270,55 +1270,55 @@ class Google_Channel extends Google_Model {
   public $resourceUri;
   public $token;
   public $type;
-  public function setAddress( $address) {
+  public function setAddress($address) {
 	$this->address = $address;
   }
   public function getAddress() {
 	return $this->address;
   }
-  public function setExpiration( $expiration) {
+  public function setExpiration($expiration) {
 	$this->expiration = $expiration;
   }
   public function getExpiration() {
 	return $this->expiration;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setParams( $params) {
+  public function setParams($params) {
 	$this->params = $params;
   }
   public function getParams() {
 	return $this->params;
   }
-  public function setResourceId( $resourceId) {
+  public function setResourceId($resourceId) {
 	$this->resourceId = $resourceId;
   }
   public function getResourceId() {
 	return $this->resourceId;
   }
-  public function setResourceUri( $resourceUri) {
+  public function setResourceUri($resourceUri) {
 	$this->resourceUri = $resourceUri;
   }
   public function getResourceUri() {
 	return $this->resourceUri;
   }
-  public function setToken( $token) {
+  public function setToken($token) {
 	$this->token = $token;
   }
   public function getToken() {
 	return $this->token;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1340,7 +1340,7 @@ class Google_ComposeRequest extends Google_Model {
   public function getDestination() {
 	return $this->destination;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1361,13 +1361,13 @@ class Google_ComposeRequestSourceObjects extends Google_Model {
   protected $__objectPreconditionsType = 'Google_ComposeRequestSourceObjectsObjectPreconditions';
   protected $__objectPreconditionsDataType = '';
   public $objectPreconditions;
-  public function setGeneration( $generation) {
+  public function setGeneration($generation) {
 	$this->generation = $generation;
   }
   public function getGeneration() {
 	return $this->generation;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -1383,7 +1383,7 @@ class Google_ComposeRequestSourceObjects extends Google_Model {
 
 class Google_ComposeRequestSourceObjectsObjectPreconditions extends Google_Model {
   public $ifGenerationMatch;
-  public function setIfGenerationMatch( $ifGenerationMatch) {
+  public function setIfGenerationMatch($ifGenerationMatch) {
 	$this->ifGenerationMatch = $ifGenerationMatch;
   }
   public function getIfGenerationMatch() {
@@ -1404,73 +1404,73 @@ class Google_ObjectAccessControl extends Google_Model {
   public $object;
   public $role;
   public $selfLink;
-  public function setBucket( $bucket) {
+  public function setBucket($bucket) {
 	$this->bucket = $bucket;
   }
   public function getBucket() {
 	return $this->bucket;
   }
-  public function setDomain( $domain) {
+  public function setDomain($domain) {
 	$this->domain = $domain;
   }
   public function getDomain() {
 	return $this->domain;
   }
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
 	return $this->email;
   }
-  public function setEntity( $entity) {
+  public function setEntity($entity) {
 	$this->entity = $entity;
   }
   public function getEntity() {
 	return $this->entity;
   }
-  public function setEntityId( $entityId) {
+  public function setEntityId($entityId) {
 	$this->entityId = $entityId;
   }
   public function getEntityId() {
 	return $this->entityId;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setGeneration( $generation) {
+  public function setGeneration($generation) {
 	$this->generation = $generation;
   }
   public function getGeneration() {
 	return $this->generation;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setObject( $object) {
+  public function setObject($object) {
 	$this->object = $object;
   }
   public function getObject() {
 	return $this->object;
   }
-  public function setRole( $role) {
+  public function setRole($role) {
 	$this->role = $role;
   }
   public function getRole() {
 	return $this->role;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -1488,7 +1488,7 @@ class Google_ObjectAccessControls extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1510,13 +1510,13 @@ class Google_Objects extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1566,103 +1566,103 @@ class Google_StorageObject extends Google_Model {
   public function getAcl() {
 	return $this->acl;
   }
-  public function setBucket( $bucket) {
+  public function setBucket($bucket) {
 	$this->bucket = $bucket;
   }
   public function getBucket() {
 	return $this->bucket;
   }
-  public function setCacheControl( $cacheControl) {
+  public function setCacheControl($cacheControl) {
 	$this->cacheControl = $cacheControl;
   }
   public function getCacheControl() {
 	return $this->cacheControl;
   }
-  public function setComponentCount( $componentCount) {
+  public function setComponentCount($componentCount) {
 	$this->componentCount = $componentCount;
   }
   public function getComponentCount() {
 	return $this->componentCount;
   }
-  public function setContentDisposition( $contentDisposition) {
+  public function setContentDisposition($contentDisposition) {
 	$this->contentDisposition = $contentDisposition;
   }
   public function getContentDisposition() {
 	return $this->contentDisposition;
   }
-  public function setContentEncoding( $contentEncoding) {
+  public function setContentEncoding($contentEncoding) {
 	$this->contentEncoding = $contentEncoding;
   }
   public function getContentEncoding() {
 	return $this->contentEncoding;
   }
-  public function setContentLanguage( $contentLanguage) {
+  public function setContentLanguage($contentLanguage) {
 	$this->contentLanguage = $contentLanguage;
   }
   public function getContentLanguage() {
 	return $this->contentLanguage;
   }
-  public function setContentType( $contentType) {
+  public function setContentType($contentType) {
 	$this->contentType = $contentType;
   }
   public function getContentType() {
 	return $this->contentType;
   }
-  public function setCrc32c( $crc32c) {
+  public function setCrc32c($crc32c) {
 	$this->crc32c = $crc32c;
   }
   public function getCrc32c() {
 	return $this->crc32c;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setGeneration( $generation) {
+  public function setGeneration($generation) {
 	$this->generation = $generation;
   }
   public function getGeneration() {
 	return $this->generation;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMd5Hash( $md5Hash) {
+  public function setMd5Hash($md5Hash) {
 	$this->md5Hash = $md5Hash;
   }
   public function getMd5Hash() {
 	return $this->md5Hash;
   }
-  public function setMediaLink( $mediaLink) {
+  public function setMediaLink($mediaLink) {
 	$this->mediaLink = $mediaLink;
   }
   public function getMediaLink() {
 	return $this->mediaLink;
   }
-  public function setMetadata( $metadata) {
+  public function setMetadata($metadata) {
 	$this->metadata = $metadata;
   }
   public function getMetadata() {
 	return $this->metadata;
   }
-  public function setMetageneration( $metageneration) {
+  public function setMetageneration($metageneration) {
 	$this->metageneration = $metageneration;
   }
   public function getMetageneration() {
 	return $this->metageneration;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -1674,25 +1674,25 @@ class Google_StorageObject extends Google_Model {
   public function getOwner() {
 	return $this->owner;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSize( $size) {
+  public function setSize($size) {
 	$this->size = $size;
   }
   public function getSize() {
 	return $this->size;
   }
-  public function setTimeDeleted( $timeDeleted) {
+  public function setTimeDeleted($timeDeleted) {
 	$this->timeDeleted = $timeDeleted;
   }
   public function getTimeDeleted() {
 	return $this->timeDeleted;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
@@ -1703,13 +1703,13 @@ class Google_StorageObject extends Google_Model {
 class Google_StorageObjectOwner extends Google_Model {
   public $entity;
   public $entityId;
-  public function setEntity( $entity) {
+  public function setEntity($entity) {
 	$this->entity = $entity;
   }
   public function getEntity() {
 	return $this->entity;
   }
-  public function setEntityId( $entityId) {
+  public function setEntityId($entityId) {
 	$this->entityId = $entityId;
   }
   public function getEntityId() {

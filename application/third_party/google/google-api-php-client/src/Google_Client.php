@@ -145,7 +145,7 @@ class Google_Client {
 			$scopes[] = $val['scope'];
 		  }
 		} else {
-		  $scopes[] = 'https://www.googleapis.com/auth/' . $key;
+		  $scopes[] = 'https://www.googleapis.com/auth/'.$key;
 		}
 		unset($val['discoveryURI']);
 		unset($val['scope']);
@@ -443,7 +443,7 @@ class Google_ServiceException extends Google_Exception {
    */
   public function __construct($message, $code = 0, Exception $previous = null,
 							  $errors = array()) {
-	if(version_compare(PHP_VERSION, '5.3.0') >= 0) {
+	if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
 	  parent::__construct($message, $code, $previous);
 	} else {
 	  parent::__construct($message, $code);

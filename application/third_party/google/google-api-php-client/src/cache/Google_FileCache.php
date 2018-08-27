@@ -34,27 +34,27 @@ class Google_FileCache extends Google_Cache {
 
   private function isLocked($storageFile) {
 	// our lock file convention is simple: /the/file/path.lock
-	return file_exists($storageFile . '.lock');
+	return file_exists($storageFile.'.lock');
   }
 
   private function createLock($storageFile) {
 	$storageDir = dirname($storageFile);
-	if (! is_dir($storageDir)) {
+	if ( ! is_dir($storageDir)) {
 	  // @codeCoverageIgnoreStart
-	  if (! @mkdir($storageDir, 0755, true)) {
+	  if ( ! @mkdir($storageDir, 0755, true)) {
 		// make sure the failure isn't because of a concurrency issue
-		if (! is_dir($storageDir)) {
+		if ( ! is_dir($storageDir)) {
 		  throw new Google_CacheException("Could not create storage directory: $storageDir");
 		}
 	  }
 	  // @codeCoverageIgnoreEnd
 	}
-	@touch($storageFile . '.lock');
+	@touch($storageFile.'.lock');
   }
 
   private function removeLock($storageFile) {
 	// suppress all warnings, if some other process removed it that's ok too
-	@unlink($storageFile . '.lock');
+	@unlink($storageFile.'.lock');
   }
 
   private function waitForLock($storageFile) {
@@ -66,7 +66,7 @@ class Google_FileCache extends Google_Cache {
 	  clearstatcache();
 	  // 250 ms is a long time to sleep, but it does stop the server from burning all resources on polling locks..
 	  usleep(250);
-	  $cnt ++;
+	  $cnt++;
 	} while ($cnt <= $tries && $this->isLocked($storageFile));
 	if ($this->isLocked($storageFile)) {
 	  // 5 seconds passed, assume the owning process died off and remove it
@@ -78,11 +78,11 @@ class Google_FileCache extends Google_Cache {
 	// use the first 2 characters of the hash as a directory prefix
 	// this should prevent slowdowns due to huge directory listings
 	// and thus give some basic amount of scalability
-	return $this->path . '/' . substr($hash, 0, 2);
+	return $this->path.'/'.substr($hash, 0, 2);
   }
 
   private function getCacheFile($hash) {
-	return $this->getCacheDir($hash) . '/' . $hash;
+	return $this->getCacheDir($hash).'/'.$hash;
   }
 
   public function get($key, $expiration = false) {
@@ -95,7 +95,7 @@ class Google_FileCache extends Google_Cache {
 	}
 	if (file_exists($storageFile) && is_readable($storageFile)) {
 	  $now = time();
-	  if (! $expiration || (($mtime = @filemtime($storageFile)) !== false && ($now - $mtime) < $expiration)) {
+	  if ( ! $expiration || (($mtime = @filemtime($storageFile)) !== false && ($now - $mtime) < $expiration)) {
 		if (($data = @file_get_contents($storageFile)) !== false) {
 		  $data = unserialize($data);
 		  return $data;
@@ -112,8 +112,8 @@ class Google_FileCache extends Google_Cache {
 	  // some other process is writing to this file too, wait until it's done to prevent hiccups
 	  $this->waitForLock($storageFile);
 	}
-	if (! is_dir($storageDir)) {
-	  if (! @mkdir($storageDir, 0755, true)) {
+	if ( ! is_dir($storageDir)) {
+	  if ( ! @mkdir($storageDir, 0755, true)) {
 		throw new Google_CacheException("Could not create storage directory: $storageDir");
 	  }
 	}
@@ -121,7 +121,7 @@ class Google_FileCache extends Google_Cache {
 	// responseContent but also the postBody used, headers, size, etc
 	$data = serialize($value);
 	$this->createLock($storageFile);
-	if (! @file_put_contents($storageFile, $data)) {
+	if ( ! @file_put_contents($storageFile, $data)) {
 	  $this->removeLock($storageFile);
 	  throw new Google_CacheException("Could not store data in the file");
 	}
@@ -130,7 +130,7 @@ class Google_FileCache extends Google_Cache {
 
   public function delete($key) {
 	$file = $this->getCacheFile(md5($key));
-	if (! @unlink($file)) {
+	if ( ! @unlink($file)) {
 	  throw new Google_CacheException("Cache file could not be deleted");
 	}
   }

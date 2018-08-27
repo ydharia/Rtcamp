@@ -951,8 +951,7 @@ class CI_Email {
 		if ($this->mailtype === 'html')
 		{
 			return empty($this->_attachments) ? 'html' : 'html-attach';
-		}
-		elseif ($this->mailtype === 'text' && ! empty($this->_attachments))
+		} elseif ($this->mailtype === 'text' && ! empty($this->_attachments))
 		{
 			return 'plain-attach';
 		}
@@ -1556,8 +1555,7 @@ class CI_Email {
 				elseif ($ascii === 61)
 				{
 					$char = $escape.strtoupper(sprintf('%02s', dechex($ascii))); // =3D
-				}
-				elseif ( ! in_array($ascii, $ascii_safe_chars, TRUE))
+				} elseif ( ! in_array($ascii, $ascii_safe_chars, TRUE))
 				{
 					$char = $escape.strtoupper(sprintf('%02s', dechex($ascii)));
 				}

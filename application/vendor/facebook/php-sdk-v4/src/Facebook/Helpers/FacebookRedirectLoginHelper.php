@@ -155,7 +155,7 @@ class FacebookRedirectLoginHelper
 	 */
 	public function getLogoutUrl($accessToken, $next, $separator = '&')
 	{
-		if (!$accessToken instanceof AccessToken) {
+		if ( ! $accessToken instanceof AccessToken) {
 			$accessToken = new AccessToken($accessToken);
 		}
 
@@ -168,7 +168,7 @@ class FacebookRedirectLoginHelper
 			'access_token' => $accessToken->getValue(),
 		];
 
-		return 'https://www.facebook.com/logout.php?' . http_build_query($params, null, $separator);
+		return 'https://www.facebook.com/logout.php?'.http_build_query($params, null, $separator);
 	}
 
 	/**
@@ -214,7 +214,7 @@ class FacebookRedirectLoginHelper
 	 */
 	public function getAccessToken($redirectUrl = null)
 	{
-		if (!$code = $this->getCode()) {
+		if ( ! $code = $this->getCode()) {
 			return null;
 		}
 
@@ -236,11 +236,11 @@ class FacebookRedirectLoginHelper
 	protected function validateCsrf()
 	{
 		$state = $this->getState();
-		if (!$state) {
+		if ( ! $state) {
 			throw new FacebookSDKException('Cross-site request forgery validation failed. Required GET param "state" missing.');
 		}
 		$savedState = $this->persistentDataHandler->get('state');
-		if (!$savedState) {
+		if ( ! $savedState) {
 			throw new FacebookSDKException('Cross-site request forgery validation failed. Required param "state" missing from persistent data.');
 		}
 

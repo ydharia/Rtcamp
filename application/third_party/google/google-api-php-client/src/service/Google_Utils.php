@@ -59,7 +59,7 @@ class Google_Utils {
 	  switch (true) {
 		case (($ordinalValue >= 0x20) && ($ordinalValue <= 0x7F)):
 		  // characters U-00000000 - U-0000007F (same as ASCII)
-		  $ret ++;
+		  $ret++;
 		  break;
 
 		case (($ordinalValue & 0xE0) == 0xC0):
@@ -92,7 +92,7 @@ class Google_Utils {
 		  $ret += 6;
 		  break;
 		default:
-		  $ret ++;
+		  $ret++;
 	  }
 	}
 	return $ret;
@@ -104,7 +104,7 @@ class Google_Utils {
    * @return array Normalized array.
    */
   public static function normalize($arr) {
-	if (!is_array($arr)) {
+	if ( ! is_array($arr)) {
 	  return array();
 	}
 

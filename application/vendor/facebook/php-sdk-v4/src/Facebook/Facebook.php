@@ -135,11 +135,11 @@ class Facebook
 			'url_detection_handler' => null,
 		], $config);
 
-		if (!$config['app_id']) {
-			throw new FacebookSDKException('Required "app_id" key not supplied in config and could not find fallback environment variable "' . static::APP_ID_ENV_NAME . '"');
+		if ( ! $config['app_id']) {
+			throw new FacebookSDKException('Required "app_id" key not supplied in config and could not find fallback environment variable "'.static::APP_ID_ENV_NAME.'"');
 		}
-		if (!$config['app_secret']) {
-			throw new FacebookSDKException('Required "app_secret" key not supplied in config and could not find fallback environment variable "' . static::APP_SECRET_ENV_NAME . '"');
+		if ( ! $config['app_secret']) {
+			throw new FacebookSDKException('Required "app_secret" key not supplied in config and could not find fallback environment variable "'.static::APP_SECRET_ENV_NAME.'"');
 		}
 
 		$this->app = new FacebookApp($config['app_id'], $config['app_secret']);
@@ -190,7 +190,7 @@ class Facebook
 	 */
 	public function getOAuth2Client()
 	{
-		if (!$this->oAuth2Client instanceof OAuth2Client) {
+		if ( ! $this->oAuth2Client instanceof OAuth2Client) {
 			$app = $this->getApp();
 			$client = $this->getClient();
 			$this->oAuth2Client = new OAuth2Client($app, $client, $this->defaultGraphVersion);
@@ -433,7 +433,7 @@ class Facebook
 	public function getPaginationResults(GraphEdge $graphEdge, $direction)
 	{
 		$paginationRequest = $graphEdge->getPaginationRequest($direction);
-		if (!$paginationRequest) {
+		if ( ! $paginationRequest) {
 			return null;
 		}
 
@@ -599,7 +599,7 @@ class Facebook
 
 		do {
 			$chunk = $this->maxTriesTransfer($uploader, $endpoint, $chunk, $maxTransferTries);
-		} while (!$chunk->isLastChunk());
+		} while ( ! $chunk->isLastChunk());
 
 		return [
 		  'video_id' => $chunk->getVideoId(),

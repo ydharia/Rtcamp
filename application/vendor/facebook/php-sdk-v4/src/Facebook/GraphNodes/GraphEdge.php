@@ -153,7 +153,7 @@ class GraphEdge extends Collection
 		$this->validateForPagination();
 
 		// Do we have a paging URL?
-		if (!isset($this->metaData['paging'][$direction])) {
+		if ( ! isset($this->metaData['paging'][$direction])) {
 			return null;
 		}
 
@@ -186,7 +186,7 @@ class GraphEdge extends Collection
 	public function getPaginationRequest($direction)
 	{
 		$pageUrl = $this->getPaginationUrl($direction);
-		if (!$pageUrl) {
+		if ( ! $pageUrl) {
 			return null;
 		}
 

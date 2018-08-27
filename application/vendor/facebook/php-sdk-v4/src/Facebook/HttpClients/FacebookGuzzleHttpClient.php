@@ -56,7 +56,7 @@ class FacebookGuzzleHttpClient implements FacebookHttpClientInterface
 			'body' => $body,
 			'timeout' => $timeOut,
 			'connect_timeout' => 10,
-			'verify' => __DIR__ . '/certs/DigiCertHighAssuranceEVRootCA.pem',
+			'verify' => __DIR__.'/certs/DigiCertHighAssuranceEVRootCA.pem',
 		];
 		$request = $this->guzzleClient->createRequest($method, $url, $options);
 
@@ -65,7 +65,7 @@ class FacebookGuzzleHttpClient implements FacebookHttpClientInterface
 		} catch (RequestException $e) {
 			$rawResponse = $e->getResponse();
 
-			if ($e->getPrevious() instanceof RingException || !$rawResponse instanceof ResponseInterface) {
+			if ($e->getPrevious() instanceof RingException || ! $rawResponse instanceof ResponseInterface) {
 				throw new FacebookSDKException($e->getMessage(), $e->getCode());
 			}
 		}
@@ -89,7 +89,7 @@ class FacebookGuzzleHttpClient implements FacebookHttpClientInterface
 		$headers = $response->getHeaders();
 		$rawHeaders = [];
 		foreach ($headers as $name => $values) {
-			$rawHeaders[] = $name . ": " . implode(", ", $values);
+			$rawHeaders[] = $name.": ".implode(", ", $values);
 		}
 
 		return implode("\r\n", $rawHeaders);
