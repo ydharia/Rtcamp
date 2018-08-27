@@ -112,8 +112,7 @@ class CI_Cache extends CI_Driver_Library {
 				// Backup isn't supported either. Default to 'Dummy' driver.
 				log_message('error', 'Cache adapter "'.$this->_adapter.'" and backup "'.$this->_backup_driver.'" are both unavailable. Cache is now using "Dummy" adapter.');
 				$this->_adapter = 'dummy';
-			}
-			else
+			} else
 			{
 				// Backup is supported. Set it to primary.
 				log_message('debug', 'Cache adapter "'.$this->_adapter.'" is unavailable. Falling back to "'.$this->_backup_driver.'" backup adapter.');

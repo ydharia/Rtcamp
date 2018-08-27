@@ -98,7 +98,7 @@ class CI_URI {
 	 */
 	public function __construct()
 	{
-		$this->config =& load_class('Config', 'core');
+		$this->config = & load_class('Config', 'core');
 
 		// If query strings are enabled, we don't need to parse any segments.
 		// However, they don't make sense under CLI.
@@ -110,8 +110,7 @@ class CI_URI {
 			if (is_cli())
 			{
 				$uri = $this->_parse_argv();
-			}
-			else
+			} else
 			{
 				$protocol = $this->config->item('uri_protocol');
 				empty($protocol) && $protocol = 'REQUEST_URI';
@@ -212,8 +211,7 @@ class CI_URI {
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
 			{
 				$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
-			}
-			elseif (strpos($uri, dirname($_SERVER['SCRIPT_NAME'])) === 0)
+			} elseif (strpos($uri, dirname($_SERVER['SCRIPT_NAME'])) === 0)
 			{
 				$uri = (string) substr($uri, strlen(dirname($_SERVER['SCRIPT_NAME'])));
 			}
@@ -226,8 +224,7 @@ class CI_URI {
 			$query = explode('?', $query, 2);
 			$uri = $query[0];
 			$_SERVER['QUERY_STRING'] = isset($query[1]) ? $query[1] : '';
-		}
-		else
+		} else
 		{
 			$_SERVER['QUERY_STRING'] = $query;
 		}
@@ -259,8 +256,7 @@ class CI_URI {
 		if (trim($uri, '/') === '')
 		{
 			return '';
-		}
-		elseif (strncmp($uri, '/', 1) === 0)
+		} elseif (strncmp($uri, '/', 1) === 0)
 		{
 			$uri = explode('?', $uri, 2);
 			$_SERVER['QUERY_STRING'] = isset($uri[1]) ? $uri[1] : '';
@@ -456,8 +452,7 @@ class CI_URI {
 			if ($i % 2)
 			{
 				$retval[$lastval] = $seg;
-			}
-			else
+			} else
 			{
 				$retval[$seg] = NULL;
 				$lastval = $seg;
@@ -558,11 +553,10 @@ class CI_URI {
 
 		if ($where === 'trailing')
 		{
-			$leading	= '';
-		}
-		elseif ($where === 'leading')
+			$leading = '';
+		} elseif ($where === 'leading')
 		{
-			$trailing	= '';
+			$trailing = '';
 		}
 
 		return $leading.$this->$which($n).$trailing;

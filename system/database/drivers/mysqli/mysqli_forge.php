@@ -53,7 +53,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= 'CREATE DATABASE %s CHARACTER SET %s COLLATE %s';
+	protected $_create_database = 'CREATE DATABASE %s CHARACTER SET %s COLLATE %s';
 
 	/**
 	 * CREATE TABLE keys flag
@@ -63,14 +63,14 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 	 *
 	 * @var	bool
 	 */
-	protected $_create_table_keys	= TRUE;
+	protected $_create_table_keys = TRUE;
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'TINYINT',
 		'SMALLINT',
 		'MEDIUMINT',
@@ -150,14 +150,12 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 				$field[$i] = ($alter_type === 'ADD')
 						? "\n\tADD ".$field[$i]['_literal']
 						: "\n\tMODIFY ".$field[$i]['_literal'];
-			}
-			else
+			} else
 			{
 				if ($alter_type === 'ADD')
 				{
 					$field[$i]['_literal'] = "\n\tADD ";
-				}
-				else
+				} else
 				{
 					$field[$i]['_literal'] = empty($field[$i]['new_name']) ? "\n\tMODIFY " : "\n\tCHANGE ";
 				}
@@ -223,8 +221,7 @@ class CI_DB_mysqli_forge extends CI_DB_forge {
 						continue;
 					}
 				}
-			}
-			elseif ( ! isset($this->fields[$this->keys[$i]]))
+			} elseif ( ! isset($this->fields[$this->keys[$i]]))
 			{
 				unset($this->keys[$i]);
 				continue;

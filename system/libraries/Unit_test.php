@@ -92,7 +92,7 @@ class CI_Unit_test {
 	 *
 	 * @var	array
 	 */
-	protected $_test_items_visible	= array(
+	protected $_test_items_visible = array(
 		'test_name',
 		'test_datatype',
 		'res_datatype',
@@ -156,8 +156,7 @@ class CI_Unit_test {
 		{
 			$result = $expected($test);
 			$extype = str_replace(array('true', 'false'), 'bool', str_replace('is_', '', $expected));
-		}
-		else
+		} else
 		{
 			$result = ($this->strict === TRUE) ? ($test === $expected) : ($test == $expected);
 			$extype = gettype($expected);
@@ -165,7 +164,7 @@ class CI_Unit_test {
 
 		$back = $this->_backtrace();
 
-		$report = array (
+		$report = array(
 			'test_name'     => $test_name,
 			'test_datatype' => gettype($test),
 			'res_datatype'  => $extype,
@@ -197,7 +196,7 @@ class CI_Unit_test {
 			$result = $this->result();
 		}
 
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->load->language('unit_test');
 
 		$this->_parse_template();
@@ -214,8 +213,7 @@ class CI_Unit_test {
 					if ($val === $CI->lang->line('ut_passed'))
 					{
 						$val = '<span style="color: #0C0;">'.$val.'</span>';
-					}
-					elseif ($val === $CI->lang->line('ut_failed'))
+					} elseif ($val === $CI->lang->line('ut_failed'))
 					{
 						$val = '<span style="color: #C00;">'.$val.'</span>';
 					}
@@ -272,7 +270,7 @@ class CI_Unit_test {
 	 */
 	public function result($results = array())
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->load->language('unit_test');
 
 		if (count($results) === 0)
@@ -289,8 +287,7 @@ class CI_Unit_test {
 				if ( ! in_array($key, $this->_test_items_visible))
 				{
 					continue;
-				}
-				elseif (in_array($key, array('test_name', 'test_datatype', 'res_datatype', 'result'), TRUE))
+				} elseif (in_array($key, array('test_name', 'test_datatype', 'res_datatype', 'result'), TRUE))
 				{
 					if (FALSE !== ($line = $CI->lang->line(strtolower('ut_'.$val), FALSE)))
 					{

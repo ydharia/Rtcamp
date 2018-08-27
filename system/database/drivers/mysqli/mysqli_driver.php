@@ -122,8 +122,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 			$hostname = NULL;
 			$port = NULL;
 			$socket = $this->hostname;
-		}
-		else
+		} else
 		{
 			$hostname = ($persistent === TRUE)
 				? 'p:'.$this->hostname : $this->hostname;
@@ -141,8 +140,7 @@ class CI_DB_mysqli_driver extends CI_DB {
 			if ($this->stricton)
 			{
 				$this->_mysqli->options(MYSQLI_INIT_COMMAND, 'SET SESSION sql_mode = CONCAT(@@sql_mode, ",", "STRICT_ALL_TABLES")');
-			}
-			else
+			} else
 			{
 				$this->_mysqli->options(MYSQLI_INIT_COMMAND,
 					'SET SESSION sql_mode =
@@ -161,9 +159,9 @@ class CI_DB_mysqli_driver extends CI_DB {
 		if (is_array($this->encrypt))
 		{
 			$ssl = array();
-			empty($this->encrypt['ssl_key'])    OR $ssl['key']    = $this->encrypt['ssl_key'];
-			empty($this->encrypt['ssl_cert'])   OR $ssl['cert']   = $this->encrypt['ssl_cert'];
-			empty($this->encrypt['ssl_ca'])     OR $ssl['ca']     = $this->encrypt['ssl_ca'];
+			empty($this->encrypt['ssl_key']) OR $ssl['key'] = $this->encrypt['ssl_key'];
+			empty($this->encrypt['ssl_cert']) OR $ssl['cert'] = $this->encrypt['ssl_cert'];
+			empty($this->encrypt['ssl_ca']) OR $ssl['ca'] = $this->encrypt['ssl_ca'];
 			empty($this->encrypt['ssl_capath']) OR $ssl['capath'] = $this->encrypt['ssl_capath'];
 			empty($this->encrypt['ssl_cipher']) OR $ssl['cipher'] = $this->encrypt['ssl_cipher'];
 
@@ -189,9 +187,9 @@ class CI_DB_mysqli_driver extends CI_DB {
 
 				$client_flags |= MYSQLI_CLIENT_SSL;
 				$this->_mysqli->ssl_set(
-					isset($ssl['key'])    ? $ssl['key']    : NULL,
-					isset($ssl['cert'])   ? $ssl['cert']   : NULL,
-					isset($ssl['ca'])     ? $ssl['ca']     : NULL,
+					isset($ssl['key']) ? $ssl['key'] : NULL,
+					isset($ssl['cert']) ? $ssl['cert'] : NULL,
+					isset($ssl['ca']) ? $ssl['ca'] : NULL,
 					isset($ssl['capath']) ? $ssl['capath'] : NULL,
 					isset($ssl['cipher']) ? $ssl['cipher'] : NULL
 				);
@@ -471,16 +469,16 @@ class CI_DB_mysqli_driver extends CI_DB {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
-			$retval[$i]->name		= $query[$i]->Field;
+			$retval[$i] = new stdClass();
+			$retval[$i]->name = $query[$i]->Field;
 
 			sscanf($query[$i]->Type, '%[a-z](%d)',
 				$retval[$i]->type,
 				$retval[$i]->max_length
 			);
 
-			$retval[$i]->default		= $query[$i]->Default;
-			$retval[$i]->primary_key	= (int) ($query[$i]->Key === 'PRI');
+			$retval[$i]->default = $query[$i]->Default;
+			$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
 		}
 
 		return $retval;

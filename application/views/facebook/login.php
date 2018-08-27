@@ -88,7 +88,7 @@
         <input type="text" name="" placeholder="Password" >
     </p>
     
-    <?php if (!$this->facebook->is_authenticated()) { ?>
+    <?php if ( ! $this->facebook->is_authenticated()) { ?>
 
         <div class="login">
             <div class="btn">

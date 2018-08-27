@@ -176,8 +176,7 @@ class CI_DB_oci8_driver extends CI_DB {
 		{
 			$this->dsn = $this->hostname;
 			return;
-		}
-		elseif ($this->hostname !== '' && strpos($this->hostname, '/') === FALSE && strpos($this->hostname, ':') === FALSE
+		} elseif ($this->hostname !== '' && strpos($this->hostname, '/') === FALSE && strpos($this->hostname, ':') === FALSE
 			&& (( ! empty($this->port) && ctype_digit($this->port)) OR $this->database !== ''))
 		{
 			/* If the hostname field isn't empty, doesn't contain
@@ -255,8 +254,7 @@ class CI_DB_oci8_driver extends CI_DB {
 		if ( ! $this->conn_id OR ($version_string = oci_server_version($this->conn_id)) === FALSE)
 		{
 			return FALSE;
-		}
-		elseif (preg_match('#Release\s(\d+(?:\.\d+)+)#', $version_string, $match))
+		} elseif (preg_match('#Release\s(\d+(?:\.\d+)+)#', $version_string, $match))
 		{
 			return $this->data_cache['version'] = $match[1];
 		}
@@ -480,8 +478,7 @@ class CI_DB_oci8_driver extends CI_DB {
 		if (strpos($table, '.') !== FALSE)
 		{
 			sscanf($table, '%[^.].%s', $owner, $table);
-		}
-		else
+		} else
 		{
 			$owner = $this->username;
 		}
@@ -504,8 +501,7 @@ class CI_DB_oci8_driver extends CI_DB {
 		if (strpos($table, '.') !== FALSE)
 		{
 			sscanf($table, '%[^.].%s', $owner, $table);
-		}
-		else
+		} else
 		{
 			$owner = $this->username;
 		}
@@ -524,7 +520,7 @@ class CI_DB_oci8_driver extends CI_DB {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $query[$i]->COLUMN_NAME;
 			$retval[$i]->type		= $query[$i]->DATA_TYPE;
 
@@ -534,7 +530,7 @@ class CI_DB_oci8_driver extends CI_DB {
 			{
 				$length = $query[$i]->DATA_LENGTH;
 			}
-			$retval[$i]->max_length		= $length;
+			$retval[$i]->max_length = $length;
 
 			$default = $query[$i]->DATA_DEFAULT;
 			if ($default === NULL && $query[$i]->NULLABLE === 'N')
@@ -565,16 +561,13 @@ class CI_DB_oci8_driver extends CI_DB {
 		if (is_resource($this->curs_id))
 		{
 			$error = oci_error($this->curs_id);
-		}
-		elseif (is_resource($this->stmt_id))
+		} elseif (is_resource($this->stmt_id))
 		{
 			$error = oci_error($this->stmt_id);
-		}
-		elseif (is_resource($this->conn_id))
+		} elseif (is_resource($this->conn_id))
 		{
 			$error = oci_error($this->conn_id);
-		}
-		else
+		} else
 		{
 			$error = oci_error();
 		}
@@ -641,7 +634,7 @@ class CI_DB_oci8_driver extends CI_DB {
 	{
 		if ($this->qb_limit)
 		{
-			$this->where('rownum <= ',$this->qb_limit, FALSE);
+			$this->where('rownum <= ', $this->qb_limit, FALSE);
 			$this->qb_limit = FALSE;
 		}
 

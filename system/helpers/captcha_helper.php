@@ -75,10 +75,10 @@ if ( ! function_exists('create_captcha'))
 			'img_id'	=> '',
 			'pool'		=> '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			'colors'	=> array(
-				'background'	=> array(255,255,255),
-				'border'	=> array(153,102,102),
-				'text'		=> array(204,153,153),
-				'grid'		=> array(255,182,182)
+				'background'	=> array(255, 255, 255),
+				'border'	=> array(153, 102, 102),
+				'text'		=> array(204, 153, 153),
+				'grid'		=> array(255, 182, 182)
 			)
 		);
 
@@ -87,8 +87,7 @@ if ( ! function_exists('create_captcha'))
 			if ( ! is_array($data) && empty($$key))
 			{
 				$$key = $val;
-			}
-			else
+			} else
 			{
 				$$key = isset($data[$key]) ? $data[$key] : $val;
 			}
@@ -138,8 +137,7 @@ if ( ! function_exists('create_captcha'))
 					{
 						$word .= $pool[random_int(0, $rand_max)];
 					}
-				}
-				catch (Exception $e)
+				} catch (Exception $e)
 				{
 					// This means fallback to the next possible
 					// alternative to random_int()
@@ -217,8 +215,7 @@ if ( ! function_exists('create_captcha'))
 			{
 				$word .= $pool[mt_rand(0, $rand_max)];
 			}
-		}
-		elseif ( ! is_string($word))
+		} elseif ( ! is_string($word))
 		{
 			$word = (string) $word;
 		}
@@ -227,8 +224,8 @@ if ( ! function_exists('create_captcha'))
 		// Determine angle and position
 		// -----------------------------------
 		$length	= strlen($word);
-		$angle	= ($length >= 6) ? mt_rand(-($length-6), ($length-6)) : 0;
-		$x_axis	= mt_rand(6, (360/$length)-16);
+		$angle = ($length >= 6) ? mt_rand(-($length - 6), ($length - 6)) : 0;
+		$x_axis	= mt_rand(6, (360 / $length) - 16);
 		$y_axis = ($angle >= 0) ? mt_rand($img_height, $img_width) : mt_rand(6, $img_height);
 
 		// Create image
@@ -256,7 +253,7 @@ if ( ! function_exists('create_captcha'))
 		// -----------------------------------
 		//  Create the spiral pattern
 		// -----------------------------------
-		$theta		= 1;
+		$theta = 1;
 		$thetac		= 7;
 		$radius		= 16;
 		$circles	= 20;
@@ -286,8 +283,7 @@ if ( ! function_exists('create_captcha'))
 			($font_size > 5) && $font_size = 5;
 			$x = mt_rand(0, $img_width / ($length / 3));
 			$y = 0;
-		}
-		else
+		} else
 		{
 			($font_size > 30) && $font_size = 30;
 			$x = mt_rand(0, $img_width / ($length / 1.5));
@@ -298,11 +294,10 @@ if ( ! function_exists('create_captcha'))
 		{
 			if ($use_font === FALSE)
 			{
-				$y = mt_rand(0 , $img_height / 2);
+				$y = mt_rand(0, $img_height / 2);
 				imagestring($im, $font_size, $x, $y, $word[$i], $colors['text']);
 				$x += ($font_size * 2);
-			}
-			else
+			} else
 			{
 				$y = mt_rand($img_height / 2, $img_height - 3);
 				imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $font_path, $word[$i]);
@@ -322,18 +317,16 @@ if ( ! function_exists('create_captcha'))
 		{
 			$img_filename = $now.'.jpg';
 			imagejpeg($im, $img_path.$img_filename);
-		}
-		elseif (function_exists('imagepng'))
+		} elseif (function_exists('imagepng'))
 		{
 			$img_filename = $now.'.png';
 			imagepng($im, $img_path.$img_filename);
-		}
-		else
+		} else
 		{
 			return FALSE;
 		}
 
-		$img = '<img '.($img_id === '' ? '' : 'id="'.$img_id.'"').' src="'.$img_url.$img_filename.'" style="width: '.$img_width.'; height: '.$img_height .'; border: 0;" alt=" " />';
+		$img = '<img '.($img_id === '' ? '' : 'id="'.$img_id.'"').' src="'.$img_url.$img_filename.'" style="width: '.$img_width.'; height: '.$img_height.'; border: 0;" alt=" " />';
 		ImageDestroy($im);
 
 		return array('word' => $word, 'time' => $now, 'image' => $img, 'filename' => $img_filename);

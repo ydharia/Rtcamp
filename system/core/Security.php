@@ -53,22 +53,22 @@ class CI_Security {
 	 *
 	 * @var	array
 	 */
-	public $filename_bad_chars =	array(
+	public $filename_bad_chars = array(
 		'../', '<!--', '-->', '<', '>',
 		"'", '"', '&', '$', '#',
 		'{', '}', '[', ']', '=',
 		';', '?', '%20', '%22',
-		'%3c',		// <
-		'%253c',	// <
-		'%3e',		// >
-		'%0e',		// >
-		'%28',		// (
-		'%29',		// )
-		'%2528',	// (
-		'%26',		// &
-		'%24',		// $
-		'%3f',		// ?
-		'%3b',		// ;
+		'%3c', // <
+		'%253c', // <
+		'%3e', // >
+		'%0e', // >
+		'%28', // (
+		'%29', // )
+		'%2528', // (
+		'%26', // &
+		'%24', // $
+		'%3f', // ?
+		'%3b', // ;
 		'%3d'		// =
 	);
 
@@ -107,7 +107,7 @@ class CI_Security {
 	 *
 	 * @var	int
 	 */
-	protected $_csrf_expire =	7200;
+	protected $_csrf_expire = 7200;
 
 	/**
 	 * CSRF Token name
@@ -116,7 +116,7 @@ class CI_Security {
 	 *
 	 * @var	string
 	 */
-	protected $_csrf_token_name =	'ci_csrf_token';
+	protected $_csrf_token_name = 'ci_csrf_token';
 
 	/**
 	 * CSRF Cookie name
@@ -125,14 +125,14 @@ class CI_Security {
 	 *
 	 * @var	string
 	 */
-	protected $_csrf_cookie_name =	'ci_csrf_token';
+	protected $_csrf_cookie_name = 'ci_csrf_token';
 
 	/**
 	 * List of never allowed strings
 	 *
 	 * @var	array
 	 */
-	protected $_never_allowed_str =	array(
+	protected $_never_allowed_str = array(
 		'document.cookie' => '[removed]',
 		'(document).cookie' => '[removed]',
 		'document.write'  => '[removed]',
@@ -432,8 +432,7 @@ class CI_Security {
 			// closing tags every so often so we skip those and only
 			// do the long opening tags.
 			$str = preg_replace('/<\?(php)/i', '&lt;?\\1', $str);
-		}
-		else
+		} else
 		{
 			$str = str_replace(array('<?', '?'.'>'), array('&lt;?', '?&gt;'), $str);
 		}
@@ -618,8 +617,7 @@ class CI_Security {
 			{
 				// The cast is required to avoid TypeError
 				return random_bytes((int) $length);
-			}
-			catch (Exception $e)
+			} catch (Exception $e)
 			{
 				// If random_bytes() can't do the job, we can't either ...
 				// There's no point in using fallbacks.
@@ -839,7 +837,7 @@ class CI_Security {
 	 */
 	protected function _sanitize_naughty_html($matches)
 	{
-		static $naughty_tags    = array(
+		static $naughty_tags = array(
 			'alert', 'area', 'prompt', 'confirm', 'applet', 'audio', 'basefont', 'base', 'behavior', 'bgsound',
 			'blink', 'body', 'embed', 'expression', 'form', 'frameset', 'frame', 'head', 'html', 'ilayer',
 			'iframe', 'input', 'button', 'select', 'isindex', 'layer', 'link', 'meta', 'keygen', 'object',
@@ -898,8 +896,7 @@ class CI_Security {
 				)
 				{
 					$attributes[] = 'xss=removed';
-				}
-				else
+				} else
 				{
 					$attributes[] = $attribute[0][0];
 				}

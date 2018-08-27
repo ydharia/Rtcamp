@@ -67,8 +67,7 @@ class CI_Utf8 {
 		{
 			define('UTF8_ENABLED', TRUE);
 			log_message('debug', 'UTF-8 Support Enabled');
-		}
-		else
+		} else
 		{
 			define('UTF8_ENABLED', FALSE);
 			log_message('debug', 'UTF-8 Support Disabled');
@@ -94,8 +93,7 @@ class CI_Utf8 {
 			if (MB_ENABLED)
 			{
 				$str = mb_convert_encoding($str, 'UTF-8', 'UTF-8');
-			}
-			elseif (ICONV_ENABLED)
+			} elseif (ICONV_ENABLED)
 			{
 				$str = @iconv('UTF-8', 'UTF-8//IGNORE', $str);
 			}
@@ -137,8 +135,7 @@ class CI_Utf8 {
 		if (MB_ENABLED)
 		{
 			return mb_convert_encoding($str, 'UTF-8', $encoding);
-		}
-		elseif (ICONV_ENABLED)
+		} elseif (ICONV_ENABLED)
 		{
 			return @iconv($encoding, 'UTF-8', $str);
 		}

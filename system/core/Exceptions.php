@@ -122,8 +122,7 @@ class CI_Exceptions {
 		{
 			$heading = 'Not Found';
 			$message = 'The controller/method pair you requested was not found.';
-		}
-		else
+		} else
 		{
 			$heading = '404 Page Not Found';
 			$message = 'The page you requested was not found.';
@@ -166,8 +165,7 @@ class CI_Exceptions {
 		{
 			$message = "\t".(is_array($message) ? implode("\n\t", $message) : $message);
 			$template = 'cli'.DIRECTORY_SEPARATOR.$template;
-		}
-		else
+		} else
 		{
 			set_status_header($status_code);
 			$message = '<p>'.(is_array($message) ? implode('</p><p>', $message) : $message).'</p>';
@@ -204,8 +202,7 @@ class CI_Exceptions {
 		if (is_cli())
 		{
 			$templates_path .= 'cli'.DIRECTORY_SEPARATOR;
-		}
-		else
+		} else
 		{
 			$templates_path .= 'html'.DIRECTORY_SEPARATOR;
 		}
@@ -250,12 +247,11 @@ class CI_Exceptions {
 			if (FALSE !== strpos($filepath, '/'))
 			{
 				$x = explode('/', $filepath);
-				$filepath = $x[count($x)-2].'/'.end($x);
+				$filepath = $x[count($x) - 2].'/'.end($x);
 			}
 
 			$template = 'html'.DIRECTORY_SEPARATOR.'error_php';
-		}
-		else
+		} else
 		{
 			$template = 'cli'.DIRECTORY_SEPARATOR.'error_php';
 		}

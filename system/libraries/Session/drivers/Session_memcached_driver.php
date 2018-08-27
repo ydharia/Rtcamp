@@ -132,8 +132,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 			if ( ! $this->_memcached->addServer($match[1], $match[2], isset($match[3]) ? $match[3] : 0))
 			{
 				log_message('error', 'Could not add '.$match[1].':'.$match[2].' to Memcached server pool.');
-			}
-			else
+			} else
 			{
 				$server_list[] = $match[1].':'.$match[2];
 			}
@@ -216,8 +215,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 			}
 
 			return $this->_fail();
-		}
-		elseif (
+		} elseif (
 			$this->_memcached->touch($key, $this->_config['expiration'])
 			OR ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND && $this->_memcached->set($key, $session_data, $this->_config['expiration']))
 		)
@@ -305,7 +303,7 @@ class CI_Session_memcached_driver extends CI_Session_driver implements SessionHa
 	 */
 	public function validateId($id)
 	{
-		$this->_memcached-get($this->_key_prefix.$id);
+		$this->_memcached - get($this->_key_prefix.$id);
 		return ($this->_memcached->getResultCode() === Memcached::RES_SUCCESS);
 	}
 

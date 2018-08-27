@@ -100,8 +100,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 			{
 				$this->auto_commit = FALSE;
 			}
-		}
-		else
+		} else
 		{
 			// If no port is defined by the user, use the default value
 			empty($this->port) OR $this->port = 33000;
@@ -194,8 +193,7 @@ class CI_DB_cubrid_driver extends CI_DB {
 		if (($autocommit = cubrid_get_autocommit($this->conn_id)) === NULL)
 		{
 			return FALSE;
-		}
-		elseif ($autocommit === TRUE)
+		} elseif ($autocommit === TRUE)
 		{
 			return cubrid_set_autocommit($this->conn_id, CUBRID_AUTOCOMMIT_FALSE);
 		}
@@ -340,16 +338,16 @@ class CI_DB_cubrid_driver extends CI_DB {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
-			$retval[$i]->name		= $query[$i]->Field;
+			$retval[$i] = new stdClass();
+			$retval[$i]->name = $query[$i]->Field;
 
 			sscanf($query[$i]->Type, '%[a-z](%d)',
 				$retval[$i]->type,
 				$retval[$i]->max_length
 			);
 
-			$retval[$i]->default		= $query[$i]->Default;
-			$retval[$i]->primary_key	= (int) ($query[$i]->Key === 'PRI');
+			$retval[$i]->default = $query[$i]->Default;
+			$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
 		}
 
 		return $retval;

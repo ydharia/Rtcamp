@@ -17,26 +17,26 @@
 
 // Check for the json extension, the Google APIs PHP Client won't function
 // without it.
-if (! function_exists('json_decode')) {
+if ( ! function_exists('json_decode')) {
   throw new Exception('Google PHP API Client requires the JSON PHP extension');
 }
 
-if (! function_exists('http_build_query')) {
+if ( ! function_exists('http_build_query')) {
   throw new Exception('Google PHP API Client requires http_build_query()');
 }
 
-if (! ini_get('date.timezone') && function_exists('date_default_timezone_set')) {
+if ( ! ini_get('date.timezone') && function_exists('date_default_timezone_set')) {
   date_default_timezone_set('UTC');
 }
 
 // hack around with the include paths a bit so the library 'just works'
-set_include_path(dirname(__FILE__) . PATH_SEPARATOR . get_include_path());
+set_include_path(dirname(__FILE__).PATH_SEPARATOR.get_include_path());
 
 require_once "config.php";
 // If a local configuration file is found, merge it's values with the default configuration
-if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
+if (file_exists(dirname(__FILE__).'/local_config.php')) {
   $defaultConfig = $apiConfig;
-  require_once (dirname(__FILE__)  . '/local_config.php');
+  require_once (dirname(__FILE__).'/local_config.php');
   $apiConfig = array_merge($defaultConfig, $apiConfig);
 }
 
@@ -99,32 +99,32 @@ class Google_Client {
   private $authenticated = false;
 
   public function __construct($config = array()) {
-    global $apiConfig;
-    $apiConfig = array_merge($apiConfig, $config);
-    self::$cache = new $apiConfig['cacheClass']();
-    self::$auth = new $apiConfig['authClass']();
-    self::$io = new $apiConfig['ioClass']();
+	global $apiConfig;
+	$apiConfig = array_merge($apiConfig, $config);
+	self::$cache = new $apiConfig['cacheClass']();
+	self::$auth = new $apiConfig['authClass']();
+	self::$io = new $apiConfig['ioClass']();
   }
 
   /**
    * Add a service
    */
   public function addService($service, $version = false) {
-    global $apiConfig;
-    if ($this->authenticated) {
-      throw new Google_Exception('Cant add services after having authenticated');
-    }
-    $this->services[$service] = array();
-    if (isset($apiConfig['services'][$service])) {
-      // Merge the service descriptor with the default values
-      $this->services[$service] = array_merge($this->services[$service], $apiConfig['services'][$service]);
-    }
+	global $apiConfig;
+	if ($this->authenticated) {
+	  throw new Google_Exception('Cant add services after having authenticated');
+	}
+	$this->services[$service] = array();
+	if (isset($apiConfig['services'][$service])) {
+	  // Merge the service descriptor with the default values
+	  $this->services[$service] = array_merge($this->services[$service], $apiConfig['services'][$service]);
+	}
   }
 
   public function authenticate($code = null) {
-    $service = $this->prepareService();
-    $this->authenticated = true;
-    return self::$auth->authenticate($service, $code);
+	$service = $this->prepareService();
+	$this->authenticated = true;
+	return self::$auth->authenticate($service, $code);
   }
 
   /**
@@ -132,28 +132,28 @@ class Google_Client {
    * @visible For Testing
    */
   public function prepareService() {
-    $service = array();
-    $scopes = array();
-    if ($this->scopes) {
-      $scopes = $this->scopes;
-    } else {
-      foreach ($this->services as $key => $val) {
-        if (isset($val['scope'])) {
-          if (is_array($val['scope'])) {
-            $scopes = array_merge($val['scope'], $scopes);
-          } else {
-            $scopes[] = $val['scope'];
-          }
-        } else {
-          $scopes[] = 'https://www.googleapis.com/auth/' . $key;
-        }
-        unset($val['discoveryURI']);
-        unset($val['scope']);
-        $service = array_merge($service, $val);
-      }
-    }
-    $service['scope'] = implode(' ', $scopes);
-    return $service;
+	$service = array();
+	$scopes = array();
+	if ($this->scopes) {
+	  $scopes = $this->scopes;
+	} else {
+	  foreach ($this->services as $key => $val) {
+		if (isset($val['scope'])) {
+		  if (is_array($val['scope'])) {
+			$scopes = array_merge($val['scope'], $scopes);
+		  } else {
+			$scopes[] = $val['scope'];
+		  }
+		} else {
+		  $scopes[] = 'https://www.googleapis.com/auth/'.$key;
+		}
+		unset($val['discoveryURI']);
+		unset($val['scope']);
+		$service = array_merge($service, $val);
+	  }
+	}
+	$service['scope'] = implode(' ', $scopes);
+	return $service;
   }
 
   /**
@@ -164,10 +164,10 @@ class Google_Client {
    *  "expires_in":3600, "id_token":"TOKEN", "created":1320790426}
    */
   public function setAccessToken($accessToken) {
-    if ($accessToken == null || 'null' == $accessToken) {
-      $accessToken = null;
-    }
-    self::$auth->setAccessToken($accessToken);
+	if ($accessToken == null || 'null' == $accessToken) {
+	  $accessToken = null;
+	}
+	self::$auth->setAccessToken($accessToken);
   }
 
   /**
@@ -175,7 +175,7 @@ class Google_Client {
    * @param string $authClassName
    */
   public function setAuthClass($authClassName) {
-    self::$auth = new $authClassName();
+	self::$auth = new $authClassName();
   }
 
   /**
@@ -183,8 +183,8 @@ class Google_Client {
    * @return string
    */
   public function createAuthUrl() {
-    $service = $this->prepareService();
-    return self::$auth->createAuthUrl($service['scope']);
+	$service = $this->prepareService();
+	return self::$auth->createAuthUrl($service['scope']);
   }
 
   /**
@@ -194,8 +194,8 @@ class Google_Client {
    *  "expires_in":3600,"id_token":"TOKEN", "created":1320790426}
    */
   public function getAccessToken() {
-    $token = self::$auth->getAccessToken();
-    return (null == $token || 'null' == $token) ? null : $token;
+	$token = self::$auth->getAccessToken();
+	return (null == $token || 'null' == $token) ? null : $token;
   }
 
   /**
@@ -203,7 +203,7 @@ class Google_Client {
    * @return bool Returns True if the access_token is expired.
    */
   public function isAccessTokenExpired() {
-    return self::$auth->isAccessTokenExpired();
+	return self::$auth->isAccessTokenExpired();
   }
 
   /**
@@ -212,7 +212,7 @@ class Google_Client {
    * @param string $developerKey
    */
   public function setDeveloperKey($developerKey) {
-    self::$auth->setDeveloperKey($developerKey);
+	self::$auth->setDeveloperKey($developerKey);
   }
 
   /**
@@ -221,7 +221,7 @@ class Google_Client {
    * @param string $state
    */
   public function setState($state) {
-    self::$auth->setState($state);
+	self::$auth->setState($state);
   }
 
   /**
@@ -230,7 +230,7 @@ class Google_Client {
    *  {@code "online"} to request online access from the user.
    */
   public function setAccessType($accessType) {
-    self::$auth->setAccessType($accessType);
+	self::$auth->setAccessType($accessType);
   }
 
   /**
@@ -239,7 +239,7 @@ class Google_Client {
    *  {@code "auto"} to request auto-approval when possible.
    */
   public function setApprovalPrompt($approvalPrompt) {
-    self::$auth->setApprovalPrompt($approvalPrompt);
+	self::$auth->setApprovalPrompt($approvalPrompt);
   }
 
   /**
@@ -247,8 +247,8 @@ class Google_Client {
    * @param string $applicationName
    */
   public function setApplicationName($applicationName) {
-    global $apiConfig;
-    $apiConfig['application_name'] = $applicationName;
+	global $apiConfig;
+	$apiConfig['application_name'] = $applicationName;
   }
 
   /**
@@ -256,16 +256,16 @@ class Google_Client {
    * @param string $clientId
    */
   public function setClientId($clientId) {
-    global $apiConfig;
-    $apiConfig['oauth2_client_id'] = $clientId;
-    self::$auth->clientId = $clientId;
+	global $apiConfig;
+	$apiConfig['oauth2_client_id'] = $clientId;
+	self::$auth->clientId = $clientId;
   }
 
   /**
    * Get the OAuth 2.0 Client ID.
    */
   public function getClientId() {
-    return self::$auth->clientId;
+	return self::$auth->clientId;
   }
 
   /**
@@ -273,16 +273,16 @@ class Google_Client {
    * @param string $clientSecret
    */
   public function setClientSecret($clientSecret) {
-    global $apiConfig;
-    $apiConfig['oauth2_client_secret'] = $clientSecret;
-    self::$auth->clientSecret = $clientSecret;
+	global $apiConfig;
+	$apiConfig['oauth2_client_secret'] = $clientSecret;
+	self::$auth->clientSecret = $clientSecret;
   }
 
   /**
    * Get the OAuth 2.0 Client Secret.
    */
   public function getClientSecret() {
-    return self::$auth->clientSecret;
+	return self::$auth->clientSecret;
   }
 
   /**
@@ -290,16 +290,16 @@ class Google_Client {
    * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri) {
-    global $apiConfig;
-    $apiConfig['oauth2_redirect_uri'] = $redirectUri;
-    self::$auth->redirectUri = $redirectUri;
+	global $apiConfig;
+	$apiConfig['oauth2_redirect_uri'] = $redirectUri;
+	self::$auth->redirectUri = $redirectUri;
   }
 
   /**
    * Get the OAuth 2.0 Redirect URI.
    */
   public function getRedirectUri() {
-    return self::$auth->redirectUri;
+	return self::$auth->redirectUri;
   }
 
   /**
@@ -308,7 +308,7 @@ class Google_Client {
    * @return void
    */
   public function refreshToken($refreshToken) {
-    self::$auth->refreshToken($refreshToken);
+	self::$auth->refreshToken($refreshToken);
   }
 
   /**
@@ -319,7 +319,7 @@ class Google_Client {
    * @return boolean Returns True if the revocation was successful, otherwise False.
    */
   public function revokeToken($token = null) {
-    self::$auth->revokeToken($token);
+	self::$auth->revokeToken($token);
   }
 
   /**
@@ -331,7 +331,7 @@ class Google_Client {
    * successful.
    */
   public function verifyIdToken($token = null) {
-    return self::$auth->verifyIdToken($token);
+	return self::$auth->verifyIdToken($token);
   }
 
   /**
@@ -339,7 +339,7 @@ class Google_Client {
    * @return void
    */
   public function setAssertionCredentials(Google_AssertionCredentials $creds) {
-    self::$auth->setAssertionCredentials($creds);
+	self::$auth->setAssertionCredentials($creds);
   }
 
   /**
@@ -349,7 +349,7 @@ class Google_Client {
    * @param array $scopes, ie: array('https://www.googleapis.com/auth/plus.me', 'https://www.googleapis.com/auth/moderator')
    */
   public function setScopes($scopes) {
-    $this->scopes = is_string($scopes) ? explode(" ", $scopes) : $scopes;
+	$this->scopes = is_string($scopes) ? explode(" ", $scopes) : $scopes;
   }
 
   /**
@@ -358,7 +358,7 @@ class Google_Client {
    *
    */
   public function getScopes() {
-     return $this->scopes;
+	 return $this->scopes;
   }
 
   /**
@@ -370,8 +370,8 @@ class Google_Client {
    * @param array $requestVisibleActions Array of app activity types
    */
   public function setRequestVisibleActions($requestVisibleActions) {
-    self::$auth->requestVisibleActions =
-            join(" ", $requestVisibleActions);
+	self::$auth->requestVisibleActions =
+			join(" ", $requestVisibleActions);
   }
 
   /**
@@ -382,8 +382,8 @@ class Google_Client {
    * @experimental
    */
   public function setUseObjects($useObjects) {
-    global $apiConfig;
-    $apiConfig['use_objects'] = $useObjects;
+	global $apiConfig;
+	$apiConfig['use_objects'] = $useObjects;
   }
 
   /**
@@ -394,7 +394,7 @@ class Google_Client {
    * @experimental
    */
   public function setUseBatch($useBatch) {
-    self::$useBatch = $useBatch;
+	self::$useBatch = $useBatch;
   }
 
   /**
@@ -402,7 +402,7 @@ class Google_Client {
    * @return Google_Auth the implementation of apiAuth.
    */
   public static function getAuth() {
-    return Google_Client::$auth;
+	return Google_Client::$auth;
   }
 
   /**
@@ -410,14 +410,14 @@ class Google_Client {
    * @return Google_IO the implementation of apiIo.
    */
   public static function getIo() {
-    return Google_Client::$io;
+	return Google_Client::$io;
   }
 
   /**
    * @return Google_Cache the implementation of apiCache.
    */
   public function getCache() {
-    return Google_Client::$cache;
+	return Google_Client::$cache;
   }
 }
 
@@ -442,14 +442,14 @@ class Google_ServiceException extends Google_Exception {
    * response.  Defaults to [].
    */
   public function __construct($message, $code = 0, Exception $previous = null,
-                              $errors = array()) {
-    if(version_compare(PHP_VERSION, '5.3.0') >= 0) {
-      parent::__construct($message, $code, $previous);
-    } else {
-      parent::__construct($message, $code);
-    }
+							  $errors = array()) {
+	if (version_compare(PHP_VERSION, '5.3.0') >= 0) {
+	  parent::__construct($message, $code, $previous);
+	} else {
+	  parent::__construct($message, $code);
+	}
 
-    $this->errors = $errors;
+	$this->errors = $errors;
   }
 
   /**
@@ -466,6 +466,6 @@ class Google_ServiceException extends Google_Exception {
    * @return [{string, string}] List of errors return in an HTTP response or [].
    */
   public function getErrors() {
-    return $this->errors;
+	return $this->errors;
   }
 }

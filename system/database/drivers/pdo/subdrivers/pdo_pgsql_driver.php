@@ -281,11 +281,11 @@ class CI_DB_pdo_pgsql_driver extends CI_DB_pdo_driver {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $query[$i]->column_name;
 			$retval[$i]->type		= $query[$i]->data_type;
-			$retval[$i]->max_length		= ($query[$i]->character_maximum_length > 0) ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
-			$retval[$i]->default		= $query[$i]->column_default;
+			$retval[$i]->max_length = ($query[$i]->character_maximum_length > 0) ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
+			$retval[$i]->default = $query[$i]->column_default;
 		}
 
 		return $retval;

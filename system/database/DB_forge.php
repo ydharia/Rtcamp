@@ -58,28 +58,28 @@ abstract class CI_DB_forge {
 	 *
 	 * @var	array
 	 */
-	public $fields		= array();
+	public $fields = array();
 
 	/**
 	 * Keys data
 	 *
 	 * @var	array
 	 */
-	public $keys		= array();
+	public $keys = array();
 
 	/**
 	 * Primary Keys data
 	 *
 	 * @var	array
 	 */
-	public $primary_keys	= array();
+	public $primary_keys = array();
 
 	/**
 	 * Database character set
 	 *
 	 * @var	string
 	 */
-	public $db_char_set	= '';
+	public $db_char_set = '';
 
 	// --------------------------------------------------------------------
 
@@ -88,28 +88,28 @@ abstract class CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= 'CREATE DATABASE %s';
+	protected $_create_database = 'CREATE DATABASE %s';
 
 	/**
 	 * DROP DATABASE statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_database	= 'DROP DATABASE %s';
+	protected $_drop_database = 'DROP DATABASE %s';
 
 	/**
 	 * CREATE TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table	= "%s %s (%s\n)";
+	protected $_create_table = "%s %s (%s\n)";
 
 	/**
 	 * CREATE TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= 'CREATE TABLE IF NOT EXISTS';
+	protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
 
 	/**
 	 * CREATE TABLE keys flag
@@ -119,42 +119,42 @@ abstract class CI_DB_forge {
 	 *
 	 * @var	bool
 	 */
-	protected $_create_table_keys	= FALSE;
+	protected $_create_table_keys = FALSE;
 
 	/**
 	 * DROP TABLE IF EXISTS statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_table_if	= 'DROP TABLE IF EXISTS';
+	protected $_drop_table_if = 'DROP TABLE IF EXISTS';
 
 	/**
 	 * RENAME TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_rename_table	= 'ALTER TABLE %s RENAME TO %s;';
+	protected $_rename_table = 'ALTER TABLE %s RENAME TO %s;';
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	bool|array
 	 */
-	protected $_unsigned		= TRUE;
+	protected $_unsigned = TRUE;
 
 	/**
 	 * NULL value representation in CREATE/ALTER TABLE statements
 	 *
 	 * @var	string
 	 */
-	protected $_null		= '';
+	protected $_null = '';
 
 	/**
 	 * DEFAULT value representation in CREATE/ALTER TABLE statements
 	 *
 	 * @var	string
 	 */
-	protected $_default		= ' DEFAULT ';
+	protected $_default = ' DEFAULT ';
 
 	// --------------------------------------------------------------------
 
@@ -166,7 +166,7 @@ abstract class CI_DB_forge {
 	 */
 	public function __construct(&$db)
 	{
-		$this->db =& $db;
+		$this->db = & $db;
 		log_message('info', 'Database Forge Class Initialized');
 	}
 
@@ -183,8 +183,7 @@ abstract class CI_DB_forge {
 		if ($this->_create_database === FALSE)
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
-		}
-		elseif ( ! $this->db->query(sprintf($this->_create_database, $this->db->escape_identifiers($db_name), $this->db->char_set, $this->db->dbcollat)))
+		} elseif ( ! $this->db->query(sprintf($this->_create_database, $this->db->escape_identifiers($db_name), $this->db->char_set, $this->db->dbcollat)))
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
 		}
@@ -210,8 +209,7 @@ abstract class CI_DB_forge {
 		if ($this->_drop_database === FALSE)
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
-		}
-		elseif ( ! $this->db->query(sprintf($this->_drop_database, $this->db->escape_identifiers($db_name))))
+		} elseif ( ! $this->db->query(sprintf($this->_drop_database, $this->db->escape_identifiers($db_name))))
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
 		}
@@ -258,8 +256,7 @@ abstract class CI_DB_forge {
 		if ($primary === TRUE)
 		{
 			$this->primary_keys[] = $key;
-		}
-		else
+		} else
 		{
 			$this->keys[] = $key;
 		}
@@ -289,8 +286,7 @@ abstract class CI_DB_forge {
 					)
 				));
 				$this->add_key('id', TRUE);
-			}
-			else
+			} else
 			{
 				if (strpos($field, ' ') === FALSE)
 				{
@@ -324,8 +320,7 @@ abstract class CI_DB_forge {
 		if ($table === '')
 		{
 			show_error('A table name is required for that operation.');
-		}
-		else
+		} else
 		{
 			$table = $this->db->dbprefix.$table;
 		}
@@ -500,8 +495,7 @@ abstract class CI_DB_forge {
 				{
 					return TRUE;
 				}
-			}
-			else
+			} else
 			{
 				$sql = sprintf($this->_drop_table_if, $this->db->escape_identifiers($table));
 			}
@@ -525,8 +519,7 @@ abstract class CI_DB_forge {
 		{
 			show_error('A table name is required for that operation.');
 			return FALSE;
-		}
-		elseif ($this->_rename_table === FALSE)
+		} elseif ($this->_rename_table === FALSE)
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
 		}
@@ -738,8 +731,7 @@ abstract class CI_DB_forge {
 				if (isset($attributes['AFTER']))
 				{
 					$field['after'] = $attributes['AFTER'];
-				}
-				elseif (isset($attributes['FIRST']))
+				} elseif (isset($attributes['FIRST']))
 				{
 					$field['first'] = (bool) $attributes['FIRST'];
 				}
@@ -752,13 +744,11 @@ abstract class CI_DB_forge {
 				if ($attributes['NULL'] === TRUE)
 				{
 					$field['null'] = empty($this->_null) ? '' : ' '.$this->_null;
-				}
-				else
+				} else
 				{
 					$field['null'] = ' NOT NULL';
 				}
-			}
-			elseif ($create_table === TRUE)
+			} elseif ($create_table === TRUE)
 			{
 				$field['null'] = ' NOT NULL';
 			}
@@ -862,8 +852,7 @@ abstract class CI_DB_forge {
 				{
 					$field['unsigned'] = ' UNSIGNED';
 					return;
-				}
-				elseif (is_string($key) && strcasecmp($attributes['TYPE'], $key) === 0)
+				} elseif (is_string($key) && strcasecmp($attributes['TYPE'], $key) === 0)
 				{
 					$field['type'] = $key;
 					return;
@@ -901,8 +890,7 @@ abstract class CI_DB_forge {
 				// Override the NULL attribute if that's our default
 				$attributes['NULL'] = TRUE;
 				$field['null'] = empty($this->_null) ? '' : ' '.$this->_null;
-			}
-			else
+			} else
 			{
 				$field['default'] = $this->_default.$this->db->escape($attributes['DEFAULT']);
 			}
@@ -996,8 +984,7 @@ abstract class CI_DB_forge {
 						continue;
 					}
 				}
-			}
-			elseif ( ! isset($this->fields[$this->keys[$i]]))
+			} elseif ( ! isset($this->fields[$this->keys[$i]]))
 			{
 				unset($this->keys[$i]);
 				continue;

@@ -89,16 +89,14 @@ class CI_DB_pdo_firebird_driver extends CI_DB_pdo_driver {
 			if ( ! empty($this->database))
 			{
 				$this->dsn .= 'dbname='.$this->database;
-			}
-			elseif ( ! empty($this->hostname))
+			} elseif ( ! empty($this->hostname))
 			{
 				$this->dsn .= 'dbname='.$this->hostname;
 			}
 
 			empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
 			empty($this->role) OR $this->dsn .= ';role='.$this->role;
-		}
-		elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 9) === FALSE)
+		} elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 9) === FALSE)
 		{
 			$this->dsn .= ';charset='.$this->char_set;
 		}
@@ -250,8 +248,7 @@ class CI_DB_pdo_firebird_driver extends CI_DB_pdo_driver {
 		{
 			$select = 'FIRST '.$this->qb_limit
 				.($this->qb_offset > 0 ? ' SKIP '.$this->qb_offset : '');
-		}
-		else
+		} else
 		{
 			$select = 'ROWS '
 				.($this->qb_offset > 0 ? $this->qb_offset.' TO '.($this->qb_limit + $this->qb_offset) : $this->qb_limit);

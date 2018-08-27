@@ -173,8 +173,7 @@ class CI_Driver_Library {
 			if (class_exists($child_name, FALSE))
 			{
 				$class_name = $child_name;
-			}
-			else
+			} else
 			{
 				$msg = 'Unable to load the requested driver: '.$class_name;
 				log_message('error', $msg);
@@ -274,8 +273,7 @@ class CI_Driver {
 			}
 
 			self::$_reflections[$class_name] = array($this->_methods, $this->_properties);
-		}
-		else
+		} else
 		{
 			list($this->_methods, $this->_properties) = self::$_reflections[$class_name];
 		}

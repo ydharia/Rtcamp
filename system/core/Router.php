@@ -62,21 +62,21 @@ class CI_Router {
 	 *
 	 * @var	array
 	 */
-	public $routes =	array();
+	public $routes = array();
 
 	/**
 	 * Current class name
 	 *
 	 * @var	string
 	 */
-	public $class =		'';
+	public $class = '';
 
 	/**
 	 * Current method name
 	 *
 	 * @var	string
 	 */
-	public $method =	'index';
+	public $method = 'index';
 
 	/**
 	 * Sub-directory that contains the requested controller class
@@ -123,8 +123,8 @@ class CI_Router {
 	 */
 	public function __construct($routing = NULL)
 	{
-		$this->config =& load_class('Config', 'core');
-		$this->uri =& load_class('URI', 'core');
+		$this->config = & load_class('Config', 'core');
+		$this->uri = & load_class('URI', 'core');
 
 		$this->enable_query_strings = ( ! is_cli() && $this->config->item('enable_query_strings') === TRUE);
 
@@ -136,7 +136,7 @@ class CI_Router {
 		if (is_array($routing))
 		{
 			empty($routing['controller']) OR $this->set_class($routing['controller']);
-			empty($routing['function'])   OR $this->set_method($routing['function']);
+			empty($routing['function']) OR $this->set_method($routing['function']);
 		}
 
 		log_message('info', 'Router Class Initialized');
@@ -211,8 +211,7 @@ class CI_Router {
 					1 => $this->class,
 					2 => $this->method
 				);
-			}
-			else
+			} else
 			{
 				$this->_set_default_controller();
 			}
@@ -226,8 +225,7 @@ class CI_Router {
 		if ($this->uri->uri_string !== '')
 		{
 			$this->_parse_routes();
-		}
-		else
+		} else
 		{
 			$this->_set_default_controller();
 		}
@@ -269,8 +267,7 @@ class CI_Router {
 		if (isset($segments[1]))
 		{
 			$this->set_method($segments[1]);
-		}
-		else
+		} else
 		{
 			$segments[1] = 'index';
 		}
@@ -385,8 +382,7 @@ class CI_Router {
 				if (isset($val[$http_verb]))
 				{
 					$val = $val[$http_verb];
-				}
-				else
+				} else
 				{
 					continue;
 				}
@@ -489,8 +485,7 @@ class CI_Router {
 		if ($append !== TRUE OR empty($this->directory))
 		{
 			$this->directory = str_replace('.', '', trim($dir, '/')).'/';
-		}
-		else
+		} else
 		{
 			$this->directory .= str_replace('.', '', trim($dir, '/')).'/';
 		}

@@ -55,56 +55,56 @@ class CI_Table {
 	 *
 	 * @var array
 	 */
-	public $rows		= array();
+	public $rows = array();
 
 	/**
 	 * Data for table heading
 	 *
 	 * @var array
 	 */
-	public $heading		= array();
+	public $heading = array();
 
 	/**
 	 * Whether or not to automatically create the table header
 	 *
 	 * @var bool
 	 */
-	public $auto_heading	= TRUE;
+	public $auto_heading = TRUE;
 
 	/**
 	 * Table caption
 	 *
 	 * @var string
 	 */
-	public $caption		= NULL;
+	public $caption = NULL;
 
 	/**
 	 * Table layout template
 	 *
 	 * @var array
 	 */
-	public $template	= NULL;
+	public $template = NULL;
 
 	/**
 	 * Newline setting
 	 *
 	 * @var string
 	 */
-	public $newline		= "\n";
+	public $newline = "\n";
 
 	/**
 	 * Contents of empty cells
 	 *
 	 * @var string
 	 */
-	public $empty_cells	= '';
+	public $empty_cells = '';
 
 	/**
 	 * Callback for custom table layout
 	 *
 	 * @var function
 	 */
-	public $function	= NULL;
+	public $function = NULL;
 
 	/**
 	 * Set the template from the table config file if it exists
@@ -297,8 +297,7 @@ class CI_Table {
 			if ($table_data instanceof CI_DB_result)
 			{
 				$this->_set_from_db_result($table_data);
-			}
-			elseif (is_array($table_data))
+			} elseif (is_array($table_data))
 			{
 				$this->_set_from_array($table_data);
 			}
@@ -388,12 +387,10 @@ class CI_Table {
 					if ($cell === '' OR $cell === NULL)
 					{
 						$out .= $this->empty_cells;
-					}
-					elseif (isset($this->function))
+					} elseif (isset($this->function))
 					{
 						$out .= call_user_func($this->function, $cell);
-					}
-					else
+					} else
 					{
 						$out .= $cell;
 					}

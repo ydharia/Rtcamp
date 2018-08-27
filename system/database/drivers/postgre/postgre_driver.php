@@ -324,8 +324,7 @@ class CI_DB_postgre_driver extends CI_DB {
 		if (is_php('5.4.4') && (is_string($str) OR (is_object($str) && method_exists($str, '__toString'))))
 		{
 			return pg_escape_literal($this->conn_id, $str);
-		}
-		elseif (is_bool($str))
+		} elseif (is_bool($str))
 		{
 			return ($str) ? 'TRUE' : 'FALSE';
 		}
@@ -356,14 +355,13 @@ class CI_DB_postgre_driver extends CI_DB {
 	{
 		$v = $this->version();
 
-		$table	= (func_num_args() > 0) ? func_get_arg(0) : NULL;
-		$column	= (func_num_args() > 1) ? func_get_arg(1) : NULL;
+		$table = (func_num_args() > 0) ? func_get_arg(0) : NULL;
+		$column = (func_num_args() > 1) ? func_get_arg(1) : NULL;
 
 		if ($table === NULL && $v >= '8.1')
 		{
 			$sql = 'SELECT LASTVAL() AS ins_id';
-		}
-		elseif ($table !== NULL)
+		} elseif ($table !== NULL)
 		{
 			if ($column !== NULL && $v >= '8.0')
 			{
@@ -371,16 +369,14 @@ class CI_DB_postgre_driver extends CI_DB {
 				$query = $this->query($sql);
 				$query = $query->row();
 				$seq = $query->seq;
-			}
-			else
+			} else
 			{
 				// seq_name passed in table parameter
 				$seq = $table;
 			}
 
 			$sql = 'SELECT CURRVAL(\''.$seq."') AS ins_id";
-		}
-		else
+		} else
 		{
 			return pg_last_oid($this->result_id);
 		}
@@ -454,11 +450,11 @@ class CI_DB_postgre_driver extends CI_DB {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $query[$i]->column_name;
 			$retval[$i]->type		= $query[$i]->data_type;
-			$retval[$i]->max_length		= ($query[$i]->character_maximum_length > 0) ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
-			$retval[$i]->default		= $query[$i]->column_default;
+			$retval[$i]->max_length = ($query[$i]->character_maximum_length > 0) ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
+			$retval[$i]->default = $query[$i]->column_default;
 		}
 
 		return $retval;

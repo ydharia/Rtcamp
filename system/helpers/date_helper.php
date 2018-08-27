@@ -104,8 +104,7 @@ if ( ! function_exists('mdate'))
 		if ($datestr === '')
 		{
 			return '';
-		}
-		elseif (empty($time))
+		} elseif (empty($time))
 		{
 			$time = now();
 		}
@@ -177,7 +176,7 @@ if ( ! function_exists('timespan'))
 	 */
 	function timespan($seconds = 1, $time = '', $units = 7)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->lang->load('date');
 
 		is_numeric($seconds) OR $seconds = 1;
@@ -283,8 +282,7 @@ if ( ! function_exists('days_in_month'))
 		if ($month < 1 OR $month > 12)
 		{
 			return 0;
-		}
-		elseif ( ! is_numeric($year) OR strlen($year) !== 4)
+		} elseif ( ! is_numeric($year) OR strlen($year) !== 4)
 		{
 			$year = date('Y');
 		}
@@ -307,7 +305,7 @@ if ( ! function_exists('days_in_month'))
 			}
 		}
 
-		$days_in_month	= array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+		$days_in_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 		return $days_in_month[$month - 1];
 	}
 }
@@ -420,8 +418,7 @@ if ( ! function_exists('unix_to_human'))
 		if ($fmt === 'us')
 		{
 			$r .= date('h', $time).':'.date('i', $time);
-		}
-		else
+		} else
 		{
 			$r .= date('H', $time).':'.date('i', $time);
 		}
@@ -477,8 +474,7 @@ if ( ! function_exists('human_to_unix'))
 			if ($ampm[0] === 'p' && $hour < 12)
 			{
 				$hour += 12;
-			}
-			elseif ($ampm[0] === 'a' && $hour === 12)
+			} elseif ($ampm[0] === 'a' && $hour === 12)
 			{
 				$hour = 0;
 			}
@@ -506,8 +502,7 @@ if ( ! function_exists('nice_date'))
 		if (empty($bad_date))
 		{
 			return 'Unknown';
-		}
-		elseif (empty($format))
+		} elseif (empty($format))
 		{
 			$format = 'U';
 		}
@@ -519,8 +514,7 @@ if ( ! function_exists('nice_date'))
 			{
 				$year  = substr($bad_date, 0, 4);
 				$month = substr($bad_date, 4, 2);
-			}
-			else
+			} else
 			{
 				$month  = substr($bad_date, 0, 2);
 				$year   = substr($bad_date, 2, 4);
@@ -571,7 +565,7 @@ if ( ! function_exists('timezone_menu'))
 	 */
 	function timezone_menu($default = 'UTC', $class = '', $name = 'timezones', $attributes = '')
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$CI->lang->load('date');
 
 		$default = ($default === 'GMT') ? 'UTC' : $default;
@@ -694,7 +688,7 @@ if ( ! function_exists('date_range'))
 		$is_unix = ! ( ! $is_unix OR $is_unix === 'days');
 
 		// Validate input and try strtotime() on invalid timestamps/intervals, just in case
-		if ( ( ! ctype_digit((string) $unix_start) && ($unix_start = @strtotime($unix_start)) === FALSE)
+		if (( ! ctype_digit((string) $unix_start) && ($unix_start = @strtotime($unix_start)) === FALSE)
 			OR ( ! ctype_digit((string) $mixed) && ($is_unix === FALSE OR ($mixed = @strtotime($mixed)) === FALSE))
 			OR ($is_unix === TRUE && $mixed < $unix_start))
 		{
@@ -715,8 +709,7 @@ if ( ! function_exists('date_range'))
 		{
 			$arg = new DateTime();
 			$arg->setTimestamp($mixed);
-		}
-		else
+		} else
 		{
 			$arg = (int) $mixed;
 		}

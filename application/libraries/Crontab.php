@@ -38,7 +38,7 @@ class Crontab
 		foreach ($config as $key => $value) {
 			$this->$key = $value;
 		}
-		if (!defined('PHPUnit_MAIN_METHOD')) {
+		if ( ! defined('PHPUnit_MAIN_METHOD')) {
 			$CI = &get_instance();
 			$CI->load->helper('file');
 		}
@@ -59,25 +59,25 @@ class Crontab
 		if (is_int($time)) {
 			$time = $this->translate_timestamp($time);
 		}
-		if (!preg_match('~^([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)$~', $time)) {
-			log_message('DEBUG', 'Wrong preg for cron time ' . $time);
+		if ( ! preg_match('~^([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)$~', $time)) {
+			log_message('DEBUG', 'Wrong preg for cron time '.$time);
 			return FALSE;
 		}
 		
 		if (strpos($action, $this->cli_path) === FALSE) {
-			$action = $this->cli_path . $action;
+			$action = $this->cli_path.$action;
 		}
 		
 		$jobs = explode("\n", read_file($this->cronfile));
 		
-		if (!is_array($jobs)) {
+		if ( ! is_array($jobs)) {
 			$jobs = array();
 		}
 		
-		$job = $time . ' ' .$this->php_path . ' ' . $action;
+		$job = $time.' '.$this->php_path.' '.$action;
 		
-		if (!in_array($job, $jobs)) {
-			$this->_write($job . "\n", FOPEN_READ_WRITE_CREATE);
+		if ( ! in_array($job, $jobs)) {
+			$this->_write($job."\n", FOPEN_READ_WRITE_CREATE);
 		}
 		
 		return TRUE;
@@ -97,22 +97,22 @@ class Crontab
 			$time = $this->translate_timestamp($time);
 		}
 		
-		if (!preg_match('~^([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)$~', $time)) {
-			log_message('DEBUG', 'Wrong preg for cron time ' . $time);
+		if ( ! preg_match('~^([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)\s([\d/\\*]+)$~', $time)) {
+			log_message('DEBUG', 'Wrong preg for cron time '.$time);
 			return FALSE;
 		}
 		
 		if (strpos($action, $this->cli_path) === FALSE) {
-			$action = $this->cli_path . $action;
+			$action = $this->cli_path.$action;
 		}
 		
 		$jobs = explode("\n", read_file($this->cronfile));
 		
-		if (!is_array($jobs)) {
+		if ( ! is_array($jobs)) {
 			$jobs = array();
 		}
 		
-		$job = $time . ' ' .$this->php_path . ' ' . $action;
+		$job = $time.' '.$this->php_path.' '.$action;
 		
 		if (($index = array_search($job, $jobs)) !== FALSE) {
 			unset($jobs[$index]);
@@ -149,16 +149,16 @@ class Crontab
 	{
 		$jobs = explode("\n", read_file($this->cronfile));
 		
-		if (!is_array($jobs)) {
+		if ( ! is_array($jobs)) {
 			$jobs = array();
 		}
 		
 		if (strpos($action, $this->cli_path) === FALSE) {
-			$action = $this->cli_path . $action;
+			$action = $this->cli_path.$action;
 		}
 		
 		foreach ($jobs as &$job) {
-			if (preg_match('~' . $action . '$~', $job)) {
+			if (preg_match('~'.$action.'$~', $job)) {
 				$job = '----';
 			}
 		}
@@ -175,9 +175,9 @@ class Crontab
 	 */
 	protected function _write($text, $mode = FOPEN_WRITE_CREATE_DESTRUCTIVE)
 	{
-		log_message('DEBUG', 'Writing to cronfile: ' . $this->cronfile);
+		log_message('DEBUG', 'Writing to cronfile: '.$this->cronfile);
 		write_file($this->cronfile, $text, $mode);
-		$this->_exec('crontab ' . $this->cronfile);
+		$this->_exec('crontab '.$this->cronfile);
 	}
 	
 	/**
@@ -204,12 +204,12 @@ class Crontab
 	protected function _exec($command)
 	{
 		$output = array();
-		if (!defined('PHPUnit_MAIN_METHOD')) {
+		if ( ! defined('PHPUnit_MAIN_METHOD')) {
 			exec($command, $output);
 		} else {
 			$output = array('called from phpunit');
 		}
-		log_message('DEBUG', 'Exec output: ' . implode("\n", $output));
+		log_message('DEBUG', 'Exec output: '.implode("\n", $output));
 	}
 	
 	public function __get($variable)

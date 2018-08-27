@@ -104,8 +104,7 @@ class CI_DB_pdo_dblib_driver extends CI_DB_pdo_driver {
 			empty($this->database) OR $this->dsn .= ';dbname='.$this->database;
 			empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
 			empty($this->appname) OR $this->dsn .= ';appname='.$this->appname;
-		}
-		else
+		} else
 		{
 			if ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 6) === FALSE)
 			{
@@ -212,11 +211,11 @@ class CI_DB_pdo_dblib_driver extends CI_DB_pdo_driver {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= $query[$i]->COLUMN_NAME;
 			$retval[$i]->type		= $query[$i]->DATA_TYPE;
-			$retval[$i]->max_length		= ($query[$i]->CHARACTER_MAXIMUM_LENGTH > 0) ? $query[$i]->CHARACTER_MAXIMUM_LENGTH : $query[$i]->NUMERIC_PRECISION;
-			$retval[$i]->default		= $query[$i]->COLUMN_DEFAULT;
+			$retval[$i]->max_length = ($query[$i]->CHARACTER_MAXIMUM_LENGTH > 0) ? $query[$i]->CHARACTER_MAXIMUM_LENGTH : $query[$i]->NUMERIC_PRECISION;
+			$retval[$i]->default = $query[$i]->COLUMN_DEFAULT;
 		}
 
 		return $retval;
@@ -287,8 +286,7 @@ class CI_DB_pdo_dblib_driver extends CI_DB_pdo_driver {
 			if (count($this->qb_select) === 0 OR strpos(implode(',', $this->qb_select), '*') !== FALSE)
 			{
 				$select = '*'; // Inevitable
-			}
-			else
+			} else
 			{
 				// Use only field names and their aliases, everything else is out of our scope.
 				$select = array();
@@ -308,7 +306,7 @@ class CI_DB_pdo_dblib_driver extends CI_DB_pdo_driver {
 				."\nWHERE ".$this->escape_identifiers('CI_rownum').' BETWEEN '.($this->qb_offset + 1).' AND '.$limit;
 		}
 
-		return preg_replace('/(^\SELECT (DISTINCT)?)/i','\\1 TOP '.$limit.' ', $sql);
+		return preg_replace('/(^\SELECT (DISTINCT)?)/i', '\\1 TOP '.$limit.' ', $sql);
 	}
 
 	// --------------------------------------------------------------------

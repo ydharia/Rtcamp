@@ -91,8 +91,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 		if (empty($this->_config['save_path']))
 		{
 			log_message('error', 'Session: No Redis save path configured.');
-		}
-		elseif (preg_match('#(?:tcp://)?([^:?]+)(?:\:(\d+))?(\?.+)?#', $this->_config['save_path'], $matches))
+		} elseif (preg_match('#(?:tcp://)?([^:?]+)(?:\:(\d+))?(\?.+)?#', $this->_config['save_path'], $matches))
 		{
 			isset($matches[3]) OR $matches[3] = ''; // Just to avoid undefined index notices below
 			$this->_config['save_path'] = array(
@@ -104,8 +103,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 			);
 
 			preg_match('#prefix=([^\s&]+)#', $matches[3], $match) && $this->_key_prefix = $match[1];
-		}
-		else
+		} else
 		{
 			log_message('error', 'Session: Invalid Redis save path format: '.$this->_config['save_path']);
 		}
@@ -138,16 +136,13 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 		if ( ! $redis->connect($this->_config['save_path']['host'], $this->_config['save_path']['port'], $this->_config['save_path']['timeout']))
 		{
 			log_message('error', 'Session: Unable to connect to Redis with the configured settings.');
-		}
-		elseif (isset($this->_config['save_path']['password']) && ! $redis->auth($this->_config['save_path']['password']))
+		} elseif (isset($this->_config['save_path']['password']) && ! $redis->auth($this->_config['save_path']['password']))
 		{
 			log_message('error', 'Session: Unable to authenticate to Redis instance.');
-		}
-		elseif (isset($this->_config['save_path']['database']) && ! $redis->select($this->_config['save_path']['database']))
+		} elseif (isset($this->_config['save_path']['database']) && ! $redis->select($this->_config['save_path']['database']))
 		{
 			log_message('error', 'Session: Unable to select Redis database with index '.$this->_config['save_path']['database']);
-		}
-		else
+		} else
 		{
 			$this->_redis = $redis;
 			return $this->_success;
@@ -257,8 +252,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 						return $this->_fail();
 					}
 				}
-			}
-			catch (RedisException $e)
+			} catch (RedisException $e)
 			{
 				log_message('error', 'Session: Got RedisException on close(): '.$e->getMessage());
 			}
@@ -378,8 +372,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 		{
 			log_message('error', 'Session: Unable to obtain lock for '.$this->_key_prefix.$session_id.' after 30 attempts, aborting.');
 			return FALSE;
-		}
-		elseif ($ttl === -1)
+		} elseif ($ttl === -1)
 		{
 			log_message('debug', 'Session: Lock for '.$this->_key_prefix.$session_id.' had no TTL, overriding.');
 		}

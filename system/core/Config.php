@@ -62,7 +62,7 @@ class CI_Config {
 	 *
 	 * @var	array
 	 */
-	public $is_loaded =	array();
+	public $is_loaded = array();
 
 	/**
 	 * List of paths to search when trying to load a config file.
@@ -70,7 +70,7 @@ class CI_Config {
 	 * @used-by	CI_Loader
 	 * @var		array
 	 */
-	public $_config_paths =	array(APPPATH);
+	public $_config_paths = array(APPPATH);
 
 	// --------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ class CI_Config {
 	 */
 	public function __construct()
 	{
-		$this->config =& get_config();
+		$this->config = & get_config();
 
 		// Set the base_url automatically if none was provided
 		if (empty($this->config['base_url']))
@@ -93,16 +93,14 @@ class CI_Config {
 				if (strpos($_SERVER['SERVER_ADDR'], ':') !== FALSE)
 				{
 					$server_addr = '['.$_SERVER['SERVER_ADDR'].']';
-				}
-				else
+				} else
 				{
 					$server_addr = $_SERVER['SERVER_ADDR'];
 				}
 
 				$base_url = (is_https() ? 'https' : 'http').'://'.$server_addr
 					.substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], basename($_SERVER['SCRIPT_FILENAME'])));
-			}
-			else
+			} else
 			{
 				$base_url = 'http://localhost/';
 			}
@@ -160,8 +158,7 @@ class CI_Config {
 					$this->config[$file] = isset($this->config[$file])
 						? array_merge($this->config[$file], $config)
 						: $config;
-				}
-				else
+				} else
 				{
 					$this->config = array_merge($this->config, $config);
 				}
@@ -176,8 +173,7 @@ class CI_Config {
 		if ($loaded === TRUE)
 		{
 			return TRUE;
-		}
-		elseif ($fail_gracefully === TRUE)
+		} elseif ($fail_gracefully === TRUE)
 		{
 			return FALSE;
 		}
@@ -217,8 +213,7 @@ class CI_Config {
 		if ( ! isset($this->config[$item]))
 		{
 			return NULL;
-		}
-		elseif (trim($this->config[$item]) === '')
+		} elseif (trim($this->config[$item]) === '')
 		{
 			return '';
 		}
@@ -249,8 +244,7 @@ class CI_Config {
 			if ($protocol === '')
 			{
 				$base_url = substr($base_url, strpos($base_url, '//'));
-			}
-			else
+			} else
 			{
 				$base_url = $protocol.substr($base_url, strpos($base_url, '://'));
 			}
@@ -272,16 +266,14 @@ class CI_Config {
 				if (($offset = strpos($uri, '?')) !== FALSE)
 				{
 					$uri = substr($uri, 0, $offset).$suffix.substr($uri, $offset);
-				}
-				else
+				} else
 				{
 					$uri .= $suffix;
 				}
 			}
 
 			return $base_url.$this->slash_item('index_page').$uri;
-		}
-		elseif (strpos($uri, '?') === FALSE)
+		} elseif (strpos($uri, '?') === FALSE)
 		{
 			$uri = '?'.$uri;
 		}
@@ -312,8 +304,7 @@ class CI_Config {
 			if ($protocol === '')
 			{
 				$base_url = substr($base_url, strpos($base_url, '//'));
-			}
-			else
+			} else
 			{
 				$base_url = $protocol.substr($base_url, strpos($base_url, '://'));
 			}
@@ -339,8 +330,7 @@ class CI_Config {
 		{
 			is_array($uri) && $uri = implode('/', $uri);
 			return ltrim($uri, '/');
-		}
-		elseif (is_array($uri))
+		} elseif (is_array($uri))
 		{
 			return http_build_query($uri);
 		}

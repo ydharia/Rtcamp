@@ -205,8 +205,7 @@ class CI_Trackback {
 				if (MB_ENABLED === TRUE)
 				{
 					$_POST[$val] = mb_convert_encoding($_POST[$val], $this->charset, $this->data['charset']);
-				}
-				elseif (ICONV_ENABLED === TRUE)
+				} elseif (ICONV_ENABLED === TRUE)
 				{
 					$_POST[$val] = @iconv($this->data['charset'], $this->charset.'//IGNORE', $_POST[$val]);
 				}
@@ -391,26 +390,25 @@ class CI_Trackback {
 		if (strpos($url, '?') !== FALSE)
 		{
 			$tb_array = explode('/', $url);
-			$tb_end   = $tb_array[count($tb_array)-1];
+			$tb_end   = $tb_array[count($tb_array) - 1];
 
 			if ( ! is_numeric($tb_end))
 			{
-				$tb_end  = $tb_array[count($tb_array)-2];
+				$tb_end  = $tb_array[count($tb_array) - 2];
 			}
 
 			$tb_array = explode('=', $tb_end);
-			$tb_id	= $tb_array[count($tb_array)-1];
-		}
-		else
+			$tb_id = $tb_array[count($tb_array) - 1];
+		} else
 		{
 			$url = rtrim($url, '/');
 
 			$tb_array = explode('/', $url);
-			$tb_id	= $tb_array[count($tb_array)-1];
+			$tb_id = $tb_array[count($tb_array) - 1];
 
 			if ( ! is_numeric($tb_id))
 			{
-				$tb_id = $tb_array[count($tb_array)-2];
+				$tb_id = $tb_array[count($tb_array) - 2];
 			}
 		}
 
@@ -488,9 +486,9 @@ class CI_Trackback {
 	 */
 	public function convert_ascii($str)
 	{
-		$count	= 1;
-		$out	= '';
-		$temp	= array();
+		$count = 1;
+		$out = '';
+		$temp = array();
 
 		for ($i = 0, $s = strlen($str); $i < $s; $i++)
 		{
@@ -499,8 +497,7 @@ class CI_Trackback {
 			if ($ordinal < 128)
 			{
 				$out .= $str[$i];
-			}
-			else
+			} else
 			{
 				if (count($temp) === 0)
 				{

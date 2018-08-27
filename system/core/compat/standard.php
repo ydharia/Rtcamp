@@ -74,12 +74,10 @@ if ( ! function_exists('array_column'))
 			if ($type === 'double')
 			{
 				$column_key = (int) $column_key;
-			}
-			elseif ($type === 'object' && method_exists($column_key, '__toString'))
+			} elseif ($type === 'object' && method_exists($column_key, '__toString'))
 			{
 				$column_key = (string) $column_key;
-			}
-			else
+			} else
 			{
 				trigger_error('array_column(): The column key should be either a string or an integer', E_USER_WARNING);
 				return FALSE;
@@ -91,12 +89,10 @@ if ( ! function_exists('array_column'))
 			if ($type === 'double')
 			{
 				$index_key = (int) $index_key;
-			}
-			elseif ($type === 'object' && method_exists($index_key, '__toString'))
+			} elseif ($type === 'object' && method_exists($index_key, '__toString'))
 			{
 				$index_key = (string) $index_key;
-			}
-			else
+			} else
 			{
 				trigger_error('array_column(): The index key should be either a string or an integer', E_USER_WARNING);
 				return FALSE;
@@ -109,12 +105,10 @@ if ( ! function_exists('array_column'))
 			if ($column_key === NULL)
 			{
 				$value = $a;
-			}
-			elseif (is_array($a) && array_key_exists($column_key, $a))
+			} elseif (is_array($a) && array_key_exists($column_key, $a))
 			{
 				$value = $a[$column_key];
-			}
-			else
+			} else
 			{
 				continue;
 			}
@@ -122,8 +116,7 @@ if ( ! function_exists('array_column'))
 			if ($index_key === NULL OR ! array_key_exists($index_key, $a))
 			{
 				$result[] = $value;
-			}
-			else
+			} else
 			{
 				$result[$a[$index_key]] = $value;
 			}
@@ -158,8 +151,7 @@ if ( ! function_exists('hex2bin'))
 			if ($type === 'object' && method_exists($data, '__toString'))
 			{
 				$data = (string) $data;
-			}
-			else
+			} else
 			{
 				trigger_error('hex2bin() expects parameter 1 to be string, '.$type.' given', E_USER_WARNING);
 				return NULL;
@@ -170,8 +162,7 @@ if ( ! function_exists('hex2bin'))
 		{
 			trigger_error('Hexadecimal input string must have an even length', E_USER_WARNING);
 			return FALSE;
-		}
-		elseif ( ! preg_match('/^[0-9a-f]*$/i', $data))
+		} elseif ( ! preg_match('/^[0-9a-f]*$/i', $data))
 		{
 			trigger_error('Input string must be hexadecimal string', E_USER_WARNING);
 			return FALSE;

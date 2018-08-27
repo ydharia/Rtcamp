@@ -53,14 +53,14 @@ class CI_Lang {
 	 *
 	 * @var	array
 	 */
-	public $language =	array();
+	public $language = array();
 
 	/**
 	 * List of loaded language files
 	 *
 	 * @var	array
 	 */
-	public $is_loaded =	array();
+	public $is_loaded = array();
 
 	/**
 	 * Class constructor
@@ -108,7 +108,7 @@ class CI_Lang {
 
 		if (empty($idiom) OR ! preg_match('/^[a-z_-]+$/i', $idiom))
 		{
-			$config =& get_config();
+			$config = & get_config();
 			$idiom = empty($config['language']) ? 'english' : $config['language'];
 		}
 
@@ -133,8 +133,7 @@ class CI_Lang {
 				include($alt_path);
 				$found = TRUE;
 			}
-		}
-		else
+		} else
 		{
 			foreach (get_instance()->load->get_package_paths(TRUE) as $package_path)
 			{
