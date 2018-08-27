@@ -293,8 +293,8 @@ class CI_Upload {
 	{
 		empty($config) OR $this->initialize($config, FALSE);
 
-		$this->_mimes =& get_mimes();
-		$this->_CI =& get_instance();
+		$this->_mimes = & get_mimes();
+		$this->_CI = & get_instance();
 
 		log_message('info', 'Upload Class Initialized');
 	}
@@ -327,19 +327,16 @@ class CI_Upload {
 					if ($reflection->hasMethod('set_'.$key))
 					{
 						$this->{'set_'.$key}($config[$key]);
-					}
-					else
+					} else
 					{
 						$this->$key = $config[$key];
 					}
-				}
-				else
+				} else
 				{
 					$this->$key = $defaults[$key];
 				}
 			}
-		}
-		else
+		} else
 		{
 			foreach ($config as $key => &$value)
 			{
@@ -348,8 +345,7 @@ class CI_Upload {
 					if ($reflection->hasMethod('set_'.$key))
 					{
 						$this->{'set_'.$key}($value);
-					}
-					else
+					} else
 					{
 						$this->$key = $value;
 					}
@@ -476,11 +472,10 @@ class CI_Upload {
 			if (strpos($this->_file_name_override, '.') === FALSE)
 			{
 				$this->file_name .= $this->file_ext;
-			}
-			else
+			} else
 			{
 				// An extension was provided, let's have it!
-				$this->file_ext	= $this->get_extension($this->_file_name_override);
+				$this->file_ext = $this->get_extension($this->_file_name_override);
 			}
 
 			if ( ! $this->is_allowed_filetype(TRUE))
@@ -493,7 +488,7 @@ class CI_Upload {
 		// Convert the file size to kilobytes
 		if ($this->file_size > 0)
 		{
-			$this->file_size = round($this->file_size/1024, 2);
+			$this->file_size = round($this->file_size / 1024, 2);
 		}
 
 		// Is the file size within the allowed maximum?
@@ -816,10 +811,10 @@ class CI_Upload {
 			{
 				$types = array(1 => 'gif', 2 => 'jpeg', 3 => 'png');
 
-				$this->image_width	= $D[0];
-				$this->image_height	= $D[1];
-				$this->image_type	= isset($types[$D[2]]) ? $types[$D[2]] : 'unknown';
-				$this->image_size_str	= $D[3]; // string containing height and width
+				$this->image_width = $D[0];
+				$this->image_height = $D[1];
+				$this->image_type = isset($types[$D[2]]) ? $types[$D[2]] : 'unknown';
+				$this->image_size_str = $D[3]; // string containing height and width
 			}
 		}
 
@@ -861,13 +856,12 @@ class CI_Upload {
 		if (in_array($this->file_type, $png_mimes))
 		{
 			$this->file_type = 'image/png';
-		}
-		elseif (in_array($this->file_type, $jpeg_mimes))
+		} elseif (in_array($this->file_type, $jpeg_mimes))
 		{
 			$this->file_type = 'image/jpeg';
 		}
 
-		$img_mimes = array('image/gif',	'image/jpeg', 'image/png');
+		$img_mimes = array('image/gif', 'image/jpeg', 'image/png');
 
 		return in_array($this->file_type, $img_mimes, TRUE);
 	}
@@ -1009,7 +1003,7 @@ class CI_Upload {
 			return FALSE;
 		}
 
-		$this->upload_path = preg_replace('/(.+?)\/*$/', '\\1/',  $this->upload_path);
+		$this->upload_path = preg_replace('/(.+?)\/*$/', '\\1/', $this->upload_path);
 		return TRUE;
 	}
 
@@ -1053,9 +1047,9 @@ class CI_Upload {
 		$ext = '';
 		if (strpos($filename, '.') !== FALSE)
 		{
-			$parts		= explode('.', $filename);
-			$ext		= '.'.array_pop($parts);
-			$filename	= implode('.', $parts);
+			$parts = explode('.', $filename);
+			$ext = '.'.array_pop($parts);
+			$filename = implode('.', $parts);
 		}
 
 		return substr($filename, 0, ($length - strlen($ext))).$ext;
@@ -1114,9 +1108,12 @@ class CI_Upload {
 
 		if (function_exists('getimagesize') && @getimagesize($file) !== FALSE)
 		{
-			if (($file = @fopen($file, 'rb')) === FALSE) // "b" to force binary
+			if (($file = @fopen($file, 'rb')) === FALSE) {
+				// "b" to force binary
 			{
-				return FALSE; // Couldn't open the file, return FALSE
+				return FALSE;
+			}
+			// Couldn't open the file, return FALSE
 			}
 
 			$opening_bytes = fread($file, 256);
@@ -1227,9 +1224,11 @@ class CI_Upload {
 		if (function_exists('finfo_file'))
 		{
 			$finfo = @finfo_open(FILEINFO_MIME);
-			if (is_resource($finfo)) // It is possible that a FALSE value is returned, if there is no magic MIME database file found on the system
+			if (is_resource($finfo)) {
+				// It is possible that a FALSE value is returned, if there is no magic MIME database file found on the system
 			{
 				$mime = @finfo_file($finfo, $file['tmp_name']);
+			}
 				finfo_close($finfo);
 
 				/* According to the comments section of the PHP manual page,
@@ -1314,9 +1313,11 @@ class CI_Upload {
 		if (function_exists('mime_content_type'))
 		{
 			$this->file_type = @mime_content_type($file['tmp_name']);
-			if (strlen($this->file_type) > 0) // It's possible that mime_content_type() returns FALSE or an empty string
+			if (strlen($this->file_type) > 0) {
+				// It's possible that mime_content_type() returns FALSE or an empty string
 			{
 				return;
+			}
 			}
 		}
 

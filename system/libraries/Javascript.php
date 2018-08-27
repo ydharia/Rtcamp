@@ -78,12 +78,12 @@ class CI_Javascript {
 
 		extract($defaults);
 
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 
 		// load the requested js library
 		$this->CI->load->library('Javascript/'.$js_library_driver, array('autoload' => $autoload));
 		// make js to refer to current library
-		$this->js =& $this->CI->$js_library_driver;
+		$this->js = & $this->CI->$js_library_driver;
 
 		log_message('info', 'Javascript Class Initialized and loaded. Driver used: '.$js_library_driver);
 	}
@@ -644,8 +644,7 @@ class CI_Javascript {
 		if ($external_file !== '')
 		{
 			$this->_javascript_location = $external_file;
-		}
-		elseif ($this->CI->config->item('javascript_location') !== '')
+		} elseif ($this->CI->config->item('javascript_location') !== '')
 		{
 			$this->_javascript_location = $this->CI->config->item('javascript_location');
 		}
@@ -653,12 +652,10 @@ class CI_Javascript {
 		if ($relative === TRUE OR strpos($external_file, 'http://') === 0 OR strpos($external_file, 'https://') === 0)
 		{
 			$str = $this->_open_script($external_file);
-		}
-		elseif (strpos($this->_javascript_location, 'http://') !== FALSE)
+		} elseif (strpos($this->_javascript_location, 'http://') !== FALSE)
 		{
 			$str = $this->_open_script($this->_javascript_location.$external_file);
-		}
-		else
+		} else
 		{
 			$str = $this->_open_script($this->CI->config->slash_item('base_url').$this->_javascript_location.$external_file);
 		}
@@ -754,17 +751,14 @@ class CI_Javascript {
 			if (is_object($result))
 			{
 				$json_result = is_callable(array($result, 'result_array')) ? $result->result_array() : (array) $result;
-			}
-			elseif (is_array($result))
+			} elseif (is_array($result))
 			{
 				$json_result = $result;
-			}
-			else
+			} else
 			{
 				return $this->_prep_args($result);
 			}
-		}
-		else
+		} else
 		{
 			return 'null';
 		}
@@ -775,8 +769,7 @@ class CI_Javascript {
 		if ( ! is_array($json_result) && empty($json_result))
 		{
 			show_error('Generate JSON Failed - Illegal key, value pair.');
-		}
-		elseif ($match_array_type)
+		} elseif ($match_array_type)
 		{
 			$_is_assoc = $this->_is_associative_array($json_result);
 		}
@@ -786,8 +779,7 @@ class CI_Javascript {
 			if ($_is_assoc)
 			{
 				$json[] = $this->_prep_args($k, TRUE).':'.$this->generate_json($v, $match_array_type);
-			}
-			else
+			} else
 			{
 				$json[] = $this->generate_json($v, $match_array_type);
 			}
@@ -838,16 +830,13 @@ class CI_Javascript {
 		if ($result === NULL)
 		{
 			return 'null';
-		}
-		elseif (is_bool($result))
+		} elseif (is_bool($result))
 		{
 			return ($result === TRUE) ? 'true' : 'false';
-		}
-		elseif (is_string($result) OR $is_key)
+		} elseif (is_string($result) OR $is_key)
 		{
 			return '"'.str_replace(array('\\', "\t", "\n", "\r", '"', '/'), array('\\\\', '\\t', '\\n', "\\r", '\"', '\/'), $result).'"';
-		}
-		elseif (is_scalar($result))
+		} elseif (is_scalar($result))
 		{
 			return $result;
 		}

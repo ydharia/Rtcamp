@@ -201,8 +201,7 @@ class CI_Migration {
 		if ($this->_migration_type === 'sequential')
 		{
 			$target_version = sprintf('%03d', $target_version);
-		}
-		else
+		} else
 		{
 			$target_version = (string) $target_version;
 		}
@@ -218,14 +217,12 @@ class CI_Migration {
 		if ($target_version > $current_version)
 		{
 			$method = 'up';
-		}
-		elseif ($target_version < $current_version)
+		} elseif ($target_version < $current_version)
 		{
 			$method = 'down';
 			// We need this so that migrations are applied in reverse order
 			krsort($migrations);
-		}
-		else
+		} else
 		{
 			// Well, there's nothing to migrate then ...
 			return TRUE;
@@ -249,19 +246,16 @@ class CI_Migration {
 				if ($number <= $current_version)
 				{
 					continue;
-				}
-				elseif ($number > $target_version)
+				} elseif ($number > $target_version)
 				{
 					break;
 				}
-			}
-			else
+			} else
 			{
 				if ($number > $current_version)
 				{
 					continue;
-				}
-				elseif ($number <= $target_version)
+				} elseif ($number <= $target_version)
 				{
 					break;
 				}
@@ -287,8 +281,7 @@ class CI_Migration {
 			{
 				$this->_error_string = sprintf($this->lang->line('migration_class_doesnt_exist'), $class);
 				return FALSE;
-			}
-			elseif ( ! is_callable(array($class, $method)))
+			} elseif ( ! is_callable(array($class, $method)))
 			{
 				$this->_error_string = sprintf($this->lang->line('migration_missing_'.$method.'_method'), $class);
 				return FALSE;

@@ -203,9 +203,9 @@ class CI_Zip {
 			"\x50\x4b\x01\x02\x00\x00\x0a\x00\x00\x00\x00\x00"
 			.pack('v', $file_mtime)
 			.pack('v', $file_mdate)
-			.pack('V',0) // crc32
-			.pack('V',0) // compressed filesize
-			.pack('V',0) // uncompressed filesize
+			.pack('V', 0) // crc32
+			.pack('V', 0) // compressed filesize
+			.pack('V', 0) // uncompressed filesize
 			.pack('v', self::strlen($dir)) // length of pathname
 			.pack('v', 0) // extra field length
 			.pack('v', 0) // file comment length
@@ -241,8 +241,7 @@ class CI_Zip {
 				$file_data = $this->_get_mod_time($path);
 				$this->_add_data($path, $data, $file_data['file_mtime'], $file_data['file_mdate']);
 			}
-		}
-		else
+		} else
 		{
 			$file_data = $this->_get_mod_time($filepath);
 			$this->_add_data($filepath, $data, $file_data['file_mtime'], $file_data['file_mdate']);
@@ -318,8 +317,7 @@ class CI_Zip {
 			if (is_string($archive_filepath))
 			{
 				$name = str_replace('\\', '/', $archive_filepath);
-			}
-			else
+			} else
 			{
 				$name = str_replace('\\', '/', $path);
 
@@ -374,8 +372,7 @@ class CI_Zip {
 			if (is_dir($path.$file))
 			{
 				$this->read_dir($path.$file.DIRECTORY_SEPARATOR, $preserve_filepath, $root_path);
-			}
-			elseif (FALSE !== ($data = file_get_contents($path.$file)))
+			} elseif (FALSE !== ($data = file_get_contents($path.$file)))
 			{
 				$name = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, $path);
 				if ($preserve_filepath === FALSE)
@@ -465,7 +462,7 @@ class CI_Zip {
 
 		get_instance()->load->helper('download');
 		$get_zip = $this->get_zip();
-		$zip_content =& $get_zip;
+		$zip_content = & $get_zip;
 
 		force_download($filename, $zip_content);
 	}

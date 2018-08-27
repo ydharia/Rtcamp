@@ -30,23 +30,23 @@ namespace Facebook\Helpers;
  */
 class FacebookCanvasHelper extends FacebookSignedRequestFromInputHelper
 {
-    /**
-     * Returns the app data value.
-     *
-     * @return mixed|null
-     */
-    public function getAppData()
-    {
-        return $this->signedRequest ? $this->signedRequest->get('app_data') : null;
-    }
+	/**
+	 * Returns the app data value.
+	 *
+	 * @return mixed|null
+	 */
+	public function getAppData()
+	{
+		return $this->signedRequest ? $this->signedRequest->get('app_data') : null;
+	}
 
-    /**
-     * Get raw signed request from POST.
-     *
-     * @return string|null
-     */
-    public function getRawSignedRequest()
-    {
-        return $this->getRawSignedRequestFromPost() ?: null;
-    }
+	/**
+	 * Get raw signed request from POST.
+	 *
+	 * @return string|null
+	 */
+	public function getRawSignedRequest()
+	{
+		return $this->getRawSignedRequestFromPost() ?: null;
+	}
 }

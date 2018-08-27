@@ -102,7 +102,7 @@ if ( ! function_exists('current_url'))
 	 */
 	function current_url()
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		return $CI->config->site_url($CI->uri->uri_string());
 	}
 }
@@ -213,13 +213,11 @@ if ( ! function_exists('anchor_popup'))
 
 			// Ref: http://www.w3schools.com/jsref/met_win_open.asp
 			$window_name = '_blank';
-		}
-		elseif ( ! empty($attributes['window_name']))
+		} elseif ( ! empty($attributes['window_name']))
 		{
 			$window_name = $attributes['window_name'];
 			unset($attributes['window_name']);
-		}
-		else
+		} else
 		{
 			$window_name = '_blank';
 		}
@@ -308,8 +306,7 @@ if ( ! function_exists('safe_mailto'))
 					}
 					$x[] = '"';
 				}
-			}
-			else
+			} else
 			{
 				for ($i = 0, $l = strlen($attributes); $i < $l; $i++)
 				{
@@ -328,8 +325,7 @@ if ( ! function_exists('safe_mailto'))
 			if ($ordinal < 128)
 			{
 				$x[] = '|'.$ordinal;
-			}
-			else
+			} else
 			{
 				if (count($temp) === 0)
 				{
@@ -482,8 +478,7 @@ if ( ! function_exists('url_title'))
 		if ($separator === 'dash')
 		{
 			$separator = '-';
-		}
-		elseif ($separator === 'underscore')
+		} elseif ($separator === 'underscore')
 		{
 			$separator = '_';
 		}
@@ -540,16 +535,14 @@ if ( ! function_exists('redirect'))
 		if ($method === 'auto' && isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS') !== FALSE)
 		{
 			$method = 'refresh';
-		}
-		elseif ($method !== 'refresh' && (empty($code) OR ! is_numeric($code)))
+		} elseif ($method !== 'refresh' && (empty($code) OR ! is_numeric($code)))
 		{
 			if (isset($_SERVER['SERVER_PROTOCOL'], $_SERVER['REQUEST_METHOD']) && $_SERVER['SERVER_PROTOCOL'] === 'HTTP/1.1')
 			{
 				$code = ($_SERVER['REQUEST_METHOD'] !== 'GET')
 					? 303	// reference: http://en.wikipedia.org/wiki/Post/Redirect/Get
 					: 307;
-			}
-			else
+			} else
 			{
 				$code = 302;
 			}

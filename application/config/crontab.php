@@ -3,7 +3,7 @@
  * File for crontab to write
  * @var string
  */
-$config['cronfile'] = APPPATH . '/crontab';
+$config['cronfile'] = APPPATH.'/crontab';
 
 /**
  * PHP executable path

@@ -143,8 +143,7 @@ if ( ! function_exists('delete_files'))
 				if (is_dir($filepath) && $filename[0] !== '.' && ! is_link($filepath))
 				{
 					delete_files($filepath, $del_dir, $htdocs, $_level + 1);
-				}
-				elseif ($htdocs !== TRUE OR ! preg_match('/^(\.htaccess|index\.(html|htm|php)|web\.config)$/i', $filename))
+				} elseif ($htdocs !== TRUE OR ! preg_match('/^(\.htaccess|index\.(html|htm|php)|web\.config)$/i', $filename))
 				{
 					@unlink($filepath);
 				}
@@ -192,8 +191,7 @@ if ( ! function_exists('get_filenames'))
 				if (is_dir($source_dir.$file) && $file[0] !== '.')
 				{
 					get_filenames($source_dir.$file.DIRECTORY_SEPARATOR, $include_path, TRUE);
-				}
-				elseif ($file[0] !== '.')
+				} elseif ($file[0] !== '.')
 				{
 					$_filedata[] = ($include_path === TRUE) ? $source_dir.$file : $file;
 				}
@@ -244,8 +242,7 @@ if ( ! function_exists('get_dir_file_info'))
 				if (is_dir($source_dir.$file) && $file[0] !== '.' && $top_level_only === FALSE)
 				{
 					get_dir_file_info($source_dir.$file.DIRECTORY_SEPARATOR, $top_level_only, TRUE);
-				}
-				elseif ($file[0] !== '.')
+				} elseif ($file[0] !== '.')
 				{
 					$_filedata[$file] = get_file_info($source_dir.$file);
 					$_filedata[$file]['relative_path'] = $relative_path;
@@ -384,32 +381,25 @@ if ( ! function_exists('symbolic_permissions'))
 		if (($perms & 0xC000) === 0xC000)
 		{
 			$symbolic = 's'; // Socket
-		}
-		elseif (($perms & 0xA000) === 0xA000)
+		} elseif (($perms & 0xA000) === 0xA000)
 		{
 			$symbolic = 'l'; // Symbolic Link
-		}
-		elseif (($perms & 0x8000) === 0x8000)
+		} elseif (($perms & 0x8000) === 0x8000)
 		{
 			$symbolic = '-'; // Regular
-		}
-		elseif (($perms & 0x6000) === 0x6000)
+		} elseif (($perms & 0x6000) === 0x6000)
 		{
 			$symbolic = 'b'; // Block special
-		}
-		elseif (($perms & 0x4000) === 0x4000)
+		} elseif (($perms & 0x4000) === 0x4000)
 		{
 			$symbolic = 'd'; // Directory
-		}
-		elseif (($perms & 0x2000) === 0x2000)
+		} elseif (($perms & 0x2000) === 0x2000)
 		{
 			$symbolic = 'c'; // Character special
-		}
-		elseif (($perms & 0x1000) === 0x1000)
+		} elseif (($perms & 0x1000) === 0x1000)
 		{
 			$symbolic = 'p'; // FIFO pipe
-		}
-		else
+		} else
 		{
 			$symbolic = 'u'; // Unknown
 		}
@@ -417,17 +407,17 @@ if ( ! function_exists('symbolic_permissions'))
 		// Owner
 		$symbolic .= (($perms & 0x0100) ? 'r' : '-')
 			.(($perms & 0x0080) ? 'w' : '-')
-			.(($perms & 0x0040) ? (($perms & 0x0800) ? 's' : 'x' ) : (($perms & 0x0800) ? 'S' : '-'));
+			.(($perms & 0x0040) ? (($perms & 0x0800) ? 's' : 'x') : (($perms & 0x0800) ? 'S' : '-'));
 
 		// Group
 		$symbolic .= (($perms & 0x0020) ? 'r' : '-')
 			.(($perms & 0x0010) ? 'w' : '-')
-			.(($perms & 0x0008) ? (($perms & 0x0400) ? 's' : 'x' ) : (($perms & 0x0400) ? 'S' : '-'));
+			.(($perms & 0x0008) ? (($perms & 0x0400) ? 's' : 'x') : (($perms & 0x0400) ? 'S' : '-'));
 
 		// World
 		$symbolic .= (($perms & 0x0004) ? 'r' : '-')
 			.(($perms & 0x0002) ? 'w' : '-')
-			.(($perms & 0x0001) ? (($perms & 0x0200) ? 't' : 'x' ) : (($perms & 0x0200) ? 'T' : '-'));
+			.(($perms & 0x0001) ? (($perms & 0x0200) ? 't' : 'x') : (($perms & 0x0200) ? 'T' : '-'));
 
 		return $symbolic;
 	}

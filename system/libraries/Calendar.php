@@ -129,7 +129,7 @@ class CI_Calendar {
 	 */
 	public function __construct($config = array())
 	{
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 		$this->CI->lang->load('calendar');
 
 		empty($config) OR $this->initialize($config);
@@ -184,12 +184,10 @@ class CI_Calendar {
 		if (empty($year))
 		{
 			$year = date('Y', $local_time);
-		}
-		elseif (strlen($year) === 1)
+		} elseif (strlen($year) === 1)
 		{
 			$year = '200'.$year;
-		}
-		elseif (strlen($year) === 2)
+		} elseif (strlen($year) === 2)
 		{
 			$year = '20'.$year;
 		}
@@ -197,23 +195,22 @@ class CI_Calendar {
 		if (empty($month))
 		{
 			$month = date('m', $local_time);
-		}
-		elseif (strlen($month) === 1)
+		} elseif (strlen($month) === 1)
 		{
 			$month = '0'.$month;
 		}
 
 		$adjusted_date = $this->adjust_date($month, $year);
 
-		$month	= $adjusted_date['month'];
-		$year	= $adjusted_date['year'];
+		$month = $adjusted_date['month'];
+		$year = $adjusted_date['year'];
 
 		// Determine the total days in the month
 		$total_days = $this->get_total_days($month, $year);
 
 		// Set the starting day of the week
 		$start_days	= array('sunday' => 0, 'monday' => 1, 'tuesday' => 2, 'wednesday' => 3, 'thursday' => 4, 'friday' => 5, 'saturday' => 6);
-		$start_day	= isset($start_days[$this->start_day]) ? $start_days[$this->start_day] : 0;
+		$start_day = isset($start_days[$this->start_day]) ? $start_days[$this->start_day] : 0;
 
 		// Set the starting day number
 		$local_date = mktime(12, 0, 0, $month, 1, $year);
@@ -227,9 +224,9 @@ class CI_Calendar {
 
 		// Set the current month/year/day
 		// We use this to determine the "today" date
-		$cur_year	= date('Y', $local_time);
-		$cur_month	= date('m', $local_time);
-		$cur_day	= date('j', $local_time);
+		$cur_year = date('Y', $local_time);
+		$cur_month = date('m', $local_time);
+		$cur_day = date('j', $local_time);
 
 		$is_current_month = ($cur_year == $year && $cur_month == $month);
 
@@ -270,9 +267,9 @@ class CI_Calendar {
 
 		$day_names = $this->get_day_names();
 
-		for ($i = 0; $i < 7; $i ++)
+		for ($i = 0; $i < 7; $i++)
 		{
-			$out .= str_replace('{week_day}', $day_names[($start_day + $i) %7], $this->replacements['week_day_cell']);
+			$out .= str_replace('{week_day}', $day_names[($start_day + $i) % 7], $this->replacements['week_day_cell']);
 		}
 
 		$out .= "\n".$this->replacements['week_row_end']."\n";
@@ -294,8 +291,7 @@ class CI_Calendar {
 						$temp = ($is_current_month === TRUE && $day == $cur_day) ?
 								$this->replacements['cal_cell_content_today'] : $this->replacements['cal_cell_content'];
 						$out .= str_replace(array('{content}', '{day}'), array($data[$day], $day), $temp);
-					}
-					else
+					} else
 					{
 						// Cells with no content
 						$temp = ($is_current_month === TRUE && $day == $cur_day) ?
@@ -304,8 +300,7 @@ class CI_Calendar {
 					}
 
 					$out .= ($is_current_month === TRUE && $day == $cur_day) ? $this->replacements['cal_cell_end_today'] : $this->replacements['cal_cell_end'];
-				}
-				elseif ($this->show_other_days === TRUE)
+				} elseif ($this->show_other_days === TRUE)
 				{
 					$out .= $this->replacements['cal_cell_start_other'];
 
@@ -315,16 +310,14 @@ class CI_Calendar {
 						$prev_month = $this->adjust_date($month - 1, $year);
 						$prev_month_days = $this->get_total_days($prev_month['month'], $prev_month['year']);
 						$out .= str_replace('{day}', $prev_month_days + $day, $this->replacements['cal_cell_other']);
-					}
-					else
+					} else
 					{
 						// Day of next month
 						$out .= str_replace('{day}', $day - $total_days, $this->replacements['cal_cell_other']);
 					}
 
 					$out .= $this->replacements['cal_cell_end_other'];
-				}
-				else
+				} else
 				{
 					// Blank cells
 					$out .= $this->replacements['cal_cell_start'].$this->replacements['cal_cell_blank'].$this->replacements['cal_cell_end'];
@@ -355,8 +348,7 @@ class CI_Calendar {
 		if ($this->month_type === 'short')
 		{
 			$month_names = array('01' => 'cal_jan', '02' => 'cal_feb', '03' => 'cal_mar', '04' => 'cal_apr', '05' => 'cal_may', '06' => 'cal_jun', '07' => 'cal_jul', '08' => 'cal_aug', '09' => 'cal_sep', '10' => 'cal_oct', '11' => 'cal_nov', '12' => 'cal_dec');
-		}
-		else
+		} else
 		{
 			$month_names = array('01' => 'cal_january', '02' => 'cal_february', '03' => 'cal_march', '04' => 'cal_april', '05' => 'cal_mayl', '06' => 'cal_june', '07' => 'cal_july', '08' => 'cal_august', '09' => 'cal_september', '10' => 'cal_october', '11' => 'cal_november', '12' => 'cal_december');
 		}
@@ -387,12 +379,10 @@ class CI_Calendar {
 		if ($this->day_type === 'long')
 		{
 			$day_names = array('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday');
-		}
-		elseif ($this->day_type === 'short')
+		} elseif ($this->day_type === 'short')
 		{
 			$day_names = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
-		}
-		else
+		} else
 		{
 			$day_names = array('su', 'mo', 'tu', 'we', 'th', 'fr', 'sa');
 		}
@@ -423,8 +413,8 @@ class CI_Calendar {
 	{
 		$date = array();
 
-		$date['month']	= $month;
-		$date['year']	= $year;
+		$date['month'] = $month;
+		$date['year'] = $year;
 
 		while ($date['month'] > 12)
 		{
@@ -528,14 +518,12 @@ class CI_Calendar {
 				if (preg_match('/\{'.$val.'\}(.*?)\{\/'.$val.'\}/si', $this->template, $match))
 				{
 					$this->replacements[$val] = $match[1];
-				}
-				elseif (in_array($val, $today, TRUE))
+				} elseif (in_array($val, $today, TRUE))
 				{
 					$this->replacements[$val] = $this->replacements[substr($val, 0, -6)];
 				}
 			}
-		}
-		elseif (is_array($this->template))
+		} elseif (is_array($this->template))
 		{
 			$this->replacements = array_merge($this->replacements, $this->template);
 		}

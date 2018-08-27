@@ -51,35 +51,35 @@ class CI_DB_oci8_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= FALSE;
+	protected $_create_database = FALSE;
 
 	/**
 	 * CREATE TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= FALSE;
+	protected $_create_table_if = FALSE;
 
 	/**
 	 * DROP DATABASE statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_database	= FALSE;
+	protected $_drop_database = FALSE;
 
 	/**
 	 * DROP TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_table_if	= FALSE;
+	protected $_drop_table_if = FALSE;
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	bool|array
 	 */
-	protected $_unsigned		= FALSE;
+	protected $_unsigned = FALSE;
 
 	// --------------------------------------------------------------------
 
@@ -96,8 +96,7 @@ class CI_DB_oci8_forge extends CI_DB_forge {
 		if ($alter_type === 'DROP')
 		{
 			return parent::_alter_table($alter_type, $table, $field);
-		}
-		elseif ($alter_type === 'CHANGE')
+		} elseif ($alter_type === 'CHANGE')
 		{
 			$alter_type = 'MODIFY';
 		}
@@ -109,8 +108,7 @@ class CI_DB_oci8_forge extends CI_DB_forge {
 			if ($field[$i]['_literal'] !== FALSE)
 			{
 				$field[$i] = "\n\t".$field[$i]['_literal'];
-			}
-			else
+			} else
 			{
 				$field[$i]['_literal'] = "\n\t".$this->_process_column($field[$i]);
 

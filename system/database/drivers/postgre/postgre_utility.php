@@ -53,14 +53,14 @@ class CI_DB_postgre_utility extends CI_DB_utility {
 	 *
 	 * @var	string
 	 */
-	protected $_list_databases	= 'SELECT datname FROM pg_database';
+	protected $_list_databases = 'SELECT datname FROM pg_database';
 
 	/**
 	 * OPTIMIZE TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_optimize_table	= 'REINDEX TABLE %s';
+	protected $_optimize_table = 'REINDEX TABLE %s';
 
 	// --------------------------------------------------------------------
 

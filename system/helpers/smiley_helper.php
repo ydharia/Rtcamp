@@ -117,8 +117,7 @@ if ( ! function_exists('smiley_js'))
 				}
 			}
 EOF;
-		}
-		elseif (is_array($alias))
+		} elseif (is_array($alias))
 		{
 			foreach ($alias as $name => $id)
 			{
@@ -152,8 +151,7 @@ if ( ! function_exists('get_clickable_smileys'))
 		if (is_array($alias))
 		{
 			$smileys = $alias;
-		}
-		elseif (FALSE === ($smileys = _get_smiley_array()))
+		} elseif (FALSE === ($smileys = _get_smiley_array()))
 		{
 			return FALSE;
 		}

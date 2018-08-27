@@ -60,8 +60,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 		if (is_int($this->num_rows))
 		{
 			return $this->num_rows;
-		}
-		elseif (($this->num_rows = odbc_num_rows($this->result_id)) !== -1)
+		} elseif (($this->num_rows = odbc_num_rows($this->result_id)) !== -1)
 		{
 			return $this->num_rows;
 		}
@@ -70,8 +69,7 @@ class CI_DB_odbc_result extends CI_DB_result {
 		if (count($this->result_array) > 0)
 		{
 			return $this->num_rows = count($this->result_array);
-		}
-		elseif (count($this->result_object) > 0)
+		} elseif (count($this->result_object) > 0)
 		{
 			return $this->num_rows = count($this->result_object);
 		}
@@ -130,12 +128,12 @@ class CI_DB_odbc_result extends CI_DB_result {
 		$retval = array();
 		for ($i = 0, $odbc_index = 1, $c = $this->num_fields(); $i < $c; $i++, $odbc_index++)
 		{
-			$retval[$i]			= new stdClass();
+			$retval[$i] = new stdClass();
 			$retval[$i]->name		= odbc_field_name($this->result_id, $odbc_index);
 			$retval[$i]->type		= odbc_field_type($this->result_id, $odbc_index);
 			$retval[$i]->max_length		= odbc_field_len($this->result_id, $odbc_index);
 			$retval[$i]->primary_key	= 0;
-			$retval[$i]->default		= '';
+			$retval[$i]->default = '';
 		}
 
 		return $retval;
@@ -226,7 +224,7 @@ if ( ! function_exists('odbc_fetch_array'))
 		$rs_assoc = array();
 		foreach ($rs as $k => $v)
 		{
-			$field_name = odbc_field_name($result, $k+1);
+			$field_name = odbc_field_name($result, $k + 1);
 			$rs_assoc[$field_name] = $v;
 		}
 
@@ -259,7 +257,7 @@ if ( ! function_exists('odbc_fetch_object'))
 		$rs_object = new stdClass();
 		foreach ($rs as $k => $v)
 		{
-			$field_name = odbc_field_name($result, $k+1);
+			$field_name = odbc_field_name($result, $k + 1);
 			$rs_object->$field_name = $v;
 		}
 

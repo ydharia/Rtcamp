@@ -62,7 +62,7 @@ class CI_Hooks {
 	 *
 	 * @var	array
 	 */
-	public $hooks =	array();
+	public $hooks = array();
 
 	/**
 	 * Array with class objects to use hooks methods
@@ -87,7 +87,7 @@ class CI_Hooks {
 	 */
 	public function __construct()
 	{
-		$CFG =& load_class('Config', 'core');
+		$CFG = & load_class('Config', 'core');
 		log_message('info', 'Hooks Class Initialized');
 
 		// If hooks are not enabled in the config file
@@ -114,7 +114,7 @@ class CI_Hooks {
 			return;
 		}
 
-		$this->hooks =& $hook;
+		$this->hooks = & $hook;
 		$this->enabled = TRUE;
 	}
 
@@ -143,8 +143,7 @@ class CI_Hooks {
 			{
 				$this->_run_hook($val);
 			}
-		}
-		else
+		} else
 		{
 			$this->_run_hook($this->hooks[$which]);
 		}
@@ -172,8 +171,7 @@ class CI_Hooks {
 				: $data();
 
 			return TRUE;
-		}
-		elseif ( ! is_array($data))
+		} elseif ( ! is_array($data))
 		{
 			return FALSE;
 		}
@@ -206,9 +204,9 @@ class CI_Hooks {
 		}
 
 		// Determine and class and/or function names
-		$class		= empty($data['class']) ? FALSE : $data['class'];
-		$function	= empty($data['function']) ? FALSE : $data['function'];
-		$params		= isset($data['params']) ? $data['params'] : '';
+		$class = empty($data['class']) ? FALSE : $data['class'];
+		$function = empty($data['function']) ? FALSE : $data['function'];
+		$params = isset($data['params']) ? $data['params'] : '';
 
 		if (empty($function))
 		{
@@ -227,13 +225,11 @@ class CI_Hooks {
 				if (method_exists($this->_objects[$class], $function))
 				{
 					$this->_objects[$class]->$function($params);
-				}
-				else
+				} else
 				{
 					return $this->_in_progress = FALSE;
 				}
-			}
-			else
+			} else
 			{
 				class_exists($class, FALSE) OR require_once($filepath);
 
@@ -246,8 +242,7 @@ class CI_Hooks {
 				$this->_objects[$class] = new $class();
 				$this->_objects[$class]->$function($params);
 			}
-		}
-		else
+		} else
 		{
 			function_exists($function) OR require_once($filepath);
 

@@ -76,7 +76,7 @@ class CI_Output {
 	 *
 	 * @var	array
 	 */
-	public $mimes =	array();
+	public $mimes = array();
 
 	/**
 	 * Mime-type for the current page
@@ -111,7 +111,7 @@ class CI_Output {
 	 *
 	 * @var	array
 	 */
-	protected $_profiler_sections =	array();
+	protected $_profiler_sections = array();
 
 	/**
 	 * Parse markers flag
@@ -148,7 +148,7 @@ class CI_Output {
 		isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
 
 		// Get mime types for later
-		$this->mimes =& get_mimes();
+		$this->mimes = & get_mimes();
 
 		log_message('info', 'Output Class Initialized');
 	}
@@ -246,7 +246,7 @@ class CI_Output {
 			// Is this extension supported?
 			if (isset($this->mimes[$extension]))
 			{
-				$mime_type =& $this->mimes[$extension];
+				$mime_type = & $this->mimes[$extension];
 
 				if (is_array($mime_type))
 				{
@@ -316,7 +316,7 @@ class CI_Output {
 		{
 			if (strncasecmp($header, $headers[$c], $l = self::strlen($header)) === 0)
 			{
-				return trim(self::substr($headers[$c], $l+1));
+				return trim(self::substr($headers[$c], $l + 1));
 			}
 		}
 
@@ -417,13 +417,13 @@ class CI_Output {
 		// Note:  We use load_class() because we can't use $CI =& get_instance()
 		// since this function is sometimes called by the caching mechanism,
 		// which happens before the CI super object is available.
-		$BM =& load_class('Benchmark', 'core');
-		$CFG =& load_class('Config', 'core');
+		$BM = & load_class('Benchmark', 'core');
+		$CFG = & load_class('Config', 'core');
 
 		// Grab the super object if we can.
 		if (class_exists('CI_Controller', FALSE))
 		{
-			$CI =& get_instance();
+			$CI = & get_instance();
 		}
 
 		// --------------------------------------------------------------------
@@ -431,7 +431,7 @@ class CI_Output {
 		// Set the output data
 		if ($output === '')
 		{
-			$output =& $this->final_output;
+			$output = & $this->final_output;
 		}
 
 		// --------------------------------------------------------------------
@@ -491,8 +491,7 @@ class CI_Output {
 				{
 					header('Content-Encoding: gzip');
 					header('Content-Length: '.self::strlen($output));
-				}
-				else
+				} else
 				{
 					// User agent doesn't support gzip compression,
 					// so we'll have to decompress our cache
@@ -532,8 +531,7 @@ class CI_Output {
 		if (method_exists($CI, '_output'))
 		{
 			$CI->_output($output);
-		}
-		else
+		} else
 		{
 			echo $output; // Send it to the browser!
 		}
@@ -552,7 +550,7 @@ class CI_Output {
 	 */
 	public function _write_cache($output)
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$path = $CI->config->item('cache_path');
 		$cache_path = ($path === '') ? APPPATH.'cache/' : $path;
 
@@ -571,8 +569,7 @@ class CI_Output {
 			if (is_array($cache_query_string))
 			{
 				$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
-			}
-			else
+			} else
 			{
 				$uri .= '?'.$_SERVER['QUERY_STRING'];
 			}
@@ -665,8 +662,7 @@ class CI_Output {
 			if (is_array($cache_query_string))
 			{
 				$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
-			}
-			else
+			} else
 			{
 				$uri .= '?'.$_SERVER['QUERY_STRING'];
 			}
@@ -731,7 +727,7 @@ class CI_Output {
 	 */
 	public function delete_cache($uri = '')
 	{
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$cache_path = $CI->config->item('cache_path');
 		if ($cache_path === '')
 		{
@@ -753,8 +749,7 @@ class CI_Output {
 				if (is_array($cache_query_string))
 				{
 					$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
-				}
-				else
+				} else
 				{
 					$uri .= '?'.$_SERVER['QUERY_STRING'];
 				}

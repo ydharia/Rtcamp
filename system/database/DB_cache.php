@@ -74,8 +74,8 @@ class CI_DB_Cache {
 	public function __construct(&$db)
 	{
 		// Assign the main CI object to $this->CI and load the file helper since we use it a lot
-		$this->CI =& get_instance();
-		$this->db =& $db;
+		$this->CI = & get_instance();
+		$this->db = & $db;
 		$this->CI->load->helper('file');
 
 		$this->check_path();
@@ -194,7 +194,7 @@ class CI_DB_Cache {
 	{
 		if ($segment_one === '')
 		{
-			$segment_one  = ($this->CI->uri->segment(1) == FALSE) ? 'default' : $this->CI->uri->segment(1);
+			$segment_one = ($this->CI->uri->segment(1) == FALSE) ? 'default' : $this->CI->uri->segment(1);
 		}
 
 		if ($segment_two === '')

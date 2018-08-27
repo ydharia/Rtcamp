@@ -51,14 +51,14 @@ class CI_DB_sqlsrv_utility extends CI_DB_utility {
 	 *
 	 * @var	string
 	 */
-	protected $_list_databases	= 'EXEC sp_helpdb'; // Can also be: EXEC sp_databases
+	protected $_list_databases = 'EXEC sp_helpdb'; // Can also be: EXEC sp_databases
 
 	/**
 	 * OPTIMIZE TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_optimize_table	= 'ALTER INDEX all ON %s REORGANIZE';
+	protected $_optimize_table = 'ALTER INDEX all ON %s REORGANIZE';
 
 	// --------------------------------------------------------------------
 

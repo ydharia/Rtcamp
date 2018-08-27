@@ -80,7 +80,7 @@ class CI_Cache_memcached extends CI_Driver {
 	public function __construct()
 	{
 		// Try to load memcached server info from the config file.
-		$CI =& get_instance();
+		$CI = & get_instance();
 		$defaults = $this->_config['default'];
 
 		if ($CI->config->load('memcached', TRUE, TRUE))
@@ -91,12 +91,10 @@ class CI_Cache_memcached extends CI_Driver {
 		if (class_exists('Memcached', FALSE))
 		{
 			$this->_memcached = new Memcached();
-		}
-		elseif (class_exists('Memcache', FALSE))
+		} elseif (class_exists('Memcache', FALSE))
 		{
 			$this->_memcached = new Memcache();
-		}
-		else
+		} else
 		{
 			log_message('error', 'Cache: Failed to create Memcache(d) object; extension not loaded?');
 			return;
@@ -117,8 +115,7 @@ class CI_Cache_memcached extends CI_Driver {
 					TRUE,
 					$cache_server['weight']
 				);
-			}
-			elseif ($this->_memcached instanceof Memcached)
+			} elseif ($this->_memcached instanceof Memcached)
 			{
 				$this->_memcached->addServer(
 					$cache_server['hostname'],
@@ -165,8 +162,7 @@ class CI_Cache_memcached extends CI_Driver {
 		if ($this->_memcached instanceof Memcached)
 		{
 			return $this->_memcached->set($id, $data, $ttl);
-		}
-		elseif ($this->_memcached instanceof Memcache)
+		} elseif ($this->_memcached instanceof Memcache)
 		{
 			return $this->_memcached->set($id, $data, 0, $ttl);
 		}
@@ -304,8 +300,7 @@ class CI_Cache_memcached extends CI_Driver {
 		if ($this->_memcached instanceof Memcache)
 		{
 			$this->_memcached->close();
-		}
-		elseif ($this->_memcached instanceof Memcached && method_exists($this->_memcached, 'quit'))
+		} elseif ($this->_memcached instanceof Memcached && method_exists($this->_memcached, 'quit'))
 		{
 			$this->_memcached->quit();
 		}

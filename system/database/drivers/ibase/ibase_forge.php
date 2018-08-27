@@ -51,28 +51,28 @@ class CI_DB_ibase_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= FALSE;
+	protected $_create_table_if = FALSE;
 
 	/**
 	 * RENAME TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_rename_table	= FALSE;
+	protected $_rename_table = FALSE;
 
 	/**
 	 * DROP TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_table_if	= FALSE;
+	protected $_drop_table_if = FALSE;
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'SMALLINT'	=> 'INTEGER',
 		'INTEGER'	=> 'INT64',
 		'FLOAT'		=> 'DOUBLE PRECISION'
@@ -83,7 +83,7 @@ class CI_DB_ibase_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_null		= 'NULL';
+	protected $_null = 'NULL';
 
 	// --------------------------------------------------------------------
 
@@ -116,8 +116,7 @@ class CI_DB_ibase_forge extends CI_DB_forge {
 		if ( ! ibase_drop_db($this->conn_id))
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
-		}
-		elseif ( ! empty($this->db->data_cache['db_names']))
+		} elseif ( ! empty($this->db->data_cache['db_names']))
 		{
 			$key = array_search(strtolower($this->db->database), array_map('strtolower', $this->db->data_cache['db_names']), TRUE);
 			if ($key !== FALSE)

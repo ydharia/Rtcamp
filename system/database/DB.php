@@ -73,8 +73,7 @@ function &DB($params = '', $query_builder_override = NULL)
 					if (file_exists($file_path = $path.'config/'.ENVIRONMENT.'/database.php'))
 					{
 						include($file_path);
-					}
-					elseif (file_exists($file_path = $path.'config/database.php'))
+					} elseif (file_exists($file_path = $path.'config/database.php'))
 					{
 						include($file_path);
 					}
@@ -95,15 +94,13 @@ function &DB($params = '', $query_builder_override = NULL)
 		if ( ! isset($active_group))
 		{
 			show_error('You have not specified a database connection group via $active_group in your config/database.php file.');
-		}
-		elseif ( ! isset($db[$active_group]))
+		} elseif ( ! isset($db[$active_group]))
 		{
 			show_error('You have specified an invalid database connection group ('.$active_group.') in your config/database.php file.');
 		}
 
 		$params = $db[$active_group];
-	}
-	elseif (is_string($params))
+	} elseif (is_string($params))
 	{
 		/**
 		 * Parse the URL from the DSN string
@@ -181,11 +178,10 @@ function &DB($params = '', $query_builder_override = NULL)
 			 */
 			class CI_DB extends CI_DB_query_builder { }
 		}
-	}
-	elseif ( ! class_exists('CI_DB', FALSE))
+	} elseif ( ! class_exists('CI_DB', FALSE))
 	{
 		/**
-	 	 * @ignore
+		 * @ignore
 		 */
 		class CI_DB extends CI_DB_driver { }
 	}

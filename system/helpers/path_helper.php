@@ -70,8 +70,7 @@ if ( ! function_exists('set_realpath'))
 		if (realpath($path) !== FALSE)
 		{
 			$path = realpath($path);
-		}
-		elseif ($check_existance && ! is_dir($path) && ! is_file($path))
+		} elseif ($check_existance && ! is_dir($path) && ! is_file($path))
 		{
 			show_error('Not a valid path: '.$path);
 		}

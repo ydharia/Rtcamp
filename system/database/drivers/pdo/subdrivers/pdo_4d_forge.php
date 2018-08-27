@@ -51,42 +51,42 @@ class CI_DB_pdo_4d_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= 'CREATE SCHEMA %s';
+	protected $_create_database = 'CREATE SCHEMA %s';
 
 	/**
 	 * DROP DATABASE statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_database	= 'DROP SCHEMA %s';
+	protected $_drop_database = 'DROP SCHEMA %s';
 
 	/**
 	 * CREATE TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= 'CREATE TABLE IF NOT EXISTS';
+	protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
 
 	/**
 	 * RENAME TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_rename_table	= FALSE;
+	protected $_rename_table = FALSE;
 
 	/**
 	 * DROP TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_table_if	= 'DROP TABLE IF EXISTS';
+	protected $_drop_table_if = 'DROP TABLE IF EXISTS';
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'INT16'		=> 'INT',
 		'SMALLINT'	=> 'INT',
 		'INT'		=> 'INT64',
@@ -98,7 +98,7 @@ class CI_DB_pdo_4d_forge extends CI_DB_pdo_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_default		= FALSE;
+	protected $_default = FALSE;
 
 	// --------------------------------------------------------------------
 
@@ -206,8 +206,7 @@ class CI_DB_pdo_4d_forge extends CI_DB_pdo_forge {
 			if (stripos($field['type'], 'int') !== FALSE)
 			{
 				$field['auto_increment'] = ' AUTO_INCREMENT';
-			}
-			elseif (strcasecmp($field['type'], 'UUID') === 0)
+			} elseif (strcasecmp($field['type'], 'UUID') === 0)
 			{
 				$field['auto_increment'] = ' AUTO_GENERATE';
 			}

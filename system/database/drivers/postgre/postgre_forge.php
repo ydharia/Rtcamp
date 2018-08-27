@@ -53,7 +53,7 @@ class CI_DB_postgre_forge extends CI_DB_forge {
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'INT2'		=> 'INTEGER',
 		'SMALLINT'	=> 'INTEGER',
 		'INT'		=> 'BIGINT',

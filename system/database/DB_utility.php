@@ -60,21 +60,21 @@ abstract class CI_DB_utility {
 	 *
 	 * @var	string
 	 */
-	protected $_list_databases		= FALSE;
+	protected $_list_databases = FALSE;
 
 	/**
 	 * OPTIMIZE TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_optimize_table	= FALSE;
+	protected $_optimize_table = FALSE;
 
 	/**
 	 * REPAIR TABLE statement
 	 *
 	 * @var	string
 	 */
-	protected $_repair_table	= FALSE;
+	protected $_repair_table = FALSE;
 
 	// --------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ abstract class CI_DB_utility {
 	 */
 	public function __construct(&$db)
 	{
-		$this->db =& $db;
+		$this->db = & $db;
 		log_message('info', 'Database Utility Class Initialized');
 	}
 
@@ -103,8 +103,7 @@ abstract class CI_DB_utility {
 		if (isset($this->db->data_cache['db_names']))
 		{
 			return $this->db->data_cache['db_names'];
-		}
-		elseif ($this->_list_databases === FALSE)
+		} elseif ($this->_list_databases === FALSE)
 		{
 			return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
 		}
@@ -387,8 +386,7 @@ abstract class CI_DB_utility {
 			{
 				$prefs['filename'] = (count($prefs['tables']) === 1 ? $prefs['tables'] : $this->db->database)
 							.date('Y-m-d_H-i', time()).'.sql';
-			}
-			else
+			} else
 			{
 				// If they included the .zip file extension we'll remove it
 				if (preg_match('|.+?\.zip$|', $prefs['filename']))
@@ -404,18 +402,20 @@ abstract class CI_DB_utility {
 			}
 
 			// Load the Zip class and output it
-			$CI =& get_instance();
+			$CI = & get_instance();
 			$CI->load->library('zip');
 			$CI->zip->add_data($prefs['filename'], $this->_backup($prefs));
 			return $CI->zip->get_zip();
-		}
-		elseif ($prefs['format'] === 'txt') // Was a text file requested?
+		} elseif ($prefs['format'] === 'txt') {
+			// Was a text file requested?
 		{
 			return $this->_backup($prefs);
 		}
-		elseif ($prefs['format'] === 'gzip') // Was a Gzip file requested?
+		} elseif ($prefs['format'] === 'gzip') {
+			// Was a Gzip file requested?
 		{
 			return gzencode($this->_backup($prefs));
+		}
 		}
 
 		return;

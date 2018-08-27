@@ -83,8 +83,7 @@ class CI_DB_pdo_ibm_driver extends CI_DB_pdo_driver {
 				if (isset($this->DSN))
 				{
 					$this->dsn .= 'DSN='.$this->DSN;
-				}
-				elseif ( ! empty($this->database))
+				} elseif ( ! empty($this->database))
 				{
 					$this->dsn .= 'DSN='.$this->database;
 				}
@@ -97,8 +96,7 @@ class CI_DB_pdo_ibm_driver extends CI_DB_pdo_driver {
 			if (isset($this->DATABASE))
 			{
 				$this->dsn .= 'DATABASE='.$this->DATABASE.';';
-			}
-			elseif ( ! empty($this->database))
+			} elseif ( ! empty($this->database))
 			{
 				$this->dsn .= 'DATABASE='.$this->database.';';
 			}
@@ -106,8 +104,7 @@ class CI_DB_pdo_ibm_driver extends CI_DB_pdo_driver {
 			if (isset($this->HOSTNAME))
 			{
 				$this->dsn .= 'HOSTNAME='.$this->HOSTNAME.';';
-			}
-			else
+			} else
 			{
 				$this->dsn .= 'HOSTNAME='.(empty($this->hostname) ? '127.0.0.1;' : $this->hostname.';');
 			}
@@ -115,8 +112,7 @@ class CI_DB_pdo_ibm_driver extends CI_DB_pdo_driver {
 			if (isset($this->PORT))
 			{
 				$this->dsn .= 'PORT='.$this->port.';';
-			}
-			elseif ( ! empty($this->port))
+			} elseif ( ! empty($this->port))
 			{
 				$this->dsn .= ';PORT='.$this->port.';';
 			}

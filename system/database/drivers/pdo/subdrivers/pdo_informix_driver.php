@@ -92,8 +92,7 @@ class CI_DB_pdo_informix_driver extends CI_DB_pdo_driver {
 				if (isset($this->DSN))
 				{
 					$this->dsn .= 'DSN='.$this->DSN;
-				}
-				elseif ( ! empty($this->database))
+				} elseif ( ! empty($this->database))
 				{
 					$this->dsn .= 'DSN='.$this->database;
 				}
@@ -104,8 +103,7 @@ class CI_DB_pdo_informix_driver extends CI_DB_pdo_driver {
 			if (isset($this->host))
 			{
 				$this->dsn .= 'host='.$this->host;
-			}
-			else
+			} else
 			{
 				$this->dsn .= 'host='.(empty($this->hostname) ? '127.0.0.1' : $this->hostname);
 			}
@@ -113,8 +111,7 @@ class CI_DB_pdo_informix_driver extends CI_DB_pdo_driver {
 			if (isset($this->service))
 			{
 				$this->dsn .= '; service='.$this->service;
-			}
-			elseif ( ! empty($this->port))
+			} elseif ( ! empty($this->port))
 			{
 				$this->dsn .= '; service='.$this->port;
 			}
@@ -166,8 +163,7 @@ class CI_DB_pdo_informix_driver extends CI_DB_pdo_driver {
 		if (strpos($table, '.') !== FALSE)
 		{
 			sscanf($table, '%[^.].%s', $owner, $table);
-		}
-		else
+		} else
 		{
 			$owner = $this->username;
 		}

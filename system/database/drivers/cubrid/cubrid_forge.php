@@ -51,7 +51,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 	 *
 	 * @var	string
 	 */
-	protected $_create_database	= FALSE;
+	protected $_create_database = FALSE;
 
 	/**
 	 * CREATE TABLE keys flag
@@ -61,28 +61,28 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 	 *
 	 * @var	bool
 	 */
-	protected $_create_table_keys	= TRUE;
+	protected $_create_table_keys = TRUE;
 
 	/**
 	 * DROP DATABASE statement
 	 *
 	 * @var	string
 	 */
-	protected $_drop_database	= FALSE;
+	protected $_drop_database = FALSE;
 
 	/**
 	 * CREATE TABLE IF statement
 	 *
 	 * @var	string
 	 */
-	protected $_create_table_if	= FALSE;
+	protected $_create_table_if = FALSE;
 
 	/**
 	 * UNSIGNED support
 	 *
 	 * @var	array
 	 */
-	protected $_unsigned		= array(
+	protected $_unsigned = array(
 		'SHORT'		=> 'INTEGER',
 		'SMALLINT'	=> 'INTEGER',
 		'INT'		=> 'BIGINT',
@@ -116,8 +116,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 			if ($field[$i]['_literal'] !== FALSE)
 			{
 				$sqls[] = $sql.' CHANGE '.$field[$i]['_literal'];
-			}
-			else
+			} else
 			{
 				$alter_type = empty($field[$i]['new_name']) ? ' MODIFY ' : ' CHANGE ';
 				$sqls[] = $sql.$alter_type.$this->_process_column($field[$i]);
@@ -209,8 +208,7 @@ class CI_DB_cubrid_forge extends CI_DB_forge {
 						continue;
 					}
 				}
-			}
-			elseif ( ! isset($this->fields[$this->keys[$i]]))
+			} elseif ( ! isset($this->fields[$this->keys[$i]]))
 			{
 				unset($this->keys[$i]);
 				continue;

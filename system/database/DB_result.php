@@ -69,28 +69,28 @@ class CI_DB_result {
 	 *
 	 * @var	array[]
 	 */
-	public $result_array			= array();
+	public $result_array = array();
 
 	/**
 	 * Result Object
 	 *
 	 * @var	object[]
 	 */
-	public $result_object			= array();
+	public $result_object = array();
 
 	/**
 	 * Custom Result Object
 	 *
 	 * @var	object[]
 	 */
-	public $custom_result_object		= array();
+	public $custom_result_object = array();
 
 	/**
 	 * Current Row index
 	 *
 	 * @var	int
 	 */
-	public $current_row			= 0;
+	public $current_row = 0;
 
 	/**
 	 * Number of rows
@@ -132,12 +132,10 @@ class CI_DB_result {
 		if (is_int($this->num_rows))
 		{
 			return $this->num_rows;
-		}
-		elseif (count($this->result_array) > 0)
+		} elseif (count($this->result_array) > 0)
 		{
 			return $this->num_rows = count($this->result_array);
-		}
-		elseif (count($this->result_object) > 0)
+		} elseif (count($this->result_object) > 0)
 		{
 			return $this->num_rows = count($this->result_object);
 		}
@@ -158,8 +156,7 @@ class CI_DB_result {
 		if ($type === 'array')
 		{
 			return $this->result_array();
-		}
-		elseif ($type === 'object')
+		} elseif ($type === 'object')
 		{
 			return $this->result_object();
 		}
@@ -180,8 +177,7 @@ class CI_DB_result {
 		if (isset($this->custom_result_object[$class_name]))
 		{
 			return $this->custom_result_object[$class_name];
-		}
-		elseif ( ! $this->result_id OR $this->num_rows === 0)
+		} elseif ( ! $this->result_id OR $this->num_rows === 0)
 		{
 			return array();
 		}
@@ -191,8 +187,7 @@ class CI_DB_result {
 		if (($c = count($this->result_array)) > 0)
 		{
 			$_data = 'result_array';
-		}
-		elseif (($c = count($this->result_object)) > 0)
+		} elseif (($c = count($this->result_object)) > 0)
 		{
 			$_data = 'result_object';
 		}
@@ -332,8 +327,11 @@ class CI_DB_result {
 			return $this->row_data[$n];
 		}
 
-		if ($type === 'object') return $this->row_object($n);
-		elseif ($type === 'array') return $this->row_array($n);
+		if ($type === 'object') {
+			return $this->row_object($n);
+		} elseif ($type === 'array') {
+			return $this->row_array($n);
+		}
 
 		return $this->custom_row_object($n, $type);
 	}
@@ -529,8 +527,7 @@ class CI_DB_result {
 		if ($type === 'array')
 		{
 			return $this->_fetch_assoc();
-		}
-		elseif ($type === 'object')
+		} elseif ($type === 'object')
 		{
 			return $this->_fetch_object();
 		}

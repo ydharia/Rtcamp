@@ -60,16 +60,13 @@ class CI_DB_pdo_result extends CI_DB_result {
 		if (is_int($this->num_rows))
 		{
 			return $this->num_rows;
-		}
-		elseif (count($this->result_array) > 0)
+		} elseif (count($this->result_array) > 0)
 		{
 			return $this->num_rows = count($this->result_array);
-		}
-		elseif (count($this->result_object) > 0)
+		} elseif (count($this->result_object) > 0)
 		{
 			return $this->num_rows = count($this->result_object);
-		}
-		elseif (($num_rows = $this->result_id->rowCount()) > 0)
+		} elseif (($num_rows = $this->result_id->rowCount()) > 0)
 		{
 			return $this->num_rows = $num_rows;
 		}
@@ -131,7 +128,7 @@ class CI_DB_pdo_result extends CI_DB_result {
 			{
 				$field = $this->result_id->getColumnMeta($i);
 
-				$retval[$i]			= new stdClass();
+				$retval[$i] = new stdClass();
 				$retval[$i]->name		= $field['name'];
 				$retval[$i]->type		= $field['native_type'];
 				$retval[$i]->max_length		= ($field['len'] > 0) ? $field['len'] : NULL;
@@ -139,8 +136,7 @@ class CI_DB_pdo_result extends CI_DB_result {
 			}
 
 			return $retval;
-		}
-		catch (Exception $e)
+		} catch (Exception $e)
 		{
 			if ($this->db->db_debug)
 			{

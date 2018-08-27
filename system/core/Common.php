@@ -111,8 +111,7 @@ if ( ! function_exists('is_really_writable'))
 			@chmod($file, 0777);
 			@unlink($file);
 			return TRUE;
-		}
-		elseif ( ! is_file($file) OR ($fp = @fopen($file, 'ab')) === FALSE)
+		} elseif ( ! is_file($file) OR ($fp = @fopen($file, 'ab')) === FALSE)
 		{
 			return FALSE;
 		}
@@ -253,8 +252,7 @@ if ( ! function_exists('get_config'))
 			if (file_exists($file_path = APPPATH.'config/'.ENVIRONMENT.'/config.php'))
 			{
 				require($file_path);
-			}
-			elseif ( ! $found)
+			} elseif ( ! $found)
 			{
 				set_status_header(503);
 				echo 'The configuration file does not exist.';
@@ -297,7 +295,7 @@ if ( ! function_exists('config_item'))
 		if (empty($_config))
 		{
 			// references cannot be directly assigned to static variables, so we use an array
-			$_config[0] =& get_config();
+			$_config[0] = & get_config();
 		}
 
 		return isset($_config[0][$item]) ? $_config[0][$item] : NULL;
@@ -350,12 +348,10 @@ if ( ! function_exists('is_https'))
 		if ( ! empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
 		{
 			return TRUE;
-		}
-		elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+		} elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
 		{
 			return TRUE;
-		}
-		elseif ( ! empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off')
+		} elseif ( ! empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off')
 		{
 			return TRUE;
 		}
@@ -407,13 +403,12 @@ if ( ! function_exists('show_error'))
 		{
 			$exit_status = $status_code + 9; // 9 is EXIT__AUTO_MIN
 			$status_code = 500;
-		}
-		else
+		} else
 		{
 			$exit_status = 1; // EXIT_ERROR
 		}
 
-		$_error =& load_class('Exceptions', 'core');
+		$_error = & load_class('Exceptions', 'core');
 		echo $_error->show_error($heading, $message, 'error_general', $status_code);
 		exit($exit_status);
 	}
@@ -436,7 +431,7 @@ if ( ! function_exists('show_404'))
 	 */
 	function show_404($page = '', $log_error = TRUE)
 	{
-		$_error =& load_class('Exceptions', 'core');
+		$_error = & load_class('Exceptions', 'core');
 		$_error->show_404($page, $log_error);
 		exit(4); // EXIT_UNKNOWN_FILE
 	}
@@ -463,7 +458,7 @@ if ( ! function_exists('log_message'))
 		if ($_log === NULL)
 		{
 			// references cannot be directly assigned to static variables, so we use an array
-			$_log[0] =& load_class('Log', 'core');
+			$_log[0] = & load_class('Log', 'core');
 		}
 
 		$_log[0]->write_log($level, $message);
@@ -552,8 +547,7 @@ if ( ! function_exists('set_status_header'))
 			if (isset($stati[$code]))
 			{
 				$text = $stati[$code];
-			}
-			else
+			} else
 			{
 				show_error('No status text available. Please check your status code number or supply your own message text.', 500);
 			}
@@ -614,7 +608,7 @@ if ( ! function_exists('_error_handler'))
 			return;
 		}
 
-		$_error =& load_class('Exceptions', 'core');
+		$_error = & load_class('Exceptions', 'core');
 		$_error->log_exception($severity, $message, $filepath, $line);
 
 		// Should we display the error?
@@ -649,7 +643,7 @@ if ( ! function_exists('_exception_handler'))
 	 */
 	function _exception_handler($exception)
 	{
-		$_error =& load_class('Exceptions', 'core');
+		$_error = & load_class('Exceptions', 'core');
 		$_error->log_exception('error', 'Exception: '.$exception->getMessage(), $exception->getFile(), $exception->getLine());
 
 		is_cli() OR set_status_header(500);
@@ -713,12 +707,12 @@ if ( ! function_exists('remove_invisible_characters'))
 		// carriage return (dec 13) and horizontal tab (dec 09)
 		if ($url_encoded)
 		{
-			$non_displayables[] = '/%0[0-8bcef]/i';	// url encoded 00-08, 11, 12, 14, 15
-			$non_displayables[] = '/%1[0-9a-f]/i';	// url encoded 16-31
-			$non_displayables[] = '/%7f/i';	// url encoded 127
+			$non_displayables[] = '/%0[0-8bcef]/i'; // url encoded 00-08, 11, 12, 14, 15
+			$non_displayables[] = '/%1[0-9a-f]/i'; // url encoded 16-31
+			$non_displayables[] = '/%7f/i'; // url encoded 127
 		}
 
-		$non_displayables[] = '/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/S';	// 00-08, 11, 12, 14-31, 127
+		$non_displayables[] = '/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/S'; // 00-08, 11, 12, 14-31, 127
 
 		do
 		{

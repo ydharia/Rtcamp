@@ -60,63 +60,63 @@ class CI_Form_validation {
 	 *
 	 * @var array
 	 */
-	protected $_field_data		= array();
+	protected $_field_data = array();
 
 	/**
 	 * Validation rules for the current form
 	 *
 	 * @var array
 	 */
-	protected $_config_rules	= array();
+	protected $_config_rules = array();
 
 	/**
 	 * Array of validation errors
 	 *
 	 * @var array
 	 */
-	protected $_error_array		= array();
+	protected $_error_array = array();
 
 	/**
 	 * Array of custom error messages
 	 *
 	 * @var array
 	 */
-	protected $_error_messages	= array();
+	protected $_error_messages = array();
 
 	/**
 	 * Start tag for error wrapping
 	 *
 	 * @var string
 	 */
-	protected $_error_prefix	= '<p>';
+	protected $_error_prefix = '<p>';
 
 	/**
 	 * End tag for error wrapping
 	 *
 	 * @var string
 	 */
-	protected $_error_suffix	= '</p>';
+	protected $_error_suffix = '</p>';
 
 	/**
 	 * Custom error message
 	 *
 	 * @var string
 	 */
-	protected $error_string		= '';
+	protected $error_string = '';
 
 	/**
 	 * Whether the form data has been validated as safe
 	 *
 	 * @var bool
 	 */
-	protected $_safe_form_data	= FALSE;
+	protected $_safe_form_data = FALSE;
 
 	/**
 	 * Custom data to validate
 	 *
 	 * @var array
 	 */
-	public $validation_data	= array();
+	public $validation_data = array();
 
 	/**
 	 * Initialize Form_Validation class
@@ -126,7 +126,7 @@ class CI_Form_validation {
 	 */
 	public function __construct($rules = array())
 	{
-		$this->CI =& get_instance();
+		$this->CI = & get_instance();
 
 		// applies delimiters set in config file.
 		if (isset($rules['error_prefix']))
@@ -202,8 +202,7 @@ class CI_Form_validation {
 		if ( ! is_string($field) OR $field === '' OR empty($rules))
 		{
 			return $this;
-		}
-		elseif ( ! is_array($rules))
+		} elseif ( ! is_array($rules))
 		{
 			// BC: Convert pipe-separated rules string to an array
 			if ( ! is_string($rules))
@@ -457,8 +456,7 @@ class CI_Form_validation {
 			if ($row['is_array'] === TRUE)
 			{
 				$this->_field_data[$field]['postdata'] = $this->_reduce_array($validation_array, $row['keys']);
-			}
-			elseif (isset($validation_array[$field]))
+			} elseif (isset($validation_array[$field]))
 			{
 				$this->_field_data[$field]['postdata'] = $validation_array[$field];
 			}
@@ -562,7 +560,7 @@ class CI_Form_validation {
 	{
 		if (is_array($array) && isset($keys[$i]))
 		{
-			return isset($array[$keys[$i]]) ? $this->_reduce_array($array[$keys[$i]], $keys, ($i+1)) : NULL;
+			return isset($array[$keys[$i]]) ? $this->_reduce_array($array[$keys[$i]], $keys, ($i + 1)) : NULL;
 		}
 
 		// NULL must be returned for empty fields
@@ -585,22 +583,21 @@ class CI_Form_validation {
 				if ($row['is_array'] === FALSE)
 				{
 					isset($_POST[$field]) && $_POST[$field] = $row['postdata'];
-				}
-				else
+				} else
 				{
 					// start with a reference
-					$post_ref =& $_POST;
+					$post_ref = & $_POST;
 
 					// before we assign values, make a reference to the right POST key
 					if (count($row['keys']) === 1)
 					{
-						$post_ref =& $post_ref[current($row['keys'])];
+						$post_ref = & $post_ref[current($row['keys'])];
 					}
 					else
 					{
 						foreach ($row['keys'] as $val)
 						{
-							$post_ref =& $post_ref[$val];
+							$post_ref = & $post_ref[$val];
 						}
 					}
 
@@ -655,8 +652,7 @@ class CI_Form_validation {
 
 				$postdata = $this->_field_data[$row['field']]['postdata'][$cycles];
 				$_in_array = TRUE;
-			}
-			else
+			} else
 			{
 				// If we get an array field, but it's not expected - then it is most likely
 				// somebody messing with the form on the client side, so we'll just consider
@@ -675,12 +671,10 @@ class CI_Form_validation {
 					$rule = substr($rule, 9);
 					$callback = TRUE;
 				}
-			}
-			elseif (is_callable($rule))
+			} elseif (is_callable($rule))
 			{
 				$callable = TRUE;
-			}
-			elseif (is_array($rule) && isset($rule[0], $rule[1]) && is_callable($rule[1]))
+			} elseif (is_array($rule) && isset($rule[0], $rule[1]) && is_callable($rule[1]))
 			{
 				// We have a "named" callable, so save the name
 				$callable = $rule[0];
@@ -716,14 +710,12 @@ class CI_Form_validation {
 					{
 						log_message('debug', 'Unable to find callback validation rule: '.$rule);
 						$result = FALSE;
-					}
-					else
+					} else
 					{
 						// Run the function and grab the result
 						$result = $this->CI->$rule($postdata, $param);
 					}
-				}
-				else
+				} else
 				{
 					$result = is_array($rule)
 						? $rule[0]->{$rule[1]}($postdata)
@@ -740,13 +732,11 @@ class CI_Form_validation {
 				if ($_in_array === TRUE)
 				{
 					$this->_field_data[$row['field']]['postdata'][$cycles] = is_bool($result) ? $postdata : $result;
-				}
-				else
+				} else
 				{
 					$this->_field_data[$row['field']]['postdata'] = is_bool($result) ? $postdata : $result;
 				}
-			}
-			elseif ( ! method_exists($this, $rule))
+			} elseif ( ! method_exists($this, $rule))
 			{
 				// If our own wrapper function doesn't exist we see if a native PHP function does.
 				// Users can use any native PHP function call that has one param.
@@ -758,27 +748,23 @@ class CI_Form_validation {
 					if ($_in_array === TRUE)
 					{
 						$this->_field_data[$row['field']]['postdata'][$cycles] = is_bool($result) ? $postdata : $result;
-					}
-					else
+					} else
 					{
 						$this->_field_data[$row['field']]['postdata'] = is_bool($result) ? $postdata : $result;
 					}
-				}
-				else
+				} else
 				{
 					log_message('debug', 'Unable to find validation rule: '.$rule);
 					$result = FALSE;
 				}
-			}
-			else
+			} else
 			{
 				$result = $this->$rule($postdata, $param);
 
 				if ($_in_array === TRUE)
 				{
 					$this->_field_data[$row['field']]['postdata'][$cycles] = is_bool($result) ? $postdata : $result;
-				}
-				else
+				} else
 				{
 					$this->_field_data[$row['field']]['postdata'] = is_bool($result) ? $postdata : $result;
 				}
@@ -791,8 +777,7 @@ class CI_Form_validation {
 				if ( ! is_string($rule))
 				{
 					$line = $this->CI->lang->line('form_validation_error_message_not_set').'(Anonymous function)';
-				}
-				else
+				} else
 				{
 					$line = $this->_get_error_message($rule, $row['field']);
 				}
@@ -840,8 +825,7 @@ class CI_Form_validation {
 		elseif (isset($this->_error_messages[$rule]))
 		{
 			return $this->_error_messages[$rule];
-		}
-		elseif (FALSE !== ($line = $this->CI->lang->line('form_validation_'.$rule)))
+		} elseif (FALSE !== ($line = $this->CI->lang->line('form_validation_'.$rule)))
 		{
 			return $line;
 		}
@@ -973,8 +957,7 @@ class CI_Form_validation {
 			}
 
 			return '';
-		}
-		elseif (($field === '' OR $value === '') OR ($field !== $value))
+		} elseif (($field === '' OR $value === '') OR ($field !== $value))
 		{
 			return '';
 		}
@@ -1016,8 +999,7 @@ class CI_Form_validation {
 			}
 
 			return '';
-		}
-		elseif (($field === '' OR $value === '') OR ($field !== $value))
+		} elseif (($field === '' OR $value === '') OR ($field !== $value))
 		{
 			return '';
 		}
@@ -1193,14 +1175,12 @@ class CI_Form_validation {
 		if (empty($str))
 		{
 			return FALSE;
-		}
-		elseif (preg_match('/^(?:([^:]*)\:)?\/\/(.+)$/', $str, $matches))
+		} elseif (preg_match('/^(?:([^:]*)\:)?\/\/(.+)$/', $str, $matches))
 		{
 			if (empty($matches[2]))
 			{
 				return FALSE;
-			}
-			elseif ( ! in_array(strtolower($matches[1]), array('http', 'https'), TRUE))
+			} elseif ( ! in_array(strtolower($matches[1]), array('http', 'https'), TRUE))
 			{
 				return FALSE;
 			}

@@ -120,7 +120,7 @@ class CI_Log {
 	 */
 	public function __construct()
 	{
-		$config =& get_config();
+		$config = & get_config();
 
 		isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
 
@@ -138,8 +138,7 @@ class CI_Log {
 		if (is_numeric($config['log_threshold']))
 		{
 			$this->_threshold = (int) $config['log_threshold'];
-		}
-		elseif (is_array($config['log_threshold']))
+		} elseif (is_array($config['log_threshold']))
 		{
 			$this->_threshold = 0;
 			$this->_threshold_array = array_flip($config['log_threshold']);
@@ -209,8 +208,7 @@ class CI_Log {
 			$microtime_short = sprintf("%06d", ($microtime_full - floor($microtime_full)) * 1000000);
 			$date = new DateTime(date('Y-m-d H:i:s.'.$microtime_short, $microtime_full));
 			$date = $date->format($this->_date_fmt);
-		}
-		else
+		} else
 		{
 			$date = date($this->_date_fmt);
 		}

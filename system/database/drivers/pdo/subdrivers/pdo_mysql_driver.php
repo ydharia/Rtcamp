@@ -105,8 +105,7 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
 			empty($this->port) OR $this->dsn .= ';port='.$this->port;
 			empty($this->database) OR $this->dsn .= ';dbname='.$this->database;
 			empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
-		}
-		elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 6) === FALSE)
+		} elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 6) === FALSE)
 		{
 			$this->dsn .= ';charset='.$this->char_set;
 		}
@@ -127,8 +126,7 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
 			if ($this->stricton)
 			{
 				$sql = 'CONCAT(@@sql_mode, ",", "STRICT_ALL_TABLES")';
-			}
-			else
+			} else
 			{
 				$sql = 'REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
                                         @@sql_mode,
@@ -145,8 +143,7 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
 				if (empty($this->options[PDO::MYSQL_ATTR_INIT_COMMAND]))
 				{
 					$this->options[PDO::MYSQL_ATTR_INIT_COMMAND] = 'SET SESSION sql_mode = '.$sql;
-				}
-				else
+				} else
 				{
 					$this->options[PDO::MYSQL_ATTR_INIT_COMMAND] .= ', @@session.sql_mode = '.$sql;
 				}
@@ -161,9 +158,9 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
 		if (is_array($this->encrypt))
 		{
 			$ssl = array();
-			empty($this->encrypt['ssl_key'])    OR $ssl[PDO::MYSQL_ATTR_SSL_KEY]    = $this->encrypt['ssl_key'];
-			empty($this->encrypt['ssl_cert'])   OR $ssl[PDO::MYSQL_ATTR_SSL_CERT]   = $this->encrypt['ssl_cert'];
-			empty($this->encrypt['ssl_ca'])     OR $ssl[PDO::MYSQL_ATTR_SSL_CA]     = $this->encrypt['ssl_ca'];
+			empty($this->encrypt['ssl_key']) OR $ssl[PDO::MYSQL_ATTR_SSL_KEY]    = $this->encrypt['ssl_key'];
+			empty($this->encrypt['ssl_cert']) OR $ssl[PDO::MYSQL_ATTR_SSL_CERT]   = $this->encrypt['ssl_cert'];
+			empty($this->encrypt['ssl_ca']) OR $ssl[PDO::MYSQL_ATTR_SSL_CA]     = $this->encrypt['ssl_ca'];
 			empty($this->encrypt['ssl_capath']) OR $ssl[PDO::MYSQL_ATTR_SSL_CAPATH] = $this->encrypt['ssl_capath'];
 			empty($this->encrypt['ssl_cipher']) OR $ssl[PDO::MYSQL_ATTR_SSL_CIPHER] = $this->encrypt['ssl_cipher'];
 
@@ -318,16 +315,16 @@ class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
 		$retval = array();
 		for ($i = 0, $c = count($query); $i < $c; $i++)
 		{
-			$retval[$i]			= new stdClass();
-			$retval[$i]->name		= $query[$i]->Field;
+			$retval[$i] = new stdClass();
+			$retval[$i]->name = $query[$i]->Field;
 
 			sscanf($query[$i]->Type, '%[a-z](%d)',
 				$retval[$i]->type,
 				$retval[$i]->max_length
 			);
 
-			$retval[$i]->default		= $query[$i]->Default;
-			$retval[$i]->primary_key	= (int) ($query[$i]->Key === 'PRI');
+			$retval[$i]->default = $query[$i]->Default;
+			$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
 		}
 
 		return $retval;
