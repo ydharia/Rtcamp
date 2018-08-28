@@ -353,34 +353,6 @@ class myfacebook extends CI_Controller {
 		
 	}
 
-	private function downloadMultiple($albs = "all", $selected = array())
-	{
-		$albums = $this->facebook->request('get', '/me?fields=albums{count,name}');
-		$i = 1;
-		foreach ($albums["albums"]["data"] as $ab)
-		{
-			if ($albs == "all" && $ab["count"] != 0)
-			{
-				$data = $this->downloadAlbum($ab["id"]);
-			} else
-			{
-				if (in_array($ab["id"], $selected))
-				{
-					$data = $this->downloadAlbum($ab["id"]);
-				}
-			}
-		}
-		
-		if ($albs == "all")
-		{
-			$data["foldername"] = $this->session->userdata("uname")."_all_albums";
-		} else
-		{
-			$data["foldername"] = $this->session->userdata("uname")."_Selected_albums";
-		}
-		$this->zipping($data);
-	}
-
 	public function zipping($type = "")
 	{
 		$albumName = $this->input->post("albumName");
