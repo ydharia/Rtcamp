@@ -74,3 +74,28 @@ when all albums are moved to google drive then **_cron job_ is removed from serv
 [Google Drive API](https://github.com/uchilaka/CI_GoogleDrive)
 
 [Crontab](https://github.com/biozshock/crontab)
+
+
+## Setup / Install : 
+
+### 1. Facebook setup.
+
+open -> application/config/facebook.php
+
+    $config['facebook_app_id']              = 'APP_API_KEY';
+    $config['facebook_app_secret']          = 'API_SECRET_KEY'; 
+
+put your app id and app secret key
+get app id [click here](https://developers.facebook.com/apps/) 
+
+get APP_ID and APP_SECRET_KEY from 
+
+1. Select your application
+2. goto basic -> setting and get your keys.
+
+### 1. Google Drive setup.
+
+    $config = array("client_id"=>"CLIENT_ID", "client_secret"=>"CLIENT_SECRET", "redirect_uri"=>$url);
+    
+put your CLIENT_ID and CLIENT_SECRET
+get [CLIENT_ID and CLIENT_SECRET](https://console.cloud.google.com/apis/credentials)
