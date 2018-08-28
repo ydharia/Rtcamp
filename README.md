@@ -99,7 +99,8 @@ get APP_ID and APP_SECRET_KEY from
 
 open -> application/controllers/Myfacebook.php
 edit CLIENT_ID and CLIENT_SECRET in construct and googleLogin() function
-        public function \__construct()
+
+        public function __construct()
         {
             .....
             $config = array("client_id"=>"__CLIENT_ID__", "client_secret"=>"__CLIENT_SECRET__", "redirect_uri"=>$url);
