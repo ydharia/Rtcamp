@@ -1,5 +1,13 @@
 # Rtcamp Facebook Challenge
 
+### scrutinizer Result : 
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ydharia/Rtcamp/?branch=master)
+
+[![Build Status](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ydharia/Rtcamp/build-status/master)
+
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
 ### Live Demo :
 
 Url : https://rtcampyash.myfoodstore.in
