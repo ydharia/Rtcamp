@@ -69,6 +69,6 @@ when all albums are moved to google drive then **_cron job_ is removed from serv
 
 ### Library Used :
 
-    Facebook PHP SDK 
+    [Facebook PHP SDK](https://github.com/darkwhispering/facebook-sdk-codeigniter)
     Google Drive API
     Crontab
