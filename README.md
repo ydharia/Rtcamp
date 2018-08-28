@@ -82,6 +82,8 @@ when all albums are moved to google drive then **_cron job_ is removed from serv
 
 open -> application/config/facebook.php
 
+edit 2 lines with your facebook_app_id and facebook_app_secret
+
     $config['facebook_app_id']              = 'APP_API_KEY';
     $config['facebook_app_secret']          = 'API_SECRET_KEY'; 
 
@@ -95,7 +97,20 @@ get APP_ID and APP_SECRET_KEY from
 
 ### 2. Google Drive setup.
 
-    $config = array("client_id"=>"CLIENT_ID", "client_secret"=>"CLIENT_SECRET", "redirect_uri"=>$url);
+open -> application/controllers/Myfacebook.php
+edit CLIENT_ID and CLIENT_SECRET in construct and googleLogin() function
+        public function \__construct()
+        {
+            .....
+            $config = array("client_id"=>"__CLIENT_ID__", "client_secret"=>"__CLIENT_SECRET__", "redirect_uri"=>$url);
+            ....
+        }
+        public function googleLogin()
+        {
+            .....
+            $config = array("client_id"=>"__CLIENT_ID__", "client_secret"=>"__CLIENT_SECRET__", "redirect_uri"=>$url);		
+            .....
+        }
     
 put your CLIENT_ID and CLIENT_SECRET
 get [CLIENT_ID and CLIENT_SECRET](https://console.cloud.google.com/apis/credentials)
