@@ -93,9 +93,11 @@ get APP_ID and APP_SECRET_KEY from
 1. Select your application
 2. goto basic -> setting and get your keys.
 
-### 1. Google Drive setup.
+### 2. Google Drive setup.
 
     $config = array("client_id"=>"CLIENT_ID", "client_secret"=>"CLIENT_SECRET", "redirect_uri"=>$url);
     
 put your CLIENT_ID and CLIENT_SECRET
 get [CLIENT_ID and CLIENT_SECRET](https://console.cloud.google.com/apis/credentials)
+
+put your website domain and Authorized redirect URIs to client id of your project in google conslole.
