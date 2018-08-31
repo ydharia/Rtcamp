@@ -66,12 +66,15 @@ function downloadAlbum(albumId,type,e="")
         	var picno = i+1;
         	var jdata = { albumId: albumId, albumName: response.album.name,source: response.album.data[i].source, photono: picno };
         	
-			  xhr[i] = $.ajax({
+			  $.ajax({
 			        dataType:'json',
 			        type:'post',
 				data:jdata,				        
 			        url:baseurl+'myfacebook/downloadSingle',
 			        catch:false,
+				beforeSend: function (jqXHR, settings) {
+				        xhr.push(jqXHR);
+				},
 			        success:async function(result)
 			        {
 			        	$("#downloadAlbumName").html('Downloading '+response.album.name+' photos');
@@ -137,11 +140,8 @@ function downloadAlbum(albumId,type,e="")
 			        }
 			    });    
         	}
-        	await sleep(1000);
-        	
+        	await sleep(1000);	
         }
-        
-        
     });
     
 }
@@ -153,10 +153,9 @@ function download_zip(url){
 function canceldownload()
 {
 	$("#download-button").html('<button><i class="fa fa-refresh fa-spin" /></button> <button style="background-color:#d9534f;" onclick="canceldownload()"><i class="fa fa-refresh fa-spin" /></button>');
-	for(i=0;i<xhr.length;i++)
-	{
-		xhr[i].abort();
-	}
+	$.each(xhr, function(idx, jqXHR) {
+	        jqXHR.abort();
+	});
 	closeDownload();
 	$.ajax({
 		dataType:'json',
