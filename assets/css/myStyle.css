@@ -5,7 +5,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("http://acshub.co.uk/hubassets/uploads/2016/09/acs-website-background-building-e1472862899804.jpg");    
+    background-image: url("https://rtcampyash.myfoodstore.in/assets/images/bgimg.jpg");    
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -31,10 +31,9 @@ body, html {
 
 .header > .profile {
     position: relative;
-    width: 60vw;
+    width: 40vw;
     height: 100%;
     float: right;
-    margin-left: 5vw;
 }
 
 .profile > .profileName {
@@ -65,7 +64,7 @@ body, html {
     color: inherit;
 }
 
-.header > .menu > .mobileMenu {
+.header > .menu > .mobileMenu, .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,9 +74,16 @@ body, html {
     z-index: 20;
     padding:5px 5px; 
     border-radius: 5px;
+    cursor:pointer;
+    margin-left: 1em;
+    display: none;
 }
 
-.header > .menu > .mobileMenu > i {
+.back  {	
+    display: block;
+}
+
+.header > .menu > .mobileMenu > i, .header > .backDiv > .back > i {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,16 +93,13 @@ body, html {
     margin-left: 18px;
 }
 
-.header > .menu {
+.header > .menu, .backDiv {
     position: relative;
-    width: auto;
+    width: 60vw;
     height: 100%;
-    margin-right: 4vw;
     float: left;
     display: block;
-    margin-left: 1em;
-    height: auto;
-    background-color: #3B3B3B;    
+    //background-color: #3B3B3B;    
 }
 
 .menuLeft {
@@ -104,17 +107,14 @@ body, html {
 }
 
 .header > .menu > ul {
-    /*position: relative;*/
-    position: absolute;
-    display: none;
+    position: relative;
+    display: flex;
     list-style-type: none;
-    /*margin: 0px;*/
+    margin: 0px;
     padding: 0px;
-    float: right;
-
-    margin-top: 47px;
-    background-color: black;
-    width: 12em;
+    float: left;
+    //background-color: black;
+    width: auto;
 }
 
 .header > .menu > ul > li {
@@ -125,8 +125,8 @@ body, html {
     height: 100%;
     line-height: 100%;
     padding: 1em;
-    margin-left: 5px;
-    background-color: transparent;
+    margin-left: 1em;
+    background-color: #0000008a;
     box-shadow: 3px 3px 10px 0px #1942a759; 
     border-bottom: 1px solid gray;   
     text-align: left;   
@@ -427,12 +427,18 @@ span.imgName > label > i.fa-check-square-o, span.imgName > label > i.fa-check-sq
     display: table;
 }
 
+.siderFooter > .backbtn {
+	    position: absolute;
+	    margin-top: 20px;
+	    margin-left: 10px;
+}
+
 .siderFooter .siderBtn {       
     display: table-cell;
     vertical-align: middle;
 }
 
-.siderBtn button {  
+.siderBtn button, .siderFooter > .backbtn {  
     background-color: black;
     color: white;
     border: 2px solid #3F3F3F;    
@@ -620,5 +626,49 @@ span.imgName > label > i.fa-check-square-o, span.imgName > label > i.fa-check-sq
     	width: 100%;
     	height: 80vw;
     }
+    
+    
+       .header > .menu > .mobileMenu, .back {	   
+	    display: block;
+	    margin-left: 1em;
+	}
+	
+	
+	.header > .profile{
+ 	    width: 55vw;  
+	}	
+	
+	.header > .menu, .backDiv {
+ 	    width: 40vw;
+	    //background-color: #3B3B3B;    
+	}
+	
+	.menuLeft {
+	    margin-left: 0px !important;
+	}
+	
+	.header > .menu > ul {
+	    position: absolute;	   
+	    width: 100%;
+	    display: none;
+	    margin-top: 3em;
+	}
+	
+	.header > .menu > ul > li {
+	    position: relative;
+	    max-width: 20rem;
+	    min-width: 10rem;
+	    text-align: center;
+	    height: 100%;
+	    line-height: 100%;
+	    padding: 1em;
+	    margin-left: 1em;
+	    background-color: black;
+	    box-shadow: 3px 3px 10px 0px #1942a759; 
+	    border-bottom: 1px solid gray;   
+	    text-align: left;   
+	    /* box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2); */
+	}
+
 
 }
