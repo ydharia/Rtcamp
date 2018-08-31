@@ -179,7 +179,6 @@ class myfacebook extends CI_Controller {
 			$finish = 0;
 			while((time() < ($startTime + 50)) && $albums["count"] >= $i)
 			{
-				//$photono = $this->session->userdata("photono");
 				$this->moveAlbumPhoto($albumName, $albumId, $images["album"]["data"][$i-1]["source"], $i);
 				$i++;
 				if($albums["count"] == $i-1)
