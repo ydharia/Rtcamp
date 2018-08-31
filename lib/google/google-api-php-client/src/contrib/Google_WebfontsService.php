@@ -24,24 +24,24 @@
    */
   class Google_WebfontsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Retrieves the list of fonts currently served by the Google Fonts Developer API (webfonts.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string sort Enables sorting of the list
-     * @return Google_WebfontList
-     */
-    public function listWebfonts($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_WebfontList($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Retrieves the list of fonts currently served by the Google Fonts Developer API (webfonts.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string sort Enables sorting of the list
+	 * @return Google_WebfontList
+	 */
+	public function listWebfonts($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_WebfontList($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
 /**
@@ -66,12 +66,12 @@ class Google_WebfontsService extends Google_Service {
    * @param Google_Client $client
    */
   public function __construct(Google_Client $client) {
-    $this->servicePath = 'webfonts/v1/';
-    $this->version = 'v1';
-    $this->serviceName = 'webfonts';
+	$this->servicePath = 'webfonts/v1/';
+	$this->version = 'v1';
+	$this->serviceName = 'webfonts';
 
-    $client->addService($this->serviceName, $this->version);
-    $this->webfonts = new Google_WebfontsServiceResource($this, $this->serviceName, 'webfonts', json_decode('{"methods": {"list": {"id": "webfonts.webfonts.list", "path": "webfonts", "httpMethod": "GET", "parameters": {"sort": {"type": "string", "enum": ["alpha", "date", "popularity", "style", "trending"], "location": "query"}}, "response": {"$ref": "WebfontList"}}}}', true));
+	$client->addService($this->serviceName, $this->version);
+	$this->webfonts = new Google_WebfontsServiceResource($this, $this->serviceName, 'webfonts', json_decode('{"methods": {"list": {"id": "webfonts.webfonts.list", "path": "webfonts", "httpMethod": "GET", "parameters": {"sort": {"type": "string", "enum": ["alpha", "date", "popularity", "style", "trending"], "location": "query"}}, "response": {"$ref": "WebfontList"}}}}', true));
 
   }
 }
@@ -87,48 +87,48 @@ class Google_Webfont extends Google_Model {
   public $variants;
   public $version;
   public function setFamily( $family) {
-    $this->family = $family;
+	$this->family = $family;
   }
   public function getFamily() {
-    return $this->family;
+	return $this->family;
   }
   public function setFiles( $files) {
-    $this->files = $files;
+	$this->files = $files;
   }
   public function getFiles() {
-    return $this->files;
+	return $this->files;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setLastModified( $lastModified) {
-    $this->lastModified = $lastModified;
+	$this->lastModified = $lastModified;
   }
   public function getLastModified() {
-    return $this->lastModified;
+	return $this->lastModified;
   }
   public function setSubsets(/* array(Google_string) */ $subsets) {
-    $this->assertIsArray($subsets, 'Google_string', __METHOD__);
-    $this->subsets = $subsets;
+	$this->assertIsArray($subsets, 'Google_string', __METHOD__);
+	$this->subsets = $subsets;
   }
   public function getSubsets() {
-    return $this->subsets;
+	return $this->subsets;
   }
   public function setVariants(/* array(Google_string) */ $variants) {
-    $this->assertIsArray($variants, 'Google_string', __METHOD__);
-    $this->variants = $variants;
+	$this->assertIsArray($variants, 'Google_string', __METHOD__);
+	$this->variants = $variants;
   }
   public function getVariants() {
-    return $this->variants;
+	return $this->variants;
   }
   public function setVersion( $version) {
-    $this->version = $version;
+	$this->version = $version;
   }
   public function getVersion() {
-    return $this->version;
+	return $this->version;
   }
 }
 
@@ -138,16 +138,16 @@ class Google_WebfontList extends Google_Model {
   public $items;
   public $kind;
   public function setItems(/* array(Google_Webfont) */ $items) {
-    $this->assertIsArray($items, 'Google_Webfont', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_Webfont', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
 }

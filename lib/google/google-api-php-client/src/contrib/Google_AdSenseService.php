@@ -24,44 +24,44 @@
    */
   class Google_AccountsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Get information about the selected AdSense account. (accounts.get)
-     *
-     * @param string $accountId Account to get information about.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param bool tree Whether the tree of sub accounts should be returned.
-     * @return Google_Account
-     */
-    public function get($accountId, $optParams = array()) {
-      $params = array('accountId' => $accountId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_Account($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all accounts available to this AdSense account. (accounts.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of accounts to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_Accounts
-     */
-    public function listAccounts($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_Accounts($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Get information about the selected AdSense account. (accounts.get)
+	 *
+	 * @param string $accountId Account to get information about.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param bool tree Whether the tree of sub accounts should be returned.
+	 * @return Google_Account
+	 */
+	public function get($accountId, $optParams = array()) {
+	  $params = array('accountId' => $accountId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Account($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all accounts available to this AdSense account. (accounts.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of accounts to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_Accounts
+	 */
+	public function listAccounts($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Accounts($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -74,26 +74,26 @@
    */
   class Google_AccountsAdclientsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all ad clients in the specified account. (adclients.list)
-     *
-     * @param string $accountId Account for which to list ad clients.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of ad clients to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdClients
-     */
-    public function listAccountsAdclients($accountId, $optParams = array()) {
-      $params = array('accountId' => $accountId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdClients($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all ad clients in the specified account. (adclients.list)
+	 *
+	 * @param string $accountId Account for which to list ad clients.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of ad clients to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdClients
+	 */
+	public function listAccountsAdclients($accountId, $optParams = array()) {
+	  $params = array('accountId' => $accountId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdClients($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "adunits" collection of methods.
@@ -105,66 +105,66 @@
    */
   class Google_AccountsAdunitsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Gets the specified ad unit in the specified ad client for the specified account. (adunits.get)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client for which to get the ad unit.
-     * @param string $adUnitId Ad unit to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_AdUnit
-     */
-    public function get($accountId, $adClientId, $adUnitId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnit($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * Get ad code for the specified ad unit. (adunits.getAdCode)
-     *
-     * @param string $accountId Account which contains the ad client.
-     * @param string $adClientId Ad client with contains the ad unit.
-     * @param string $adUnitId Ad unit to get the code for.
-     * @param array $optParams Optional parameters.
-     * @return Google_AdCode
-     */
-    public function getAdCode($accountId, $adClientId, $adUnitId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('getAdCode', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdCode($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all ad units in the specified ad client for the specified account. (adunits.list)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client for which to list ad units.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
-     * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdUnits
-     */
-    public function listAccountsAdunits($accountId, $adClientId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnits($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Gets the specified ad unit in the specified ad client for the specified account. (adunits.get)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client for which to get the ad unit.
+	 * @param string $adUnitId Ad unit to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_AdUnit
+	 */
+	public function get($accountId, $adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnit($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * Get ad code for the specified ad unit. (adunits.getAdCode)
+	 *
+	 * @param string $accountId Account which contains the ad client.
+	 * @param string $adClientId Ad client with contains the ad unit.
+	 * @param string $adUnitId Ad unit to get the code for.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_AdCode
+	 */
+	public function getAdCode($accountId, $adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('getAdCode', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdCode($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all ad units in the specified ad client for the specified account. (adunits.list)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client for which to list ad units.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
+	 * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdUnits
+	 */
+	public function listAccountsAdunits($accountId, $adClientId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnits($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -177,28 +177,28 @@
    */
   class Google_AccountsAdunitsCustomchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all custom channels which the specified ad unit belongs to. (customchannels.list)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client which contains the ad unit.
-     * @param string $adUnitId Ad unit for which to list custom channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_CustomChannels
-     */
-    public function listAccountsAdunitsCustomchannels($accountId, $adClientId, $adUnitId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all custom channels which the specified ad unit belongs to. (customchannels.list)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client which contains the ad unit.
+	 * @param string $adUnitId Ad unit for which to list custom channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_CustomChannels
+	 */
+	public function listAccountsAdunitsCustomchannels($accountId, $adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "alerts" collection of methods.
@@ -210,25 +210,25 @@
    */
   class Google_AccountsAlertsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List the alerts for the specified AdSense account. (alerts.list)
-     *
-     * @param string $accountId Account for which to retrieve the alerts.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string locale The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
-     * @return Google_Alerts
-     */
-    public function listAccountsAlerts($accountId, $optParams = array()) {
-      $params = array('accountId' => $accountId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_Alerts($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List the alerts for the specified AdSense account. (alerts.list)
+	 *
+	 * @param string $accountId Account for which to retrieve the alerts.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string locale The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
+	 * @return Google_Alerts
+	 */
+	public function listAccountsAlerts($accountId, $optParams = array()) {
+	  $params = array('accountId' => $accountId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Alerts($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "customchannels" collection of methods.
@@ -240,48 +240,48 @@
    */
   class Google_AccountsCustomchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Get the specified custom channel from the specified ad client for the specified account.
-     * (customchannels.get)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client which contains the custom channel.
-     * @param string $customChannelId Custom channel to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_CustomChannel
-     */
-    public function get($accountId, $adClientId, $customChannelId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'customChannelId' => $customChannelId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannel($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all custom channels in the specified ad client for the specified account.
-     * (customchannels.list)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client for which to list custom channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_CustomChannels
-     */
-    public function listAccountsCustomchannels($accountId, $adClientId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Get the specified custom channel from the specified ad client for the specified account.
+	 * (customchannels.get)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client which contains the custom channel.
+	 * @param string $customChannelId Custom channel to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_CustomChannel
+	 */
+	public function get($accountId, $adClientId, $customChannelId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'customChannelId' => $customChannelId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannel($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all custom channels in the specified ad client for the specified account.
+	 * (customchannels.list)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client for which to list custom channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_CustomChannels
+	 */
+	public function listAccountsCustomchannels($accountId, $adClientId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -294,29 +294,29 @@
    */
   class Google_AccountsCustomchannelsAdunitsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all ad units in the specified custom channel. (adunits.list)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client which contains the custom channel.
-     * @param string $customChannelId Custom channel for which to list ad units.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
-     * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdUnits
-     */
-    public function listAccountsCustomchannelsAdunits($accountId, $adClientId, $customChannelId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'customChannelId' => $customChannelId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnits($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all ad units in the specified custom channel. (adunits.list)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client which contains the custom channel.
+	 * @param string $customChannelId Custom channel for which to list ad units.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
+	 * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdUnits
+	 */
+	public function listAccountsCustomchannelsAdunits($accountId, $adClientId, $customChannelId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'customChannelId' => $customChannelId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnits($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "reports" collection of methods.
@@ -328,37 +328,37 @@
    */
   class Google_AccountsReportsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Generate an AdSense report based on the report request sent in the query parameters. Returns the
-     * result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-     * (reports.generate)
-     *
-     * @param string $accountId Account upon which to report.
-     * @param string $startDate Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
-     * @param string $endDate End of the date range to report on in "YYYY-MM-DD" format, inclusive.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string currency Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
-     * @opt_param string dimension Dimensions to base the report on.
-     * @opt_param string filter Filters to be run on the report.
-     * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
-     * @opt_param int maxResults The maximum number of rows of report data to return.
-     * @opt_param string metric Numeric columns to include in the report.
-     * @opt_param string sort The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
-     * @opt_param int startIndex Index of the first row of report data to return.
-     * @opt_param bool useTimezoneReporting Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
-     * @return Google_AdsenseReportsGenerateResponse
-     */
-    public function generate($accountId, $startDate, $endDate, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'startDate' => $startDate, 'endDate' => $endDate);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('generate', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdsenseReportsGenerateResponse($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Generate an AdSense report based on the report request sent in the query parameters. Returns the
+	 * result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+	 * (reports.generate)
+	 *
+	 * @param string $accountId Account upon which to report.
+	 * @param string $startDate Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
+	 * @param string $endDate End of the date range to report on in "YYYY-MM-DD" format, inclusive.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string currency Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
+	 * @opt_param string dimension Dimensions to base the report on.
+	 * @opt_param string filter Filters to be run on the report.
+	 * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+	 * @opt_param int maxResults The maximum number of rows of report data to return.
+	 * @opt_param string metric Numeric columns to include in the report.
+	 * @opt_param string sort The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
+	 * @opt_param int startIndex Index of the first row of report data to return.
+	 * @opt_param bool useTimezoneReporting Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
+	 * @return Google_AdsenseReportsGenerateResponse
+	 */
+	public function generate($accountId, $startDate, $endDate, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'startDate' => $startDate, 'endDate' => $endDate);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('generate', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdsenseReportsGenerateResponse($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -371,49 +371,49 @@
    */
   class Google_AccountsReportsSavedServiceResource extends Google_ServiceResource {
 
-    /**
-     * Generate an AdSense report based on the saved report ID sent in the query parameters.
-     * (saved.generate)
-     *
-     * @param string $accountId Account to which the saved reports belong.
-     * @param string $savedReportId The saved report to retrieve.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
-     * @opt_param int maxResults The maximum number of rows of report data to return.
-     * @opt_param int startIndex Index of the first row of report data to return.
-     * @return Google_AdsenseReportsGenerateResponse
-     */
-    public function generate($accountId, $savedReportId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'savedReportId' => $savedReportId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('generate', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdsenseReportsGenerateResponse($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all saved reports in the specified AdSense account. (saved.list)
-     *
-     * @param string $accountId Account to which the saved reports belong.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of saved reports to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_SavedReports
-     */
-    public function listAccountsReportsSaved($accountId, $optParams = array()) {
-      $params = array('accountId' => $accountId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedReports($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Generate an AdSense report based on the saved report ID sent in the query parameters.
+	 * (saved.generate)
+	 *
+	 * @param string $accountId Account to which the saved reports belong.
+	 * @param string $savedReportId The saved report to retrieve.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+	 * @opt_param int maxResults The maximum number of rows of report data to return.
+	 * @opt_param int startIndex Index of the first row of report data to return.
+	 * @return Google_AdsenseReportsGenerateResponse
+	 */
+	public function generate($accountId, $savedReportId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'savedReportId' => $savedReportId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('generate', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdsenseReportsGenerateResponse($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all saved reports in the specified AdSense account. (saved.list)
+	 *
+	 * @param string $accountId Account to which the saved reports belong.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of saved reports to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_SavedReports
+	 */
+	public function listAccountsReportsSaved($accountId, $optParams = array()) {
+	  $params = array('accountId' => $accountId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedReports($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "savedadstyles" collection of methods.
@@ -425,44 +425,44 @@
    */
   class Google_AccountsSavedadstylesServiceResource extends Google_ServiceResource {
 
-    /**
-     * List a specific saved ad style for the specified account. (savedadstyles.get)
-     *
-     * @param string $accountId Account for which to get the saved ad style.
-     * @param string $savedAdStyleId Saved ad style to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_SavedAdStyle
-     */
-    public function get($accountId, $savedAdStyleId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'savedAdStyleId' => $savedAdStyleId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedAdStyle($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all saved ad styles in the specified account. (savedadstyles.list)
-     *
-     * @param string $accountId Account for which to list saved ad styles.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of saved ad styles to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_SavedAdStyles
-     */
-    public function listAccountsSavedadstyles($accountId, $optParams = array()) {
-      $params = array('accountId' => $accountId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedAdStyles($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List a specific saved ad style for the specified account. (savedadstyles.get)
+	 *
+	 * @param string $accountId Account for which to get the saved ad style.
+	 * @param string $savedAdStyleId Saved ad style to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_SavedAdStyle
+	 */
+	public function get($accountId, $savedAdStyleId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'savedAdStyleId' => $savedAdStyleId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedAdStyle($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all saved ad styles in the specified account. (savedadstyles.list)
+	 *
+	 * @param string $accountId Account for which to list saved ad styles.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of saved ad styles to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_SavedAdStyles
+	 */
+	public function listAccountsSavedadstyles($accountId, $optParams = array()) {
+	  $params = array('accountId' => $accountId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedAdStyles($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "urlchannels" collection of methods.
@@ -474,27 +474,27 @@
    */
   class Google_AccountsUrlchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all URL channels in the specified ad client for the specified account. (urlchannels.list)
-     *
-     * @param string $accountId Account to which the ad client belongs.
-     * @param string $adClientId Ad client for which to list URL channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of URL channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_UrlChannels
-     */
-    public function listAccountsUrlchannels($accountId, $adClientId, $optParams = array()) {
-      $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_UrlChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all URL channels in the specified ad client for the specified account. (urlchannels.list)
+	 *
+	 * @param string $accountId Account to which the ad client belongs.
+	 * @param string $adClientId Ad client for which to list URL channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of URL channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_UrlChannels
+	 */
+	public function listAccountsUrlchannels($accountId, $adClientId, $optParams = array()) {
+	  $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_UrlChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -507,25 +507,25 @@
    */
   class Google_AdclientsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all ad clients in this AdSense account. (adclients.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of ad clients to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdClients
-     */
-    public function listAdclients($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdClients($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all ad clients in this AdSense account. (adclients.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of ad clients to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdClients
+	 */
+	public function listAdclients($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdClients($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -538,63 +538,63 @@
    */
   class Google_AdunitsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Gets the specified ad unit in the specified ad client. (adunits.get)
-     *
-     * @param string $adClientId Ad client for which to get the ad unit.
-     * @param string $adUnitId Ad unit to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_AdUnit
-     */
-    public function get($adClientId, $adUnitId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnit($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * Get ad code for the specified ad unit. (adunits.getAdCode)
-     *
-     * @param string $adClientId Ad client with contains the ad unit.
-     * @param string $adUnitId Ad unit to get the code for.
-     * @param array $optParams Optional parameters.
-     * @return Google_AdCode
-     */
-    public function getAdCode($adClientId, $adUnitId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('getAdCode', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdCode($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all ad units in the specified ad client for this AdSense account. (adunits.list)
-     *
-     * @param string $adClientId Ad client for which to list ad units.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
-     * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdUnits
-     */
-    public function listAdunits($adClientId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnits($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Gets the specified ad unit in the specified ad client. (adunits.get)
+	 *
+	 * @param string $adClientId Ad client for which to get the ad unit.
+	 * @param string $adUnitId Ad unit to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_AdUnit
+	 */
+	public function get($adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnit($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * Get ad code for the specified ad unit. (adunits.getAdCode)
+	 *
+	 * @param string $adClientId Ad client with contains the ad unit.
+	 * @param string $adUnitId Ad unit to get the code for.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_AdCode
+	 */
+	public function getAdCode($adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('getAdCode', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdCode($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all ad units in the specified ad client for this AdSense account. (adunits.list)
+	 *
+	 * @param string $adClientId Ad client for which to list ad units.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
+	 * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdUnits
+	 */
+	public function listAdunits($adClientId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnits($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -607,27 +607,27 @@
    */
   class Google_AdunitsCustomchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all custom channels which the specified ad unit belongs to. (customchannels.list)
-     *
-     * @param string $adClientId Ad client which contains the ad unit.
-     * @param string $adUnitId Ad unit for which to list custom channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_CustomChannels
-     */
-    public function listAdunitsCustomchannels($adClientId, $adUnitId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all custom channels which the specified ad unit belongs to. (customchannels.list)
+	 *
+	 * @param string $adClientId Ad client which contains the ad unit.
+	 * @param string $adUnitId Ad unit for which to list custom channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_CustomChannels
+	 */
+	public function listAdunitsCustomchannels($adClientId, $adUnitId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId, 'adUnitId' => $adUnitId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -640,24 +640,24 @@
    */
   class Google_AlertsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List the alerts for this AdSense account. (alerts.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string locale The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
-     * @return Google_Alerts
-     */
-    public function listAlerts($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_Alerts($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List the alerts for this AdSense account. (alerts.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string locale The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
+	 * @return Google_Alerts
+	 */
+	public function listAlerts($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Alerts($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -670,45 +670,45 @@
    */
   class Google_CustomchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Get the specified custom channel from the specified ad client. (customchannels.get)
-     *
-     * @param string $adClientId Ad client which contains the custom channel.
-     * @param string $customChannelId Custom channel to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_CustomChannel
-     */
-    public function get($adClientId, $customChannelId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId, 'customChannelId' => $customChannelId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannel($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all custom channels in the specified ad client for this AdSense account.
-     * (customchannels.list)
-     *
-     * @param string $adClientId Ad client for which to list custom channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_CustomChannels
-     */
-    public function listCustomchannels($adClientId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_CustomChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Get the specified custom channel from the specified ad client. (customchannels.get)
+	 *
+	 * @param string $adClientId Ad client which contains the custom channel.
+	 * @param string $customChannelId Custom channel to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_CustomChannel
+	 */
+	public function get($adClientId, $customChannelId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId, 'customChannelId' => $customChannelId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannel($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all custom channels in the specified ad client for this AdSense account.
+	 * (customchannels.list)
+	 *
+	 * @param string $adClientId Ad client for which to list custom channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of custom channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_CustomChannels
+	 */
+	public function listCustomchannels($adClientId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_CustomChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -721,28 +721,28 @@
    */
   class Google_CustomchannelsAdunitsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all ad units in the specified custom channel. (adunits.list)
-     *
-     * @param string $adClientId Ad client which contains the custom channel.
-     * @param string $customChannelId Custom channel for which to list ad units.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
-     * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_AdUnits
-     */
-    public function listCustomchannelsAdunits($adClientId, $customChannelId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId, 'customChannelId' => $customChannelId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdUnits($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all ad units in the specified custom channel. (adunits.list)
+	 *
+	 * @param string $adClientId Ad client which contains the custom channel.
+	 * @param string $customChannelId Custom channel for which to list ad units.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param bool includeInactive Whether to include inactive ad units. Default: true.
+	 * @opt_param int maxResults The maximum number of ad units to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_AdUnits
+	 */
+	public function listCustomchannelsAdunits($adClientId, $customChannelId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId, 'customChannelId' => $customChannelId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdUnits($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -767,22 +767,22 @@
    */
   class Google_MetadataDimensionsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List the metadata for the dimensions available to this AdSense account. (dimensions.list)
-     *
-     * @param array $optParams Optional parameters.
-     * @return Google_Metadata
-     */
-    public function listMetadataDimensions($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_Metadata($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List the metadata for the dimensions available to this AdSense account. (dimensions.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 * @return Google_Metadata
+	 */
+	public function listMetadataDimensions($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Metadata($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
   /**
    * The "metrics" collection of methods.
@@ -794,22 +794,22 @@
    */
   class Google_MetadataMetricsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List the metadata for the metrics available to this AdSense account. (metrics.list)
-     *
-     * @param array $optParams Optional parameters.
-     * @return Google_Metadata
-     */
-    public function listMetadataMetrics($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_Metadata($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List the metadata for the metrics available to this AdSense account. (metrics.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 * @return Google_Metadata
+	 */
+	public function listMetadataMetrics($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_Metadata($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -822,37 +822,37 @@
    */
   class Google_ReportsServiceResource extends Google_ServiceResource {
 
-    /**
-     * Generate an AdSense report based on the report request sent in the query parameters. Returns the
-     * result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-     * (reports.generate)
-     *
-     * @param string $startDate Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
-     * @param string $endDate End of the date range to report on in "YYYY-MM-DD" format, inclusive.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string accountId Accounts upon which to report.
-     * @opt_param string currency Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
-     * @opt_param string dimension Dimensions to base the report on.
-     * @opt_param string filter Filters to be run on the report.
-     * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
-     * @opt_param int maxResults The maximum number of rows of report data to return.
-     * @opt_param string metric Numeric columns to include in the report.
-     * @opt_param string sort The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
-     * @opt_param int startIndex Index of the first row of report data to return.
-     * @opt_param bool useTimezoneReporting Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
-     * @return Google_AdsenseReportsGenerateResponse
-     */
-    public function generate($startDate, $endDate, $optParams = array()) {
-      $params = array('startDate' => $startDate, 'endDate' => $endDate);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('generate', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdsenseReportsGenerateResponse($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Generate an AdSense report based on the report request sent in the query parameters. Returns the
+	 * result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+	 * (reports.generate)
+	 *
+	 * @param string $startDate Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
+	 * @param string $endDate End of the date range to report on in "YYYY-MM-DD" format, inclusive.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string accountId Accounts upon which to report.
+	 * @opt_param string currency Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
+	 * @opt_param string dimension Dimensions to base the report on.
+	 * @opt_param string filter Filters to be run on the report.
+	 * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+	 * @opt_param int maxResults The maximum number of rows of report data to return.
+	 * @opt_param string metric Numeric columns to include in the report.
+	 * @opt_param string sort The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
+	 * @opt_param int startIndex Index of the first row of report data to return.
+	 * @opt_param bool useTimezoneReporting Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
+	 * @return Google_AdsenseReportsGenerateResponse
+	 */
+	public function generate($startDate, $endDate, $optParams = array()) {
+	  $params = array('startDate' => $startDate, 'endDate' => $endDate);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('generate', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdsenseReportsGenerateResponse($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -865,47 +865,47 @@
    */
   class Google_ReportsSavedServiceResource extends Google_ServiceResource {
 
-    /**
-     * Generate an AdSense report based on the saved report ID sent in the query parameters.
-     * (saved.generate)
-     *
-     * @param string $savedReportId The saved report to retrieve.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
-     * @opt_param int maxResults The maximum number of rows of report data to return.
-     * @opt_param int startIndex Index of the first row of report data to return.
-     * @return Google_AdsenseReportsGenerateResponse
-     */
-    public function generate($savedReportId, $optParams = array()) {
-      $params = array('savedReportId' => $savedReportId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('generate', array($params));
-      if ($this->useObjects()) {
-        return new Google_AdsenseReportsGenerateResponse($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all saved reports in this AdSense account. (saved.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of saved reports to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_SavedReports
-     */
-    public function listReportsSaved($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedReports($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Generate an AdSense report based on the saved report ID sent in the query parameters.
+	 * (saved.generate)
+	 *
+	 * @param string $savedReportId The saved report to retrieve.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param string locale Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+	 * @opt_param int maxResults The maximum number of rows of report data to return.
+	 * @opt_param int startIndex Index of the first row of report data to return.
+	 * @return Google_AdsenseReportsGenerateResponse
+	 */
+	public function generate($savedReportId, $optParams = array()) {
+	  $params = array('savedReportId' => $savedReportId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('generate', array($params));
+	  if ($this->useObjects()) {
+		return new Google_AdsenseReportsGenerateResponse($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all saved reports in this AdSense account. (saved.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of saved reports to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_SavedReports
+	 */
+	public function listReportsSaved($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedReports($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -918,42 +918,42 @@
    */
   class Google_SavedadstylesServiceResource extends Google_ServiceResource {
 
-    /**
-     * Get a specific saved ad style from the user's account. (savedadstyles.get)
-     *
-     * @param string $savedAdStyleId Saved ad style to retrieve.
-     * @param array $optParams Optional parameters.
-     * @return Google_SavedAdStyle
-     */
-    public function get($savedAdStyleId, $optParams = array()) {
-      $params = array('savedAdStyleId' => $savedAdStyleId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedAdStyle($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * List all saved ad styles in the user's account. (savedadstyles.list)
-     *
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of saved ad styles to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_SavedAdStyles
-     */
-    public function listSavedadstyles($optParams = array()) {
-      $params = array();
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_SavedAdStyles($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * Get a specific saved ad style from the user's account. (savedadstyles.get)
+	 *
+	 * @param string $savedAdStyleId Saved ad style to retrieve.
+	 * @param array $optParams Optional parameters.
+	 * @return Google_SavedAdStyle
+	 */
+	public function get($savedAdStyleId, $optParams = array()) {
+	  $params = array('savedAdStyleId' => $savedAdStyleId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('get', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedAdStyle($data);
+	  } else {
+		return $data;
+	  }
+	}
+	/**
+	 * List all saved ad styles in the user's account. (savedadstyles.list)
+	 *
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of saved ad styles to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_SavedAdStyles
+	 */
+	public function listSavedadstyles($optParams = array()) {
+	  $params = array();
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_SavedAdStyles($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
   /**
@@ -966,26 +966,26 @@
    */
   class Google_UrlchannelsServiceResource extends Google_ServiceResource {
 
-    /**
-     * List all URL channels in the specified ad client for this AdSense account. (urlchannels.list)
-     *
-     * @param string $adClientId Ad client for which to list URL channels.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param int maxResults The maximum number of URL channels to include in the response, used for paging.
-     * @opt_param string pageToken A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_UrlChannels
-     */
-    public function listUrlchannels($adClientId, $optParams = array()) {
-      $params = array('adClientId' => $adClientId);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_UrlChannels($data);
-      } else {
-        return $data;
-      }
-    }
+	/**
+	 * List all URL channels in the specified ad client for this AdSense account. (urlchannels.list)
+	 *
+	 * @param string $adClientId Ad client for which to list URL channels.
+	 * @param array $optParams Optional parameters.
+	 *
+	 * @opt_param int maxResults The maximum number of URL channels to include in the response, used for paging.
+	 * @opt_param string pageToken A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+	 * @return Google_UrlChannels
+	 */
+	public function listUrlchannels($adClientId, $optParams = array()) {
+	  $params = array('adClientId' => $adClientId);
+	  $params = array_merge($params, $optParams);
+	  $data = $this->__call('list', array($params));
+	  if ($this->useObjects()) {
+		return new Google_UrlChannels($data);
+	  } else {
+		return $data;
+	  }
+	}
   }
 
 /**
@@ -1032,34 +1032,34 @@ class Google_AdSenseService extends Google_Service {
    * @param Google_Client $client
    */
   public function __construct(Google_Client $client) {
-    $this->servicePath = 'adsense/v1.3/';
-    $this->version = 'v1.3';
-    $this->serviceName = 'adsense';
+	$this->servicePath = 'adsense/v1.3/';
+	$this->version = 'v1.3';
+	$this->serviceName = 'adsense';
 
-    $client->addService($this->serviceName, $this->version);
-    $this->accounts = new Google_AccountsServiceResource($this, $this->serviceName, 'accounts', json_decode('{"methods": {"get": {"id": "adsense.accounts.get", "path": "accounts/{accountId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "tree": {"type": "boolean", "location": "query"}}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.list", "path": "accounts", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "Accounts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_adclients = new Google_AccountsAdclientsServiceResource($this, $this->serviceName, 'adclients', json_decode('{"methods": {"list": {"id": "adsense.accounts.adclients.list", "path": "accounts/{accountId}/adclients", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdClients"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_adunits = new Google_AccountsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"get": {"id": "adsense.accounts.adunits.get", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdUnit"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "getAdCode": {"id": "adsense.accounts.adunits.getAdCode", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdCode"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.adunits.list", "path": "accounts/{accountId}/adclients/{adClientId}/adunits", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_adunits_customchannels = new Google_AccountsAdunitsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"list": {"id": "adsense.accounts.adunits.customchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_alerts = new Google_AccountsAlertsServiceResource($this, $this->serviceName, 'alerts', json_decode('{"methods": {"list": {"id": "adsense.accounts.alerts.list", "path": "accounts/{accountId}/alerts", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "locale": {"type": "string", "location": "query"}}, "response": {"$ref": "Alerts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_customchannels = new Google_AccountsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"get": {"id": "adsense.accounts.customchannels.get", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "CustomChannel"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.customchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_customchannels_adunits = new Google_AccountsCustomchannelsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"list": {"id": "adsense.accounts.customchannels.adunits.list", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_reports = new Google_AccountsReportsServiceResource($this, $this->serviceName, 'reports', json_decode('{"methods": {"generate": {"id": "adsense.accounts.reports.generate", "path": "accounts/{accountId}/reports", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "currency": {"type": "string", "location": "query"}, "dimension": {"type": "string", "repeated": true, "location": "query"}, "endDate": {"type": "string", "required": true, "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "metric": {"type": "string", "repeated": true, "location": "query"}, "sort": {"type": "string", "repeated": true, "location": "query"}, "startDate": {"type": "string", "required": true, "location": "query"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}, "useTimezoneReporting": {"type": "boolean", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"], "supportsMediaDownload": true}}}', true));
-    $this->accounts_reports_saved = new Google_AccountsReportsSavedServiceResource($this, $this->serviceName, 'saved', json_decode('{"methods": {"generate": {"id": "adsense.accounts.reports.saved.generate", "path": "accounts/{accountId}/reports/{savedReportId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "savedReportId": {"type": "string", "required": true, "location": "path"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.reports.saved.list", "path": "accounts/{accountId}/reports/saved", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedReports"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_savedadstyles = new Google_AccountsSavedadstylesServiceResource($this, $this->serviceName, 'savedadstyles', json_decode('{"methods": {"get": {"id": "adsense.accounts.savedadstyles.get", "path": "accounts/{accountId}/savedadstyles/{savedAdStyleId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "savedAdStyleId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SavedAdStyle"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.savedadstyles.list", "path": "accounts/{accountId}/savedadstyles", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedAdStyles"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->accounts_urlchannels = new Google_AccountsUrlchannelsServiceResource($this, $this->serviceName, 'urlchannels', json_decode('{"methods": {"list": {"id": "adsense.accounts.urlchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/urlchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "UrlChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->adclients = new Google_AdclientsServiceResource($this, $this->serviceName, 'adclients', json_decode('{"methods": {"list": {"id": "adsense.adclients.list", "path": "adclients", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdClients"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->adunits = new Google_AdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"get": {"id": "adsense.adunits.get", "path": "adclients/{adClientId}/adunits/{adUnitId}", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdUnit"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "getAdCode": {"id": "adsense.adunits.getAdCode", "path": "adclients/{adClientId}/adunits/{adUnitId}/adcode", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdCode"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.adunits.list", "path": "adclients/{adClientId}/adunits", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->adunits_customchannels = new Google_AdunitsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"list": {"id": "adsense.adunits.customchannels.list", "path": "adclients/{adClientId}/adunits/{adUnitId}/customchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->alerts = new Google_AlertsServiceResource($this, $this->serviceName, 'alerts', json_decode('{"methods": {"list": {"id": "adsense.alerts.list", "path": "alerts", "httpMethod": "GET", "parameters": {"locale": {"type": "string", "location": "query"}}, "response": {"$ref": "Alerts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->customchannels = new Google_CustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"get": {"id": "adsense.customchannels.get", "path": "adclients/{adClientId}/customchannels/{customChannelId}", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "CustomChannel"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.customchannels.list", "path": "adclients/{adClientId}/customchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->customchannels_adunits = new Google_CustomchannelsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"list": {"id": "adsense.customchannels.adunits.list", "path": "adclients/{adClientId}/customchannels/{customChannelId}/adunits", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->metadata_dimensions = new Google_MetadataDimensionsServiceResource($this, $this->serviceName, 'dimensions', json_decode('{"methods": {"list": {"id": "adsense.metadata.dimensions.list", "path": "metadata/dimensions", "httpMethod": "GET", "response": {"$ref": "Metadata"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->metadata_metrics = new Google_MetadataMetricsServiceResource($this, $this->serviceName, 'metrics', json_decode('{"methods": {"list": {"id": "adsense.metadata.metrics.list", "path": "metadata/metrics", "httpMethod": "GET", "response": {"$ref": "Metadata"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->reports = new Google_ReportsServiceResource($this, $this->serviceName, 'reports', json_decode('{"methods": {"generate": {"id": "adsense.reports.generate", "path": "reports", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "repeated": true, "location": "query"}, "currency": {"type": "string", "location": "query"}, "dimension": {"type": "string", "repeated": true, "location": "query"}, "endDate": {"type": "string", "required": true, "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "metric": {"type": "string", "repeated": true, "location": "query"}, "sort": {"type": "string", "repeated": true, "location": "query"}, "startDate": {"type": "string", "required": true, "location": "query"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}, "useTimezoneReporting": {"type": "boolean", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"], "supportsMediaDownload": true}}}', true));
-    $this->reports_saved = new Google_ReportsSavedServiceResource($this, $this->serviceName, 'saved', json_decode('{"methods": {"generate": {"id": "adsense.reports.saved.generate", "path": "reports/{savedReportId}", "httpMethod": "GET", "parameters": {"locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "savedReportId": {"type": "string", "required": true, "location": "path"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.reports.saved.list", "path": "reports/saved", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedReports"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->savedadstyles = new Google_SavedadstylesServiceResource($this, $this->serviceName, 'savedadstyles', json_decode('{"methods": {"get": {"id": "adsense.savedadstyles.get", "path": "savedadstyles/{savedAdStyleId}", "httpMethod": "GET", "parameters": {"savedAdStyleId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SavedAdStyle"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.savedadstyles.list", "path": "savedadstyles", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedAdStyles"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
-    $this->urlchannels = new Google_UrlchannelsServiceResource($this, $this->serviceName, 'urlchannels', json_decode('{"methods": {"list": {"id": "adsense.urlchannels.list", "path": "adclients/{adClientId}/urlchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "UrlChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$client->addService($this->serviceName, $this->version);
+	$this->accounts = new Google_AccountsServiceResource($this, $this->serviceName, 'accounts', json_decode('{"methods": {"get": {"id": "adsense.accounts.get", "path": "accounts/{accountId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "tree": {"type": "boolean", "location": "query"}}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.list", "path": "accounts", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "Accounts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_adclients = new Google_AccountsAdclientsServiceResource($this, $this->serviceName, 'adclients', json_decode('{"methods": {"list": {"id": "adsense.accounts.adclients.list", "path": "accounts/{accountId}/adclients", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdClients"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_adunits = new Google_AccountsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"get": {"id": "adsense.accounts.adunits.get", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdUnit"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "getAdCode": {"id": "adsense.accounts.adunits.getAdCode", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdCode"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.adunits.list", "path": "accounts/{accountId}/adclients/{adClientId}/adunits", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_adunits_customchannels = new Google_AccountsAdunitsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"list": {"id": "adsense.accounts.adunits.customchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_alerts = new Google_AccountsAlertsServiceResource($this, $this->serviceName, 'alerts', json_decode('{"methods": {"list": {"id": "adsense.accounts.alerts.list", "path": "accounts/{accountId}/alerts", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "locale": {"type": "string", "location": "query"}}, "response": {"$ref": "Alerts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_customchannels = new Google_AccountsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"get": {"id": "adsense.accounts.customchannels.get", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "CustomChannel"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.customchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_customchannels_adunits = new Google_AccountsCustomchannelsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"list": {"id": "adsense.accounts.customchannels.adunits.list", "path": "accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_reports = new Google_AccountsReportsServiceResource($this, $this->serviceName, 'reports', json_decode('{"methods": {"generate": {"id": "adsense.accounts.reports.generate", "path": "accounts/{accountId}/reports", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "currency": {"type": "string", "location": "query"}, "dimension": {"type": "string", "repeated": true, "location": "query"}, "endDate": {"type": "string", "required": true, "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "metric": {"type": "string", "repeated": true, "location": "query"}, "sort": {"type": "string", "repeated": true, "location": "query"}, "startDate": {"type": "string", "required": true, "location": "query"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}, "useTimezoneReporting": {"type": "boolean", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"], "supportsMediaDownload": true}}}', true));
+	$this->accounts_reports_saved = new Google_AccountsReportsSavedServiceResource($this, $this->serviceName, 'saved', json_decode('{"methods": {"generate": {"id": "adsense.accounts.reports.saved.generate", "path": "accounts/{accountId}/reports/{savedReportId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "savedReportId": {"type": "string", "required": true, "location": "path"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.reports.saved.list", "path": "accounts/{accountId}/reports/saved", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedReports"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_savedadstyles = new Google_AccountsSavedadstylesServiceResource($this, $this->serviceName, 'savedadstyles', json_decode('{"methods": {"get": {"id": "adsense.accounts.savedadstyles.get", "path": "accounts/{accountId}/savedadstyles/{savedAdStyleId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "savedAdStyleId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SavedAdStyle"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.accounts.savedadstyles.list", "path": "accounts/{accountId}/savedadstyles", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedAdStyles"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->accounts_urlchannels = new Google_AccountsUrlchannelsServiceResource($this, $this->serviceName, 'urlchannels', json_decode('{"methods": {"list": {"id": "adsense.accounts.urlchannels.list", "path": "accounts/{accountId}/adclients/{adClientId}/urlchannels", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "location": "path"}, "adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "UrlChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->adclients = new Google_AdclientsServiceResource($this, $this->serviceName, 'adclients', json_decode('{"methods": {"list": {"id": "adsense.adclients.list", "path": "adclients", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdClients"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->adunits = new Google_AdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"get": {"id": "adsense.adunits.get", "path": "adclients/{adClientId}/adunits/{adUnitId}", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdUnit"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "getAdCode": {"id": "adsense.adunits.getAdCode", "path": "adclients/{adClientId}/adunits/{adUnitId}/adcode", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AdCode"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.adunits.list", "path": "adclients/{adClientId}/adunits", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->adunits_customchannels = new Google_AdunitsCustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"list": {"id": "adsense.adunits.customchannels.list", "path": "adclients/{adClientId}/adunits/{adUnitId}/customchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "adUnitId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->alerts = new Google_AlertsServiceResource($this, $this->serviceName, 'alerts', json_decode('{"methods": {"list": {"id": "adsense.alerts.list", "path": "alerts", "httpMethod": "GET", "parameters": {"locale": {"type": "string", "location": "query"}}, "response": {"$ref": "Alerts"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->customchannels = new Google_CustomchannelsServiceResource($this, $this->serviceName, 'customchannels', json_decode('{"methods": {"get": {"id": "adsense.customchannels.get", "path": "adclients/{adClientId}/customchannels/{customChannelId}", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "CustomChannel"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.customchannels.list", "path": "adclients/{adClientId}/customchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "CustomChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->customchannels_adunits = new Google_CustomchannelsAdunitsServiceResource($this, $this->serviceName, 'adunits', json_decode('{"methods": {"list": {"id": "adsense.customchannels.adunits.list", "path": "adclients/{adClientId}/customchannels/{customChannelId}/adunits", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "customChannelId": {"type": "string", "required": true, "location": "path"}, "includeInactive": {"type": "boolean", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AdUnits"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->metadata_dimensions = new Google_MetadataDimensionsServiceResource($this, $this->serviceName, 'dimensions', json_decode('{"methods": {"list": {"id": "adsense.metadata.dimensions.list", "path": "metadata/dimensions", "httpMethod": "GET", "response": {"$ref": "Metadata"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->metadata_metrics = new Google_MetadataMetricsServiceResource($this, $this->serviceName, 'metrics', json_decode('{"methods": {"list": {"id": "adsense.metadata.metrics.list", "path": "metadata/metrics", "httpMethod": "GET", "response": {"$ref": "Metadata"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->reports = new Google_ReportsServiceResource($this, $this->serviceName, 'reports', json_decode('{"methods": {"generate": {"id": "adsense.reports.generate", "path": "reports", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "repeated": true, "location": "query"}, "currency": {"type": "string", "location": "query"}, "dimension": {"type": "string", "repeated": true, "location": "query"}, "endDate": {"type": "string", "required": true, "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "metric": {"type": "string", "repeated": true, "location": "query"}, "sort": {"type": "string", "repeated": true, "location": "query"}, "startDate": {"type": "string", "required": true, "location": "query"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}, "useTimezoneReporting": {"type": "boolean", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"], "supportsMediaDownload": true}}}', true));
+	$this->reports_saved = new Google_ReportsSavedServiceResource($this, $this->serviceName, 'saved', json_decode('{"methods": {"generate": {"id": "adsense.reports.saved.generate", "path": "reports/{savedReportId}", "httpMethod": "GET", "parameters": {"locale": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "50000", "location": "query"}, "savedReportId": {"type": "string", "required": true, "location": "path"}, "startIndex": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "5000", "location": "query"}}, "response": {"$ref": "AdsenseReportsGenerateResponse"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.reports.saved.list", "path": "reports/saved", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedReports"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->savedadstyles = new Google_SavedadstylesServiceResource($this, $this->serviceName, 'savedadstyles', json_decode('{"methods": {"get": {"id": "adsense.savedadstyles.get", "path": "savedadstyles/{savedAdStyleId}", "httpMethod": "GET", "parameters": {"savedAdStyleId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SavedAdStyle"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}, "list": {"id": "adsense.savedadstyles.list", "path": "savedadstyles", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "SavedAdStyles"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
+	$this->urlchannels = new Google_UrlchannelsServiceResource($this, $this->serviceName, 'urlchannels', json_decode('{"methods": {"list": {"id": "adsense.urlchannels.list", "path": "adclients/{adClientId}/urlchannels", "httpMethod": "GET", "parameters": {"adClientId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "0", "maximum": "10000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "UrlChannels"}, "scopes": ["https://www.googleapis.com/auth/adsense", "https://www.googleapis.com/auth/adsense.readonly"]}}}', true));
 
   }
 }
@@ -1075,35 +1075,35 @@ class Google_Account extends Google_Model {
   protected $__subAccountsDataType = 'array';
   public $subAccounts;
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
   public function setPremium( $premium) {
-    $this->premium = $premium;
+	$this->premium = $premium;
   }
   public function getPremium() {
-    return $this->premium;
+	return $this->premium;
   }
   public function setSubAccounts(/* array(Google_Account) */ $subAccounts) {
-    $this->assertIsArray($subAccounts, 'Google_Account', __METHOD__);
-    $this->subAccounts = $subAccounts;
+	$this->assertIsArray($subAccounts, 'Google_Account', __METHOD__);
+	$this->subAccounts = $subAccounts;
   }
   public function getSubAccounts() {
-    return $this->subAccounts;
+	return $this->subAccounts;
   }
 }
 
@@ -1115,29 +1115,29 @@ class Google_Accounts extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_Account) */ $items) {
-    $this->assertIsArray($items, 'Google_Account', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_Account', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -1148,34 +1148,34 @@ class Google_AdClient extends Google_Model {
   public $productCode;
   public $supportsReporting;
   public function setArcOptIn( $arcOptIn) {
-    $this->arcOptIn = $arcOptIn;
+	$this->arcOptIn = $arcOptIn;
   }
   public function getArcOptIn() {
-    return $this->arcOptIn;
+	return $this->arcOptIn;
   }
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setProductCode( $productCode) {
-    $this->productCode = $productCode;
+	$this->productCode = $productCode;
   }
   public function getProductCode() {
-    return $this->productCode;
+	return $this->productCode;
   }
   public function setSupportsReporting( $supportsReporting) {
-    $this->supportsReporting = $supportsReporting;
+	$this->supportsReporting = $supportsReporting;
   }
   public function getSupportsReporting() {
-    return $this->supportsReporting;
+	return $this->supportsReporting;
   }
 }
 
@@ -1187,29 +1187,29 @@ class Google_AdClients extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_AdClient) */ $items) {
-    $this->assertIsArray($items, 'Google_AdClient', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_AdClient', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -1217,16 +1217,16 @@ class Google_AdCode extends Google_Model {
   public $adCode;
   public $kind;
   public function setAdCode( $adCode) {
-    $this->adCode = $adCode;
+	$this->adCode = $adCode;
   }
   public function getAdCode() {
-    return $this->adCode;
+	return $this->adCode;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
 }
 
@@ -1240,28 +1240,28 @@ class Google_AdStyle extends Google_Model {
   public $font;
   public $kind;
   public function setColors(Google_AdStyleColors $colors) {
-    $this->colors = $colors;
+	$this->colors = $colors;
   }
   public function getColors() {
-    return $this->colors;
+	return $this->colors;
   }
   public function setCorners( $corners) {
-    $this->corners = $corners;
+	$this->corners = $corners;
   }
   public function getCorners() {
-    return $this->corners;
+	return $this->corners;
   }
   public function setFont(Google_AdStyleFont $font) {
-    $this->font = $font;
+	$this->font = $font;
   }
   public function getFont() {
-    return $this->font;
+	return $this->font;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
 }
 
@@ -1272,34 +1272,34 @@ class Google_AdStyleColors extends Google_Model {
   public $title;
   public $url;
   public function setBackground( $background) {
-    $this->background = $background;
+	$this->background = $background;
   }
   public function getBackground() {
-    return $this->background;
+	return $this->background;
   }
   public function setBorder( $border) {
-    $this->border = $border;
+	$this->border = $border;
   }
   public function getBorder() {
-    return $this->border;
+	return $this->border;
   }
   public function setText( $text) {
-    $this->text = $text;
+	$this->text = $text;
   }
   public function getText() {
-    return $this->text;
+	return $this->text;
   }
   public function setTitle( $title) {
-    $this->title = $title;
+	$this->title = $title;
   }
   public function getTitle() {
-    return $this->title;
+	return $this->title;
   }
   public function setUrl( $url) {
-    $this->url = $url;
+	$this->url = $url;
   }
   public function getUrl() {
-    return $this->url;
+	return $this->url;
   }
 }
 
@@ -1307,16 +1307,16 @@ class Google_AdStyleFont extends Google_Model {
   public $family;
   public $size;
   public function setFamily( $family) {
-    $this->family = $family;
+	$this->family = $family;
   }
   public function getFamily() {
-    return $this->family;
+	return $this->family;
   }
   public function setSize( $size) {
-    $this->size = $size;
+	$this->size = $size;
   }
   public function getSize() {
-    return $this->size;
+	return $this->size;
   }
 }
 
@@ -1340,64 +1340,64 @@ class Google_AdUnit extends Google_Model {
   public $savedStyleId;
   public $status;
   public function setCode( $code) {
-    $this->code = $code;
+	$this->code = $code;
   }
   public function getCode() {
-    return $this->code;
+	return $this->code;
   }
   public function setContentAdsSettings(Google_AdUnitContentAdsSettings $contentAdsSettings) {
-    $this->contentAdsSettings = $contentAdsSettings;
+	$this->contentAdsSettings = $contentAdsSettings;
   }
   public function getContentAdsSettings() {
-    return $this->contentAdsSettings;
+	return $this->contentAdsSettings;
   }
   public function setCustomStyle(Google_AdStyle $customStyle) {
-    $this->customStyle = $customStyle;
+	$this->customStyle = $customStyle;
   }
   public function getCustomStyle() {
-    return $this->customStyle;
+	return $this->customStyle;
   }
   public function setFeedAdsSettings(Google_AdUnitFeedAdsSettings $feedAdsSettings) {
-    $this->feedAdsSettings = $feedAdsSettings;
+	$this->feedAdsSettings = $feedAdsSettings;
   }
   public function getFeedAdsSettings() {
-    return $this->feedAdsSettings;
+	return $this->feedAdsSettings;
   }
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setMobileContentAdsSettings(Google_AdUnitMobileContentAdsSettings $mobileContentAdsSettings) {
-    $this->mobileContentAdsSettings = $mobileContentAdsSettings;
+	$this->mobileContentAdsSettings = $mobileContentAdsSettings;
   }
   public function getMobileContentAdsSettings() {
-    return $this->mobileContentAdsSettings;
+	return $this->mobileContentAdsSettings;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
   public function setSavedStyleId( $savedStyleId) {
-    $this->savedStyleId = $savedStyleId;
+	$this->savedStyleId = $savedStyleId;
   }
   public function getSavedStyleId() {
-    return $this->savedStyleId;
+	return $this->savedStyleId;
   }
   public function setStatus( $status) {
-    $this->status = $status;
+	$this->status = $status;
   }
   public function getStatus() {
-    return $this->status;
+	return $this->status;
   }
 }
 
@@ -1408,22 +1408,22 @@ class Google_AdUnitContentAdsSettings extends Google_Model {
   public $size;
   public $type;
   public function setBackupOption(Google_AdUnitContentAdsSettingsBackupOption $backupOption) {
-    $this->backupOption = $backupOption;
+	$this->backupOption = $backupOption;
   }
   public function getBackupOption() {
-    return $this->backupOption;
+	return $this->backupOption;
   }
   public function setSize( $size) {
-    $this->size = $size;
+	$this->size = $size;
   }
   public function getSize() {
-    return $this->size;
+	return $this->size;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
 }
 
@@ -1432,22 +1432,22 @@ class Google_AdUnitContentAdsSettingsBackupOption extends Google_Model {
   public $type;
   public $url;
   public function setColor( $color) {
-    $this->color = $color;
+	$this->color = $color;
   }
   public function getColor() {
-    return $this->color;
+	return $this->color;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
   public function setUrl( $url) {
-    $this->url = $url;
+	$this->url = $url;
   }
   public function getUrl() {
-    return $this->url;
+	return $this->url;
   }
 }
 
@@ -1457,28 +1457,28 @@ class Google_AdUnitFeedAdsSettings extends Google_Model {
   public $minimumWordCount;
   public $type;
   public function setAdPosition( $adPosition) {
-    $this->adPosition = $adPosition;
+	$this->adPosition = $adPosition;
   }
   public function getAdPosition() {
-    return $this->adPosition;
+	return $this->adPosition;
   }
   public function setFrequency( $frequency) {
-    $this->frequency = $frequency;
+	$this->frequency = $frequency;
   }
   public function getFrequency() {
-    return $this->frequency;
+	return $this->frequency;
   }
   public function setMinimumWordCount( $minimumWordCount) {
-    $this->minimumWordCount = $minimumWordCount;
+	$this->minimumWordCount = $minimumWordCount;
   }
   public function getMinimumWordCount() {
-    return $this->minimumWordCount;
+	return $this->minimumWordCount;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
 }
 
@@ -1488,28 +1488,28 @@ class Google_AdUnitMobileContentAdsSettings extends Google_Model {
   public $size;
   public $type;
   public function setMarkupLanguage( $markupLanguage) {
-    $this->markupLanguage = $markupLanguage;
+	$this->markupLanguage = $markupLanguage;
   }
   public function getMarkupLanguage() {
-    return $this->markupLanguage;
+	return $this->markupLanguage;
   }
   public function setScriptingLanguage( $scriptingLanguage) {
-    $this->scriptingLanguage = $scriptingLanguage;
+	$this->scriptingLanguage = $scriptingLanguage;
   }
   public function getScriptingLanguage() {
-    return $this->scriptingLanguage;
+	return $this->scriptingLanguage;
   }
   public function setSize( $size) {
-    $this->size = $size;
+	$this->size = $size;
   }
   public function getSize() {
-    return $this->size;
+	return $this->size;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
 }
 
@@ -1521,29 +1521,29 @@ class Google_AdUnits extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_AdUnit) */ $items) {
-    $this->assertIsArray($items, 'Google_AdUnit', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_AdUnit', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -1558,51 +1558,51 @@ class Google_AdsenseReportsGenerateResponse extends Google_Model {
   public $totals;
   public $warnings;
   public function setAverages(/* array(Google_string) */ $averages) {
-    $this->assertIsArray($averages, 'Google_string', __METHOD__);
-    $this->averages = $averages;
+	$this->assertIsArray($averages, 'Google_string', __METHOD__);
+	$this->averages = $averages;
   }
   public function getAverages() {
-    return $this->averages;
+	return $this->averages;
   }
   public function setHeaders(/* array(Google_AdsenseReportsGenerateResponseHeaders) */ $headers) {
-    $this->assertIsArray($headers, 'Google_AdsenseReportsGenerateResponseHeaders', __METHOD__);
-    $this->headers = $headers;
+	$this->assertIsArray($headers, 'Google_AdsenseReportsGenerateResponseHeaders', __METHOD__);
+	$this->headers = $headers;
   }
   public function getHeaders() {
-    return $this->headers;
+	return $this->headers;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setRows(/* array(Google_string) */ $rows) {
-    $this->assertIsArray($rows, 'Google_string', __METHOD__);
-    $this->rows = $rows;
+	$this->assertIsArray($rows, 'Google_string', __METHOD__);
+	$this->rows = $rows;
   }
   public function getRows() {
-    return $this->rows;
+	return $this->rows;
   }
   public function setTotalMatchedRows( $totalMatchedRows) {
-    $this->totalMatchedRows = $totalMatchedRows;
+	$this->totalMatchedRows = $totalMatchedRows;
   }
   public function getTotalMatchedRows() {
-    return $this->totalMatchedRows;
+	return $this->totalMatchedRows;
   }
   public function setTotals(/* array(Google_string) */ $totals) {
-    $this->assertIsArray($totals, 'Google_string', __METHOD__);
-    $this->totals = $totals;
+	$this->assertIsArray($totals, 'Google_string', __METHOD__);
+	$this->totals = $totals;
   }
   public function getTotals() {
-    return $this->totals;
+	return $this->totals;
   }
   public function setWarnings(/* array(Google_string) */ $warnings) {
-    $this->assertIsArray($warnings, 'Google_string', __METHOD__);
-    $this->warnings = $warnings;
+	$this->assertIsArray($warnings, 'Google_string', __METHOD__);
+	$this->warnings = $warnings;
   }
   public function getWarnings() {
-    return $this->warnings;
+	return $this->warnings;
   }
 }
 
@@ -1611,22 +1611,22 @@ class Google_AdsenseReportsGenerateResponseHeaders extends Google_Model {
   public $name;
   public $type;
   public function setCurrency( $currency) {
-    $this->currency = $currency;
+	$this->currency = $currency;
   }
   public function getCurrency() {
-    return $this->currency;
+	return $this->currency;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
 }
 
@@ -1637,34 +1637,34 @@ class Google_Alert extends Google_Model {
   public $severity;
   public $type;
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setMessage( $message) {
-    $this->message = $message;
+	$this->message = $message;
   }
   public function getMessage() {
-    return $this->message;
+	return $this->message;
   }
   public function setSeverity( $severity) {
-    $this->severity = $severity;
+	$this->severity = $severity;
   }
   public function getSeverity() {
-    return $this->severity;
+	return $this->severity;
   }
   public function setType( $type) {
-    $this->type = $type;
+	$this->type = $type;
   }
   public function getType() {
-    return $this->type;
+	return $this->type;
   }
 }
 
@@ -1674,17 +1674,17 @@ class Google_Alerts extends Google_Model {
   public $items;
   public $kind;
   public function setItems(/* array(Google_Alert) */ $items) {
-    $this->assertIsArray($items, 'Google_Alert', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_Alert', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
 }
 
@@ -1697,34 +1697,34 @@ class Google_CustomChannel extends Google_Model {
   protected $__targetingInfoDataType = '';
   public $targetingInfo;
   public function setCode( $code) {
-    $this->code = $code;
+	$this->code = $code;
   }
   public function getCode() {
-    return $this->code;
+	return $this->code;
   }
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
   public function setTargetingInfo(Google_CustomChannelTargetingInfo $targetingInfo) {
-    $this->targetingInfo = $targetingInfo;
+	$this->targetingInfo = $targetingInfo;
   }
   public function getTargetingInfo() {
-    return $this->targetingInfo;
+	return $this->targetingInfo;
   }
 }
 
@@ -1734,28 +1734,28 @@ class Google_CustomChannelTargetingInfo extends Google_Model {
   public $location;
   public $siteLanguage;
   public function setAdsAppearOn( $adsAppearOn) {
-    $this->adsAppearOn = $adsAppearOn;
+	$this->adsAppearOn = $adsAppearOn;
   }
   public function getAdsAppearOn() {
-    return $this->adsAppearOn;
+	return $this->adsAppearOn;
   }
   public function setDescription( $description) {
-    $this->description = $description;
+	$this->description = $description;
   }
   public function getDescription() {
-    return $this->description;
+	return $this->description;
   }
   public function setLocation( $location) {
-    $this->location = $location;
+	$this->location = $location;
   }
   public function getLocation() {
-    return $this->location;
+	return $this->location;
   }
   public function setSiteLanguage( $siteLanguage) {
-    $this->siteLanguage = $siteLanguage;
+	$this->siteLanguage = $siteLanguage;
   }
   public function getSiteLanguage() {
-    return $this->siteLanguage;
+	return $this->siteLanguage;
   }
 }
 
@@ -1767,29 +1767,29 @@ class Google_CustomChannels extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_CustomChannel) */ $items) {
-    $this->assertIsArray($items, 'Google_CustomChannel', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_CustomChannel', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -1799,17 +1799,17 @@ class Google_Metadata extends Google_Model {
   public $items;
   public $kind;
   public function setItems(/* array(Google_ReportingMetadataEntry) */ $items) {
-    $this->assertIsArray($items, 'Google_ReportingMetadataEntry', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_ReportingMetadataEntry', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
 }
 
@@ -1822,51 +1822,51 @@ class Google_ReportingMetadataEntry extends Google_Model {
   public $requiredMetrics;
   public $supportedProducts;
   public function setCompatibleDimensions(/* array(Google_string) */ $compatibleDimensions) {
-    $this->assertIsArray($compatibleDimensions, 'Google_string', __METHOD__);
-    $this->compatibleDimensions = $compatibleDimensions;
+	$this->assertIsArray($compatibleDimensions, 'Google_string', __METHOD__);
+	$this->compatibleDimensions = $compatibleDimensions;
   }
   public function getCompatibleDimensions() {
-    return $this->compatibleDimensions;
+	return $this->compatibleDimensions;
   }
   public function setCompatibleMetrics(/* array(Google_string) */ $compatibleMetrics) {
-    $this->assertIsArray($compatibleMetrics, 'Google_string', __METHOD__);
-    $this->compatibleMetrics = $compatibleMetrics;
+	$this->assertIsArray($compatibleMetrics, 'Google_string', __METHOD__);
+	$this->compatibleMetrics = $compatibleMetrics;
   }
   public function getCompatibleMetrics() {
-    return $this->compatibleMetrics;
+	return $this->compatibleMetrics;
   }
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setRequiredDimensions(/* array(Google_string) */ $requiredDimensions) {
-    $this->assertIsArray($requiredDimensions, 'Google_string', __METHOD__);
-    $this->requiredDimensions = $requiredDimensions;
+	$this->assertIsArray($requiredDimensions, 'Google_string', __METHOD__);
+	$this->requiredDimensions = $requiredDimensions;
   }
   public function getRequiredDimensions() {
-    return $this->requiredDimensions;
+	return $this->requiredDimensions;
   }
   public function setRequiredMetrics(/* array(Google_string) */ $requiredMetrics) {
-    $this->assertIsArray($requiredMetrics, 'Google_string', __METHOD__);
-    $this->requiredMetrics = $requiredMetrics;
+	$this->assertIsArray($requiredMetrics, 'Google_string', __METHOD__);
+	$this->requiredMetrics = $requiredMetrics;
   }
   public function getRequiredMetrics() {
-    return $this->requiredMetrics;
+	return $this->requiredMetrics;
   }
   public function setSupportedProducts(/* array(Google_string) */ $supportedProducts) {
-    $this->assertIsArray($supportedProducts, 'Google_string', __METHOD__);
-    $this->supportedProducts = $supportedProducts;
+	$this->assertIsArray($supportedProducts, 'Google_string', __METHOD__);
+	$this->supportedProducts = $supportedProducts;
   }
   public function getSupportedProducts() {
-    return $this->supportedProducts;
+	return $this->supportedProducts;
   }
 }
 
@@ -1878,28 +1878,28 @@ class Google_SavedAdStyle extends Google_Model {
   public $kind;
   public $name;
   public function setAdStyle(Google_AdStyle $adStyle) {
-    $this->adStyle = $adStyle;
+	$this->adStyle = $adStyle;
   }
   public function getAdStyle() {
-    return $this->adStyle;
+	return $this->adStyle;
   }
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
 }
 
@@ -1911,29 +1911,29 @@ class Google_SavedAdStyles extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_SavedAdStyle) */ $items) {
-    $this->assertIsArray($items, 'Google_SavedAdStyle', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_SavedAdStyle', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -1942,22 +1942,22 @@ class Google_SavedReport extends Google_Model {
   public $kind;
   public $name;
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setName( $name) {
-    $this->name = $name;
+	$this->name = $name;
   }
   public function getName() {
-    return $this->name;
+	return $this->name;
   }
 }
 
@@ -1969,29 +1969,29 @@ class Google_SavedReports extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_SavedReport) */ $items) {
-    $this->assertIsArray($items, 'Google_SavedReport', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_SavedReport', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }
 
@@ -2000,22 +2000,22 @@ class Google_UrlChannel extends Google_Model {
   public $kind;
   public $urlPattern;
   public function setId( $id) {
-    $this->id = $id;
+	$this->id = $id;
   }
   public function getId() {
-    return $this->id;
+	return $this->id;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setUrlPattern( $urlPattern) {
-    $this->urlPattern = $urlPattern;
+	$this->urlPattern = $urlPattern;
   }
   public function getUrlPattern() {
-    return $this->urlPattern;
+	return $this->urlPattern;
   }
 }
 
@@ -2027,28 +2027,28 @@ class Google_UrlChannels extends Google_Model {
   public $kind;
   public $nextPageToken;
   public function setEtag( $etag) {
-    $this->etag = $etag;
+	$this->etag = $etag;
   }
   public function getEtag() {
-    return $this->etag;
+	return $this->etag;
   }
   public function setItems(/* array(Google_UrlChannel) */ $items) {
-    $this->assertIsArray($items, 'Google_UrlChannel', __METHOD__);
-    $this->items = $items;
+	$this->assertIsArray($items, 'Google_UrlChannel', __METHOD__);
+	$this->items = $items;
   }
   public function getItems() {
-    return $this->items;
+	return $this->items;
   }
   public function setKind( $kind) {
-    $this->kind = $kind;
+	$this->kind = $kind;
   }
   public function getKind() {
-    return $this->kind;
+	return $this->kind;
   }
   public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
+	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
-    return $this->nextPageToken;
+	return $this->nextPageToken;
   }
 }

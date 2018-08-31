@@ -151,12 +151,12 @@ class myfacebook extends CI_Controller {
 	
 	public function cronMoveAlbums()
 	{
-		if(count($this->session->userdata("albumList")) > 0)
+		if (count($this->session->userdata("albumList")) > 0)
 		{
 			$startTime = time();
-			foreach($this->getAllAlbumList()["albums"]["data"] as $list)
+			foreach ($this->getAllAlbumList()["albums"]["data"] as $list)
 			{
-				if($list["id"] == $_SESSION["albumList"][0])
+				if ($list["id"] == $_SESSION["albumList"][0])
 				{
 					$albums["count"] = $list["count"];
 					$albums["name"] = $list["name"];
@@ -166,10 +166,10 @@ class myfacebook extends CI_Controller {
 			$albumName = $albums["name"];
 			$albumId = $_SESSION["albumList"][0];
 			$images = $this->getAllImage($albumId);
-			if(!$this->session->userdata("photono"))
+			if ( ! $this->session->userdata("photono"))
 			{
 				$photono = $this->session->set_userdata("photono", 1);
-				$i=1;
+				$i = 1;
 			} else
 			{
 				$photono = $this->session->userdata("photono");
@@ -177,11 +177,11 @@ class myfacebook extends CI_Controller {
 			}
 
 			$finish = 0;
-			while((time() < ($startTime + 50)) && $albums["count"] >= $i)
+			while ((time() < ($startTime + 50)) && $albums["count"] >= $i)
 			{
-				$this->moveAlbumPhoto($albumName, $albumId, $images["album"]["data"][$i-1]["source"], $i);
+				$this->moveAlbumPhoto($albumName, $albumId, $images["album"]["data"][$i - 1]["source"], $i);
 				$i++;
-				if($albums["count"] == $i-1)
+				if ($albums["count"] == $i - 1)
 				{
 					$i = 1;
 					$finish = 1;
@@ -189,7 +189,7 @@ class myfacebook extends CI_Controller {
 				} else
 				{
 					$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "r") or die("Unable to open file!");
-					$cronSession = fread($myfile,filesize("cron/".$this->session->userdata("userid").".txt"));
+					$cronSession = fread($myfile, filesize("cron/".$this->session->userdata("userid").".txt"));
 					fclose($myfile);
 					$allSession = json_decode($cronSession, TRUE);
 					$_SESSION = $allSession;
@@ -201,11 +201,11 @@ class myfacebook extends CI_Controller {
 				}
 			}
 			$myfile = fopen("cron/".$this->session->userdata("userid").".txt", "r") or die("Unable to open file!");
-			$cronSession = fread($myfile,filesize("cron/".$this->session->userdata("userid").".txt"));
+			$cronSession = fread($myfile, filesize("cron/".$this->session->userdata("userid").".txt"));
 			fclose($myfile);
 			$allSession = json_decode($cronSession, TRUE);
 			$_SESSION = $allSession;
-			if($finish == 1)
+			if ($finish == 1)
 			{
 				$allSession["albumList"] = array_splice($allSession["albumList"], 1);
 				$_SESSION["albumList"] = $allSession["albumList"];
@@ -215,8 +215,7 @@ class myfacebook extends CI_Controller {
 			$txt = json_encode($this->session->userdata())."\n";
 			fwrite($myfile, $txt);
 			fclose($myfile);
-		}
-		else
+		} else
 		{
 			unlink("cron/".$this->session->userdata("userid").".txt");
 		}
@@ -283,12 +282,12 @@ class myfacebook extends CI_Controller {
 		if (file_exists($dirname)) 
 		{
 			$myfile = fopen($dirname, "r") or die("Unable to open file!");
-			$allAlbums = fread($myfile,filesize($dirname));
+			$allAlbums = fread($myfile, filesize($dirname));
 			fclose($myfile);
 			$data = json_decode($allAlbums, TRUE);
 		} else
 		{
-			if (!file_exists($path)) 
+			if ( ! file_exists($path)) 
 			{
 				mkdir($path, 0777, true);
 			}
@@ -326,7 +325,7 @@ class myfacebook extends CI_Controller {
 			$allAlbums = fread($myfile,filesize($dirname));
 			fclose($myfile);
 			$data = json_decode($allAlbums, TRUE);
-		}else
+		} else
 		{
 			$data['album'] = array();
 			$album = $this->facebook->request('get', '/'.$albumId.'/photos?fields=source');
@@ -339,19 +338,19 @@ class myfacebook extends CI_Controller {
 	
 			try {
 			
-				if(isset($data["album"]["paging"]["next"]))
+				if (isset($data["album"]["paging"]["next"]))
 			  	{
 			  		$nextUrl = $data["album"]["paging"]["next"];
 			  	} else {
 			  		$nextUrl = "";
 			  	}
 			  
-			  while($nextUrl) {
+			  while ($nextUrl) {
 			  
 			  	$nextData = $this->nextAlbumData($nextUrl);
-			  	if(isset($nextData["paging"]["next"]))
+			  	if (isset($nextData["paging"]["next"]))
 			  	{
-			  		$nextUrl =$nextData["paging"]["next"];
+			  		$nextUrl = $nextData["paging"]["next"];
 			  	} else {
 			  		$nextUrl = "";
 			  	}
@@ -359,7 +358,7 @@ class myfacebook extends CI_Controller {
 			  	$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
 			  }
 			  
-			  if (!file_exists($path)) {
+			  if ( ! file_exists($path)) {
 				mkdir($path, 0777, true);
 			  }
 			  
@@ -371,9 +370,9 @@ class myfacebook extends CI_Controller {
 			  
 			} catch (Exception $e) {
 				echo "catch";
-		    	}
+				}
 		  }
-	    return $data;
+		return $data;
 	}
 
 	public function nextAlbumData($nextUrl)
@@ -540,18 +539,18 @@ class myfacebook extends CI_Controller {
 	}
 	
 	public function cancledownload()
-    	{
+		{
 		$this->delete_directory("albums/".$this->session->userdata("userid"));
 		$data["status"] = "canceled";
 		echo json_encode($data);
-    	}
+		}
 
-    	public function cancleupload()
-    	{
+		public function cancleupload()
+		{
 		unlink("cron/".$this->session->userdata("userid").".txt");
 		$data["status"] = "canceled";
 		echo json_encode($data);
-    	}
+		}
 
 	// ------------------------------------------------------------------------
 

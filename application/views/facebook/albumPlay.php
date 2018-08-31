@@ -12,7 +12,7 @@
 <body id="fullscreen" style="overflow: hidden;">
     <div class="bg"></div>      
         <div class="sider" id="sider" > 
-            <?php foreach($album["data"] as $img) { ?>                
+            <?php foreach ($album["data"] as $img) { ?>                
                 <div class="side" >
                     <img src="<?php echo $img['source']; ?>" alt="">
                 </div>

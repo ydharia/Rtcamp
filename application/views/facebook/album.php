@@ -87,7 +87,7 @@
             <hr>
         </div>
         <div class="gridContainer" style="color:white;" style="grid-template-columns: auto auto auto auto;" >           
-            <?php foreach($album["data"] as $img) { ?>                
+            <?php foreach ($album["data"] as $img) { ?>                
                 <a href="#" onclick="imgpreview('<?php print_r($img["source"]); ?>');"> 
                     <div class="grid-item" >  
                         <div class="gridData" style="background: transparent;" >                                                 
