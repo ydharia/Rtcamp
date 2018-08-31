@@ -23,6 +23,9 @@ $(document).ready(function(){
         download('all',event);
     });
 
+   
+
+    
 });
 
 function sleep(ms) {
@@ -31,18 +34,21 @@ function sleep(ms) {
 
 var totalAlbums = 0;
 var doneAlbum = 0;
+var xhr = [];
 function downloadAlbum(albumId,type,e="")
 {
-
+    closeDownload();
+    $("#download-button").html('<button><i class="fa fa-refresh fa-spin" /></button>');
     document.getElementById("progress-bar-in").style.width= "0%";
     document.getElementById("progress-bar-in-album").style.width= "0%";
     document.getElementById("download-file").style.display = "block";
     document.getElementById("closeDiv").style.color = "#fff";
-    $("#download-button").html("");
+   
     $("#progress-bar-in-album-counter").html("");
+    $("#progress-bar-in-counter").html("");
     $("#progress-bar-in-album").html("");
 	var inresult = "";
-   $.ajax({
+   	$.ajax({
         dataType:'json',
         type:'get',
         url:baseurl+'myfacebook/getAllImageCount/'+albumId,
@@ -54,12 +60,13 @@ function downloadAlbum(albumId,type,e="")
 
             var totalPhotos = response.album.data.length;
             var percentage = 100/totalPhotos;
-
+    $("#download-button").html('<button><i class="fa fa-refresh fa-spin" /></button> <button style="background-color:#d9534f;" onclick="canceldownload()">cancel</button>');
         	for(i=0;i<response.album.data.length;i++)
         	{
         	var picno = i+1;
         	var jdata = { albumId: albumId, albumName: response.album.name,source: response.album.data[i].source, photono: picno };
-			    $.ajax({
+        	
+			  xhr[i] = $.ajax({
 			        dataType:'json',
 			        type:'post',
 				data:jdata,				        
@@ -67,21 +74,25 @@ function downloadAlbum(albumId,type,e="")
 			        catch:false,
 			        success:async function(result)
 			        {
+			        	$("#downloadAlbumName").html('Downloading '+response.album.name+' photos');
 			        	inresult = result;
+			        	
 			        	if(result.status == 1)
 			        	{
                             var progress = (response.album.data.length-total+1) * (100/response.album.data.length);
                             document.getElementById("progress-bar-in").style.width= progress + "%";
 
-							$("#progress-bar-in-counter").html(( response.album.data.length-total+1 )+" of "+response.album.data.length);                
-							if(total == 1)
+                             $("#progress-bar-in-counter").html(( response.album.data.length-total+1 )+" of "+response.album.data.length);                
+
+				        	if(total == 1)
 				        	{
                                 doneAlbum++;
                                 var progressRate = doneAlbum/totalAlbums * 100;
                                 document.getElementById("progress-bar-in-album").style.width= progressRate + "%";
 
                                 $("#progress-bar-in-album-counter").html(doneAlbum + " of "+ totalAlbums);     
-				        	    if(totalAlbums <= doneAlbum)
+				        		
+                                if(totalAlbums <= doneAlbum)
                                 {
                                     if(totalAlbums == 1 && type == "single")
                                     {       
@@ -91,7 +102,8 @@ function downloadAlbum(albumId,type,e="")
                                     {   
                                         var album = {albumName:"", albumId:""};
                                     }
-                                    $.ajax({
+                                    
+                                    var xhr = $.ajax({
                                         async:false,
                                         dataType:'json',
                                         type:'post',
@@ -101,7 +113,7 @@ function downloadAlbum(albumId,type,e="")
                                         success:function(zipresult)
                                         {
                                             document.getElementById("closeDiv").style.color = "black";
-                                            $("#download-button").append("<button onclick='download_zip(\""+zipresult.url+"\");'>Download</button>");
+                                            $("#download-button").html("<button onclick='download_zip(\""+zipresult.url+"\");'>Download</button>");
                                             totalAlbums = 0;
                                             doneAlbum = 0;
                                             console.log(zipresult);
@@ -110,8 +122,11 @@ function downloadAlbum(albumId,type,e="")
                                     });
                                     
                                 }
+
+
 				        	}
 				        	total--;
+				        	
 			        	}
 			        	else
 			        	{
@@ -128,10 +143,29 @@ function downloadAlbum(albumId,type,e="")
         
         
     });
+    
 }
 function download_zip(url){    
     window.location.href =url;    
     closeDownload();
+}
+
+function canceldownload()
+{
+	$("#download-button").html('<button><i class="fa fa-refresh fa-spin" /></button> <button style="background-color:#d9534f;" onclick="canceldownload()"><i class="fa fa-refresh fa-spin" /></button>');
+	for(i=0;i<xhr.length;i++)
+	{
+		xhr[i].abort();
+	}
+	closeDownload();
+	$.ajax({
+		dataType:'json',
+		type:'get',
+		url:baseurl+'myfacebook/cancledownload',
+		catch:false,
+		success:function(result){
+		}
+	});
 }
 
 function download(type,e,albumId="")
@@ -173,6 +207,29 @@ function download(type,e,albumId="")
    }
 }
 
+function downloadSelected()
+{
+    var selected_albums =  [];
+    $(".selectedAlbums").each(function () {
+        if ($(this).is(":checked")) {
+            selected_albums.push($(this).val());
+        }
+    });
+
+    $.ajax({
+        dataType:'json',
+        type:'post',
+        data:'selected='+selected_albums+'&albums=selected',
+        url:baseurl+'myfacebook/downloadall',
+        catch:false,
+        success:function(response)
+        {
+            console.log(response);
+            alert(response.status);
+        }
+    });
+}
+
 function moveAlbum(albumId,albumName,e)
 {
     e.preventDefault();
@@ -200,8 +257,7 @@ function moveAll()
         data:'albums=all',
         url:baseurl+'myfacebook/moveAll',
         catch:false,
-        success:function(response)
-        {
+        success:function(response){
         }
     });
 }
@@ -209,6 +265,7 @@ function moveAll()
 
 function moveSelected()
 {
+    
     var selected_albums =  [];
     $(".selectedAlbums").each(function () {
         if ($(this).is(":checked")) {
@@ -226,11 +283,25 @@ function moveSelected()
         data:'selected='+selected_albums+'&albums=selected',
         url:baseurl+'myfacebook/moveSelected',
         catch:false,
-        success:function(response)
-        {
+        success:function(response){
         }
     });
 }
+
+function cancelupload()
+{
+	$.ajax({
+	        dataType:'json',
+	        type:'get',
+	        url:baseurl+'myfacebook/cancleupload',
+	        catch:false,
+	        success:function(response){
+	        	$('#driveFiles').hide();
+	        }
+    });
+}
+
+
 
 
 var total = (document.getElementById("sider").childElementCount*100);
