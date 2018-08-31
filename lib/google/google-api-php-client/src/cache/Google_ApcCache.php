@@ -26,13 +26,13 @@
 class Google_APCCache extends Google_Cache {
 
   public function __construct() {
-	if (! function_exists('apc_add')) {
+	if ( ! function_exists('apc_add')) {
 	  throw new Google_CacheException("Apc functions not available");
 	}
   }
 
   private function isLocked($key) {
-	if ((@apc_fetch($key . '.lock')) === false) {
+	if ((@apc_fetch($key.'.lock')) === false) {
 	  return false;
 	}
 	return true;
@@ -41,12 +41,12 @@ class Google_APCCache extends Google_Cache {
   private function createLock($key) {
 	// the interesting thing is that this could fail if the lock was created in the meantime..
 	// but we'll ignore that out of convenience
-	@apc_add($key . '.lock', '', 5);
+	@apc_add($key.'.lock', '', 5);
   }
 
   private function removeLock($key) {
 	// suppress all warnings, if some other process removed it that's ok too
-	@apc_delete($key . '.lock');
+	@apc_delete($key.'.lock');
   }
 
   private function waitForLock($key) {
@@ -56,7 +56,7 @@ class Google_APCCache extends Google_Cache {
 	do {
 	  // 250 ms is a long time to sleep, but it does stop the server from burning all resources on polling locks..
 	  usleep(250);
-	  $cnt ++;
+	  $cnt++;
 	} while ($cnt <= $tries && $this->isLocked($key));
 	if ($this->isLocked($key)) {
 	  // 5 seconds passed, assume the owning process died off and remove it
@@ -72,7 +72,7 @@ class Google_APCCache extends Google_Cache {
 	if (($ret = @apc_fetch($key)) === false) {
 	  return false;
 	}
-	if (!$expiration || (time() - $ret['time'] > $expiration)) {
+	if ( ! $expiration || (time() - $ret['time'] > $expiration)) {
 	  $this->delete($key);
 	  return false;
 	}

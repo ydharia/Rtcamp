@@ -54,8 +54,8 @@ class Google_REST {
     
 	if ((intVal($code)) >= 300) {
 	  $decoded = json_decode($body, true);
-	  $err = 'Error calling ' . $response->getRequestMethod() . ' ' . $response->getUrl();
-	  if ($decoded != null && isset($decoded['error']['message'])  && isset($decoded['error']['code'])) {
+	  $err = 'Error calling '.$response->getRequestMethod().' '.$response->getUrl();
+	  if ($decoded != null && isset($decoded['error']['message']) && isset($decoded['error']['code'])) {
 		// if we're getting a json encoded error definition, use that instead of the raw response
 		// body for improved readability
 		$err .= ": ({$decoded['error']['code']}) {$decoded['error']['message']}";
@@ -86,12 +86,12 @@ class Google_REST {
    * @return string $requestUrl
    */
   static function createRequestUri($servicePath, $restPath, $params) {
-	$requestUrl = $servicePath . $restPath;
+	$requestUrl = $servicePath.$restPath;
 	$uriTemplateVars = array();
 	$queryVars = array();
 	foreach ($params as $paramName => $paramSpec) {
 	  // Discovery v1.0 puts the canonical location under the 'location' field.
-	  if (! isset($paramSpec['location'])) {
+	  if ( ! isset($paramSpec['location'])) {
 		$paramSpec['location'] = $paramSpec['restParameterType'];
 	  }
 
@@ -103,10 +103,10 @@ class Google_REST {
 	  } else {
 		if (isset($paramSpec['repeated']) && is_array($paramSpec['value'])) {
 		  foreach ($paramSpec['value'] as $value) {
-			$queryVars[] = $paramName . '=' . rawurlencode($value);
+			$queryVars[] = $paramName.'='.rawurlencode($value);
 		  }
 		} else {
-		  $queryVars[] = $paramName . '=' . rawurlencode($paramSpec['value']);
+		  $queryVars[] = $paramName.'='.rawurlencode($paramSpec['value']);
 		}
 	  }
 	}
@@ -120,7 +120,7 @@ class Google_REST {
 	$requestUrl = str_replace('%40', '@', $requestUrl);
 
 	if (count($queryVars)) {
-	  $requestUrl .= '?' . implode($queryVars, '&');
+	  $requestUrl .= '?'.implode($queryVars, '&');
 	}
 
 	return $requestUrl;

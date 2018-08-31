@@ -239,49 +239,49 @@ class Google_Task extends Google_Model {
   public $queueName;
   public $retry_count;
   public $tag;
-  public function setEnqueueTimestamp( $enqueueTimestamp) {
+  public function setEnqueueTimestamp($enqueueTimestamp) {
 	$this->enqueueTimestamp = $enqueueTimestamp;
   }
   public function getEnqueueTimestamp() {
 	return $this->enqueueTimestamp;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLeaseTimestamp( $leaseTimestamp) {
+  public function setLeaseTimestamp($leaseTimestamp) {
 	$this->leaseTimestamp = $leaseTimestamp;
   }
   public function getLeaseTimestamp() {
 	return $this->leaseTimestamp;
   }
-  public function setPayloadBase64( $payloadBase64) {
+  public function setPayloadBase64($payloadBase64) {
 	$this->payloadBase64 = $payloadBase64;
   }
   public function getPayloadBase64() {
 	return $this->payloadBase64;
   }
-  public function setQueueName( $queueName) {
+  public function setQueueName($queueName) {
 	$this->queueName = $queueName;
   }
   public function getQueueName() {
 	return $this->queueName;
   }
-  public function setRetry_count( $retry_count) {
+  public function setRetry_count($retry_count) {
 	$this->retry_count = $retry_count;
   }
   public function getRetry_count() {
 	return $this->retry_count;
   }
-  public function setTag( $tag) {
+  public function setTag($tag) {
 	$this->tag = $tag;
   }
   public function getTag() {
@@ -305,19 +305,19 @@ class Google_TaskQueue extends Google_Model {
   public function getAcl() {
 	return $this->acl;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMaxLeases( $maxLeases) {
+  public function setMaxLeases($maxLeases) {
 	$this->maxLeases = $maxLeases;
   }
   public function getMaxLeases() {
@@ -363,25 +363,25 @@ class Google_TaskQueueStats extends Google_Model {
   public $leasedLastMinute;
   public $oldestTask;
   public $totalTasks;
-  public function setLeasedLastHour( $leasedLastHour) {
+  public function setLeasedLastHour($leasedLastHour) {
 	$this->leasedLastHour = $leasedLastHour;
   }
   public function getLeasedLastHour() {
 	return $this->leasedLastHour;
   }
-  public function setLeasedLastMinute( $leasedLastMinute) {
+  public function setLeasedLastMinute($leasedLastMinute) {
 	$this->leasedLastMinute = $leasedLastMinute;
   }
   public function getLeasedLastMinute() {
 	return $this->leasedLastMinute;
   }
-  public function setOldestTask( $oldestTask) {
+  public function setOldestTask($oldestTask) {
 	$this->oldestTask = $oldestTask;
   }
   public function getOldestTask() {
 	return $this->oldestTask;
   }
-  public function setTotalTasks( $totalTasks) {
+  public function setTotalTasks($totalTasks) {
 	$this->totalTasks = $totalTasks;
   }
   public function getTotalTasks() {
@@ -401,7 +401,7 @@ class Google_Tasks extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -421,7 +421,7 @@ class Google_Tasks2 extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {

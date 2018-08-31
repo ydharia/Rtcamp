@@ -371,19 +371,19 @@ class Google_CustomField extends Google_Model {
   public $customFieldId;
   public $kind;
   public $value;
-  public function setCustomFieldId( $customFieldId) {
+  public function setCustomFieldId($customFieldId) {
 	$this->customFieldId = $customFieldId;
   }
   public function getCustomFieldId() {
 	return $this->customFieldId;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -398,37 +398,37 @@ class Google_CustomFieldDef extends Google_Model {
   public $name;
   public $requiredForCheckout;
   public $type;
-  public function setEnabled( $enabled) {
+  public function setEnabled($enabled) {
 	$this->enabled = $enabled;
   }
   public function getEnabled() {
 	return $this->enabled;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setRequiredForCheckout( $requiredForCheckout) {
+  public function setRequiredForCheckout($requiredForCheckout) {
 	$this->requiredForCheckout = $requiredForCheckout;
   }
   public function getRequiredForCheckout() {
 	return $this->requiredForCheckout;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -448,7 +448,7 @@ class Google_CustomFieldDefListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -468,7 +468,7 @@ class Google_CustomFields extends Google_Model {
   public function getCustomField() {
 	return $this->customField;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -485,7 +485,7 @@ class Google_Job extends Google_Model {
   protected $__stateType = 'Google_JobState';
   protected $__stateDataType = '';
   public $state;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -498,7 +498,7 @@ class Google_Job extends Google_Model {
   public function getJobChange() {
 	return $this->jobChange;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -518,7 +518,7 @@ class Google_JobChange extends Google_Model {
   protected $__stateDataType = '';
   public $state;
   public $timestamp;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -530,7 +530,7 @@ class Google_JobChange extends Google_Model {
   public function getState() {
 	return $this->state;
   }
-  public function setTimestamp( $timestamp) {
+  public function setTimestamp($timestamp) {
 	$this->timestamp = $timestamp;
   }
   public function getTimestamp() {
@@ -551,13 +551,13 @@ class Google_JobListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -579,7 +579,7 @@ class Google_JobState extends Google_Model {
   public $note;
   public $progress;
   public $title;
-  public function setAssignee( $assignee) {
+  public function setAssignee($assignee) {
 	$this->assignee = $assignee;
   }
   public function getAssignee() {
@@ -591,19 +591,19 @@ class Google_JobState extends Google_Model {
   public function getCustomFields() {
 	return $this->customFields;
   }
-  public function setCustomerName( $customerName) {
+  public function setCustomerName($customerName) {
 	$this->customerName = $customerName;
   }
   public function getCustomerName() {
 	return $this->customerName;
   }
-  public function setCustomerPhoneNumber( $customerPhoneNumber) {
+  public function setCustomerPhoneNumber($customerPhoneNumber) {
 	$this->customerPhoneNumber = $customerPhoneNumber;
   }
   public function getCustomerPhoneNumber() {
 	return $this->customerPhoneNumber;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -622,13 +622,13 @@ class Google_JobState extends Google_Model {
   public function getNote() {
 	return $this->note;
   }
-  public function setProgress( $progress) {
+  public function setProgress($progress) {
 	$this->progress = $progress;
   }
   public function getProgress() {
 	return $this->progress;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -648,19 +648,19 @@ class Google_Location extends Google_Model {
   public function getAddressLine() {
 	return $this->addressLine;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLat( $lat) {
+  public function setLat($lat) {
 	$this->lat = $lat;
   }
   public function getLat() {
 	return $this->lat;
   }
-  public function setLng( $lng) {
+  public function setLng($lng) {
 	$this->lng = $lng;
   }
   public function getLng() {
@@ -684,13 +684,13 @@ class Google_LocationListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -710,31 +710,31 @@ class Google_LocationRecord extends Google_Model {
   public $kind;
   public $latitude;
   public $longitude;
-  public function setCollectionTime( $collectionTime) {
+  public function setCollectionTime($collectionTime) {
 	$this->collectionTime = $collectionTime;
   }
   public function getCollectionTime() {
 	return $this->collectionTime;
   }
-  public function setConfidenceRadius( $confidenceRadius) {
+  public function setConfidenceRadius($confidenceRadius) {
 	$this->confidenceRadius = $confidenceRadius;
   }
   public function getConfidenceRadius() {
 	return $this->confidenceRadius;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLatitude( $latitude) {
+  public function setLatitude($latitude) {
 	$this->latitude = $latitude;
   }
   public function getLatitude() {
 	return $this->latitude;
   }
-  public function setLongitude( $longitude) {
+  public function setLongitude($longitude) {
 	$this->longitude = $longitude;
   }
   public function getLongitude() {
@@ -748,31 +748,31 @@ class Google_Schedule extends Google_Model {
   public $endTime;
   public $kind;
   public $startTime;
-  public function setAllDay( $allDay) {
+  public function setAllDay($allDay) {
 	$this->allDay = $allDay;
   }
   public function getAllDay() {
 	return $this->allDay;
   }
-  public function setDuration( $duration) {
+  public function setDuration($duration) {
 	$this->duration = $duration;
   }
   public function getDuration() {
 	return $this->duration;
   }
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
 	return $this->endTime;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
@@ -784,19 +784,19 @@ class Google_TokenPagination extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $previousPageToken;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setPreviousPageToken( $previousPageToken) {
+  public function setPreviousPageToken($previousPageToken) {
 	$this->previousPageToken = $previousPageToken;
   }
   public function getPreviousPageToken() {
@@ -807,13 +807,13 @@ class Google_TokenPagination extends Google_Model {
 class Google_Worker extends Google_Model {
   public $id;
   public $kind;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -833,7 +833,7 @@ class Google_WorkerListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {

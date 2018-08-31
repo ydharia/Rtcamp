@@ -86,25 +86,25 @@ class Google_Webfont extends Google_Model {
   public $subsets;
   public $variants;
   public $version;
-  public function setFamily( $family) {
+  public function setFamily($family) {
 	$this->family = $family;
   }
   public function getFamily() {
 	return $this->family;
   }
-  public function setFiles( $files) {
+  public function setFiles($files) {
 	$this->files = $files;
   }
   public function getFiles() {
 	return $this->files;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLastModified( $lastModified) {
+  public function setLastModified($lastModified) {
 	$this->lastModified = $lastModified;
   }
   public function getLastModified() {
@@ -124,7 +124,7 @@ class Google_Webfont extends Google_Model {
   public function getVariants() {
 	return $this->variants;
   }
-  public function setVersion( $version) {
+  public function setVersion($version) {
 	$this->version = $version;
   }
   public function getVersion() {
@@ -144,7 +144,7 @@ class Google_WebfontList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {

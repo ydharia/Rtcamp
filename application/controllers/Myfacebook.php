@@ -322,7 +322,7 @@ class myfacebook extends CI_Controller {
 		if (file_exists($dirname)) 
 		{
 			$myfile = fopen($dirname, "r") or die("Unable to open file!");
-			$allAlbums = fread($myfile,filesize($dirname));
+			$allAlbums = fread($myfile, filesize($dirname));
 			fclose($myfile);
 			$data = json_decode($allAlbums, TRUE);
 		} else
@@ -330,7 +330,7 @@ class myfacebook extends CI_Controller {
 			$data['album'] = array();
 			$album = $this->facebook->request('get', '/'.$albumId.'/photos?fields=source');
 			$albumdetails = $this->facebook->request('get', '/'.$albumId);
-			if (!isset($album['error']))
+			if ( ! isset($album['error']))
 			{
 				$data['album'] = $album;
 				$data['album']["name"] = $albumdetails["name"];

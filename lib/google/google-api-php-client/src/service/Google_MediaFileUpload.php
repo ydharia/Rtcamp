@@ -52,12 +52,12 @@ class Google_MediaFileUpload {
    * @param bool $chunkSize File will be uploaded in chunks of this many bytes.
    * only used if resumable=True
    */
-  public function __construct($mimeType, $data, $resumable=false, $chunkSize=false) {
+  public function __construct($mimeType, $data, $resumable = false, $chunkSize = false) {
 	$this->mimeType = $mimeType;
 	$this->data = $data;
 	$this->size = strlen($this->data);
 	$this->resumable = $resumable;
-	if(!$chunkSize) {
+	if ( ! $chunkSize) {
 	  $chunkSize = 256 * 1024;
 	}
 	$this->chunkSize = $chunkSize;
@@ -78,7 +78,7 @@ class Google_MediaFileUpload {
 	$payload = array();
 	$meta = is_string($meta) ? json_decode($meta, true) : $meta;
 	$uploadType = self::getUploadType($meta, $payload, $params);
-	if (!$uploadType) {
+	if ( ! $uploadType) {
 	  // Process as a normal API request.
 	  return false;
 	}
@@ -95,7 +95,7 @@ class Google_MediaFileUpload {
 		: false;
 	unset($params['mimeType']);
 
-	if (!$mimeType) {
+	if ( ! $mimeType) {
 	  $mimeType = $payload['content-type'];
 	}
 
@@ -119,20 +119,18 @@ class Google_MediaFileUpload {
 	  // This is a simple media upload.
 	  $payload['content-type'] = $mimeType;
 	  $payload['postBody'] = $data;
-	}
-
-	elseif (self::UPLOAD_MULTIPART_TYPE == $uploadType) {
+	} elseif (self::UPLOAD_MULTIPART_TYPE == $uploadType) {
 	  // This is a multipart/related upload.
 	  $boundary = isset($params['boundary']['value']) ? $params['boundary']['value'] : mt_rand();
 	  $boundary = str_replace('"', '', $boundary);
-	  $payload['content-type'] = 'multipart/related; boundary=' . $boundary;
+	  $payload['content-type'] = 'multipart/related; boundary='.$boundary;
 	  $related = "--$boundary\r\n";
 	  $related .= "Content-Type: application/json; charset=UTF-8\r\n";
-	  $related .= "\r\n" . json_encode($meta) . "\r\n";
+	  $related .= "\r\n".json_encode($meta)."\r\n";
 	  $related .= "--$boundary\r\n";
 	  $related .= "Content-Type: $mimeType\r\n";
 	  $related .= "Content-Transfer-Encoding: base64\r\n";
-	  $related .= "\r\n" . base64_encode($data) . "\r\n";
+	  $related .= "\r\n".base64_encode($data)."\r\n";
 	  $related .= "--$boundary--";
 	  $payload['postBody'] = $related;
 	}
@@ -148,9 +146,9 @@ class Google_MediaFileUpload {
    * @visible For testing.
    */
   public static function processFileUpload($file, $mime) {
-	if (!$file) return array();
+	if ( ! $file) return array();
 	if (substr($file, 0, 1) != '@') {
-	  $file = '@' . $file;
+	  $file = '@'.$file;
 	}
 
 	// This is a standard file upload with curl.
@@ -209,7 +207,7 @@ class Google_MediaFileUpload {
   }
 
 
-  public function nextChunk(Google_HttpRequest $req, $chunk=false) {
+  public function nextChunk(Google_HttpRequest $req, $chunk = false) {
 	if (false == $this->resumeUri) {
 	  $this->resumeUri = $this->getResumeUri($req);
 	}

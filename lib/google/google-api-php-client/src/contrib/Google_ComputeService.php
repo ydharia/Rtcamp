@@ -2197,25 +2197,25 @@ class Google_AccessConfig extends Google_Model {
   public $name;
   public $natIP;
   public $type;
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setNatIP( $natIP) {
+  public function setNatIP($natIP) {
 	$this->natIP = $natIP;
   }
   public function getNatIP() {
 	return $this->natIP;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -2234,55 +2234,55 @@ class Google_Address extends Google_Model {
   public $selfLink;
   public $status;
   public $users;
-  public function setAddress( $address) {
+  public function setAddress($address) {
 	$this->address = $address;
   }
   public function getAddress() {
 	return $this->address;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
 	return $this->region;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -2305,7 +2305,7 @@ class Google_AddressAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2317,19 +2317,19 @@ class Google_AddressAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2345,7 +2345,7 @@ class Google_AddressList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2358,19 +2358,19 @@ class Google_AddressList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2406,7 +2406,7 @@ class Google_AddressesScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -2419,7 +2419,7 @@ class Google_AddressesScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -2430,13 +2430,13 @@ class Google_AddressesScopedListWarning extends Google_Model {
 class Google_AddressesScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -2452,43 +2452,43 @@ class Google_AttachedDisk extends Google_Model {
   public $mode;
   public $source;
   public $type;
-  public function setBoot( $boot) {
+  public function setBoot($boot) {
 	$this->boot = $boot;
   }
   public function getBoot() {
 	return $this->boot;
   }
-  public function setDeviceName( $deviceName) {
+  public function setDeviceName($deviceName) {
 	$this->deviceName = $deviceName;
   }
   public function getDeviceName() {
 	return $this->deviceName;
   }
-  public function setIndex( $index) {
+  public function setIndex($index) {
 	$this->index = $index;
   }
   public function getIndex() {
 	return $this->index;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMode( $mode) {
+  public function setMode($mode) {
 	$this->mode = $mode;
   }
   public function getMode() {
 	return $this->mode;
   }
-  public function setSource( $source) {
+  public function setSource($source) {
 	$this->source = $source;
   }
   public function getSource() {
 	return $this->source;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -2502,31 +2502,31 @@ class Google_DeprecationStatus extends Google_Model {
   public $obsolete;
   public $replacement;
   public $state;
-  public function setDeleted( $deleted) {
+  public function setDeleted($deleted) {
 	$this->deleted = $deleted;
   }
   public function getDeleted() {
 	return $this->deleted;
   }
-  public function setDeprecated( $deprecated) {
+  public function setDeprecated($deprecated) {
 	$this->deprecated = $deprecated;
   }
   public function getDeprecated() {
 	return $this->deprecated;
   }
-  public function setObsolete( $obsolete) {
+  public function setObsolete($obsolete) {
 	$this->obsolete = $obsolete;
   }
   public function getObsolete() {
 	return $this->obsolete;
   }
-  public function setReplacement( $replacement) {
+  public function setReplacement($replacement) {
 	$this->replacement = $replacement;
   }
   public function getReplacement() {
 	return $this->replacement;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
@@ -2549,85 +2549,85 @@ class Google_Disk extends Google_Model {
   public $sourceSnapshotId;
   public $status;
   public $zone;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setOptions( $options) {
+  public function setOptions($options) {
 	$this->options = $options;
   }
   public function getOptions() {
 	return $this->options;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSizeGb( $sizeGb) {
+  public function setSizeGb($sizeGb) {
 	$this->sizeGb = $sizeGb;
   }
   public function getSizeGb() {
 	return $this->sizeGb;
   }
-  public function setSourceImage( $sourceImage) {
+  public function setSourceImage($sourceImage) {
 	$this->sourceImage = $sourceImage;
   }
   public function getSourceImage() {
 	return $this->sourceImage;
   }
-  public function setSourceImageId( $sourceImageId) {
+  public function setSourceImageId($sourceImageId) {
 	$this->sourceImageId = $sourceImageId;
   }
   public function getSourceImageId() {
 	return $this->sourceImageId;
   }
-  public function setSourceSnapshot( $sourceSnapshot) {
+  public function setSourceSnapshot($sourceSnapshot) {
 	$this->sourceSnapshot = $sourceSnapshot;
   }
   public function getSourceSnapshot() {
 	return $this->sourceSnapshot;
   }
-  public function setSourceSnapshotId( $sourceSnapshotId) {
+  public function setSourceSnapshotId($sourceSnapshotId) {
 	$this->sourceSnapshotId = $sourceSnapshotId;
   }
   public function getSourceSnapshotId() {
 	return $this->sourceSnapshotId;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setZone( $zone) {
+  public function setZone($zone) {
 	$this->zone = $zone;
   }
   public function getZone() {
@@ -2643,7 +2643,7 @@ class Google_DiskAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2655,19 +2655,19 @@ class Google_DiskAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2683,7 +2683,7 @@ class Google_DiskList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2696,19 +2696,19 @@ class Google_DiskList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2744,7 +2744,7 @@ class Google_DisksScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -2757,7 +2757,7 @@ class Google_DisksScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -2768,13 +2768,13 @@ class Google_DisksScopedListWarning extends Google_Model {
 class Google_DisksScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -2803,43 +2803,43 @@ class Google_Firewall extends Google_Model {
   public function getAllowed() {
 	return $this->allowed;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setNetwork( $network) {
+  public function setNetwork($network) {
 	$this->network = $network;
   }
   public function getNetwork() {
 	return $this->network;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2871,7 +2871,7 @@ class Google_Firewall extends Google_Model {
 class Google_FirewallAllowed extends Google_Model {
   public $IPProtocol;
   public $ports;
-  public function setIPProtocol( $IPProtocol) {
+  public function setIPProtocol($IPProtocol) {
 	$this->IPProtocol = $IPProtocol;
   }
   public function getIPProtocol() {
@@ -2894,7 +2894,7 @@ class Google_FirewallList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -2907,19 +2907,19 @@ class Google_FirewallList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -2939,67 +2939,67 @@ class Google_ForwardingRule extends Google_Model {
   public $region;
   public $selfLink;
   public $target;
-  public function setIPAddress( $IPAddress) {
+  public function setIPAddress($IPAddress) {
 	$this->IPAddress = $IPAddress;
   }
   public function getIPAddress() {
 	return $this->IPAddress;
   }
-  public function setIPProtocol( $IPProtocol) {
+  public function setIPProtocol($IPProtocol) {
 	$this->IPProtocol = $IPProtocol;
   }
   public function getIPProtocol() {
 	return $this->IPProtocol;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setPortRange( $portRange) {
+  public function setPortRange($portRange) {
 	$this->portRange = $portRange;
   }
   public function getPortRange() {
 	return $this->portRange;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
 	return $this->region;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTarget( $target) {
+  public function setTarget($target) {
 	$this->target = $target;
   }
   public function getTarget() {
@@ -3015,7 +3015,7 @@ class Google_ForwardingRuleAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3027,19 +3027,19 @@ class Google_ForwardingRuleAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3055,7 +3055,7 @@ class Google_ForwardingRuleList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3068,19 +3068,19 @@ class Google_ForwardingRuleList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3116,7 +3116,7 @@ class Google_ForwardingRulesScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -3129,7 +3129,7 @@ class Google_ForwardingRulesScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -3140,13 +3140,13 @@ class Google_ForwardingRulesScopedListWarning extends Google_Model {
 class Google_ForwardingRulesScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -3156,7 +3156,7 @@ class Google_ForwardingRulesScopedListWarningData extends Google_Model {
 
 class Google_HealthCheckReference extends Google_Model {
   public $healthCheck;
-  public function setHealthCheck( $healthCheck) {
+  public function setHealthCheck($healthCheck) {
 	$this->healthCheck = $healthCheck;
   }
   public function getHealthCheck() {
@@ -3168,19 +3168,19 @@ class Google_HealthStatus extends Google_Model {
   public $healthState;
   public $instance;
   public $ipAddress;
-  public function setHealthState( $healthState) {
+  public function setHealthState($healthState) {
 	$this->healthState = $healthState;
   }
   public function getHealthState() {
 	return $this->healthState;
   }
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
 	return $this->instance;
   }
-  public function setIpAddress( $ipAddress) {
+  public function setIpAddress($ipAddress) {
 	$this->ipAddress = $ipAddress;
   }
   public function getIpAddress() {
@@ -3202,79 +3202,79 @@ class Google_HttpHealthCheck extends Google_Model {
   public $selfLink;
   public $timeoutSec;
   public $unhealthyThreshold;
-  public function setCheckIntervalSec( $checkIntervalSec) {
+  public function setCheckIntervalSec($checkIntervalSec) {
 	$this->checkIntervalSec = $checkIntervalSec;
   }
   public function getCheckIntervalSec() {
 	return $this->checkIntervalSec;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setHealthyThreshold( $healthyThreshold) {
+  public function setHealthyThreshold($healthyThreshold) {
 	$this->healthyThreshold = $healthyThreshold;
   }
   public function getHealthyThreshold() {
 	return $this->healthyThreshold;
   }
-  public function setHost( $host) {
+  public function setHost($host) {
 	$this->host = $host;
   }
   public function getHost() {
 	return $this->host;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setPort( $port) {
+  public function setPort($port) {
 	$this->port = $port;
   }
   public function getPort() {
 	return $this->port;
   }
-  public function setRequestPath( $requestPath) {
+  public function setRequestPath($requestPath) {
 	$this->requestPath = $requestPath;
   }
   public function getRequestPath() {
 	return $this->requestPath;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setTimeoutSec( $timeoutSec) {
+  public function setTimeoutSec($timeoutSec) {
 	$this->timeoutSec = $timeoutSec;
   }
   public function getTimeoutSec() {
 	return $this->timeoutSec;
   }
-  public function setUnhealthyThreshold( $unhealthyThreshold) {
+  public function setUnhealthyThreshold($unhealthyThreshold) {
 	$this->unhealthyThreshold = $unhealthyThreshold;
   }
   public function getUnhealthyThreshold() {
@@ -3290,7 +3290,7 @@ class Google_HttpHealthCheckList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3303,19 +3303,19 @@ class Google_HttpHealthCheckList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3339,13 +3339,13 @@ class Google_Image extends Google_Model {
   public $selfLink;
   public $sourceType;
   public $status;
-  public function setArchiveSizeBytes( $archiveSizeBytes) {
+  public function setArchiveSizeBytes($archiveSizeBytes) {
 	$this->archiveSizeBytes = $archiveSizeBytes;
   }
   public function getArchiveSizeBytes() {
 	return $this->archiveSizeBytes;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
@@ -3357,25 +3357,25 @@ class Google_Image extends Google_Model {
   public function getDeprecated() {
 	return $this->deprecated;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -3387,19 +3387,19 @@ class Google_Image extends Google_Model {
   public function getRawDisk() {
 	return $this->rawDisk;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSourceType( $sourceType) {
+  public function setSourceType($sourceType) {
 	$this->sourceType = $sourceType;
   }
   public function getSourceType() {
 	return $this->sourceType;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -3415,7 +3415,7 @@ class Google_ImageList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3428,19 +3428,19 @@ class Google_ImageList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3452,19 +3452,19 @@ class Google_ImageRawDisk extends Google_Model {
   public $containerType;
   public $sha1Checksum;
   public $source;
-  public function setContainerType( $containerType) {
+  public function setContainerType($containerType) {
 	$this->containerType = $containerType;
   }
   public function getContainerType() {
 	return $this->containerType;
   }
-  public function setSha1Checksum( $sha1Checksum) {
+  public function setSha1Checksum($sha1Checksum) {
 	$this->sha1Checksum = $sha1Checksum;
   }
   public function getSha1Checksum() {
 	return $this->sha1Checksum;
   }
-  public function setSource( $source) {
+  public function setSource($source) {
 	$this->source = $source;
   }
   public function getSource() {
@@ -3502,19 +3502,19 @@ class Google_Instance extends Google_Model {
   protected $__tagsDataType = '';
   public $tags;
   public $zone;
-  public function setCanIpForward( $canIpForward) {
+  public function setCanIpForward($canIpForward) {
 	$this->canIpForward = $canIpForward;
   }
   public function getCanIpForward() {
 	return $this->canIpForward;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
@@ -3527,19 +3527,19 @@ class Google_Instance extends Google_Model {
   public function getDisks() {
 	return $this->disks;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMachineType( $machineType) {
+  public function setMachineType($machineType) {
 	$this->machineType = $machineType;
   }
   public function getMachineType() {
@@ -3551,7 +3551,7 @@ class Google_Instance extends Google_Model {
   public function getMetadata() {
 	return $this->metadata;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -3570,7 +3570,7 @@ class Google_Instance extends Google_Model {
   public function getScheduling() {
 	return $this->scheduling;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3583,13 +3583,13 @@ class Google_Instance extends Google_Model {
   public function getServiceAccounts() {
 	return $this->serviceAccounts;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setStatusMessage( $statusMessage) {
+  public function setStatusMessage($statusMessage) {
 	$this->statusMessage = $statusMessage;
   }
   public function getStatusMessage() {
@@ -3601,7 +3601,7 @@ class Google_Instance extends Google_Model {
   public function getTags() {
 	return $this->tags;
   }
-  public function setZone( $zone) {
+  public function setZone($zone) {
 	$this->zone = $zone;
   }
   public function getZone() {
@@ -3617,7 +3617,7 @@ class Google_InstanceAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3629,19 +3629,19 @@ class Google_InstanceAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3657,7 +3657,7 @@ class Google_InstanceList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3670,19 +3670,19 @@ class Google_InstanceList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3692,7 +3692,7 @@ class Google_InstanceList extends Google_Model {
 
 class Google_InstanceReference extends Google_Model {
   public $instance;
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
@@ -3728,7 +3728,7 @@ class Google_InstancesScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -3741,7 +3741,7 @@ class Google_InstancesScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -3752,13 +3752,13 @@ class Google_InstancesScopedListWarning extends Google_Model {
 class Google_InstancesScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -3785,7 +3785,7 @@ class Google_MachineType extends Google_Model {
   public $scratchDisks;
   public $selfLink;
   public $zone;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
@@ -3797,55 +3797,55 @@ class Google_MachineType extends Google_Model {
   public function getDeprecated() {
 	return $this->deprecated;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setGuestCpus( $guestCpus) {
+  public function setGuestCpus($guestCpus) {
 	$this->guestCpus = $guestCpus;
   }
   public function getGuestCpus() {
 	return $this->guestCpus;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setImageSpaceGb( $imageSpaceGb) {
+  public function setImageSpaceGb($imageSpaceGb) {
 	$this->imageSpaceGb = $imageSpaceGb;
   }
   public function getImageSpaceGb() {
 	return $this->imageSpaceGb;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setMaximumPersistentDisks( $maximumPersistentDisks) {
+  public function setMaximumPersistentDisks($maximumPersistentDisks) {
 	$this->maximumPersistentDisks = $maximumPersistentDisks;
   }
   public function getMaximumPersistentDisks() {
 	return $this->maximumPersistentDisks;
   }
-  public function setMaximumPersistentDisksSizeGb( $maximumPersistentDisksSizeGb) {
+  public function setMaximumPersistentDisksSizeGb($maximumPersistentDisksSizeGb) {
 	$this->maximumPersistentDisksSizeGb = $maximumPersistentDisksSizeGb;
   }
   public function getMaximumPersistentDisksSizeGb() {
 	return $this->maximumPersistentDisksSizeGb;
   }
-  public function setMemoryMb( $memoryMb) {
+  public function setMemoryMb($memoryMb) {
 	$this->memoryMb = $memoryMb;
   }
   public function getMemoryMb() {
 	return $this->memoryMb;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -3858,13 +3858,13 @@ class Google_MachineType extends Google_Model {
   public function getScratchDisks() {
 	return $this->scratchDisks;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setZone( $zone) {
+  public function setZone($zone) {
 	$this->zone = $zone;
   }
   public function getZone() {
@@ -3880,7 +3880,7 @@ class Google_MachineTypeAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3892,19 +3892,19 @@ class Google_MachineTypeAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3920,7 +3920,7 @@ class Google_MachineTypeList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -3933,19 +3933,19 @@ class Google_MachineTypeList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -3955,7 +3955,7 @@ class Google_MachineTypeList extends Google_Model {
 
 class Google_MachineTypeScratchDisks extends Google_Model {
   public $diskGb;
-  public function setDiskGb( $diskGb) {
+  public function setDiskGb($diskGb) {
 	$this->diskGb = $diskGb;
   }
   public function getDiskGb() {
@@ -3991,7 +3991,7 @@ class Google_MachineTypesScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -4004,7 +4004,7 @@ class Google_MachineTypesScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -4015,13 +4015,13 @@ class Google_MachineTypesScopedListWarning extends Google_Model {
 class Google_MachineTypesScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -4035,7 +4035,7 @@ class Google_Metadata extends Google_Model {
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  public function setFingerprint( $fingerprint) {
+  public function setFingerprint($fingerprint) {
 	$this->fingerprint = $fingerprint;
   }
   public function getFingerprint() {
@@ -4048,7 +4048,7 @@ class Google_Metadata extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -4059,13 +4059,13 @@ class Google_Metadata extends Google_Model {
 class Google_MetadataItems extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -4082,49 +4082,49 @@ class Google_Network extends Google_Model {
   public $kind;
   public $name;
   public $selfLink;
-  public function setIPv4Range( $IPv4Range) {
+  public function setIPv4Range($IPv4Range) {
 	$this->IPv4Range = $IPv4Range;
   }
   public function getIPv4Range() {
 	return $this->IPv4Range;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setGatewayIPv4( $gatewayIPv4) {
+  public function setGatewayIPv4($gatewayIPv4) {
 	$this->gatewayIPv4 = $gatewayIPv4;
   }
   public function getGatewayIPv4() {
 	return $this->gatewayIPv4;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4146,19 +4146,19 @@ class Google_NetworkInterface extends Google_Model {
   public function getAccessConfigs() {
 	return $this->accessConfigs;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setNetwork( $network) {
+  public function setNetwork($network) {
 	$this->network = $network;
   }
   public function getNetwork() {
 	return $this->network;
   }
-  public function setNetworkIP( $networkIP) {
+  public function setNetworkIP($networkIP) {
 	$this->networkIP = $networkIP;
   }
   public function getNetworkIP() {
@@ -4174,7 +4174,7 @@ class Google_NetworkList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -4187,19 +4187,19 @@ class Google_NetworkList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4234,19 +4234,19 @@ class Google_Operation extends Google_Model {
   protected $__warningsDataType = 'array';
   public $warnings;
   public $zone;
-  public function setClientOperationId( $clientOperationId) {
+  public function setClientOperationId($clientOperationId) {
 	$this->clientOperationId = $clientOperationId;
   }
   public function getClientOperationId() {
 	return $this->clientOperationId;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
@@ -4258,97 +4258,97 @@ class Google_Operation extends Google_Model {
   public function getError() {
 	return $this->error;
   }
-  public function setHttpErrorMessage( $httpErrorMessage) {
+  public function setHttpErrorMessage($httpErrorMessage) {
 	$this->httpErrorMessage = $httpErrorMessage;
   }
   public function getHttpErrorMessage() {
 	return $this->httpErrorMessage;
   }
-  public function setHttpErrorStatusCode( $httpErrorStatusCode) {
+  public function setHttpErrorStatusCode($httpErrorStatusCode) {
 	$this->httpErrorStatusCode = $httpErrorStatusCode;
   }
   public function getHttpErrorStatusCode() {
 	return $this->httpErrorStatusCode;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setInsertTime( $insertTime) {
+  public function setInsertTime($insertTime) {
 	$this->insertTime = $insertTime;
   }
   public function getInsertTime() {
 	return $this->insertTime;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setOperationType( $operationType) {
+  public function setOperationType($operationType) {
 	$this->operationType = $operationType;
   }
   public function getOperationType() {
 	return $this->operationType;
   }
-  public function setProgress( $progress) {
+  public function setProgress($progress) {
 	$this->progress = $progress;
   }
   public function getProgress() {
 	return $this->progress;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
 	return $this->region;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setStartTime( $startTime) {
+  public function setStartTime($startTime) {
 	$this->startTime = $startTime;
   }
   public function getStartTime() {
 	return $this->startTime;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setStatusMessage( $statusMessage) {
+  public function setStatusMessage($statusMessage) {
 	$this->statusMessage = $statusMessage;
   }
   public function getStatusMessage() {
 	return $this->statusMessage;
   }
-  public function setTargetId( $targetId) {
+  public function setTargetId($targetId) {
 	$this->targetId = $targetId;
   }
   public function getTargetId() {
 	return $this->targetId;
   }
-  public function setTargetLink( $targetLink) {
+  public function setTargetLink($targetLink) {
 	$this->targetLink = $targetLink;
   }
   public function getTargetLink() {
 	return $this->targetLink;
   }
-  public function setUser( $user) {
+  public function setUser($user) {
 	$this->user = $user;
   }
   public function getUser() {
@@ -4361,7 +4361,7 @@ class Google_Operation extends Google_Model {
   public function getWarnings() {
 	return $this->warnings;
   }
-  public function setZone( $zone) {
+  public function setZone($zone) {
 	$this->zone = $zone;
   }
   public function getZone() {
@@ -4377,7 +4377,7 @@ class Google_OperationAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -4389,19 +4389,19 @@ class Google_OperationAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4426,19 +4426,19 @@ class Google_OperationErrorErrors extends Google_Model {
   public $code;
   public $location;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
 	return $this->code;
   }
-  public function setLocation( $location) {
+  public function setLocation($location) {
 	$this->location = $location;
   }
   public function getLocation() {
 	return $this->location;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -4454,7 +4454,7 @@ class Google_OperationList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -4467,19 +4467,19 @@ class Google_OperationList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4493,7 +4493,7 @@ class Google_OperationWarnings extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -4506,7 +4506,7 @@ class Google_OperationWarnings extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -4517,13 +4517,13 @@ class Google_OperationWarnings extends Google_Model {
 class Google_OperationWarningsData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -4559,7 +4559,7 @@ class Google_OperationsScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -4572,7 +4572,7 @@ class Google_OperationsScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -4583,13 +4583,13 @@ class Google_OperationsScopedListWarning extends Google_Model {
 class Google_OperationsScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -4616,31 +4616,31 @@ class Google_Project extends Google_Model {
   public function getCommonInstanceMetadata() {
 	return $this->commonInstanceMetadata;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -4653,7 +4653,7 @@ class Google_Project extends Google_Model {
   public function getQuotas() {
 	return $this->quotas;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4665,19 +4665,19 @@ class Google_Quota extends Google_Model {
   public $limit;
   public $metric;
   public $usage;
-  public function setLimit( $limit) {
+  public function setLimit($limit) {
 	$this->limit = $limit;
   }
   public function getLimit() {
 	return $this->limit;
   }
-  public function setMetric( $metric) {
+  public function setMetric($metric) {
 	$this->metric = $metric;
   }
   public function getMetric() {
 	return $this->metric;
   }
-  public function setUsage( $usage) {
+  public function setUsage($usage) {
 	$this->usage = $usage;
   }
   public function getUsage() {
@@ -4700,7 +4700,7 @@ class Google_Region extends Google_Model {
   public $selfLink;
   public $status;
   public $zones;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
@@ -4712,25 +4712,25 @@ class Google_Region extends Google_Model {
   public function getDeprecated() {
 	return $this->deprecated;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
@@ -4743,13 +4743,13 @@ class Google_Region extends Google_Model {
   public function getQuotas() {
 	return $this->quotas;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -4772,7 +4772,7 @@ class Google_RegionList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -4785,19 +4785,19 @@ class Google_RegionList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4823,79 +4823,79 @@ class Google_Route extends Google_Model {
   protected $__warningsType = 'Google_RouteWarnings';
   protected $__warningsDataType = 'array';
   public $warnings;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setDestRange( $destRange) {
+  public function setDestRange($destRange) {
 	$this->destRange = $destRange;
   }
   public function getDestRange() {
 	return $this->destRange;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setNetwork( $network) {
+  public function setNetwork($network) {
 	$this->network = $network;
   }
   public function getNetwork() {
 	return $this->network;
   }
-  public function setNextHopGateway( $nextHopGateway) {
+  public function setNextHopGateway($nextHopGateway) {
 	$this->nextHopGateway = $nextHopGateway;
   }
   public function getNextHopGateway() {
 	return $this->nextHopGateway;
   }
-  public function setNextHopInstance( $nextHopInstance) {
+  public function setNextHopInstance($nextHopInstance) {
 	$this->nextHopInstance = $nextHopInstance;
   }
   public function getNextHopInstance() {
 	return $this->nextHopInstance;
   }
-  public function setNextHopIp( $nextHopIp) {
+  public function setNextHopIp($nextHopIp) {
 	$this->nextHopIp = $nextHopIp;
   }
   public function getNextHopIp() {
 	return $this->nextHopIp;
   }
-  public function setNextHopNetwork( $nextHopNetwork) {
+  public function setNextHopNetwork($nextHopNetwork) {
 	$this->nextHopNetwork = $nextHopNetwork;
   }
   public function getNextHopNetwork() {
 	return $this->nextHopNetwork;
   }
-  public function setPriority( $priority) {
+  public function setPriority($priority) {
 	$this->priority = $priority;
   }
   public function getPriority() {
 	return $this->priority;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4925,7 +4925,7 @@ class Google_RouteList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -4938,19 +4938,19 @@ class Google_RouteList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -4964,7 +4964,7 @@ class Google_RouteWarnings extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -4977,7 +4977,7 @@ class Google_RouteWarnings extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -4988,13 +4988,13 @@ class Google_RouteWarnings extends Google_Model {
 class Google_RouteWarningsData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -5005,13 +5005,13 @@ class Google_RouteWarningsData extends Google_Model {
 class Google_Scheduling extends Google_Model {
   public $automaticRestart;
   public $onHostMaintenance;
-  public function setAutomaticRestart( $automaticRestart) {
+  public function setAutomaticRestart($automaticRestart) {
 	$this->automaticRestart = $automaticRestart;
   }
   public function getAutomaticRestart() {
 	return $this->automaticRestart;
   }
-  public function setOnHostMaintenance( $onHostMaintenance) {
+  public function setOnHostMaintenance($onHostMaintenance) {
 	$this->onHostMaintenance = $onHostMaintenance;
   }
   public function getOnHostMaintenance() {
@@ -5023,19 +5023,19 @@ class Google_SerialPortOutput extends Google_Model {
   public $contents;
   public $kind;
   public $selfLink;
-  public function setContents( $contents) {
+  public function setContents($contents) {
 	$this->contents = $contents;
   }
   public function getContents() {
 	return $this->contents;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5046,7 +5046,7 @@ class Google_SerialPortOutput extends Google_Model {
 class Google_ServiceAccount extends Google_Model {
   public $email;
   public $scopes;
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
@@ -5074,73 +5074,73 @@ class Google_Snapshot extends Google_Model {
   public $status;
   public $storageBytes;
   public $storageBytesStatus;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setDiskSizeGb( $diskSizeGb) {
+  public function setDiskSizeGb($diskSizeGb) {
 	$this->diskSizeGb = $diskSizeGb;
   }
   public function getDiskSizeGb() {
 	return $this->diskSizeGb;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSourceDisk( $sourceDisk) {
+  public function setSourceDisk($sourceDisk) {
 	$this->sourceDisk = $sourceDisk;
   }
   public function getSourceDisk() {
 	return $this->sourceDisk;
   }
-  public function setSourceDiskId( $sourceDiskId) {
+  public function setSourceDiskId($sourceDiskId) {
 	$this->sourceDiskId = $sourceDiskId;
   }
   public function getSourceDiskId() {
 	return $this->sourceDiskId;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
 	return $this->status;
   }
-  public function setStorageBytes( $storageBytes) {
+  public function setStorageBytes($storageBytes) {
 	$this->storageBytes = $storageBytes;
   }
   public function getStorageBytes() {
 	return $this->storageBytes;
   }
-  public function setStorageBytesStatus( $storageBytesStatus) {
+  public function setStorageBytesStatus($storageBytesStatus) {
 	$this->storageBytesStatus = $storageBytesStatus;
   }
   public function getStorageBytesStatus() {
@@ -5156,7 +5156,7 @@ class Google_SnapshotList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5169,19 +5169,19 @@ class Google_SnapshotList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5192,7 +5192,7 @@ class Google_SnapshotList extends Google_Model {
 class Google_Tags extends Google_Model {
   public $fingerprint;
   public $items;
-  public function setFingerprint( $fingerprint) {
+  public function setFingerprint($fingerprint) {
 	$this->fingerprint = $fingerprint;
   }
   public function getFingerprint() {
@@ -5217,55 +5217,55 @@ class Google_TargetInstance extends Google_Model {
   public $natPolicy;
   public $selfLink;
   public $zone;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setInstance( $instance) {
+  public function setInstance($instance) {
 	$this->instance = $instance;
   }
   public function getInstance() {
 	return $this->instance;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setNatPolicy( $natPolicy) {
+  public function setNatPolicy($natPolicy) {
 	$this->natPolicy = $natPolicy;
   }
   public function getNatPolicy() {
 	return $this->natPolicy;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setZone( $zone) {
+  public function setZone($zone) {
 	$this->zone = $zone;
   }
   public function getZone() {
@@ -5281,7 +5281,7 @@ class Google_TargetInstanceAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5293,19 +5293,19 @@ class Google_TargetInstanceAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5321,7 +5321,7 @@ class Google_TargetInstanceList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5334,19 +5334,19 @@ class Google_TargetInstanceList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5382,7 +5382,7 @@ class Google_TargetInstancesScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -5395,7 +5395,7 @@ class Google_TargetInstancesScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -5406,13 +5406,13 @@ class Google_TargetInstancesScopedListWarning extends Google_Model {
 class Google_TargetInstancesScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -5433,25 +5433,25 @@ class Google_TargetPool extends Google_Model {
   public $region;
   public $selfLink;
   public $sessionAffinity;
-  public function setBackupPool( $backupPool) {
+  public function setBackupPool($backupPool) {
 	$this->backupPool = $backupPool;
   }
   public function getBackupPool() {
 	return $this->backupPool;
   }
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
 	return $this->creationTimestamp;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setFailoverRatio( $failoverRatio) {
+  public function setFailoverRatio($failoverRatio) {
 	$this->failoverRatio = $failoverRatio;
   }
   public function getFailoverRatio() {
@@ -5464,7 +5464,7 @@ class Google_TargetPool extends Google_Model {
   public function getHealthChecks() {
 	return $this->healthChecks;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5477,31 +5477,31 @@ class Google_TargetPool extends Google_Model {
   public function getInstances() {
 	return $this->instances;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
 	return $this->region;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSessionAffinity( $sessionAffinity) {
+  public function setSessionAffinity($sessionAffinity) {
 	$this->sessionAffinity = $sessionAffinity;
   }
   public function getSessionAffinity() {
@@ -5517,7 +5517,7 @@ class Google_TargetPoolAggregatedList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5529,19 +5529,19 @@ class Google_TargetPoolAggregatedList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5561,7 +5561,7 @@ class Google_TargetPoolInstanceHealth extends Google_Model {
   public function getHealthStatus() {
 	return $this->healthStatus;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -5577,7 +5577,7 @@ class Google_TargetPoolList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5590,19 +5590,19 @@ class Google_TargetPoolList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5690,7 +5690,7 @@ class Google_TargetPoolsScopedListWarning extends Google_Model {
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode( $code) {
+  public function setCode($code) {
 	$this->code = $code;
   }
   public function getCode() {
@@ -5703,7 +5703,7 @@ class Google_TargetPoolsScopedListWarning extends Google_Model {
   public function getData() {
 	return $this->data;
   }
-  public function setMessage( $message) {
+  public function setMessage($message) {
 	$this->message = $message;
   }
   public function getMessage() {
@@ -5714,13 +5714,13 @@ class Google_TargetPoolsScopedListWarning extends Google_Model {
 class Google_TargetPoolsScopedListWarningData extends Google_Model {
   public $key;
   public $value;
-  public function setKey( $key) {
+  public function setKey($key) {
 	$this->key = $key;
   }
   public function getKey() {
 	return $this->key;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -5730,7 +5730,7 @@ class Google_TargetPoolsScopedListWarningData extends Google_Model {
 
 class Google_TargetReference extends Google_Model {
   public $target;
-  public function setTarget( $target) {
+  public function setTarget($target) {
 	$this->target = $target;
   }
   public function getTarget() {
@@ -5753,7 +5753,7 @@ class Google_Zone extends Google_Model {
   public $region;
   public $selfLink;
   public $status;
-  public function setCreationTimestamp( $creationTimestamp) {
+  public function setCreationTimestamp($creationTimestamp) {
 	$this->creationTimestamp = $creationTimestamp;
   }
   public function getCreationTimestamp() {
@@ -5765,19 +5765,19 @@ class Google_Zone extends Google_Model {
   public function getDeprecated() {
 	return $this->deprecated;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -5790,25 +5790,25 @@ class Google_Zone extends Google_Model {
   public function getMaintenanceWindows() {
 	return $this->maintenanceWindows;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setRegion( $region) {
+  public function setRegion($region) {
 	$this->region = $region;
   }
   public function getRegion() {
 	return $this->region;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -5824,7 +5824,7 @@ class Google_ZoneList extends Google_Model {
   public $kind;
   public $nextPageToken;
   public $selfLink;
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -5837,19 +5837,19 @@ class Google_ZoneList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -5862,25 +5862,25 @@ class Google_ZoneMaintenanceWindows extends Google_Model {
   public $description;
   public $endTime;
   public $name;
-  public function setBeginTime( $beginTime) {
+  public function setBeginTime($beginTime) {
 	$this->beginTime = $beginTime;
   }
   public function getBeginTime() {
 	return $this->beginTime;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setEndTime( $endTime) {
+  public function setEndTime($endTime) {
 	$this->endTime = $endTime;
   }
   public function getEndTime() {
 	return $this->endTime;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
