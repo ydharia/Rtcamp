@@ -1019,7 +1019,7 @@ class Google_YouTubeService extends Google_Service {
 class Google_AccessPolicy extends Google_Model {
   public $allowed;
   public $exception;
-  public function setAllowed( $allowed) {
+  public function setAllowed($allowed) {
 	$this->allowed = $allowed;
   }
   public function getAllowed() {
@@ -1050,19 +1050,19 @@ class Google_Activity extends Google_Model {
   public function getContentDetails() {
 	return $this->contentDetails;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1244,13 +1244,13 @@ class Google_ActivityContentDetailsPlaylistItem extends Google_Model {
   protected $__resourceIdType = 'Google_ResourceId';
   protected $__resourceIdDataType = '';
   public $resourceId;
-  public function setPlaylistId( $playlistId) {
+  public function setPlaylistId($playlistId) {
 	$this->playlistId = $playlistId;
   }
   public function getPlaylistId() {
 	return $this->playlistId;
   }
-  public function setPlaylistItemId( $playlistItemId) {
+  public function setPlaylistItemId($playlistItemId) {
 	$this->playlistItemId = $playlistItemId;
   }
   public function getPlaylistItemId() {
@@ -1272,43 +1272,43 @@ class Google_ActivityContentDetailsPromotedItem extends Google_Model {
   public $descriptionText;
   public $destinationUrl;
   public $videoId;
-  public function setAdTag( $adTag) {
+  public function setAdTag($adTag) {
 	$this->adTag = $adTag;
   }
   public function getAdTag() {
 	return $this->adTag;
   }
-  public function setClickTrackingUrl( $clickTrackingUrl) {
+  public function setClickTrackingUrl($clickTrackingUrl) {
 	$this->clickTrackingUrl = $clickTrackingUrl;
   }
   public function getClickTrackingUrl() {
 	return $this->clickTrackingUrl;
   }
-  public function setCreativeViewUrl( $creativeViewUrl) {
+  public function setCreativeViewUrl($creativeViewUrl) {
 	$this->creativeViewUrl = $creativeViewUrl;
   }
   public function getCreativeViewUrl() {
 	return $this->creativeViewUrl;
   }
-  public function setCtaType( $ctaType) {
+  public function setCtaType($ctaType) {
 	$this->ctaType = $ctaType;
   }
   public function getCtaType() {
 	return $this->ctaType;
   }
-  public function setDescriptionText( $descriptionText) {
+  public function setDescriptionText($descriptionText) {
 	$this->descriptionText = $descriptionText;
   }
   public function getDescriptionText() {
 	return $this->descriptionText;
   }
-  public function setDestinationUrl( $destinationUrl) {
+  public function setDestinationUrl($destinationUrl) {
 	$this->destinationUrl = $destinationUrl;
   }
   public function getDestinationUrl() {
 	return $this->destinationUrl;
   }
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -1324,7 +1324,7 @@ class Google_ActivityContentDetailsRecommendation extends Google_Model {
   protected $__seedResourceIdType = 'Google_ResourceId';
   protected $__seedResourceIdDataType = '';
   public $seedResourceId;
-  public function setReason( $reason) {
+  public function setReason($reason) {
 	$this->reason = $reason;
   }
   public function getReason() {
@@ -1352,19 +1352,19 @@ class Google_ActivityContentDetailsSocial extends Google_Model {
   protected $__resourceIdDataType = '';
   public $resourceId;
   public $type;
-  public function setAuthor( $author) {
+  public function setAuthor($author) {
 	$this->author = $author;
   }
   public function getAuthor() {
 	return $this->author;
   }
-  public function setImageUrl( $imageUrl) {
+  public function setImageUrl($imageUrl) {
 	$this->imageUrl = $imageUrl;
   }
   public function getImageUrl() {
 	return $this->imageUrl;
   }
-  public function setReferenceUrl( $referenceUrl) {
+  public function setReferenceUrl($referenceUrl) {
 	$this->referenceUrl = $referenceUrl;
   }
   public function getReferenceUrl() {
@@ -1376,7 +1376,7 @@ class Google_ActivityContentDetailsSocial extends Google_Model {
   public function getResourceId() {
 	return $this->resourceId;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1398,7 +1398,7 @@ class Google_ActivityContentDetailsSubscription extends Google_Model {
 
 class Google_ActivityContentDetailsUpload extends Google_Model {
   public $videoId;
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -1419,13 +1419,13 @@ class Google_ActivityListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -1438,13 +1438,13 @@ class Google_ActivityListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1456,13 +1456,13 @@ class Google_ActivityListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -1481,31 +1481,31 @@ class Google_ActivitySnippet extends Google_Model {
   public $thumbnails;
   public $title;
   public $type;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setGroupId( $groupId) {
+  public function setGroupId($groupId) {
 	$this->groupId = $groupId;
   }
   public function getGroupId() {
 	return $this->groupId;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -1517,13 +1517,13 @@ class Google_ActivitySnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -1577,13 +1577,13 @@ class Google_Channel extends Google_Model {
   public function getConversionPings() {
 	return $this->conversionPings;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -1595,7 +1595,7 @@ class Google_Channel extends Google_Model {
   public function getInvideoPromotion() {
 	return $this->invideoPromotion;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1631,19 +1631,19 @@ class Google_ChannelBannerResource extends Google_Model {
   public $etag;
   public $kind;
   public $url;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
@@ -1696,7 +1696,7 @@ class Google_ChannelContentDetails extends Google_Model {
   protected $__relatedPlaylistsType = 'Google_ChannelContentDetailsRelatedPlaylists';
   protected $__relatedPlaylistsDataType = '';
   public $relatedPlaylists;
-  public function setGooglePlusUserId( $googlePlusUserId) {
+  public function setGooglePlusUserId($googlePlusUserId) {
 	$this->googlePlusUserId = $googlePlusUserId;
   }
   public function getGooglePlusUserId() {
@@ -1716,31 +1716,31 @@ class Google_ChannelContentDetailsRelatedPlaylists extends Google_Model {
   public $uploads;
   public $watchHistory;
   public $watchLater;
-  public function setFavorites( $favorites) {
+  public function setFavorites($favorites) {
 	$this->favorites = $favorites;
   }
   public function getFavorites() {
 	return $this->favorites;
   }
-  public function setLikes( $likes) {
+  public function setLikes($likes) {
 	$this->likes = $likes;
   }
   public function getLikes() {
 	return $this->likes;
   }
-  public function setUploads( $uploads) {
+  public function setUploads($uploads) {
 	$this->uploads = $uploads;
   }
   public function getUploads() {
 	return $this->uploads;
   }
-  public function setWatchHistory( $watchHistory) {
+  public function setWatchHistory($watchHistory) {
 	$this->watchHistory = $watchHistory;
   }
   public function getWatchHistory() {
 	return $this->watchHistory;
   }
-  public function setWatchLater( $watchLater) {
+  public function setWatchLater($watchLater) {
 	$this->watchLater = $watchLater;
   }
   public function getWatchLater() {
@@ -1751,13 +1751,13 @@ class Google_ChannelContentDetailsRelatedPlaylists extends Google_Model {
 class Google_ChannelConversionPing extends Google_Model {
   public $context;
   public $conversionUrl;
-  public function setContext( $context) {
+  public function setContext($context) {
 	$this->context = $context;
   }
   public function getContext() {
 	return $this->context;
   }
-  public function setConversionUrl( $conversionUrl) {
+  public function setConversionUrl($conversionUrl) {
 	$this->conversionUrl = $conversionUrl;
   }
   public function getConversionUrl() {
@@ -1791,13 +1791,13 @@ class Google_ChannelListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -1810,13 +1810,13 @@ class Google_ChannelListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1828,13 +1828,13 @@ class Google_ChannelListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -1855,19 +1855,19 @@ class Google_ChannelSettings extends Google_Model {
   public $title;
   public $trackingAnalyticsAccountId;
   public $unsubscribedTrailer;
-  public function setDefaultTab( $defaultTab) {
+  public function setDefaultTab($defaultTab) {
 	$this->defaultTab = $defaultTab;
   }
   public function getDefaultTab() {
 	return $this->defaultTab;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setFeaturedChannelsTitle( $featuredChannelsTitle) {
+  public function setFeaturedChannelsTitle($featuredChannelsTitle) {
 	$this->featuredChannelsTitle = $featuredChannelsTitle;
   }
   public function getFeaturedChannelsTitle() {
@@ -1880,49 +1880,49 @@ class Google_ChannelSettings extends Google_Model {
   public function getFeaturedChannelsUrls() {
 	return $this->featuredChannelsUrls;
   }
-  public function setKeywords( $keywords) {
+  public function setKeywords($keywords) {
 	$this->keywords = $keywords;
   }
   public function getKeywords() {
 	return $this->keywords;
   }
-  public function setModerateComments( $moderateComments) {
+  public function setModerateComments($moderateComments) {
 	$this->moderateComments = $moderateComments;
   }
   public function getModerateComments() {
 	return $this->moderateComments;
   }
-  public function setProfileColor( $profileColor) {
+  public function setProfileColor($profileColor) {
 	$this->profileColor = $profileColor;
   }
   public function getProfileColor() {
 	return $this->profileColor;
   }
-  public function setShowBrowseView( $showBrowseView) {
+  public function setShowBrowseView($showBrowseView) {
 	$this->showBrowseView = $showBrowseView;
   }
   public function getShowBrowseView() {
 	return $this->showBrowseView;
   }
-  public function setShowRelatedChannels( $showRelatedChannels) {
+  public function setShowRelatedChannels($showRelatedChannels) {
 	$this->showRelatedChannels = $showRelatedChannels;
   }
   public function getShowRelatedChannels() {
 	return $this->showRelatedChannels;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setTrackingAnalyticsAccountId( $trackingAnalyticsAccountId) {
+  public function setTrackingAnalyticsAccountId($trackingAnalyticsAccountId) {
 	$this->trackingAnalyticsAccountId = $trackingAnalyticsAccountId;
   }
   public function getTrackingAnalyticsAccountId() {
 	return $this->trackingAnalyticsAccountId;
   }
-  public function setUnsubscribedTrailer( $unsubscribedTrailer) {
+  public function setUnsubscribedTrailer($unsubscribedTrailer) {
 	$this->unsubscribedTrailer = $unsubscribedTrailer;
   }
   public function getUnsubscribedTrailer() {
@@ -1937,13 +1937,13 @@ class Google_ChannelSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -1955,7 +1955,7 @@ class Google_ChannelSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -1968,25 +1968,25 @@ class Google_ChannelStatistics extends Google_Model {
   public $subscriberCount;
   public $videoCount;
   public $viewCount;
-  public function setCommentCount( $commentCount) {
+  public function setCommentCount($commentCount) {
 	$this->commentCount = $commentCount;
   }
   public function getCommentCount() {
 	return $this->commentCount;
   }
-  public function setSubscriberCount( $subscriberCount) {
+  public function setSubscriberCount($subscriberCount) {
 	$this->subscriberCount = $subscriberCount;
   }
   public function getSubscriberCount() {
 	return $this->subscriberCount;
   }
-  public function setVideoCount( $videoCount) {
+  public function setVideoCount($videoCount) {
 	$this->videoCount = $videoCount;
   }
   public function getVideoCount() {
 	return $this->videoCount;
   }
-  public function setViewCount( $viewCount) {
+  public function setViewCount($viewCount) {
 	$this->viewCount = $viewCount;
   }
   public function getViewCount() {
@@ -1997,13 +1997,13 @@ class Google_ChannelStatistics extends Google_Model {
 class Google_ChannelStatus extends Google_Model {
   public $isLinked;
   public $privacyStatus;
-  public function setIsLinked( $isLinked) {
+  public function setIsLinked($isLinked) {
 	$this->isLinked = $isLinked;
   }
   public function getIsLinked() {
 	return $this->isLinked;
   }
-  public function setPrivacyStatus( $privacyStatus) {
+  public function setPrivacyStatus($privacyStatus) {
 	$this->privacyStatus = $privacyStatus;
   }
   public function getPrivacyStatus() {
@@ -2039,97 +2039,97 @@ class Google_ContentRating extends Google_Model {
   public $russiaRating;
   public $tvpgRating;
   public $ytRating;
-  public function setAcbRating( $acbRating) {
+  public function setAcbRating($acbRating) {
 	$this->acbRating = $acbRating;
   }
   public function getAcbRating() {
 	return $this->acbRating;
   }
-  public function setBbfcRating( $bbfcRating) {
+  public function setBbfcRating($bbfcRating) {
 	$this->bbfcRating = $bbfcRating;
   }
   public function getBbfcRating() {
 	return $this->bbfcRating;
   }
-  public function setCbfcRating( $cbfcRating) {
+  public function setCbfcRating($cbfcRating) {
 	$this->cbfcRating = $cbfcRating;
   }
   public function getCbfcRating() {
 	return $this->cbfcRating;
   }
-  public function setChvrsRating( $chvrsRating) {
+  public function setChvrsRating($chvrsRating) {
 	$this->chvrsRating = $chvrsRating;
   }
   public function getChvrsRating() {
 	return $this->chvrsRating;
   }
-  public function setDjctqRating( $djctqRating) {
+  public function setDjctqRating($djctqRating) {
 	$this->djctqRating = $djctqRating;
   }
   public function getDjctqRating() {
 	return $this->djctqRating;
   }
-  public function setEirinRating( $eirinRating) {
+  public function setEirinRating($eirinRating) {
 	$this->eirinRating = $eirinRating;
   }
   public function getEirinRating() {
 	return $this->eirinRating;
   }
-  public function setFmocRating( $fmocRating) {
+  public function setFmocRating($fmocRating) {
 	$this->fmocRating = $fmocRating;
   }
   public function getFmocRating() {
 	return $this->fmocRating;
   }
-  public function setFskRating( $fskRating) {
+  public function setFskRating($fskRating) {
 	$this->fskRating = $fskRating;
   }
   public function getFskRating() {
 	return $this->fskRating;
   }
-  public function setIcaaRating( $icaaRating) {
+  public function setIcaaRating($icaaRating) {
 	$this->icaaRating = $icaaRating;
   }
   public function getIcaaRating() {
 	return $this->icaaRating;
   }
-  public function setKmrbRating( $kmrbRating) {
+  public function setKmrbRating($kmrbRating) {
 	$this->kmrbRating = $kmrbRating;
   }
   public function getKmrbRating() {
 	return $this->kmrbRating;
   }
-  public function setMpaaRating( $mpaaRating) {
+  public function setMpaaRating($mpaaRating) {
 	$this->mpaaRating = $mpaaRating;
   }
   public function getMpaaRating() {
 	return $this->mpaaRating;
   }
-  public function setOflcRating( $oflcRating) {
+  public function setOflcRating($oflcRating) {
 	$this->oflcRating = $oflcRating;
   }
   public function getOflcRating() {
 	return $this->oflcRating;
   }
-  public function setRtcRating( $rtcRating) {
+  public function setRtcRating($rtcRating) {
 	$this->rtcRating = $rtcRating;
   }
   public function getRtcRating() {
 	return $this->rtcRating;
   }
-  public function setRussiaRating( $russiaRating) {
+  public function setRussiaRating($russiaRating) {
 	$this->russiaRating = $russiaRating;
   }
   public function getRussiaRating() {
 	return $this->russiaRating;
   }
-  public function setTvpgRating( $tvpgRating) {
+  public function setTvpgRating($tvpgRating) {
 	$this->tvpgRating = $tvpgRating;
   }
   public function getTvpgRating() {
 	return $this->tvpgRating;
   }
-  public function setYtRating( $ytRating) {
+  public function setYtRating($ytRating) {
 	$this->ytRating = $ytRating;
   }
   public function getYtRating() {
@@ -2141,19 +2141,19 @@ class Google_GeoPoint extends Google_Model {
   public $altitude;
   public $latitude;
   public $longitude;
-  public function setAltitude( $altitude) {
+  public function setAltitude($altitude) {
 	$this->altitude = $altitude;
   }
   public function getAltitude() {
 	return $this->altitude;
   }
-  public function setLatitude( $latitude) {
+  public function setLatitude($latitude) {
 	$this->latitude = $latitude;
   }
   public function getLatitude() {
 	return $this->latitude;
   }
-  public function setLongitude( $longitude) {
+  public function setLongitude($longitude) {
 	$this->longitude = $longitude;
   }
   public function getLongitude() {
@@ -2168,19 +2168,19 @@ class Google_GuideCategory extends Google_Model {
   protected $__snippetType = 'Google_GuideCategorySnippet';
   protected $__snippetDataType = '';
   public $snippet;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2202,13 +2202,13 @@ class Google_GuideCategoryListResponse extends Google_Model {
   public $items;
   public $kind;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -2221,13 +2221,13 @@ class Google_GuideCategoryListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -2238,13 +2238,13 @@ class Google_GuideCategoryListResponse extends Google_Model {
 class Google_GuideCategorySnippet extends Google_Model {
   public $channelId;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -2288,73 +2288,73 @@ class Google_ImageSettings extends Google_Model {
   public function getBackgroundImageUrl() {
 	return $this->backgroundImageUrl;
   }
-  public function setBannerExternalUrl( $bannerExternalUrl) {
+  public function setBannerExternalUrl($bannerExternalUrl) {
 	$this->bannerExternalUrl = $bannerExternalUrl;
   }
   public function getBannerExternalUrl() {
 	return $this->bannerExternalUrl;
   }
-  public function setBannerImageUrl( $bannerImageUrl) {
+  public function setBannerImageUrl($bannerImageUrl) {
 	$this->bannerImageUrl = $bannerImageUrl;
   }
   public function getBannerImageUrl() {
 	return $this->bannerImageUrl;
   }
-  public function setBannerMobileExtraHdImageUrl( $bannerMobileExtraHdImageUrl) {
+  public function setBannerMobileExtraHdImageUrl($bannerMobileExtraHdImageUrl) {
 	$this->bannerMobileExtraHdImageUrl = $bannerMobileExtraHdImageUrl;
   }
   public function getBannerMobileExtraHdImageUrl() {
 	return $this->bannerMobileExtraHdImageUrl;
   }
-  public function setBannerMobileHdImageUrl( $bannerMobileHdImageUrl) {
+  public function setBannerMobileHdImageUrl($bannerMobileHdImageUrl) {
 	$this->bannerMobileHdImageUrl = $bannerMobileHdImageUrl;
   }
   public function getBannerMobileHdImageUrl() {
 	return $this->bannerMobileHdImageUrl;
   }
-  public function setBannerMobileImageUrl( $bannerMobileImageUrl) {
+  public function setBannerMobileImageUrl($bannerMobileImageUrl) {
 	$this->bannerMobileImageUrl = $bannerMobileImageUrl;
   }
   public function getBannerMobileImageUrl() {
 	return $this->bannerMobileImageUrl;
   }
-  public function setBannerMobileLowImageUrl( $bannerMobileLowImageUrl) {
+  public function setBannerMobileLowImageUrl($bannerMobileLowImageUrl) {
 	$this->bannerMobileLowImageUrl = $bannerMobileLowImageUrl;
   }
   public function getBannerMobileLowImageUrl() {
 	return $this->bannerMobileLowImageUrl;
   }
-  public function setBannerMobileMediumHdImageUrl( $bannerMobileMediumHdImageUrl) {
+  public function setBannerMobileMediumHdImageUrl($bannerMobileMediumHdImageUrl) {
 	$this->bannerMobileMediumHdImageUrl = $bannerMobileMediumHdImageUrl;
   }
   public function getBannerMobileMediumHdImageUrl() {
 	return $this->bannerMobileMediumHdImageUrl;
   }
-  public function setBannerTabletExtraHdImageUrl( $bannerTabletExtraHdImageUrl) {
+  public function setBannerTabletExtraHdImageUrl($bannerTabletExtraHdImageUrl) {
 	$this->bannerTabletExtraHdImageUrl = $bannerTabletExtraHdImageUrl;
   }
   public function getBannerTabletExtraHdImageUrl() {
 	return $this->bannerTabletExtraHdImageUrl;
   }
-  public function setBannerTabletHdImageUrl( $bannerTabletHdImageUrl) {
+  public function setBannerTabletHdImageUrl($bannerTabletHdImageUrl) {
 	$this->bannerTabletHdImageUrl = $bannerTabletHdImageUrl;
   }
   public function getBannerTabletHdImageUrl() {
 	return $this->bannerTabletHdImageUrl;
   }
-  public function setBannerTabletImageUrl( $bannerTabletImageUrl) {
+  public function setBannerTabletImageUrl($bannerTabletImageUrl) {
 	$this->bannerTabletImageUrl = $bannerTabletImageUrl;
   }
   public function getBannerTabletImageUrl() {
 	return $this->bannerTabletImageUrl;
   }
-  public function setBannerTabletLowImageUrl( $bannerTabletLowImageUrl) {
+  public function setBannerTabletLowImageUrl($bannerTabletLowImageUrl) {
 	$this->bannerTabletLowImageUrl = $bannerTabletLowImageUrl;
   }
   public function getBannerTabletLowImageUrl() {
 	return $this->bannerTabletLowImageUrl;
   }
-  public function setBannerTvImageUrl( $bannerTvImageUrl) {
+  public function setBannerTvImageUrl($bannerTvImageUrl) {
 	$this->bannerTvImageUrl = $bannerTvImageUrl;
   }
   public function getBannerTvImageUrl() {
@@ -2384,13 +2384,13 @@ class Google_ImageSettings extends Google_Model {
   public function getSmallBrandedBannerImageUrl() {
 	return $this->smallBrandedBannerImageUrl;
   }
-  public function setTrackingImageUrl( $trackingImageUrl) {
+  public function setTrackingImageUrl($trackingImageUrl) {
 	$this->trackingImageUrl = $trackingImageUrl;
   }
   public function getTrackingImageUrl() {
 	return $this->trackingImageUrl;
   }
-  public function setWatchIconImageUrl( $watchIconImageUrl) {
+  public function setWatchIconImageUrl($watchIconImageUrl) {
 	$this->watchIconImageUrl = $watchIconImageUrl;
   }
   public function getWatchIconImageUrl() {
@@ -2402,19 +2402,19 @@ class Google_IngestionInfo extends Google_Model {
   public $backupIngestionAddress;
   public $ingestionAddress;
   public $streamName;
-  public function setBackupIngestionAddress( $backupIngestionAddress) {
+  public function setBackupIngestionAddress($backupIngestionAddress) {
 	$this->backupIngestionAddress = $backupIngestionAddress;
   }
   public function getBackupIngestionAddress() {
 	return $this->backupIngestionAddress;
   }
-  public function setIngestionAddress( $ingestionAddress) {
+  public function setIngestionAddress($ingestionAddress) {
 	$this->ingestionAddress = $ingestionAddress;
   }
   public function getIngestionAddress() {
 	return $this->ingestionAddress;
   }
-  public function setStreamName( $streamName) {
+  public function setStreamName($streamName) {
 	$this->streamName = $streamName;
   }
   public function getStreamName() {
@@ -2425,13 +2425,13 @@ class Google_IngestionInfo extends Google_Model {
 class Google_InvideoPosition extends Google_Model {
   public $cornerPosition;
   public $type;
-  public function setCornerPosition( $cornerPosition) {
+  public function setCornerPosition($cornerPosition) {
 	$this->cornerPosition = $cornerPosition;
   }
   public function getCornerPosition() {
 	return $this->cornerPosition;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -2473,13 +2473,13 @@ class Google_InvideoPromotion extends Google_Model {
 class Google_InvideoTiming extends Google_Model {
   public $offsetMs;
   public $type;
-  public function setOffsetMs( $offsetMs) {
+  public function setOffsetMs($offsetMs) {
 	$this->offsetMs = $offsetMs;
   }
   public function getOffsetMs() {
 	return $this->offsetMs;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -2506,19 +2506,19 @@ class Google_LiveBroadcast extends Google_Model {
   public function getContentDetails() {
 	return $this->contentDetails;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2548,25 +2548,25 @@ class Google_LiveBroadcastContentDetails extends Google_Model {
   public $monitorStream;
   public $recordFromStart;
   public $startWithSlate;
-  public function setBoundStreamId( $boundStreamId) {
+  public function setBoundStreamId($boundStreamId) {
 	$this->boundStreamId = $boundStreamId;
   }
   public function getBoundStreamId() {
 	return $this->boundStreamId;
   }
-  public function setEnableContentEncryption( $enableContentEncryption) {
+  public function setEnableContentEncryption($enableContentEncryption) {
 	$this->enableContentEncryption = $enableContentEncryption;
   }
   public function getEnableContentEncryption() {
 	return $this->enableContentEncryption;
   }
-  public function setEnableDvr( $enableDvr) {
+  public function setEnableDvr($enableDvr) {
 	$this->enableDvr = $enableDvr;
   }
   public function getEnableDvr() {
 	return $this->enableDvr;
   }
-  public function setEnableEmbed( $enableEmbed) {
+  public function setEnableEmbed($enableEmbed) {
 	$this->enableEmbed = $enableEmbed;
   }
   public function getEnableEmbed() {
@@ -2578,13 +2578,13 @@ class Google_LiveBroadcastContentDetails extends Google_Model {
   public function getMonitorStream() {
 	return $this->monitorStream;
   }
-  public function setRecordFromStart( $recordFromStart) {
+  public function setRecordFromStart($recordFromStart) {
 	$this->recordFromStart = $recordFromStart;
   }
   public function getRecordFromStart() {
 	return $this->recordFromStart;
   }
-  public function setStartWithSlate( $startWithSlate) {
+  public function setStartWithSlate($startWithSlate) {
 	$this->startWithSlate = $startWithSlate;
   }
   public function getStartWithSlate() {
@@ -2605,13 +2605,13 @@ class Google_LiveBroadcastList extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -2624,13 +2624,13 @@ class Google_LiveBroadcastList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -2642,13 +2642,13 @@ class Google_LiveBroadcastList extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -2668,43 +2668,43 @@ class Google_LiveBroadcastSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setActualEndTime( $actualEndTime) {
+  public function setActualEndTime($actualEndTime) {
 	$this->actualEndTime = $actualEndTime;
   }
   public function getActualEndTime() {
 	return $this->actualEndTime;
   }
-  public function setActualStartTime( $actualStartTime) {
+  public function setActualStartTime($actualStartTime) {
 	$this->actualStartTime = $actualStartTime;
   }
   public function getActualStartTime() {
 	return $this->actualStartTime;
   }
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
 	return $this->publishedAt;
   }
-  public function setScheduledEndTime( $scheduledEndTime) {
+  public function setScheduledEndTime($scheduledEndTime) {
 	$this->scheduledEndTime = $scheduledEndTime;
   }
   public function getScheduledEndTime() {
 	return $this->scheduledEndTime;
   }
-  public function setScheduledStartTime( $scheduledStartTime) {
+  public function setScheduledStartTime($scheduledStartTime) {
 	$this->scheduledStartTime = $scheduledStartTime;
   }
   public function getScheduledStartTime() {
@@ -2716,7 +2716,7 @@ class Google_LiveBroadcastSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -2728,19 +2728,19 @@ class Google_LiveBroadcastStatus extends Google_Model {
   public $lifeCycleStatus;
   public $privacyStatus;
   public $recordingStatus;
-  public function setLifeCycleStatus( $lifeCycleStatus) {
+  public function setLifeCycleStatus($lifeCycleStatus) {
 	$this->lifeCycleStatus = $lifeCycleStatus;
   }
   public function getLifeCycleStatus() {
 	return $this->lifeCycleStatus;
   }
-  public function setPrivacyStatus( $privacyStatus) {
+  public function setPrivacyStatus($privacyStatus) {
 	$this->privacyStatus = $privacyStatus;
   }
   public function getPrivacyStatus() {
 	return $this->privacyStatus;
   }
-  public function setRecordingStatus( $recordingStatus) {
+  public function setRecordingStatus($recordingStatus) {
 	$this->recordingStatus = $recordingStatus;
   }
   public function getRecordingStatus() {
@@ -2767,19 +2767,19 @@ class Google_LiveStream extends Google_Model {
   public function getCdn() {
 	return $this->cdn;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -2805,7 +2805,7 @@ class Google_LiveStreamCdn extends Google_Model {
   protected $__ingestionInfoDataType = '';
   public $ingestionInfo;
   public $ingestionType;
-  public function setFormat( $format) {
+  public function setFormat($format) {
 	$this->format = $format;
   }
   public function getFormat() {
@@ -2817,7 +2817,7 @@ class Google_LiveStreamCdn extends Google_Model {
   public function getIngestionInfo() {
 	return $this->ingestionInfo;
   }
-  public function setIngestionType( $ingestionType) {
+  public function setIngestionType($ingestionType) {
 	$this->ingestionType = $ingestionType;
   }
   public function getIngestionType() {
@@ -2838,13 +2838,13 @@ class Google_LiveStreamList extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -2857,13 +2857,13 @@ class Google_LiveStreamList extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -2875,13 +2875,13 @@ class Google_LiveStreamList extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -2894,25 +2894,25 @@ class Google_LiveStreamSnippet extends Google_Model {
   public $description;
   public $publishedAt;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
 	return $this->publishedAt;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -2922,7 +2922,7 @@ class Google_LiveStreamSnippet extends Google_Model {
 
 class Google_LiveStreamStatus extends Google_Model {
   public $streamStatus;
-  public function setStreamStatus( $streamStatus) {
+  public function setStreamStatus($streamStatus) {
 	$this->streamStatus = $streamStatus;
   }
   public function getStreamStatus() {
@@ -2935,7 +2935,7 @@ class Google_LocalizedProperty extends Google_Model {
   protected $__localizedType = 'Google_LocalizedString';
   protected $__localizedDataType = 'array';
   public $localized;
-  public function setDefault( $default) {
+  public function setDefault($default) {
 	$this->default = $default;
   }
   public function getDefault() {
@@ -2953,13 +2953,13 @@ class Google_LocalizedProperty extends Google_Model {
 class Google_LocalizedString extends Google_Model {
   public $language;
   public $value;
-  public function setLanguage( $language) {
+  public function setLanguage($language) {
 	$this->language = $language;
   }
   public function getLanguage() {
 	return $this->language;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -2971,19 +2971,19 @@ class Google_MonitorStreamInfo extends Google_Model {
   public $broadcastStreamDelayMs;
   public $embedHtml;
   public $enableMonitorStream;
-  public function setBroadcastStreamDelayMs( $broadcastStreamDelayMs) {
+  public function setBroadcastStreamDelayMs($broadcastStreamDelayMs) {
 	$this->broadcastStreamDelayMs = $broadcastStreamDelayMs;
   }
   public function getBroadcastStreamDelayMs() {
 	return $this->broadcastStreamDelayMs;
   }
-  public function setEmbedHtml( $embedHtml) {
+  public function setEmbedHtml($embedHtml) {
 	$this->embedHtml = $embedHtml;
   }
   public function getEmbedHtml() {
 	return $this->embedHtml;
   }
-  public function setEnableMonitorStream( $enableMonitorStream) {
+  public function setEnableMonitorStream($enableMonitorStream) {
 	$this->enableMonitorStream = $enableMonitorStream;
   }
   public function getEnableMonitorStream() {
@@ -2994,13 +2994,13 @@ class Google_MonitorStreamInfo extends Google_Model {
 class Google_PageInfo extends Google_Model {
   public $resultsPerPage;
   public $totalResults;
-  public function setResultsPerPage( $resultsPerPage) {
+  public function setResultsPerPage($resultsPerPage) {
 	$this->resultsPerPage = $resultsPerPage;
   }
   public function getResultsPerPage() {
 	return $this->resultsPerPage;
   }
-  public function setTotalResults( $totalResults) {
+  public function setTotalResults($totalResults) {
 	$this->totalResults = $totalResults;
   }
   public function getTotalResults() {
@@ -3030,19 +3030,19 @@ class Google_Playlist extends Google_Model {
   public function getContentDetails() {
 	return $this->contentDetails;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -3070,7 +3070,7 @@ class Google_Playlist extends Google_Model {
 
 class Google_PlaylistContentDetails extends Google_Model {
   public $itemCount;
-  public function setItemCount( $itemCount) {
+  public function setItemCount($itemCount) {
 	$this->itemCount = $itemCount;
   }
   public function getItemCount() {
@@ -3097,19 +3097,19 @@ class Google_PlaylistItem extends Google_Model {
   public function getContentDetails() {
 	return $this->contentDetails;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -3134,25 +3134,25 @@ class Google_PlaylistItemContentDetails extends Google_Model {
   public $note;
   public $startAtMs;
   public $videoId;
-  public function setEndAtMs( $endAtMs) {
+  public function setEndAtMs($endAtMs) {
 	$this->endAtMs = $endAtMs;
   }
   public function getEndAtMs() {
 	return $this->endAtMs;
   }
-  public function setNote( $note) {
+  public function setNote($note) {
 	$this->note = $note;
   }
   public function getNote() {
 	return $this->note;
   }
-  public function setStartAtMs( $startAtMs) {
+  public function setStartAtMs($startAtMs) {
 	$this->startAtMs = $startAtMs;
   }
   public function getStartAtMs() {
 	return $this->startAtMs;
   }
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -3173,13 +3173,13 @@ class Google_PlaylistItemListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -3192,13 +3192,13 @@ class Google_PlaylistItemListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -3210,13 +3210,13 @@ class Google_PlaylistItemListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -3238,37 +3238,37 @@ class Google_PlaylistItemSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPlaylistId( $playlistId) {
+  public function setPlaylistId($playlistId) {
 	$this->playlistId = $playlistId;
   }
   public function getPlaylistId() {
 	return $this->playlistId;
   }
-  public function setPosition( $position) {
+  public function setPosition($position) {
 	$this->position = $position;
   }
   public function getPosition() {
 	return $this->position;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -3286,7 +3286,7 @@ class Google_PlaylistItemSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -3296,7 +3296,7 @@ class Google_PlaylistItemSnippet extends Google_Model {
 
 class Google_PlaylistItemStatus extends Google_Model {
   public $privacyStatus;
-  public function setPrivacyStatus( $privacyStatus) {
+  public function setPrivacyStatus($privacyStatus) {
 	$this->privacyStatus = $privacyStatus;
   }
   public function getPrivacyStatus() {
@@ -3317,13 +3317,13 @@ class Google_PlaylistListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -3336,13 +3336,13 @@ class Google_PlaylistListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -3354,13 +3354,13 @@ class Google_PlaylistListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -3370,7 +3370,7 @@ class Google_PlaylistListResponse extends Google_Model {
 
 class Google_PlaylistPlayer extends Google_Model {
   public $embedHtml;
-  public function setEmbedHtml( $embedHtml) {
+  public function setEmbedHtml($embedHtml) {
 	$this->embedHtml = $embedHtml;
   }
   public function getEmbedHtml() {
@@ -3388,25 +3388,25 @@ class Google_PlaylistSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -3425,7 +3425,7 @@ class Google_PlaylistSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -3435,7 +3435,7 @@ class Google_PlaylistSnippet extends Google_Model {
 
 class Google_PlaylistStatus extends Google_Model {
   public $privacyStatus;
-  public function setPrivacyStatus( $privacyStatus) {
+  public function setPrivacyStatus($privacyStatus) {
 	$this->privacyStatus = $privacyStatus;
   }
   public function getPrivacyStatus() {
@@ -3446,13 +3446,13 @@ class Google_PlaylistStatus extends Google_Model {
 class Google_PromotedItemId extends Google_Model {
   public $type;
   public $videoId;
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
 	return $this->type;
   }
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -3463,13 +3463,13 @@ class Google_PromotedItemId extends Google_Model {
 class Google_PropertyValue extends Google_Model {
   public $property;
   public $value;
-  public function setProperty( $property) {
+  public function setProperty($property) {
 	$this->property = $property;
   }
   public function getProperty() {
 	return $this->property;
   }
-  public function setValue( $value) {
+  public function setValue($value) {
 	$this->value = $value;
   }
   public function getValue() {
@@ -3482,25 +3482,25 @@ class Google_ResourceId extends Google_Model {
   public $kind;
   public $playlistId;
   public $videoId;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPlaylistId( $playlistId) {
+  public function setPlaylistId($playlistId) {
 	$this->playlistId = $playlistId;
   }
   public function getPlaylistId() {
 	return $this->playlistId;
   }
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -3521,13 +3521,13 @@ class Google_SearchListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -3540,13 +3540,13 @@ class Google_SearchListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -3558,13 +3558,13 @@ class Google_SearchListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -3581,7 +3581,7 @@ class Google_SearchResult extends Google_Model {
   protected $__snippetType = 'Google_SearchResultSnippet';
   protected $__snippetDataType = '';
   public $snippet;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -3593,7 +3593,7 @@ class Google_SearchResult extends Google_Model {
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -3616,25 +3616,25 @@ class Google_SearchResultSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -3646,7 +3646,7 @@ class Google_SearchResultSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -3673,19 +3673,19 @@ class Google_Subscription extends Google_Model {
   public function getContentDetails() {
 	return $this->contentDetails;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -3709,19 +3709,19 @@ class Google_SubscriptionContentDetails extends Google_Model {
   public $activityType;
   public $newItemCount;
   public $totalItemCount;
-  public function setActivityType( $activityType) {
+  public function setActivityType($activityType) {
 	$this->activityType = $activityType;
   }
   public function getActivityType() {
 	return $this->activityType;
   }
-  public function setNewItemCount( $newItemCount) {
+  public function setNewItemCount($newItemCount) {
 	$this->newItemCount = $newItemCount;
   }
   public function getNewItemCount() {
 	return $this->newItemCount;
   }
-  public function setTotalItemCount( $totalItemCount) {
+  public function setTotalItemCount($totalItemCount) {
 	$this->totalItemCount = $totalItemCount;
   }
   public function getTotalItemCount() {
@@ -3742,13 +3742,13 @@ class Google_SubscriptionListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -3761,13 +3761,13 @@ class Google_SubscriptionListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -3779,13 +3779,13 @@ class Google_SubscriptionListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -3805,25 +3805,25 @@ class Google_SubscriptionSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -3841,7 +3841,7 @@ class Google_SubscriptionSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -3856,13 +3856,13 @@ class Google_SubscriptionSubscriberSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
@@ -3874,7 +3874,7 @@ class Google_SubscriptionSubscriberSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -3886,19 +3886,19 @@ class Google_Thumbnail extends Google_Model {
   public $height;
   public $url;
   public $width;
-  public function setHeight( $height) {
+  public function setHeight($height) {
 	$this->height = $height;
   }
   public function getHeight() {
 	return $this->height;
   }
-  public function setUrl( $url) {
+  public function setUrl($url) {
 	$this->url = $url;
   }
   public function getUrl() {
 	return $this->url;
   }
-  public function setWidth( $width) {
+  public function setWidth($width) {
 	$this->width = $width;
   }
   public function getWidth() {
@@ -3961,7 +3961,7 @@ class Google_ThumbnailListResponse extends Google_Model {
   public $items;
   public $kind;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -3974,13 +3974,13 @@ class Google_ThumbnailListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -4052,7 +4052,7 @@ class Google_Video extends Google_Model {
   public function getConversionPings() {
 	return $this->conversionPings;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -4064,13 +4064,13 @@ class Google_Video extends Google_Model {
   public function getFileDetails() {
 	return $this->fileDetails;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -4142,19 +4142,19 @@ class Google_VideoAgeGating extends Google_Model {
   public $alcoholContent;
   public $restricted;
   public $videoGameRating;
-  public function setAlcoholContent( $alcoholContent) {
+  public function setAlcoholContent($alcoholContent) {
 	$this->alcoholContent = $alcoholContent;
   }
   public function getAlcoholContent() {
 	return $this->alcoholContent;
   }
-  public function setRestricted( $restricted) {
+  public function setRestricted($restricted) {
 	$this->restricted = $restricted;
   }
   public function getRestricted() {
 	return $this->restricted;
   }
-  public function setVideoGameRating( $videoGameRating) {
+  public function setVideoGameRating($videoGameRating) {
 	$this->videoGameRating = $videoGameRating;
   }
   public function getVideoGameRating() {
@@ -4169,19 +4169,19 @@ class Google_VideoCategory extends Google_Model {
   protected $__snippetType = 'Google_VideoCategorySnippet';
   protected $__snippetDataType = '';
   public $snippet;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -4203,13 +4203,13 @@ class Google_VideoCategoryListResponse extends Google_Model {
   public $items;
   public $kind;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -4222,13 +4222,13 @@ class Google_VideoCategoryListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -4239,13 +4239,13 @@ class Google_VideoCategoryListResponse extends Google_Model {
 class Google_VideoCategorySnippet extends Google_Model {
   public $channelId;
   public $title;
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -4268,7 +4268,7 @@ class Google_VideoContentDetails extends Google_Model {
   protected $__regionRestrictionType = 'Google_VideoContentDetailsRegionRestriction';
   protected $__regionRestrictionDataType = '';
   public $regionRestriction;
-  public function setCaption( $caption) {
+  public function setCaption($caption) {
 	$this->caption = $caption;
   }
   public function getCaption() {
@@ -4286,25 +4286,25 @@ class Google_VideoContentDetails extends Google_Model {
   public function getCountryRestriction() {
 	return $this->countryRestriction;
   }
-  public function setDefinition( $definition) {
+  public function setDefinition($definition) {
 	$this->definition = $definition;
   }
   public function getDefinition() {
 	return $this->definition;
   }
-  public function setDimension( $dimension) {
+  public function setDimension($dimension) {
 	$this->dimension = $dimension;
   }
   public function getDimension() {
 	return $this->dimension;
   }
-  public function setDuration( $duration) {
+  public function setDuration($duration) {
 	$this->duration = $duration;
   }
   public function getDuration() {
 	return $this->duration;
   }
-  public function setLicensedContent( $licensedContent) {
+  public function setLicensedContent($licensedContent) {
 	$this->licensedContent = $licensedContent;
   }
   public function getLicensedContent() {
@@ -4340,13 +4340,13 @@ class Google_VideoContentDetailsRegionRestriction extends Google_Model {
 class Google_VideoConversionPing extends Google_Model {
   public $context;
   public $conversionUrl;
-  public function setContext( $context) {
+  public function setContext($context) {
 	$this->context = $context;
   }
   public function getContext() {
 	return $this->context;
   }
-  public function setConversionUrl( $conversionUrl) {
+  public function setConversionUrl($conversionUrl) {
 	$this->conversionUrl = $conversionUrl;
   }
   public function getConversionUrl() {
@@ -4391,43 +4391,43 @@ class Google_VideoFileDetails extends Google_Model {
   public function getAudioStreams() {
 	return $this->audioStreams;
   }
-  public function setBitrateBps( $bitrateBps) {
+  public function setBitrateBps($bitrateBps) {
 	$this->bitrateBps = $bitrateBps;
   }
   public function getBitrateBps() {
 	return $this->bitrateBps;
   }
-  public function setContainer( $container) {
+  public function setContainer($container) {
 	$this->container = $container;
   }
   public function getContainer() {
 	return $this->container;
   }
-  public function setCreationTime( $creationTime) {
+  public function setCreationTime($creationTime) {
 	$this->creationTime = $creationTime;
   }
   public function getCreationTime() {
 	return $this->creationTime;
   }
-  public function setDurationMs( $durationMs) {
+  public function setDurationMs($durationMs) {
 	$this->durationMs = $durationMs;
   }
   public function getDurationMs() {
 	return $this->durationMs;
   }
-  public function setFileName( $fileName) {
+  public function setFileName($fileName) {
 	$this->fileName = $fileName;
   }
   public function getFileName() {
 	return $this->fileName;
   }
-  public function setFileSize( $fileSize) {
+  public function setFileSize($fileSize) {
 	$this->fileSize = $fileSize;
   }
   public function getFileSize() {
 	return $this->fileSize;
   }
-  public function setFileType( $fileType) {
+  public function setFileType($fileType) {
 	$this->fileType = $fileType;
   }
   public function getFileType() {
@@ -4453,25 +4453,25 @@ class Google_VideoFileDetailsAudioStream extends Google_Model {
   public $channelCount;
   public $codec;
   public $vendor;
-  public function setBitrateBps( $bitrateBps) {
+  public function setBitrateBps($bitrateBps) {
 	$this->bitrateBps = $bitrateBps;
   }
   public function getBitrateBps() {
 	return $this->bitrateBps;
   }
-  public function setChannelCount( $channelCount) {
+  public function setChannelCount($channelCount) {
 	$this->channelCount = $channelCount;
   }
   public function getChannelCount() {
 	return $this->channelCount;
   }
-  public function setCodec( $codec) {
+  public function setCodec($codec) {
 	$this->codec = $codec;
   }
   public function getCodec() {
 	return $this->codec;
   }
-  public function setVendor( $vendor) {
+  public function setVendor($vendor) {
 	$this->vendor = $vendor;
   }
   public function getVendor() {
@@ -4488,49 +4488,49 @@ class Google_VideoFileDetailsVideoStream extends Google_Model {
   public $rotation;
   public $vendor;
   public $widthPixels;
-  public function setAspectRatio( $aspectRatio) {
+  public function setAspectRatio($aspectRatio) {
 	$this->aspectRatio = $aspectRatio;
   }
   public function getAspectRatio() {
 	return $this->aspectRatio;
   }
-  public function setBitrateBps( $bitrateBps) {
+  public function setBitrateBps($bitrateBps) {
 	$this->bitrateBps = $bitrateBps;
   }
   public function getBitrateBps() {
 	return $this->bitrateBps;
   }
-  public function setCodec( $codec) {
+  public function setCodec($codec) {
 	$this->codec = $codec;
   }
   public function getCodec() {
 	return $this->codec;
   }
-  public function setFrameRateFps( $frameRateFps) {
+  public function setFrameRateFps($frameRateFps) {
 	$this->frameRateFps = $frameRateFps;
   }
   public function getFrameRateFps() {
 	return $this->frameRateFps;
   }
-  public function setHeightPixels( $heightPixels) {
+  public function setHeightPixels($heightPixels) {
 	$this->heightPixels = $heightPixels;
   }
   public function getHeightPixels() {
 	return $this->heightPixels;
   }
-  public function setRotation( $rotation) {
+  public function setRotation($rotation) {
 	$this->rotation = $rotation;
   }
   public function getRotation() {
 	return $this->rotation;
   }
-  public function setVendor( $vendor) {
+  public function setVendor($vendor) {
 	$this->vendor = $vendor;
   }
   public function getVendor() {
 	return $this->vendor;
   }
-  public function setWidthPixels( $widthPixels) {
+  public function setWidthPixels($widthPixels) {
 	$this->widthPixels = $widthPixels;
   }
   public function getWidthPixels() {
@@ -4544,7 +4544,7 @@ class Google_VideoGetRatingResponse extends Google_Model {
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
@@ -4557,7 +4557,7 @@ class Google_VideoGetRatingResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -4578,13 +4578,13 @@ class Google_VideoListResponse extends Google_Model {
   public $pageInfo;
   public $prevPageToken;
   public $visitorId;
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setEventId( $eventId) {
+  public function setEventId($eventId) {
 	$this->eventId = $eventId;
   }
   public function getEventId() {
@@ -4597,13 +4597,13 @@ class Google_VideoListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -4615,13 +4615,13 @@ class Google_VideoListResponse extends Google_Model {
   public function getPageInfo() {
 	return $this->pageInfo;
   }
-  public function setPrevPageToken( $prevPageToken) {
+  public function setPrevPageToken($prevPageToken) {
 	$this->prevPageToken = $prevPageToken;
   }
   public function getPrevPageToken() {
 	return $this->prevPageToken;
   }
-  public function setVisitorId( $visitorId) {
+  public function setVisitorId($visitorId) {
 	$this->visitorId = $visitorId;
   }
   public function getVisitorId() {
@@ -4643,7 +4643,7 @@ class Google_VideoMonetizationDetails extends Google_Model {
 
 class Google_VideoPlayer extends Google_Model {
   public $embedHtml;
-  public function setEmbedHtml( $embedHtml) {
+  public function setEmbedHtml($embedHtml) {
 	$this->embedHtml = $embedHtml;
   }
   public function getEmbedHtml() {
@@ -4662,25 +4662,25 @@ class Google_VideoProcessingDetails extends Google_Model {
   public $processingStatus;
   public $tagSuggestionsAvailability;
   public $thumbnailsAvailability;
-  public function setEditorSuggestionsAvailability( $editorSuggestionsAvailability) {
+  public function setEditorSuggestionsAvailability($editorSuggestionsAvailability) {
 	$this->editorSuggestionsAvailability = $editorSuggestionsAvailability;
   }
   public function getEditorSuggestionsAvailability() {
 	return $this->editorSuggestionsAvailability;
   }
-  public function setFileDetailsAvailability( $fileDetailsAvailability) {
+  public function setFileDetailsAvailability($fileDetailsAvailability) {
 	$this->fileDetailsAvailability = $fileDetailsAvailability;
   }
   public function getFileDetailsAvailability() {
 	return $this->fileDetailsAvailability;
   }
-  public function setProcessingFailureReason( $processingFailureReason) {
+  public function setProcessingFailureReason($processingFailureReason) {
 	$this->processingFailureReason = $processingFailureReason;
   }
   public function getProcessingFailureReason() {
 	return $this->processingFailureReason;
   }
-  public function setProcessingIssuesAvailability( $processingIssuesAvailability) {
+  public function setProcessingIssuesAvailability($processingIssuesAvailability) {
 	$this->processingIssuesAvailability = $processingIssuesAvailability;
   }
   public function getProcessingIssuesAvailability() {
@@ -4692,19 +4692,19 @@ class Google_VideoProcessingDetails extends Google_Model {
   public function getProcessingProgress() {
 	return $this->processingProgress;
   }
-  public function setProcessingStatus( $processingStatus) {
+  public function setProcessingStatus($processingStatus) {
 	$this->processingStatus = $processingStatus;
   }
   public function getProcessingStatus() {
 	return $this->processingStatus;
   }
-  public function setTagSuggestionsAvailability( $tagSuggestionsAvailability) {
+  public function setTagSuggestionsAvailability($tagSuggestionsAvailability) {
 	$this->tagSuggestionsAvailability = $tagSuggestionsAvailability;
   }
   public function getTagSuggestionsAvailability() {
 	return $this->tagSuggestionsAvailability;
   }
-  public function setThumbnailsAvailability( $thumbnailsAvailability) {
+  public function setThumbnailsAvailability($thumbnailsAvailability) {
 	$this->thumbnailsAvailability = $thumbnailsAvailability;
   }
   public function getThumbnailsAvailability() {
@@ -4716,19 +4716,19 @@ class Google_VideoProcessingDetailsProcessingProgress extends Google_Model {
   public $partsProcessed;
   public $partsTotal;
   public $timeLeftMs;
-  public function setPartsProcessed( $partsProcessed) {
+  public function setPartsProcessed($partsProcessed) {
 	$this->partsProcessed = $partsProcessed;
   }
   public function getPartsProcessed() {
 	return $this->partsProcessed;
   }
-  public function setPartsTotal( $partsTotal) {
+  public function setPartsTotal($partsTotal) {
 	$this->partsTotal = $partsTotal;
   }
   public function getPartsTotal() {
 	return $this->partsTotal;
   }
-  public function setTimeLeftMs( $timeLeftMs) {
+  public function setTimeLeftMs($timeLeftMs) {
 	$this->timeLeftMs = $timeLeftMs;
   }
   public function getTimeLeftMs() {
@@ -4750,13 +4750,13 @@ class Google_VideoProjectDetails extends Google_Model {
 class Google_VideoRating extends Google_Model {
   public $rating;
   public $videoId;
-  public function setRating( $rating) {
+  public function setRating($rating) {
 	$this->rating = $rating;
   }
   public function getRating() {
 	return $this->rating;
   }
-  public function setVideoId( $videoId) {
+  public function setVideoId($videoId) {
 	$this->videoId = $videoId;
   }
   public function getVideoId() {
@@ -4776,13 +4776,13 @@ class Google_VideoRecordingDetails extends Google_Model {
   public function getLocation() {
 	return $this->location;
   }
-  public function setLocationDescription( $locationDescription) {
+  public function setLocationDescription($locationDescription) {
 	$this->locationDescription = $locationDescription;
   }
   public function getLocationDescription() {
 	return $this->locationDescription;
   }
-  public function setRecordingDate( $recordingDate) {
+  public function setRecordingDate($recordingDate) {
 	$this->recordingDate = $recordingDate;
   }
   public function getRecordingDate() {
@@ -4801,31 +4801,31 @@ class Google_VideoSnippet extends Google_Model {
   protected $__thumbnailsDataType = '';
   public $thumbnails;
   public $title;
-  public function setCategoryId( $categoryId) {
+  public function setCategoryId($categoryId) {
 	$this->categoryId = $categoryId;
   }
   public function getCategoryId() {
 	return $this->categoryId;
   }
-  public function setChannelId( $channelId) {
+  public function setChannelId($channelId) {
 	$this->channelId = $channelId;
   }
   public function getChannelId() {
 	return $this->channelId;
   }
-  public function setChannelTitle( $channelTitle) {
+  public function setChannelTitle($channelTitle) {
 	$this->channelTitle = $channelTitle;
   }
   public function getChannelTitle() {
 	return $this->channelTitle;
   }
-  public function setDescription( $description) {
+  public function setDescription($description) {
 	$this->description = $description;
   }
   public function getDescription() {
 	return $this->description;
   }
-  public function setPublishedAt( $publishedAt) {
+  public function setPublishedAt($publishedAt) {
 	$this->publishedAt = $publishedAt;
   }
   public function getPublishedAt() {
@@ -4844,7 +4844,7 @@ class Google_VideoSnippet extends Google_Model {
   public function getThumbnails() {
 	return $this->thumbnails;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
@@ -4858,31 +4858,31 @@ class Google_VideoStatistics extends Google_Model {
   public $favoriteCount;
   public $likeCount;
   public $viewCount;
-  public function setCommentCount( $commentCount) {
+  public function setCommentCount($commentCount) {
 	$this->commentCount = $commentCount;
   }
   public function getCommentCount() {
 	return $this->commentCount;
   }
-  public function setDislikeCount( $dislikeCount) {
+  public function setDislikeCount($dislikeCount) {
 	$this->dislikeCount = $dislikeCount;
   }
   public function getDislikeCount() {
 	return $this->dislikeCount;
   }
-  public function setFavoriteCount( $favoriteCount) {
+  public function setFavoriteCount($favoriteCount) {
 	$this->favoriteCount = $favoriteCount;
   }
   public function getFavoriteCount() {
 	return $this->favoriteCount;
   }
-  public function setLikeCount( $likeCount) {
+  public function setLikeCount($likeCount) {
 	$this->likeCount = $likeCount;
   }
   public function getLikeCount() {
 	return $this->likeCount;
   }
-  public function setViewCount( $viewCount) {
+  public function setViewCount($viewCount) {
 	$this->viewCount = $viewCount;
   }
   public function getViewCount() {
@@ -4898,43 +4898,43 @@ class Google_VideoStatus extends Google_Model {
   public $publicStatsViewable;
   public $rejectionReason;
   public $uploadStatus;
-  public function setEmbeddable( $embeddable) {
+  public function setEmbeddable($embeddable) {
 	$this->embeddable = $embeddable;
   }
   public function getEmbeddable() {
 	return $this->embeddable;
   }
-  public function setFailureReason( $failureReason) {
+  public function setFailureReason($failureReason) {
 	$this->failureReason = $failureReason;
   }
   public function getFailureReason() {
 	return $this->failureReason;
   }
-  public function setLicense( $license) {
+  public function setLicense($license) {
 	$this->license = $license;
   }
   public function getLicense() {
 	return $this->license;
   }
-  public function setPrivacyStatus( $privacyStatus) {
+  public function setPrivacyStatus($privacyStatus) {
 	$this->privacyStatus = $privacyStatus;
   }
   public function getPrivacyStatus() {
 	return $this->privacyStatus;
   }
-  public function setPublicStatsViewable( $publicStatsViewable) {
+  public function setPublicStatsViewable($publicStatsViewable) {
 	$this->publicStatsViewable = $publicStatsViewable;
   }
   public function getPublicStatsViewable() {
 	return $this->publicStatsViewable;
   }
-  public function setRejectionReason( $rejectionReason) {
+  public function setRejectionReason($rejectionReason) {
 	$this->rejectionReason = $rejectionReason;
   }
   public function getRejectionReason() {
 	return $this->rejectionReason;
   }
-  public function setUploadStatus( $uploadStatus) {
+  public function setUploadStatus($uploadStatus) {
 	$this->uploadStatus = $uploadStatus;
   }
   public function getUploadStatus() {
@@ -4997,7 +4997,7 @@ class Google_VideoSuggestionsTagSuggestion extends Google_Model {
   public function getCategoryRestricts() {
 	return $this->categoryRestricts;
   }
-  public function setTag( $tag) {
+  public function setTag($tag) {
 	$this->tag = $tag;
   }
   public function getTag() {
@@ -5020,19 +5020,19 @@ class Google_WatchSettings extends Google_Model {
   public $backgroundColor;
   public $featuredPlaylistId;
   public $textColor;
-  public function setBackgroundColor( $backgroundColor) {
+  public function setBackgroundColor($backgroundColor) {
 	$this->backgroundColor = $backgroundColor;
   }
   public function getBackgroundColor() {
 	return $this->backgroundColor;
   }
-  public function setFeaturedPlaylistId( $featuredPlaylistId) {
+  public function setFeaturedPlaylistId($featuredPlaylistId) {
 	$this->featuredPlaylistId = $featuredPlaylistId;
   }
   public function getFeaturedPlaylistId() {
 	return $this->featuredPlaylistId;
   }
-  public function setTextColor( $textColor) {
+  public function setTextColor($textColor) {
 	$this->textColor = $textColor;
   }
   public function getTextColor() {

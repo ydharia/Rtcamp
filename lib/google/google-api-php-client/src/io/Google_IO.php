@@ -103,7 +103,7 @@ abstract class Google_IO {
 	}
 
 	// Make sure the content-length header is set.
-	if (!$postBody || is_string($postBody)) {
+	if ( ! $postBody || is_string($postBody)) {
 	  $postsLength = strlen($postBody);
 	  $request->setRequestHeaders(array('content-length' => $postsLength));
 	}
@@ -150,7 +150,7 @@ abstract class Google_IO {
 	  );
 
 	  $endToEnd = array();
-	  foreach($hopByHop as $key) {
+	  foreach ($hopByHop as $key) {
 		if (isset($responseHeaders[$key])) {
 		  $endToEnd[$key] = $responseHeaders[$key];
 		}

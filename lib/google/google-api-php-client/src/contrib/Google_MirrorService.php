@@ -491,25 +491,25 @@ class Google_Attachment extends Google_Model {
   public $contentUrl;
   public $id;
   public $isProcessingContent;
-  public function setContentType( $contentType) {
+  public function setContentType($contentType) {
 	$this->contentType = $contentType;
   }
   public function getContentType() {
 	return $this->contentType;
   }
-  public function setContentUrl( $contentUrl) {
+  public function setContentUrl($contentUrl) {
 	$this->contentUrl = $contentUrl;
   }
   public function getContentUrl() {
 	return $this->contentUrl;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setIsProcessingContent( $isProcessingContent) {
+  public function setIsProcessingContent($isProcessingContent) {
 	$this->isProcessingContent = $isProcessingContent;
   }
   public function getIsProcessingContent() {
@@ -529,7 +529,7 @@ class Google_AttachmentsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -539,7 +539,7 @@ class Google_AttachmentsListResponse extends Google_Model {
 
 class Google_Command extends Google_Model {
   public $type;
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -575,13 +575,13 @@ class Google_Contact extends Google_Model {
   public function getAcceptTypes() {
 	return $this->acceptTypes;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -594,37 +594,37 @@ class Google_Contact extends Google_Model {
   public function getImageUrls() {
 	return $this->imageUrls;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setPhoneNumber( $phoneNumber) {
+  public function setPhoneNumber($phoneNumber) {
 	$this->phoneNumber = $phoneNumber;
   }
   public function getPhoneNumber() {
 	return $this->phoneNumber;
   }
-  public function setPriority( $priority) {
+  public function setPriority($priority) {
 	$this->priority = $priority;
   }
   public function getPriority() {
 	return $this->priority;
   }
-  public function setSource( $source) {
+  public function setSource($source) {
 	$this->source = $source;
   }
   public function getSource() {
 	return $this->source;
   }
-  public function setSpeakableName( $speakableName) {
+  public function setSpeakableName($speakableName) {
 	$this->speakableName = $speakableName;
   }
   public function getSpeakableName() {
 	return $this->speakableName;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {
@@ -644,7 +644,7 @@ class Google_ContactsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -661,49 +661,49 @@ class Google_Location extends Google_Model {
   public $latitude;
   public $longitude;
   public $timestamp;
-  public function setAccuracy( $accuracy) {
+  public function setAccuracy($accuracy) {
 	$this->accuracy = $accuracy;
   }
   public function getAccuracy() {
 	return $this->accuracy;
   }
-  public function setAddress( $address) {
+  public function setAddress($address) {
 	$this->address = $address;
   }
   public function getAddress() {
 	return $this->address;
   }
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLatitude( $latitude) {
+  public function setLatitude($latitude) {
 	$this->latitude = $latitude;
   }
   public function getLatitude() {
 	return $this->latitude;
   }
-  public function setLongitude( $longitude) {
+  public function setLongitude($longitude) {
 	$this->longitude = $longitude;
   }
   public function getLongitude() {
 	return $this->longitude;
   }
-  public function setTimestamp( $timestamp) {
+  public function setTimestamp($timestamp) {
 	$this->timestamp = $timestamp;
   }
   public function getTimestamp() {
@@ -723,7 +723,7 @@ class Google_LocationsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -739,25 +739,25 @@ class Google_MenuItem extends Google_Model {
   protected $__valuesType = 'Google_MenuValue';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setAction( $action) {
+  public function setAction($action) {
 	$this->action = $action;
   }
   public function getAction() {
 	return $this->action;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setPayload( $payload) {
+  public function setPayload($payload) {
 	$this->payload = $payload;
   }
   public function getPayload() {
 	return $this->payload;
   }
-  public function setRemoveWhenSelected( $removeWhenSelected) {
+  public function setRemoveWhenSelected($removeWhenSelected) {
 	$this->removeWhenSelected = $removeWhenSelected;
   }
   public function getRemoveWhenSelected() {
@@ -776,19 +776,19 @@ class Google_MenuValue extends Google_Model {
   public $displayName;
   public $iconUrl;
   public $state;
-  public function setDisplayName( $displayName) {
+  public function setDisplayName($displayName) {
 	$this->displayName = $displayName;
   }
   public function getDisplayName() {
 	return $this->displayName;
   }
-  public function setIconUrl( $iconUrl) {
+  public function setIconUrl($iconUrl) {
 	$this->iconUrl = $iconUrl;
   }
   public function getIconUrl() {
 	return $this->iconUrl;
   }
-  public function setState( $state) {
+  public function setState($state) {
 	$this->state = $state;
   }
   public function getState() {
@@ -805,19 +805,19 @@ class Google_Notification extends Google_Model {
   public $userActions;
   public $userToken;
   public $verifyToken;
-  public function setCollection( $collection) {
+  public function setCollection($collection) {
 	$this->collection = $collection;
   }
   public function getCollection() {
 	return $this->collection;
   }
-  public function setItemId( $itemId) {
+  public function setItemId($itemId) {
 	$this->itemId = $itemId;
   }
   public function getItemId() {
 	return $this->itemId;
   }
-  public function setOperation( $operation) {
+  public function setOperation($operation) {
 	$this->operation = $operation;
   }
   public function getOperation() {
@@ -830,13 +830,13 @@ class Google_Notification extends Google_Model {
   public function getUserActions() {
 	return $this->userActions;
   }
-  public function setUserToken( $userToken) {
+  public function setUserToken($userToken) {
 	$this->userToken = $userToken;
   }
   public function getUserToken() {
 	return $this->userToken;
   }
-  public function setVerifyToken( $verifyToken) {
+  public function setVerifyToken($verifyToken) {
 	$this->verifyToken = $verifyToken;
   }
   public function getVerifyToken() {
@@ -847,13 +847,13 @@ class Google_Notification extends Google_Model {
 class Google_NotificationConfig extends Google_Model {
   public $deliveryTime;
   public $level;
-  public function setDeliveryTime( $deliveryTime) {
+  public function setDeliveryTime($deliveryTime) {
 	$this->deliveryTime = $deliveryTime;
   }
   public function getDeliveryTime() {
 	return $this->deliveryTime;
   }
-  public function setLevel( $level) {
+  public function setLevel($level) {
 	$this->level = $level;
   }
   public function getLevel() {
@@ -873,25 +873,25 @@ class Google_Subscription extends Google_Model {
   public $updated;
   public $userToken;
   public $verifyToken;
-  public function setCallbackUrl( $callbackUrl) {
+  public function setCallbackUrl($callbackUrl) {
 	$this->callbackUrl = $callbackUrl;
   }
   public function getCallbackUrl() {
 	return $this->callbackUrl;
   }
-  public function setCollection( $collection) {
+  public function setCollection($collection) {
 	$this->collection = $collection;
   }
   public function getCollection() {
 	return $this->collection;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -910,19 +910,19 @@ class Google_Subscription extends Google_Model {
   public function getOperation() {
 	return $this->operation;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
 	return $this->updated;
   }
-  public function setUserToken( $userToken) {
+  public function setUserToken($userToken) {
 	$this->userToken = $userToken;
   }
   public function getUserToken() {
 	return $this->userToken;
   }
-  public function setVerifyToken( $verifyToken) {
+  public function setVerifyToken($verifyToken) {
 	$this->verifyToken = $verifyToken;
   }
   public function getVerifyToken() {
@@ -942,7 +942,7 @@ class Google_SubscriptionsListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -997,19 +997,19 @@ class Google_TimelineItem extends Google_Model {
   public function getAttachments() {
 	return $this->attachments;
   }
-  public function setBundleId( $bundleId) {
+  public function setBundleId($bundleId) {
 	$this->bundleId = $bundleId;
   }
   public function getBundleId() {
 	return $this->bundleId;
   }
-  public function setCanonicalUrl( $canonicalUrl) {
+  public function setCanonicalUrl($canonicalUrl) {
 	$this->canonicalUrl = $canonicalUrl;
   }
   public function getCanonicalUrl() {
 	return $this->canonicalUrl;
   }
-  public function setCreated( $created) {
+  public function setCreated($created) {
 	$this->created = $created;
   }
   public function getCreated() {
@@ -1021,19 +1021,19 @@ class Google_TimelineItem extends Google_Model {
   public function getCreator() {
 	return $this->creator;
   }
-  public function setDisplayTime( $displayTime) {
+  public function setDisplayTime($displayTime) {
 	$this->displayTime = $displayTime;
   }
   public function getDisplayTime() {
 	return $this->displayTime;
   }
-  public function setEtag( $etag) {
+  public function setEtag($etag) {
 	$this->etag = $etag;
   }
   public function getEtag() {
 	return $this->etag;
   }
-  public function setHtml( $html) {
+  public function setHtml($html) {
 	$this->html = $html;
   }
   public function getHtml() {
@@ -1046,37 +1046,37 @@ class Google_TimelineItem extends Google_Model {
   public function getHtmlPages() {
 	return $this->htmlPages;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setInReplyTo( $inReplyTo) {
+  public function setInReplyTo($inReplyTo) {
 	$this->inReplyTo = $inReplyTo;
   }
   public function getInReplyTo() {
 	return $this->inReplyTo;
   }
-  public function setIsBundleCover( $isBundleCover) {
+  public function setIsBundleCover($isBundleCover) {
 	$this->isBundleCover = $isBundleCover;
   }
   public function getIsBundleCover() {
 	return $this->isBundleCover;
   }
-  public function setIsDeleted( $isDeleted) {
+  public function setIsDeleted($isDeleted) {
 	$this->isDeleted = $isDeleted;
   }
   public function getIsDeleted() {
 	return $this->isDeleted;
   }
-  public function setIsPinned( $isPinned) {
+  public function setIsPinned($isPinned) {
 	$this->isPinned = $isPinned;
   }
   public function getIsPinned() {
 	return $this->isPinned;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
@@ -1101,7 +1101,7 @@ class Google_TimelineItem extends Google_Model {
   public function getNotification() {
 	return $this->notification;
   }
-  public function setPinScore( $pinScore) {
+  public function setPinScore($pinScore) {
 	$this->pinScore = $pinScore;
   }
   public function getPinScore() {
@@ -1114,43 +1114,43 @@ class Google_TimelineItem extends Google_Model {
   public function getRecipients() {
 	return $this->recipients;
   }
-  public function setSelfLink( $selfLink) {
+  public function setSelfLink($selfLink) {
 	$this->selfLink = $selfLink;
   }
   public function getSelfLink() {
 	return $this->selfLink;
   }
-  public function setSourceItemId( $sourceItemId) {
+  public function setSourceItemId($sourceItemId) {
 	$this->sourceItemId = $sourceItemId;
   }
   public function getSourceItemId() {
 	return $this->sourceItemId;
   }
-  public function setSpeakableText( $speakableText) {
+  public function setSpeakableText($speakableText) {
 	$this->speakableText = $speakableText;
   }
   public function getSpeakableText() {
 	return $this->speakableText;
   }
-  public function setSpeakableType( $speakableType) {
+  public function setSpeakableType($speakableType) {
 	$this->speakableType = $speakableType;
   }
   public function getSpeakableType() {
 	return $this->speakableType;
   }
-  public function setText( $text) {
+  public function setText($text) {
 	$this->text = $text;
   }
   public function getText() {
 	return $this->text;
   }
-  public function setTitle( $title) {
+  public function setTitle($title) {
 	$this->title = $title;
   }
   public function getTitle() {
 	return $this->title;
   }
-  public function setUpdated( $updated) {
+  public function setUpdated($updated) {
 	$this->updated = $updated;
   }
   public function getUpdated() {
@@ -1171,13 +1171,13 @@ class Google_TimelineListResponse extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1188,13 +1188,13 @@ class Google_TimelineListResponse extends Google_Model {
 class Google_UserAction extends Google_Model {
   public $payload;
   public $type;
-  public function setPayload( $payload) {
+  public function setPayload($payload) {
 	$this->payload = $payload;
   }
   public function getPayload() {
 	return $this->payload;
   }
-  public function setType( $type) {
+  public function setType($type) {
 	$this->type = $type;
   }
   public function getType() {

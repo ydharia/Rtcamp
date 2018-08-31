@@ -127,49 +127,49 @@ class Google_Tokeninfo extends Google_Model {
   public $scope;
   public $user_id;
   public $verified_email;
-  public function setAccess_type( $access_type) {
+  public function setAccess_type($access_type) {
 	$this->access_type = $access_type;
   }
   public function getAccess_type() {
 	return $this->access_type;
   }
-  public function setAudience( $audience) {
+  public function setAudience($audience) {
 	$this->audience = $audience;
   }
   public function getAudience() {
 	return $this->audience;
   }
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
 	return $this->email;
   }
-  public function setExpires_in( $expires_in) {
+  public function setExpires_in($expires_in) {
 	$this->expires_in = $expires_in;
   }
   public function getExpires_in() {
 	return $this->expires_in;
   }
-  public function setIssued_to( $issued_to) {
+  public function setIssued_to($issued_to) {
 	$this->issued_to = $issued_to;
   }
   public function getIssued_to() {
 	return $this->issued_to;
   }
-  public function setScope( $scope) {
+  public function setScope($scope) {
 	$this->scope = $scope;
   }
   public function getScope() {
 	return $this->scope;
   }
-  public function setUser_id( $user_id) {
+  public function setUser_id($user_id) {
 	$this->user_id = $user_id;
   }
   public function getUser_id() {
 	return $this->user_id;
   }
-  public function setVerified_email( $verified_email) {
+  public function setVerified_email($verified_email) {
 	$this->verified_email = $verified_email;
   }
   public function getVerified_email() {
@@ -191,79 +191,79 @@ class Google_Userinfo extends Google_Model {
   public $picture;
   public $timezone;
   public $verified_email;
-  public function setBirthday( $birthday) {
+  public function setBirthday($birthday) {
 	$this->birthday = $birthday;
   }
   public function getBirthday() {
 	return $this->birthday;
   }
-  public function setEmail( $email) {
+  public function setEmail($email) {
 	$this->email = $email;
   }
   public function getEmail() {
 	return $this->email;
   }
-  public function setFamily_name( $family_name) {
+  public function setFamily_name($family_name) {
 	$this->family_name = $family_name;
   }
   public function getFamily_name() {
 	return $this->family_name;
   }
-  public function setGender( $gender) {
+  public function setGender($gender) {
 	$this->gender = $gender;
   }
   public function getGender() {
 	return $this->gender;
   }
-  public function setGiven_name( $given_name) {
+  public function setGiven_name($given_name) {
 	$this->given_name = $given_name;
   }
   public function getGiven_name() {
 	return $this->given_name;
   }
-  public function setHd( $hd) {
+  public function setHd($hd) {
 	$this->hd = $hd;
   }
   public function getHd() {
 	return $this->hd;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setLink( $link) {
+  public function setLink($link) {
 	$this->link = $link;
   }
   public function getLink() {
 	return $this->link;
   }
-  public function setLocale( $locale) {
+  public function setLocale($locale) {
 	$this->locale = $locale;
   }
   public function getLocale() {
 	return $this->locale;
   }
-  public function setName( $name) {
+  public function setName($name) {
 	$this->name = $name;
   }
   public function getName() {
 	return $this->name;
   }
-  public function setPicture( $picture) {
+  public function setPicture($picture) {
 	$this->picture = $picture;
   }
   public function getPicture() {
 	return $this->picture;
   }
-  public function setTimezone( $timezone) {
+  public function setTimezone($timezone) {
 	$this->timezone = $timezone;
   }
   public function getTimezone() {
 	return $this->timezone;
   }
-  public function setVerified_email( $verified_email) {
+  public function setVerified_email($verified_email) {
 	$this->verified_email = $verified_email;
   }
   public function getVerified_email() {

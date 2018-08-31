@@ -144,7 +144,7 @@ class Google_AnalyticsSnapshot extends Google_Model {
   public function getCountries() {
 	return $this->countries;
   }
-  public function setLongUrlClicks( $longUrlClicks) {
+  public function setLongUrlClicks($longUrlClicks) {
 	$this->longUrlClicks = $longUrlClicks;
   }
   public function getLongUrlClicks() {
@@ -164,7 +164,7 @@ class Google_AnalyticsSnapshot extends Google_Model {
   public function getReferrers() {
 	return $this->referrers;
   }
-  public function setShortUrlClicks( $shortUrlClicks) {
+  public function setShortUrlClicks($shortUrlClicks) {
 	$this->shortUrlClicks = $shortUrlClicks;
   }
   public function getShortUrlClicks() {
@@ -223,13 +223,13 @@ class Google_AnalyticsSummary extends Google_Model {
 class Google_StringCount extends Google_Model {
   public $count;
   public $id;
-  public function setCount( $count) {
+  public function setCount($count) {
 	$this->count = $count;
   }
   public function getCount() {
 	return $this->count;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
@@ -252,31 +252,31 @@ class Google_Url extends Google_Model {
   public function getAnalytics() {
 	return $this->analytics;
   }
-  public function setCreated( $created) {
+  public function setCreated($created) {
 	$this->created = $created;
   }
   public function getCreated() {
 	return $this->created;
   }
-  public function setId( $id) {
+  public function setId($id) {
 	$this->id = $id;
   }
   public function getId() {
 	return $this->id;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setLongUrl( $longUrl) {
+  public function setLongUrl($longUrl) {
 	$this->longUrl = $longUrl;
   }
   public function getLongUrl() {
 	return $this->longUrl;
   }
-  public function setStatus( $status) {
+  public function setStatus($status) {
 	$this->status = $status;
   }
   public function getStatus() {
@@ -299,25 +299,25 @@ class Google_UrlHistory extends Google_Model {
   public function getItems() {
 	return $this->items;
   }
-  public function setItemsPerPage( $itemsPerPage) {
+  public function setItemsPerPage($itemsPerPage) {
 	$this->itemsPerPage = $itemsPerPage;
   }
   public function getItemsPerPage() {
 	return $this->itemsPerPage;
   }
-  public function setKind( $kind) {
+  public function setKind($kind) {
 	$this->kind = $kind;
   }
   public function getKind() {
 	return $this->kind;
   }
-  public function setNextPageToken( $nextPageToken) {
+  public function setNextPageToken($nextPageToken) {
 	$this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
 	return $this->nextPageToken;
   }
-  public function setTotalItems( $totalItems) {
+  public function setTotalItems($totalItems) {
 	$this->totalItems = $totalItems;
   }
   public function getTotalItems() {

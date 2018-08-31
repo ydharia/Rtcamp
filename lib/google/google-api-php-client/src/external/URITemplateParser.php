@@ -49,8 +49,8 @@ class URI_Template_Parser {
 
   public function expand($data) {
 	// Modification to make this a bit more performant (since gettype is very slow)
-	if (! is_array($data)) {
-	  $data = (array)$data;
+	if ( ! is_array($data)) {
+	  $data = (array) $data;
 	}
 	/*
     // Original code, which uses a slow gettype() statement, kept in place for if the assumption that is_array always works here is incorrect
@@ -141,7 +141,7 @@ class URI_Template_Parser {
 		}
 		$part .= $val;
 	  }
-	  if (! $exp->one_var_defined) $part = '';
+	  if ( ! $exp->one_var_defined) $part = '';
 	  $this->expansion = str_replace($exp->expression, $part, $this->expansion);
 	}
 
@@ -153,7 +153,7 @@ class URI_Template_Parser {
 	if (is_array($var->data)) {
 	  $i = 0;
 	  if ($exp->operator == '?' && ! $var->modifier) {
-		$val .= $var->name . '=';
+		$val .= $var->name.'=';
 	  }
 	  foreach ($var->data as $k => $v) {
 		$del = $var->modifier ? $exp->delimiter : ',';
@@ -163,35 +163,35 @@ class URI_Template_Parser {
 		// Array
 		if ($k !== $i) {
 		  if ($var->modifier == '+') {
-			$val .= $var->name . '.';
+			$val .= $var->name.'.';
 		  }
 		  if ($exp->operator == '?' && $var->modifier || $exp->operator == ';' && $var->modifier == '*' || $exp->operator == ';' && $var->modifier == '+') {
-			$val .= $ek . '=';
+			$val .= $ek.'=';
 		  } else {
-			$val .= $ek . $del;
+			$val .= $ek.$del;
 		  }
 
 		// List
 		} else {
 		  if ($var->modifier == '+') {
 			if ($exp->operator == ';' && $var->modifier == '*' || $exp->operator == ';' && $var->modifier == '+' || $exp->operator == '?' && $var->modifier == '+') {
-			  $val .= $var->name . '=';
+			  $val .= $var->name.'=';
 			} else {
-			  $val .= $var->name . '.';
+			  $val .= $var->name.'.';
 			}
 		  }
 		}
-		$val .= $ev . $del;
-		$i ++;
+		$val .= $ev.$del;
+		$i++;
 	  }
 	  $val = trim($val, $del);
 
 	// Strings, numbers, etc.
 	} else {
 	  if ($exp->operator == '?') {
-		$val = $var->name . (isset($var->data) ? '=' : '');
+		$val = $var->name.(isset($var->data) ? '=' : '');
 	  } else if ($exp->operator == ';') {
-		$val = $var->name . ($var->data ? '=' : '');
+		$val = $var->name.($var->data ? '=' : '');
 	  }
 	  $val .= rawurlencode($var->data);
 	  if ($exp->operator == '+') {
