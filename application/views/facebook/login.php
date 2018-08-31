@@ -18,22 +18,37 @@
             line-height: 1.5;
             overflow: hidden;
         }
+        
+        .bg {
+	    background-image: url("https://rtcampyash.myfoodstore.in/assets/images/bgimg.jpg");    
+	    height: 100%; 
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    position: fixed;
+	    width: 100%;
+	    z-index:-1;
+	}
 
         .wrapper {
-            width: 30vw;
+            width: 400px;
             margin: 25vh auto;
             border: 1px solid #eee;
-            background: #fcfcfc;
+            background: #fcfcfc4f;
             padding: 0 20px 20px;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 10px 1px black;
             overflow: hidden;
         }
 
-        input[type="text"] {
+        input[type="text"], input[type="password"] {
             border: 0px;
             border-bottom: 2px solid gray;
             width: 96%;
             padding: 0.7em;
+            font-size: 1em;
+            background-color: #ffffff94;
+            box-shadow: 2px 2px 6px black;
+            outline: none;
         }
 
 
@@ -66,16 +81,21 @@
             background: #2f5b85c7;
         }
 
+ 	.btnPolicies > a {
+	    text-decoration: none;
+	    color: #2f5b85;
+	    font-weight: bold;
+	}
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             .wrapper {
-                width: 80vw;
+                width: 70vw;
             }
         }
     </style>
 </head>
 <body>
-
+<div class="bg"></div> 
 <div class="wrapper">
 
     <h1>Login</h1>
@@ -85,10 +105,10 @@
     </p>
 
     <p>
-        <input type="text" name="" placeholder="Password" >
+        <input type="password" name="" placeholder="Password" >
     </p>
     
-    <?php if ( ! $this->facebook->is_authenticated()) { ?>
+    <?php if (!$this->facebook->is_authenticated()) { ?>
 
         <div class="login">
             <div class="btn">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>RT-CAMP Facebook</title>
 
     <link href="<?php echo base_url('assets/css/myStyle.css')?>" rel = "stylesheet" type = "text/css"  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +15,8 @@
                 <div align="right" >
                     <i class="fa fa-close" id="closeDiv" onclick="closeDownload();" style="font-size: 20px;"></i>
                 </div>
-                <div class="zip-title">
-                    Download
+                <div class="zip-title" id="downloadAlbumName">
+                    Album photos
                 </div>
                 <div class="progress-bar-div">
                     <div class="progress-bar-out" id="progress-bar-out">
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="zip-title" style="margin-top: 1%;">
-                    Download Album Progress
+                    Total Download Albums Progress
                 </div>
                 <div class="progress-bar-div">
                     <div class="progress-bar-out-album">
@@ -59,11 +59,14 @@
                 </div>
                 <div class="progress-bar-div">
                     Your Album Start To Backup in Your Google Drive. Cronjob will move your albums to google drive in background<br>
-                    You can logout or shutdown your device.
+                    Cronjob start after 1 minute<br>
+                    You can logout or shutdown your device.<br>
+                    <b>Note : </b> If you cancel google drive uploading request then it will shop all uploading to google drive.
+                    
                 </div>
             
-                <div class="download-button" id="download-button">
-                    
+                <div class="download-button" id="upload-button">
+                    <button style="background-color:#d9534f;" onclick="cancelupload()">cancel</button>
                 </div>
             </div>
     </div>
@@ -71,7 +74,6 @@
     <div class="header">
             <div class="profile">
                 <div class="profileName">
-                        
                     <span><img src="<?=$this->session->userdata("userimage")?>" align="center" ><?=$this->session->userdata("uname")?> 
                         <a href="<?=base_url().'myfacebook/logout'?>" title="Logout" class="logout">
                             <i class="fa fa-power-off"></i>
@@ -96,9 +98,9 @@
                         </a>                 
                     </li>
                     <?php
-					if ($this->session->userdata("shdwbx.gdrive.access_token"))
-					{
-					?>
+				    if($this->session->userdata("shdwbx.gdrive.access_token"))
+				    {
+				    ?>
                     <li>   
                         <a href="javascript:;" onclick="moveAll()" title="Download All Albums" class="downloadAllAlbum">
                             <i class="fa fa-google"> </i> DRIVE ALL
@@ -110,22 +112,23 @@
                         </a>
                     </li>
                     <?php
-					} else
-					{
-						?>
+                	}
+                	else
+                	{
+                		?>
                 		<li>   
-	                        <a href="<?php echo base_url()."myfacebook/googleLogin"; ?>" title="Download All Albums" class="downloadAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Download All Albums" class="downloadAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE ALL
 	                        </a>                 
 	                    </li>
 	                    <li>   
-	                        <a href="<?php echo base_url()."myfacebook/googleLogin"; ?>" title="Backup All Albums" class="driveAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Backup All Albums" class="driveAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE SELECTED
 	                        </a>
 	                    </li>
                 		<?php
-					}
-					?>
+                	}
+                    ?>
                 </ul>
             </div>
         </div>
@@ -134,15 +137,15 @@
 		<!-- <a style="color:white;" class="pull-right" href="http://myfoodstore.in/policies">privacy policy</a> -->
 	
     <?php
-	if ($this->session->userdata("shdwbx.gdrive.access_token"))
-	{
-	?>
+    if($this->session->userdata("shdwbx.gdrive.access_token"))
+    {
+    ?>
         <div class="grid-container">                
             <?php 
-			if (count($albums["albums"]) > 0)
-			{
-			foreach ($albums["albums"]["data"] as $album) { ?> 
-                <?php if ($album["count"] != 0) { ?>    
+            if(count($albums["albums"]) > 0)
+            {
+            foreach($albums["albums"]["data"] as $album) { ?> 
+                <?php if($album["count"] != 0) { ?>    
                     <a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
@@ -172,12 +175,13 @@
         </div>
  
     <?php
-	} else
-	{
-		?>
+    }
+    else
+    {
+    	?>
         <div class="grid-container">                
-            <?php foreach ($albums["albums"]["data"] as $album) { ?> 
-                <?php if ($album["count"] != 0) { ?>    
+            <?php foreach($albums["albums"]["data"] as $album) { ?> 
+                <?php if($album["count"] != 0) { ?>    
                 	<a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
@@ -194,7 +198,7 @@
                                     <span class="imgIcons">
                                         <i class="fa fa-download" onclick="download('single',event,'<?=$album['id']?>')" aria-hidden="true" style="border-right: 1px solid;" ></i>
                                         <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('myfacebook/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
-                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."myfacebook/googleLogin"; ?>'" aria-hidden="true" ></i>                                     
+                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."myfacebook/googleLogin";?>'" aria-hidden="true" ></i>                                     
                                     </span>
                                 </div>
                             </div>
@@ -205,8 +209,8 @@
         </div>
   	
     	<?php
-	}
-	?>
+    }
+    ?>
     	   </div>
 
 

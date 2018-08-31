@@ -12,16 +12,20 @@
 <body id="fullscreen" style="overflow: hidden;">
     <div class="bg"></div>      
         <div class="sider" id="sider" > 
-            <?php foreach ($album["data"] as $img) { ?>                
+            <?php foreach($album["data"] as $img) { ?>                
                 <div class="side" >
                     <img src="<?php echo $img['source']; ?>" alt="">
                 </div>
             <?php } ?>
         </div>
 
-        <div class="siderFooter">
-            <div class="siderBtn">
+        <div class="siderFooter" >
+            <button class="backbtn" onclick="location.href = '<?=base_url()?>';">
+	                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+	        </button>
+            <div class="siderBtn" >
                 <center>
+                    
                     <button class="play" onclick="openFullscreen()" >
                         <i class="fa fa-television" aria-hidden="true"></i>
                     </button>
@@ -37,6 +41,7 @@
                     
 
                 </center>
+                
             </div>
         </div>        
     </div>
