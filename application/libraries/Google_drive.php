@@ -181,6 +181,7 @@ class google_drive {
 				'maxResults'=>1
 			);
 		}
+		endif;
 			$gquery = $this->Service->files->listFiles($params);
 			$sysdir = $gquery->getItems();
 			// sysdir not found
@@ -193,7 +194,7 @@ class google_drive {
 				$sysdir = $sysdir[0];
 			}
 			endif;
-		endif;
+		//endif;
 		// return the system directory
 		return $sysdir;
 	}

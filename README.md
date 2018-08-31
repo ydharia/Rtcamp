@@ -1,5 +1,19 @@
 # Rtcamp Facebook Challenge
 
+### scrutinizer Result : 
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ydharia/Rtcamp/?branch=master)
+
+[![Build Status](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ydharia/Rtcamp/build-status/master)
+
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/ydharia/Rtcamp/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+
+### Live Demo :
+
+Url : https://rtcampyash.myfoodstore.in
+
+## description
+
 In this Application user login with facebook and see all albums which is uploaded to facebook, user can see all there album photos in full screen slider, download the albums and move thre albums to google drive easily.
 
 ## Facebook Login:
@@ -65,6 +79,51 @@ when all albums are moved to google drive then **_cron job_ is removed from serv
 
 ### Library Used :
 
-    Facebook PHP SDK 
-    Google Drive API
-    Crontab
+[Facebook PHP SDK](https://github.com/darkwhispering/facebook-sdk-codeigniter)
+
+[Google Drive API](https://github.com/uchilaka/CI_GoogleDrive)
+
+[Crontab](https://github.com/biozshock/crontab)
+
+
+## Setup / Install : 
+
+### 1. Facebook setup.
+
+open -> application/config/facebook.php
+
+edit 2 lines with your facebook_app_id and facebook_app_secret
+
+    $config['facebook_app_id']              = 'APP_API_KEY';
+    $config['facebook_app_secret']          = 'API_SECRET_KEY'; 
+
+put your app id and app secret key
+get app id [click here](https://developers.facebook.com/apps/) 
+
+get APP_ID and APP_SECRET_KEY from 
+
+1. Select your application
+2. goto basic -> setting and get your keys.
+
+### 2. Google Drive setup.
+
+open -> application/controllers/Myfacebook.php
+edit CLIENT_ID and CLIENT_SECRET in construct and googleLogin() function
+
+        public function __construct()
+        {
+            .....
+            $config = array("client_id"=>"__CLIENT_ID__", "client_secret"=>"__CLIENT_SECRET__", "redirect_uri"=>$url);
+            ....
+        }
+        public function googleLogin()
+        {
+            .....
+            $config = array("client_id"=>"__CLIENT_ID__", "client_secret"=>"__CLIENT_SECRET__", "redirect_uri"=>$url);		
+            .....
+        }
+    
+put your CLIENT_ID and CLIENT_SECRET
+get [CLIENT_ID and CLIENT_SECRET](https://console.cloud.google.com/apis/credentials)
+
+put your website domain and Authorized redirect URIs to client id of your project in google conslole.
