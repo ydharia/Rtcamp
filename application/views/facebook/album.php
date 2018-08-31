@@ -30,21 +30,17 @@
             height: 500px;
             text-align: center; 
             border-radius: 10px;
-            
-            /*box-shadow: 3px 3px 10px #333;*/
         }
         
         .img-preview-box
         {
             opacity: 1;
             max-width:100%;
-	    max-height:450px;           
+			max-height:450px;           
         }
     </style>
     <script type="text/javascript">
         function imgpreview(image) {
-            // alert(image);
-            // $("#image-box").css("display","block");
             document.getElementById("imagepreview").style.display = "block";
             $("#image-view").html();
             $("#image-view").html("<img src='"+image+"' class='img-preview-box' />");
