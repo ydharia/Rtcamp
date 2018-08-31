@@ -98,9 +98,9 @@
                         </a>                 
                     </li>
                     <?php
-				    if($this->session->userdata("shdwbx.gdrive.access_token"))
-				    {
-				    ?>
+					if($this->session->userdata("shdwbx.gdrive.access_token"))
+					{
+					?>
                     <li>   
                         <a href="javascript:;" onclick="moveAll()" title="Download All Albums" class="downloadAllAlbum">
                             <i class="fa fa-google"> </i> DRIVE ALL
@@ -112,23 +112,23 @@
                         </a>
                     </li>
                     <?php
-                	}
-                	else
-                	{
-                		?>
+					}
+					else
+					{
+						?>
                 		<li>   
-	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Download All Albums" class="downloadAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin"; ?>" title="Download All Albums" class="downloadAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE ALL
 	                        </a>                 
 	                    </li>
 	                    <li>   
-	                        <a href="<?php echo base_url()."myfacebook/googleLogin";?>" title="Backup All Albums" class="driveAllAlbum">
+	                        <a href="<?php echo base_url()."myfacebook/googleLogin"; ?>" title="Backup All Albums" class="driveAllAlbum">
 	                            <i class="fa fa-google"> </i> DRIVE SELECTED
 	                        </a>
 	                    </li>
                 		<?php
-                	}
-                    ?>
+					}
+					?>
                 </ul>
             </div>
         </div>
@@ -137,14 +137,14 @@
 		<!-- <a style="color:white;" class="pull-right" href="http://myfoodstore.in/policies">privacy policy</a> -->
 	
     <?php
-    if($this->session->userdata("shdwbx.gdrive.access_token"))
-    {
-    ?>
+	if($this->session->userdata("shdwbx.gdrive.access_token"))
+	{
+	?>
         <div class="grid-container">                
             <?php 
-            if(count($albums["albums"]) > 0)
-            {
-            foreach($albums["albums"]["data"] as $album) { ?> 
+			if(count($albums["albums"]) > 0)
+			{
+			foreach($albums["albums"]["data"] as $album) { ?> 
                 <?php if($album["count"] != 0) { ?>    
                     <a href="javascript:;">
                         <div class="grid-item" >  
@@ -175,13 +175,13 @@
         </div>
  
     <?php
-    }
-    else
-    {
-    	?>
+	}
+	else
+	{
+		?>
         <div class="grid-container">                
-            <?php foreach($albums["albums"]["data"] as $album) { ?> 
-                <?php if($album["count"] != 0) { ?>    
+            <?php foreach ($albums["albums"]["data"] as $album) { ?> 
+                <?php if ($album["count"] != 0) { ?>    
                 	<a href="javascript:;">
                         <div class="grid-item" >  
                             <div class="gridData" >                                                 
@@ -198,7 +198,7 @@
                                     <span class="imgIcons">
                                         <i class="fa fa-download" onclick="download('single',event,'<?=$album['id']?>')" aria-hidden="true" style="border-right: 1px solid;" ></i>
                                         <i class="fa fa-play" onclick="window.location.href='<?php echo base_url('myfacebook/albumPlay?album='.$album['id'])?>'" aria-hidden="true" style="border-right: 1px solid;"  ></i>
-                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."myfacebook/googleLogin";?>'" aria-hidden="true" ></i>                                     
+                                        <i class="fa fa-google" onclick="window.location.href='<?php echo base_url()."myfacebook/googleLogin"; ?>'" aria-hidden="true" ></i>                                     
                                     </span>
                                 </div>
                             </div>
@@ -209,8 +209,8 @@
         </div>
   	
     	<?php
-    }
-    ?>
+	}
+	?>
     	   </div>
 
 
