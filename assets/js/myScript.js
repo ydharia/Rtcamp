@@ -37,7 +37,6 @@ var doneAlbum = 0;
 var xhr = [];
 function downloadAlbum(albumId,type,e="")
 {
-    closeDownload();
     $("#download-button").html('<button><i class="fa fa-refresh fa-spin" /></button>');
     document.getElementById("progress-bar-in").style.width= "0%";
     document.getElementById("progress-bar-in-album").style.width= "0%";
@@ -106,13 +105,16 @@ function downloadAlbum(albumId,type,e="")
                                         var album = {albumName:"", albumId:""};
                                     }
                                     
-                                    var xhr = $.ajax({
+                                    $.ajax({
                                         async:false,
                                         dataType:'json',
                                         type:'post',
                                         data:album,			        
                                         url:baseurl+'myfacebook/zipping/'+type,
                                         catch:false,
+				    	beforeSend: function (jqXHR, settings) {
+						xhr.push(jqXHR);
+					},
                                         success:function(zipresult)
                                         {
                                             document.getElementById("closeDiv").style.color = "black";
@@ -163,6 +165,7 @@ function canceldownload()
 		url:baseurl+'myfacebook/cancledownload',
 		catch:false,
 		success:function(result){
+			location. reload(true);
 		}
 	});
 }
