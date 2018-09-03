@@ -135,7 +135,7 @@ class myfacebook extends CI_Controller {
 		{
 			if ( ! $this->session->userdata("uname"))
 			{
-				$user = $this->getAllAlbumList();
+				$user = $this->facebook->request('get', '/me?fields=id,name,first_name,last_name,email,picture,albums{count,name,picture}');
 				if ( ! isset($user['error']))
 				{
 					$usersess = array("uname"=>ucfirst($user["first_name"]).ucfirst($user["last_name"]), "userid"=>$user["id"], "userimage"=>$user["picture"]["data"]["url"]);
@@ -328,49 +328,52 @@ class myfacebook extends CI_Controller {
 		} else
 		{
 			$data['album'] = array();
-			$album = $this->facebook->request('get', '/'.$albumId.'/photos?fields=source');
-			$albumdetails = $this->facebook->request('get', '/'.$albumId);
-			if ( ! isset($album['error']))
+			$albums = $this->facebook->request('get', '/'.$albumId.'?fields=photos.limit(100){images,id},name');
+			$newdata = array();
+			if (!isset($album['error']))
 			{
-				$data['album'] = $album;
-				$data['album']["name"] = $albumdetails["name"];
+				$data['album'] = $albums;
+				$newdata['album']["name"] = $albums["name"];
 			}
-	
+			
 			try {
-			
-				if (isset($data["album"]["paging"]["next"]))
+				if (isset($data["album"]["photos"]["paging"]["next"]))
 			  	{
-			  		$nextUrl = $data["album"]["paging"]["next"];
+			  		$nextUrl = $data["album"]["photos"]["paging"]["next"];
+			  		
 			  	} else {
 			  		$nextUrl = "";
 			  	}
-			  
-			  while ($nextUrl) {
-			  
-			  	$nextData = $this->nextAlbumData($nextUrl);
-			  	if (isset($nextData["paging"]["next"]))
-			  	{
-			  		$nextUrl = $nextData["paging"]["next"];
-			  	} else {
-			  		$nextUrl = "";
-			  	}
-			  	
-			  	$data['album']["data"] = array_merge($data['album']["data"], $nextData["data"]);
-			  }
-			  
-			  if ( ! file_exists($path)) {
-				mkdir($path, 0777, true);
-			  }
-			  
-			  $allAlbums = fopen($dirname, "w") or die("Unable to open file!");
-			  $txt = json_encode($data)."\n";
-			  fwrite($allAlbums, $txt);
-			  fclose($allAlbums);
-			
-			  
+				  
+				while ($nextUrl) {
+				  	$nextData = $this->nextAlbumData($nextUrl);
+				  	
+				  	if(isset($nextData["paging"]["next"]))
+				  	{
+				  		$nextUrl = $nextData["paging"]["next"];
+				  	} else {
+				  		$nextUrl = "";
+				  	}
+				  	
+					$data['album']['photos']["data"] = array_merge($data['album']['photos']['data'], $nextData['data']);
+				}
+				
+				foreach ($data['album']['photos']["data"] as $album)
+				{
+					$newdata["album"]["data"][] = array("source"=>$album["images"][0]["source"],"id"=>$album["id"]);
+				}
+				
+				if (!file_exists($path)) {
+					mkdir($path, 0777, true);
+				}
+				  
+				$allAlbums = fopen($dirname, "w") or die("Unable to open file!");
+				$txt = json_encode($newdata)."\n";
+				fwrite($allAlbums, $txt);
+				fclose($allAlbums);
 			} catch (Exception $e) {
 				echo "catch";
-				}
+		    	}
 		  }
 		return $data;
 	}
